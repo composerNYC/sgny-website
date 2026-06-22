@@ -2,6 +2,10 @@
 import Base from '../layouts/Base.astro';
 import { activities, schedule, sessions, zoom, location } from '../data/activities.js';
 const gridMode = { 'in-person': 'In person', online: 'Online', hybrid: 'Hybrid' };
+// Encode the Zoom details so they are NOT in the page source / search indexes as
+// plain text. They are decoded in-browser only when a visitor opens a session.
+const enc = (s) => Buffer.from(String(s), 'utf8').toString('base64');
+const zoomB64 = { id: enc(zoom.id), password: enc(zoom.password), phone: enc(zoom.phone), url: enc(zoom.url) };
 ---
 <Base title="Schedule of Activities" description="The Spiritist Group of New York's regular weekly activities — study groups, prayer, fraternal assistance, and more. All free and open to everyone.">
   <section class="hero" style="padding-block:clamp(2.5rem,6vw,4.5rem)">
@@ -83,8 +87,11 @@ const gridMode = { 'in-person': 'In person', online: 'Online', hybrid: 'Hybrid' 
     </div>
   </section>
 
-  <script define:vars={{ sessionsData: sessions, zoom, venue: location }}>
+  <script define:vars={{ sessionsData: sessions, zoom: zoomB64, venue: location }}>
     const map = Object.fromEntries(sessionsData.map((s) => [s.slug, s]));
+    // decode the Zoom details in the browser (kept out of the static HTML source)
+    const dec = (s) => { try { return decodeURIComponent(escape(atob(s))); } catch (e) { return atob(s); } };
+    zoom.id = dec(zoom.id); zoom.password = dec(zoom.password); zoom.phone = dec(zoom.phone); zoom.url = dec(zoom.url);
     const dlg = document.getElementById('sessionModal');
     const body = dlg.querySelector('.m-body');
     const esc = (x) => (x || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');

@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import pagefind from 'astro-pagefind';
+import sitemap from '@astrojs/sitemap';
 
 // Fully static output: every page is prerendered to plain HTML (fast, free,
 // great SEO) and the whole site can be hosted for free on GitHub Pages.
@@ -8,7 +9,16 @@ import pagefind from 'astro-pagefind';
 export default defineConfig({
   site: 'https://www.sgny.org',
   output: 'static',
-  integrations: [pagefind()],
+  integrations: [
+    pagefind(),
+    sitemap({
+      filter: (page) =>
+        !page.includes('/bibliographies/') &&
+        !page.includes('/catalog/videos') &&
+        !page.includes('/catalog/books/list-by-title') &&
+        !page.includes('/catalog/books/sab-publications'),
+    }),
+  ],
   build: { format: 'directory' },
   // Pages merged into other pages; keep the old URLs working.
   redirects: {

@@ -17,7 +17,9 @@ export function cleanBody(html) {
   return h.trim();
 }
 
-// turn "/catalog/books/allan-kardec/spirits-book" legacy links into new "/catalog/allan-kardec/spirits-book"
+// The live catalog routes are /catalog/books/<author>/<book>, which matches the
+// legacy WordPress URLs — so we leave catalog links as-is. (Previously this
+// stripped "/books/", which created broken /catalog/<author>/<book> links.)
 export function rewriteCatalogLinks(html) {
-  return html.replace(/\/catalog\/books\//g, '/catalog/');
+  return html;
 }

@@ -3,8 +3,12 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { ViewTransitions } from 'astro:transitions';
 import '../styles/global.css';
-const { title, description = 'Spiritist Group of New York — promoting and disseminating Spiritism according to the teachings of Allan Kardec.' } = Astro.props;
+const { title, description = 'Spiritist Group of New York — promoting and disseminating Spiritism according to the teachings of Allan Kardec.', image } = Astro.props;
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const site = Astro.site ?? new URL('https://www.sgny.org');
+const canonical = new URL(Astro.url.pathname, site).href;
+const fullTitle = title ? `${title} · SGNY` : 'Spiritist Group of New York';
+const ogImage = new URL(image ?? '/uploads/2023/04/logo-SGNY-novo-300x300.jpeg', site).href;
 ---
 <!doctype html>
 <html lang="en">
@@ -13,7 +17,21 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title ? `${title} · SGNY` : 'Spiritist Group of New York'}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
     <link rel="icon" href="/uploads/2023/04/cropped-logo-SGNY-novo-32x32.jpeg" />
+    <link rel="apple-touch-icon" href="/uploads/2023/04/cropped-logo-SGNY-novo-192x192.jpeg" />
+    <meta name="theme-color" content="#1f4e79" />
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Spiritist Group of New York" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <ViewTransitions />
   </head>
   <body>
