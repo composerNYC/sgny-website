@@ -1,0 +1,4170 @@
+[
+ {
+  "slug": "Ge",
+  "title": "A Gênese",
+  "pillar": "Kardec",
+  "author": null,
+  "year": 1868,
+  "chapters": 41
+ },
+ {
+  "slug": "Ipr",
+  "title": "Instrução prática",
+  "pillar": "Kardec",
+  "author": null,
+  "year": 1858,
+  "chapters": 15
+ },
+ {
+  "slug": "Ci",
+  "title": "O Céu e o Inferno",
+  "pillar": "Kardec",
+  "author": null,
+  "year": 1865,
+  "chapters": 79
+ },
+ {
+  "slug": "Oes",
+  "title": "O Espiritismo em sua expressão mais simples.",
+  "pillar": "Kardec",
+  "author": null,
+  "year": 1862,
+  "chapters": 4
+ },
+ {
+  "slug": "Ev",
+  "title": "O Evangelho segundo o Espiritismo.",
+  "pillar": "Kardec",
+  "author": null,
+  "year": 1864,
+  "chapters": 34
+ },
+ {
+  "slug": "1Lde",
+  "title": "O Livro dos Espíritos",
+  "pillar": "Kardec",
+  "author": null,
+  "year": 1857,
+  "chapters": 67
+ },
+ {
+  "slug": "Lde",
+  "title": "O Livro dos Espíritos.",
+  "pillar": "Kardec",
+  "author": null,
+  "year": 1857,
+  "chapters": 31
+ },
+ {
+  "slug": "Ldm",
+  "title": "O Livro dos Médiuns.",
+  "pillar": "Kardec",
+  "author": null,
+  "year": 1861,
+  "chapters": 38
+ },
+ {
+  "slug": "Qe1",
+  "title": "O que é o Espiritismo.",
+  "pillar": "Kardec",
+  "author": null,
+  "year": 1865,
+  "chapters": 6
+ },
+ {
+  "slug": "Qe2",
+  "title": "O que é o Espiritismo.",
+  "pillar": "Kardec",
+  "author": null,
+  "year": 1860,
+  "chapters": 4
+ },
+ {
+  "slug": "Op",
+  "title": "Obras póstumas.",
+  "pillar": "Kardec",
+  "author": null,
+  "year": 1868,
+  "chapters": 64
+ },
+ {
+  "slug": "Re58",
+  "title": "Revista Espírita",
+  "pillar": "Kardec",
+  "author": "Ano I",
+  "year": 1858,
+  "chapters": 107
+ },
+ {
+  "slug": "Re59",
+  "title": "Revista Espírita",
+  "pillar": "Kardec",
+  "author": "Ano II",
+  "year": 1859,
+  "chapters": 94
+ },
+ {
+  "slug": "Re60",
+  "title": "Revista Espírita",
+  "pillar": "Kardec",
+  "author": "Ano III",
+  "year": 1860,
+  "chapters": 148
+ },
+ {
+  "slug": "Re61",
+  "title": "Revista Espírita",
+  "pillar": "Kardec",
+  "author": "Ano IV",
+  "year": 1861,
+  "chapters": 131
+ },
+ {
+  "slug": "Re62",
+  "title": "Revista Espírita",
+  "pillar": "Kardec",
+  "author": "Ano V",
+  "year": 1862,
+  "chapters": 125
+ },
+ {
+  "slug": "Re63",
+  "title": "Revista Espírita",
+  "pillar": "Kardec",
+  "author": "Ano VI",
+  "year": 1863,
+  "chapters": 118
+ },
+ {
+  "slug": "Re64",
+  "title": "Revista Espírita",
+  "pillar": "Kardec",
+  "author": "Ano VII",
+  "year": 1864,
+  "chapters": 102
+ },
+ {
+  "slug": "Re65",
+  "title": "Revista Espírita",
+  "pillar": "Kardec",
+  "author": "Ano VIII",
+  "year": 1865,
+  "chapters": 102
+ },
+ {
+  "slug": "Re66",
+  "title": "Revista Espírita",
+  "pillar": "Kardec",
+  "author": "Ano IX",
+  "year": 1866,
+  "chapters": 93
+ },
+ {
+  "slug": "Re67",
+  "title": "Revista Espírita",
+  "pillar": "Kardec",
+  "author": "Ano X",
+  "year": 1867,
+  "chapters": 109
+ },
+ {
+  "slug": "Re68",
+  "title": "Revista Espírita",
+  "pillar": "Kardec",
+  "author": "Ano XI",
+  "year": 1868,
+  "chapters": 97
+ },
+ {
+  "slug": "Re69",
+  "title": "Revista Espírita",
+  "pillar": "Kardec",
+  "author": "Ano XII",
+  "year": 1869,
+  "chapters": 122
+ },
+ {
+  "slug": "Ve",
+  "title": "Viagem Espírita em 1862",
+  "pillar": "Kardec",
+  "author": null,
+  "year": 1862,
+  "chapters": 18
+ },
+ {
+  "slug": "Abd",
+  "title": "Abdias.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": 1828,
+  "chapters": 1
+ },
+ {
+  "slug": "Ag",
+  "title": "Ageu.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 2
+ },
+ {
+  "slug": "Am",
+  "title": "Amós.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 9
+ },
+ {
+  "slug": "Apoc",
+  "title": "Apocalipse.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 22
+ },
+ {
+  "slug": "At",
+  "title": "Atos dos Apóstolos.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 28
+ },
+ {
+  "slug": "Ct",
+  "title": "Cantares.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 8
+ },
+ {
+  "slug": "Dn",
+  "title": "Daniel.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 12
+ },
+ {
+  "slug": "Dt",
+  "title": "Deuteronômio.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 34
+ },
+ {
+  "slug": "Ec",
+  "title": "Eclesiastes.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 12
+ },
+ {
+  "slug": "Flm",
+  "title": "Epístola a Filêmon.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": 1828,
+  "chapters": 1
+ },
+ {
+  "slug": "Tt",
+  "title": "Epístola a Tito.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 3
+ },
+ {
+  "slug": "Col",
+  "title": "Epístola aos Colossenses.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 4
+ },
+ {
+  "slug": "Ef",
+  "title": "Epístola aos Efésios.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 6
+ },
+ {
+  "slug": "Flp",
+  "title": "Epístola aos Filipenses.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 4
+ },
+ {
+  "slug": "Gal",
+  "title": "Epístola aos Gálatas.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 6
+ },
+ {
+  "slug": "Heb",
+  "title": "Epístola aos Hebreus.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 13
+ },
+ {
+  "slug": "Rom",
+  "title": "Epístola aos Romanos.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 16
+ },
+ {
+  "slug": "Jud",
+  "title": "Epístola de Judas.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": 1828,
+  "chapters": 1
+ },
+ {
+  "slug": "Tg",
+  "title": "Epístola de Tiago.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 5
+ },
+ {
+  "slug": "Ed",
+  "title": "Esdras.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 10
+ },
+ {
+  "slug": "Et",
+  "title": "Esther.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 10
+ },
+ {
+  "slug": "Ez",
+  "title": "Ezequiel.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 48
+ },
+ {
+  "slug": "Gn",
+  "title": "Gênesis.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 50
+ },
+ {
+  "slug": "Hc",
+  "title": "Habacuque.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 3
+ },
+ {
+  "slug": "Is",
+  "title": "Isaías.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 66
+ },
+ {
+  "slug": "Jr",
+  "title": "Jeremias.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 52
+ },
+ {
+  "slug": "Job",
+  "title": "Job.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 42
+ },
+ {
+  "slug": "Jl",
+  "title": "Joel.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 3
+ },
+ {
+  "slug": "Jn",
+  "title": "Jonas.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 4
+ },
+ {
+  "slug": "Js",
+  "title": "Josué.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 24
+ },
+ {
+  "slug": "Jo",
+  "title": "João.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 21
+ },
+ {
+  "slug": "Jz",
+  "title": "Juízes.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 21
+ },
+ {
+  "slug": "Lm",
+  "title": "Lamentações de Jeremias.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 5
+ },
+ {
+  "slug": "Lv",
+  "title": "Levítico.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 27
+ },
+ {
+  "slug": "Lc",
+  "title": "Lucas.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 24
+ },
+ {
+  "slug": "Ml",
+  "title": "Malaquias.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 4
+ },
+ {
+  "slug": "Mc",
+  "title": "Marcos.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 16
+ },
+ {
+  "slug": "Mt",
+  "title": "Mateus.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 28
+ },
+ {
+  "slug": "Mq",
+  "title": "Miqueias.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 7
+ },
+ {
+  "slug": "Na",
+  "title": "Naum.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 3
+ },
+ {
+  "slug": "Ne",
+  "title": "Nehemias.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 13
+ },
+ {
+  "slug": "Nm",
+  "title": "Números.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 36
+ },
+ {
+  "slug": "Os",
+  "title": "Oseias.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 14
+ },
+ {
+  "slug": "1Tim",
+  "title": "Primeira Epístola a Timóteo.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 6
+ },
+ {
+  "slug": "1Cor",
+  "title": "Primeira Epístola aos Coríntios.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 16
+ },
+ {
+  "slug": "1Tes",
+  "title": "Primeira Epístola aos Tessalonicenses.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 5
+ },
+ {
+  "slug": "1Jo",
+  "title": "Primeira Epístola de João.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 5
+ },
+ {
+  "slug": "1Pe",
+  "title": "Primeira Epístola de Pedro.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 5
+ },
+ {
+  "slug": "1Cr",
+  "title": "Primeiro Livro de Crônicas.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 29
+ },
+ {
+  "slug": "1Rs",
+  "title": "Primeiro Livro de Reis.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 22
+ },
+ {
+  "slug": "1Sm",
+  "title": "Primeiro Livro de Samuel.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 31
+ },
+ {
+  "slug": "Pv",
+  "title": "Provérbios.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 31
+ },
+ {
+  "slug": "Rt",
+  "title": "Ruth.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 4
+ },
+ {
+  "slug": "Sl",
+  "title": "Salmos.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 150
+ },
+ {
+  "slug": "2Tim",
+  "title": "Segunda Epístola a Timóteo.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 4
+ },
+ {
+  "slug": "2Cor",
+  "title": "Segunda Epístola aos Coríntios.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 13
+ },
+ {
+  "slug": "2Tes",
+  "title": "Segunda Epístola aos Tessalonicenses.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 3
+ },
+ {
+  "slug": "2Jo",
+  "title": "Segunda Epístola de João.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": 1828,
+  "chapters": 1
+ },
+ {
+  "slug": "2Pe",
+  "title": "Segunda Epístola de Pedro.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 3
+ },
+ {
+  "slug": "2Cr",
+  "title": "Segundo Livro de Crônicas.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 36
+ },
+ {
+  "slug": "2Rs",
+  "title": "Segundo Livro de Reis.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 25
+ },
+ {
+  "slug": "2Sm",
+  "title": "Segundo Livro de Samuel.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 24
+ },
+ {
+  "slug": "Sf",
+  "title": "Sofonias.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 3
+ },
+ {
+  "slug": "3Jo",
+  "title": "Terceira Epístola de João.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": 1828,
+  "chapters": 1
+ },
+ {
+  "slug": "Zc",
+  "title": "Zacarias.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 14
+ },
+ {
+  "slug": "Ex",
+  "title": "Êxodo.",
+  "pillar": "Bíblia",
+  "author": null,
+  "year": null,
+  "chapters": 40
+ },
+ {
+  "slug": "Acl",
+  "title": "A caminho da luz",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1939,
+  "chapters": 28
+ },
+ {
+  "slug": "Asm",
+  "title": "A semente de mostarda",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1990,
+  "chapters": 21
+ },
+ {
+  "slug": "Ats",
+  "title": "A terra e o semeador",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1975,
+  "chapters": 16
+ },
+ {
+  "slug": "Avr",
+  "title": "A verdade responde",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel / André Luiz",
+  "year": 1990,
+  "chapters": 21
+ },
+ {
+  "slug": "Vc",
+  "title": "A vida conta",
+  "pillar": "Chico Xavier",
+  "author": "Maria Dolores",
+  "year": 1980,
+  "chapters": 34
+ },
+ {
+  "slug": "Ave",
+  "title": "A vida escreve",
+  "pillar": "Chico Xavier",
+  "author": "Hilário Silva. — F. C. Xavier / Waldo Vieira",
+  "year": 1960,
+  "chapters": 58
+ },
+ {
+  "slug": "Av",
+  "title": "A volta",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1993,
+  "chapters": 15
+ },
+ {
+  "slug": "Abs",
+  "title": "Abençoa sempre",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1993,
+  "chapters": 21
+ },
+ {
+  "slug": "Anb",
+  "title": "Abençoando nosso Brasil, com Jesus e por Jesus",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2007,
+  "chapters": 16
+ },
+ {
+  "slug": "Ab",
+  "title": "Abrigo",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1986,
+  "chapters": 21
+ },
+ {
+  "slug": "Acv",
+  "title": "Aceitação e vida",
+  "pillar": "Chico Xavier",
+  "author": "Margarida Soares",
+  "year": 1988,
+  "chapters": 15
+ },
+ {
+  "slug": "Ads",
+  "title": "Adeus solidão",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1982,
+  "chapters": 18
+ },
+ {
+  "slug": "Ac",
+  "title": "Agenda cristã",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz",
+  "year": 1948,
+  "chapters": 51
+ },
+ {
+  "slug": "Agt",
+  "title": "Agora é o tempo",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1984,
+  "chapters": 41
+ },
+ {
+  "slug": "Adn",
+  "title": "Agência de Notícias",
+  "pillar": "Chico Xavier",
+  "author": "Jair Presente",
+  "year": 1986,
+  "chapters": 21
+ },
+ {
+  "slug": "Alm",
+  "title": "Algo mais",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1980,
+  "chapters": 37
+ },
+ {
+  "slug": "Alp",
+  "title": "Alma do povo",
+  "pillar": "Chico Xavier",
+  "author": "Cornélio Pires",
+  "year": 1996,
+  "chapters": 27
+ },
+ {
+  "slug": "Aec",
+  "title": "Alma e coração",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1969,
+  "chapters": 62
+ },
+ {
+  "slug": "Alu",
+  "title": "Alma e Luz",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1990,
+  "chapters": 21
+ },
+ {
+  "slug": "Aev",
+  "title": "Alma e Vida",
+  "pillar": "Chico Xavier",
+  "author": "Maria Dolores",
+  "year": 1984,
+  "chapters": 33
+ },
+ {
+  "slug": "Aed",
+  "title": "Almas em desfile",
+  "pillar": "Chico Xavier",
+  "author": "Hilário Silva. — F. C. Xavier. — Waldo Vieira",
+  "year": 1961,
+  "chapters": 54
+ },
+ {
+  "slug": "Alc",
+  "title": "Alvorada Cristã",
+  "pillar": "Chico Xavier",
+  "author": "Neio Lúcio",
+  "year": 1948,
+  "chapters": 51
+ },
+ {
+  "slug": "Adr",
+  "title": "Alvorada do Reino",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1988,
+  "chapters": 22
+ },
+ {
+  "slug": "Ame",
+  "title": "Amanhece",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1976,
+  "chapters": 30
+ },
+ {
+  "slug": "Ami",
+  "title": "Amigo",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1979,
+  "chapters": 21
+ },
+ {
+  "slug": "Amd",
+  "title": "Amizade",
+  "pillar": "Chico Xavier",
+  "author": "Meimei",
+  "year": 1977,
+  "chapters": 29
+ },
+ {
+  "slug": "Ael",
+  "title": "Amor e Luz",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel. — Testemunhos diversos",
+  "year": 1977,
+  "chapters": 34
+ },
+ {
+  "slug": "Aes",
+  "title": "Amor e saudade",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1985,
+  "chapters": 13
+ },
+ {
+  "slug": "Asa",
+  "title": "Amor sem adeus",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de Walter Perrone",
+  "year": 1978,
+  "chapters": 22
+ },
+ {
+  "slug": "Aof",
+  "title": "Ante o futuro",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1990,
+  "chapters": 9
+ },
+ {
+  "slug": "Al",
+  "title": "Antenas de Luz",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de Laurinho",
+  "year": 1983,
+  "chapters": 28
+ },
+ {
+  "slug": "Ae",
+  "title": "Antologia da Espiritualidade",
+  "pillar": "Chico Xavier",
+  "author": "Maria Dolores",
+  "year": 1971,
+  "chapters": 39
+ },
+ {
+  "slug": "Ani",
+  "title": "Antologia dos Imortais",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier. — Waldo Vieira",
+  "year": 1963,
+  "chapters": 116
+ },
+ {
+  "slug": "Amn",
+  "title": "Antologia mediúnica do Natal",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1967,
+  "chapters": 36
+ },
+ {
+  "slug": "Ape",
+  "title": "Apelos cristãos",
+  "pillar": "Chico Xavier",
+  "author": "Bezerra de Menezes",
+  "year": 1986,
+  "chapters": 19
+ },
+ {
+  "slug": "Apv",
+  "title": "Apostilas da Vida",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz",
+  "year": 1986,
+  "chapters": 23
+ },
+ {
+  "slug": "Opc08",
+  "title": "As palavras cantam",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier — Carlos Augusto",
+  "year": 1993,
+  "chapters": 1
+ },
+ {
+  "slug": "Adl",
+  "title": "Assembleia de Luz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1988,
+  "chapters": 34
+ },
+ {
+  "slug": "Asv",
+  "title": "Assim vencerás",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1978,
+  "chapters": 41
+ },
+ {
+  "slug": "Avm",
+  "title": "Assuntos da vida e da morte",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1991,
+  "chapters": 14
+ },
+ {
+  "slug": "Ada",
+  "title": "Astronautas do Além",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier. / J. Herculano Pires",
+  "year": 1973,
+  "chapters": 30
+ },
+ {
+  "slug": "Ao",
+  "title": "Atenção",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1981,
+  "chapters": 21
+ },
+ {
+  "slug": "Adt",
+  "title": "Através do Tempo",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1972,
+  "chapters": 51
+ },
+ {
+  "slug": "Auv",
+  "title": "Augusto vive",
+  "pillar": "Chico Xavier",
+  "author": "Augusto Cezar Netto",
+  "year": 1981,
+  "chapters": 25
+ },
+ {
+  "slug": "Adv",
+  "title": "Aulas da Vida",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1981,
+  "chapters": 33
+ },
+ {
+  "slug": "As",
+  "title": "Auta de Souza",
+  "pillar": "Chico Xavier",
+  "author": "A própria",
+  "year": 1976,
+  "chapters": 66
+ },
+ {
+  "slug": "Avc",
+  "title": "Ave, Cristo!",
+  "pillar": "Chico Xavier",
+  "author": "Romance de Emmanuel",
+  "year": 1953,
+  "chapters": 15
+ },
+ {
+  "slug": "Acc",
+  "title": "Ação e caminho",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1987,
+  "chapters": 32
+ },
+ {
+  "slug": "Aer",
+  "title": "Ação e reação",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz",
+  "year": 1957,
+  "chapters": 21
+ },
+ {
+  "slug": "Avl",
+  "title": "Ação, vida e luz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1991,
+  "chapters": 21
+ },
+ {
+  "slug": "Bda",
+  "title": "Bastão de arrimo",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de William Machado de Figueiredo",
+  "year": 1984,
+  "chapters": 32
+ },
+ {
+  "slug": "Bdv",
+  "title": "Bazar da Vida",
+  "pillar": "Chico Xavier",
+  "author": "Jair Presente",
+  "year": 1985,
+  "chapters": 21
+ },
+ {
+  "slug": "Bc",
+  "title": "Baú de casos",
+  "pillar": "Chico Xavier",
+  "author": "Cornélio Pires",
+  "year": 1977,
+  "chapters": 21
+ },
+ {
+  "slug": "Bcv",
+  "title": "Bezerra, Chico e você",
+  "pillar": "Chico Xavier",
+  "author": "Bezerra de Menezes",
+  "year": 1973,
+  "chapters": 63
+ },
+ {
+  "slug": "Bn",
+  "title": "Boa nova",
+  "pillar": "Chico Xavier",
+  "author": "Humberto de Campos",
+  "year": 1941,
+  "chapters": 31
+ },
+ {
+  "slug": "Bcm",
+  "title": "Brasil, coração do mundo, pátria do Evangelho",
+  "pillar": "Chico Xavier",
+  "author": null,
+  "year": 1934,
+  "chapters": 32
+ },
+ {
+  "slug": "Bnc",
+  "title": "Brilhantes no caminho",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2023,
+  "chapters": 21
+ },
+ {
+  "slug": "Bvl",
+  "title": "Brilhe vossa luz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / Carlos A. Baccelli",
+  "year": 1987,
+  "chapters": 25
+ },
+ {
+  "slug": "Ba",
+  "title": "Busca e acharás",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel / André Luiz",
+  "year": 1976,
+  "chapters": 50
+ },
+ {
+  "slug": "Bp",
+  "title": "Bênção de paz",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1971,
+  "chapters": 61
+ },
+ {
+  "slug": "Bea",
+  "title": "Bênçãos de amor",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1993,
+  "chapters": 21
+ },
+ {
+  "slug": "Cds",
+  "title": "Caderno de mensagens",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1964,
+  "chapters": 89
+ },
+ {
+  "slug": "Ca",
+  "title": "Calma",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1979,
+  "chapters": 32
+ },
+ {
+  "slug": "Ce",
+  "title": "Caminho espírita",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1967,
+  "chapters": 81
+ },
+ {
+  "slug": "Cvv",
+  "title": "Caminho, Verdade e Vida",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1949,
+  "chapters": 181
+ },
+ {
+  "slug": "Cos",
+  "title": "Caminhos",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1981,
+  "chapters": 24
+ },
+ {
+  "slug": "Caf",
+  "title": "Caminhos da fé",
+  "pillar": "Chico Xavier",
+  "author": "Cornélio Pires",
+  "year": 1997,
+  "chapters": 26
+ },
+ {
+  "slug": "Cvi",
+  "title": "Caminhos da vida",
+  "pillar": "Chico Xavier",
+  "author": "Cornélio Pires",
+  "year": 1997,
+  "chapters": 26
+ },
+ {
+  "slug": "Cdv",
+  "title": "Caminhos de volta",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1975,
+  "chapters": 41
+ },
+ {
+  "slug": "Cam",
+  "title": "Caminhos do amor",
+  "pillar": "Chico Xavier",
+  "author": "Maria Dolores",
+  "year": 1983,
+  "chapters": 33
+ },
+ {
+  "slug": "Cav",
+  "title": "Canais da vida",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1986,
+  "chapters": 21
+ },
+ {
+  "slug": "Caa",
+  "title": "Caravana de amor",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1985,
+  "chapters": 14
+ },
+ {
+  "slug": "Car",
+  "title": "Caridade",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1978,
+  "chapters": 41
+ },
+ {
+  "slug": "Cem",
+  "title": "Carmelo, ele mesmo",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de Carmelo Grisi",
+  "year": 1991,
+  "chapters": 17
+ },
+ {
+  "slug": "Cm",
+  "title": "Cartas de uma morta",
+  "pillar": "Chico Xavier",
+  "author": "Maria João de Deus",
+  "year": 1937,
+  "chapters": 19
+ },
+ {
+  "slug": "Cdo",
+  "title": "Cartas do Alto",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2017,
+  "chapters": 85
+ },
+ {
+  "slug": "Cc",
+  "title": "Cartas do Coração",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1952,
+  "chapters": 140
+ },
+ {
+  "slug": "Cde",
+  "title": "Cartas do Evangelho e outros poemas",
+  "pillar": "Chico Xavier",
+  "author": "Casimiro Cunha",
+  "year": 1940,
+  "chapters": 55
+ },
+ {
+  "slug": "Cec",
+  "title": "Cartas e crônicas",
+  "pillar": "Chico Xavier",
+  "author": "Irmão X",
+  "year": 1966,
+  "chapters": 41
+ },
+ {
+  "slug": "Cdn",
+  "title": "Cartilha da Natureza",
+  "pillar": "Chico Xavier",
+  "author": "Casimiro Cunha",
+  "year": 1944,
+  "chapters": 101
+ },
+ {
+  "slug": "Opc03",
+  "title": "Cartilha do bem",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier — Meimei",
+  "year": 1962,
+  "chapters": 1
+ },
+ {
+  "slug": "Cel",
+  "title": "Ceifa de Luz",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1980,
+  "chapters": 67
+ },
+ {
+  "slug": "Cmc",
+  "title": "Chico no Monte Carmelo",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2004,
+  "chapters": 29
+ },
+ {
+  "slug": "Cae",
+  "title": "Chico Xavier e suas mensagens no Anuário Espírita",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2017,
+  "chapters": 14
+ },
+ {
+  "slug": "Cg",
+  "title": "Chico Xavier em Goiânia",
+  "pillar": "Chico Xavier",
+  "author": "Entrevistas. — Emmanuel",
+  "year": 1978,
+  "chapters": 14
+ },
+ {
+  "slug": "Cxi",
+  "title": "Chico Xavier inédito",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / E. C. Monteiro",
+  "year": 2004,
+  "chapters": 21
+ },
+ {
+  "slug": "Cpl",
+  "title": "Chico Xavier pede licença",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / J. Herculano Pires",
+  "year": 1972,
+  "chapters": 42
+ },
+ {
+  "slug": "Cma",
+  "title": "Chico Xavier — Mandato de amor",
+  "pillar": "Chico Xavier",
+  "author": "Mandato de amor. — Autores diversos",
+  "year": 1992,
+  "chapters": 87
+ },
+ {
+  "slug": "Cxc",
+  "title": "Chico Xavier, 100 anos de amor",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2010,
+  "chapters": 32
+ },
+ {
+  "slug": "Cxa",
+  "title": "Chico Xavier, a aurora de uma vida entre o Céu e a Terra",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos subscritos por F. Xavier",
+  "year": 2012,
+  "chapters": 90
+ },
+ {
+  "slug": "Ccm",
+  "title": "Chico Xavier, coração missionário",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2009,
+  "chapters": 36
+ },
+ {
+  "slug": "Chm",
+  "title": "Chico Xavier, dos hippies aos problemas do mundo",
+  "pillar": "Chico Xavier",
+  "author": "Entrevistas. — Emmanuel",
+  "year": 1971,
+  "chapters": 35
+ },
+ {
+  "slug": "Cxe",
+  "title": "Chico Xavier, exemplo de amor",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2010,
+  "chapters": 22
+ },
+ {
+  "slug": "Cxr",
+  "title": "Chico Xavier, o referencial",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2010,
+  "chapters": 17
+ },
+ {
+  "slug": "Opl",
+  "title": "Chico Xavier: O Primeiro Livro",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2010,
+  "chapters": 100
+ },
+ {
+  "slug": "Cdf",
+  "title": "Chão de flores",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1975,
+  "chapters": 18
+ },
+ {
+  "slug": "Cad",
+  "title": "Cinquenta anos depois",
+  "pillar": "Chico Xavier",
+  "author": "Romance de Emmanuel",
+  "year": 1940,
+  "chapters": 15
+ },
+ {
+  "slug": "Cv",
+  "title": "Claramente vivos",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1979,
+  "chapters": 14
+ },
+ {
+  "slug": "Cdm",
+  "title": "Coisas deste mundo",
+  "pillar": "Chico Xavier",
+  "author": "Cornélio Pires",
+  "year": 1977,
+  "chapters": 3
+ },
+ {
+  "slug": "Cla",
+  "title": "Coletânea do Além",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1945,
+  "chapters": 72
+ },
+ {
+  "slug": "Cdb",
+  "title": "Colheita do bem",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares do Prof. Arthur Joviano, (Neio Lúcio) e outros",
+  "year": 2010,
+  "chapters": 129
+ },
+ {
+  "slug": "Cd",
+  "title": "Comandos do amor",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1988,
+  "chapters": 21
+ },
+ {
+  "slug": "Opc07",
+  "title": "Compaixão",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier — Emmanuel",
+  "year": 1993,
+  "chapters": 1
+ },
+ {
+  "slug": "Co",
+  "title": "Companheiro",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1977,
+  "chapters": 21
+ },
+ {
+  "slug": "Cs",
+  "title": "Confia e segue",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1984,
+  "chapters": 21
+ },
+ {
+  "slug": "Ces",
+  "title": "Confia e serve",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / Carlos A. Baccelli",
+  "year": 1989,
+  "chapters": 24
+ },
+ {
+  "slug": "Cdr",
+  "title": "Construção do amor",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1988,
+  "chapters": 21
+ },
+ {
+  "slug": "Cnt",
+  "title": "Continuidade",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1990,
+  "chapters": 10
+ },
+ {
+  "slug": "Cdd",
+  "title": "Contos desta e doutra vida",
+  "pillar": "Chico Xavier",
+  "author": "Irmão X",
+  "year": 1964,
+  "chapters": 41
+ },
+ {
+  "slug": "Cea",
+  "title": "Contos e apólogos",
+  "pillar": "Chico Xavier",
+  "author": "Irmão X",
+  "year": 1958,
+  "chapters": 41
+ },
+ {
+  "slug": "Cfe",
+  "title": "Conversa firme",
+  "pillar": "Chico Xavier",
+  "author": "Cornélio Pires",
+  "year": 1975,
+  "chapters": 21
+ },
+ {
+  "slug": "Cn",
+  "title": "Convivência",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1984,
+  "chapters": 21
+ },
+ {
+  "slug": "Crg",
+  "title": "Coragem",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1971,
+  "chapters": 51
+ },
+ {
+  "slug": "Cev",
+  "title": "Coração e vida",
+  "pillar": "Chico Xavier",
+  "author": "Maria Dolores",
+  "year": 1978,
+  "chapters": 38
+ },
+ {
+  "slug": "Cor",
+  "title": "Corações renovados",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1989,
+  "chapters": 10
+ },
+ {
+  "slug": "Cda",
+  "title": "Correio do Além",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1983,
+  "chapters": 13
+ },
+ {
+  "slug": "Cf",
+  "title": "Correio fraterno",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1970,
+  "chapters": 61
+ },
+ {
+  "slug": "Cra",
+  "title": "Crer e agir",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel / Irmão José. — F. C. Xavier / Carlos A. Baccelli",
+  "year": 1985,
+  "chapters": 32
+ },
+ {
+  "slug": "Cna",
+  "title": "Crianças no Além",
+  "pillar": "Chico Xavier",
+  "author": "Marcos",
+  "year": 1977,
+  "chapters": 6
+ },
+ {
+  "slug": "Cat",
+  "title": "Crônicas de Além-Túmulo",
+  "pillar": "Chico Xavier",
+  "author": "Humberto de Campos",
+  "year": 1937,
+  "chapters": 36
+ },
+ {
+  "slug": "Cr",
+  "title": "Cura",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1988,
+  "chapters": 27
+ },
+ {
+  "slug": "Ddv",
+  "title": "Degraus da Vida",
+  "pillar": "Chico Xavier",
+  "author": "Cornélio Pires",
+  "year": 1996,
+  "chapters": 26
+ },
+ {
+  "slug": "Ddt",
+  "title": "Depois da travessia",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos e Luiza Xavier",
+  "year": 2013,
+  "chapters": 98
+ },
+ {
+  "slug": "Dso",
+  "title": "Desobsessão",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz. — F. C. Xavier / Waldo Vieira",
+  "year": 1964,
+  "chapters": 75
+ },
+ {
+  "slug": "Dsa",
+  "title": "Deus aguarda",
+  "pillar": "Chico Xavier",
+  "author": "Meimei",
+  "year": 1980,
+  "chapters": 21
+ },
+ {
+  "slug": "Dco",
+  "title": "Deus conosco",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 2007,
+  "chapters": 414
+ },
+ {
+  "slug": "Ds",
+  "title": "Deus sempre",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1976,
+  "chapters": 24
+ },
+ {
+  "slug": "Di",
+  "title": "Dinheiro",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1986,
+  "chapters": 21
+ },
+ {
+  "slug": "Dv",
+  "title": "Diálogo dos vivos",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / J. Herculano Pires",
+  "year": 1974,
+  "chapters": 34
+ },
+ {
+  "slug": "Ddb",
+  "title": "Diário de bênçãos",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de Cristiane",
+  "year": 1983,
+  "chapters": 14
+ },
+ {
+  "slug": "Ddl",
+  "title": "Doutrina de Luz",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1990,
+  "chapters": 21
+ },
+ {
+  "slug": "Dea",
+  "title": "Doutrina e aplicação",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1989,
+  "chapters": 21
+ },
+ {
+  "slug": "Dev",
+  "title": "Doutrina e vida",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1987,
+  "chapters": 21
+ },
+ {
+  "slug": "Doe",
+  "title": "Doutrina-escola",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1996,
+  "chapters": 21
+ },
+ {
+  "slug": "Dar",
+  "title": "Dádivas de amor",
+  "pillar": "Chico Xavier",
+  "author": "Maria Dolores",
+  "year": 1986,
+  "chapters": 21
+ },
+ {
+  "slug": "De",
+  "title": "Dádivas espirituais",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1994,
+  "chapters": 16
+ },
+ {
+  "slug": "Evc",
+  "title": "E a vida continua…",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz",
+  "year": 1968,
+  "chapters": 28
+ },
+ {
+  "slug": "Edl",
+  "title": "Educandário de luz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1984,
+  "chapters": 4
+ },
+ {
+  "slug": "Opc11",
+  "title": "Elenco de familiares",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier — Familiares diversos",
+  "year": 1995,
+  "chapters": 1
+ },
+ {
+  "slug": "Evo",
+  "title": "Eles voltaram",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1981,
+  "chapters": 12
+ },
+ {
+  "slug": "Em",
+  "title": "Emmanuel",
+  "pillar": "Chico Xavier",
+  "author": "O próprio",
+  "year": 1937,
+  "chapters": 38
+ },
+ {
+  "slug": "Opc13",
+  "title": "Emmanuel responde",
+  "pillar": "Chico Xavier",
+  "author": null,
+  "year": 2010,
+  "chapters": 1
+ },
+ {
+  "slug": "Edp",
+  "title": "Encontro de paz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1973,
+  "chapters": 41
+ },
+ {
+  "slug": "Enm",
+  "title": "Encontro marcado",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1967,
+  "chapters": 61
+ },
+ {
+  "slug": "Ent",
+  "title": "Encontros no tempo",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1979,
+  "chapters": 26
+ },
+ {
+  "slug": "Ep",
+  "title": "Endereços da paz",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz",
+  "year": 1982,
+  "chapters": 33
+ },
+ {
+  "slug": "Eco",
+  "title": "Entender conversando",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1984,
+  "chapters": 22
+ },
+ {
+  "slug": "Eq",
+  "title": "Entes queridos",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1982,
+  "chapters": 16
+ },
+ {
+  "slug": "Etc",
+  "title": "Entre a Terra e o Céu",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz",
+  "year": 1954,
+  "chapters": 41
+ },
+ {
+  "slug": "Edv",
+  "title": "Entre duas vidas",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1974,
+  "chapters": 21
+ },
+ {
+  "slug": "Ei",
+  "title": "Entre irmãos de outras terras",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / Waldo Vieira",
+  "year": 1966,
+  "chapters": 44
+ },
+ {
+  "slug": "En",
+  "title": "Entrevistas",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1972,
+  "chapters": 11
+ },
+ {
+  "slug": "Enl",
+  "title": "Enxugando lágrimas",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1978,
+  "chapters": 22
+ },
+ {
+  "slug": "Ena",
+  "title": "Escola no Além",
+  "pillar": "Chico Xavier",
+  "author": "Cláudia Pinheiro Galasse",
+  "year": 1988,
+  "chapters": 15
+ },
+ {
+  "slug": "El",
+  "title": "Escrínio de luz",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1973,
+  "chapters": 57
+ },
+ {
+  "slug": "Eda",
+  "title": "Escultores de almas",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1988,
+  "chapters": 23
+ },
+ {
+  "slug": "Esp",
+  "title": "Espera servindo",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1985,
+  "chapters": 31
+ },
+ {
+  "slug": "Eea",
+  "title": "Esperança e alegria",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1987,
+  "chapters": 16
+ },
+ {
+  "slug": "Eel",
+  "title": "Esperança e luz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1993,
+  "chapters": 21
+ },
+ {
+  "slug": "Evi",
+  "title": "Esperança e vida",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / Carlos A. Baccelli",
+  "year": 1985,
+  "chapters": 24
+ },
+ {
+  "slug": "Ea",
+  "title": "Estamos no Além",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1983,
+  "chapters": 21
+ },
+ {
+  "slug": "Evs",
+  "title": "Estamos vivos",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1993,
+  "chapters": 17
+ },
+ {
+  "slug": "Esv",
+  "title": "Estante da vida",
+  "pillar": "Chico Xavier",
+  "author": "Irmão X",
+  "year": 1969,
+  "chapters": 42
+ },
+ {
+  "slug": "Eed",
+  "title": "Estradas e destinos",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1987,
+  "chapters": 24
+ },
+ {
+  "slug": "Enc",
+  "title": "Estrelas no chão",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1987,
+  "chapters": 33
+ },
+ {
+  "slug": "Eev",
+  "title": "Estude e viva",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel / André Luiz. — F. C. Xavier / Waldo Vieira",
+  "year": 1965,
+  "chapters": 82
+ },
+ {
+  "slug": "Eec",
+  "title": "Evangelho em casa",
+  "pillar": "Chico Xavier",
+  "author": "Meimei",
+  "year": 1960,
+  "chapters": 6
+ },
+ {
+  "slug": "Edm",
+  "title": "Evolução em dois mundos",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz. — F. C. Xavier / Waldo Vieira",
+  "year": 1959,
+  "chapters": 43
+ },
+ {
+  "slug": "Exp",
+  "title": "Excursão de paz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1990,
+  "chapters": 21
+ },
+ {
+  "slug": "Ft",
+  "title": "Falando à Terra",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1951,
+  "chapters": 42
+ },
+ {
+  "slug": "Fd",
+  "title": "Falou e disse",
+  "pillar": "Chico Xavier",
+  "author": "Augusto Cezar Netto",
+  "year": 1978,
+  "chapters": 22
+ },
+ {
+  "slug": "Fa",
+  "title": "Família",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1981,
+  "chapters": 34
+ },
+ {
+  "slug": "Fr",
+  "title": "Feliz regresso",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1981,
+  "chapters": 20
+ },
+ {
+  "slug": "Fdp",
+  "title": "Festa de paz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1986,
+  "chapters": 19
+ },
+ {
+  "slug": "Fiv",
+  "title": "Filhos voltando",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de J. R. P. da Silva e J. R. P. Cassiano",
+  "year": 1982,
+  "chapters": 3
+ },
+ {
+  "slug": "Ftp",
+  "title": "Fonte de paz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1987,
+  "chapters": 23
+ },
+ {
+  "slug": "Fv",
+  "title": "Fonte viva",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1956,
+  "chapters": 181
+ },
+ {
+  "slug": "Fdv",
+  "title": "Fotos da vida",
+  "pillar": "Chico Xavier",
+  "author": "Augusto Cezar",
+  "year": 1989,
+  "chapters": 19
+ },
+ {
+  "slug": "Fne",
+  "title": "Fulgor no entardecer",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1991,
+  "chapters": 18
+ },
+ {
+  "slug": "Fe",
+  "title": "Fé",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / Carlos A. Baccelli",
+  "year": 1984,
+  "chapters": 24
+ },
+ {
+  "slug": "Fev",
+  "title": "Fé e vida",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2014,
+  "chapters": 30
+ },
+ {
+  "slug": "Fpa",
+  "title": "Fé, paz e amor",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1989,
+  "chapters": 21
+ },
+ {
+  "slug": "Ga",
+  "title": "Gabriel",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de Gabriel Casemiro Espejo",
+  "year": 1982,
+  "chapters": 8
+ },
+ {
+  "slug": "Gae",
+  "title": "Gaveta de esperança",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de Laurinho",
+  "year": 1980,
+  "chapters": 33
+ },
+ {
+  "slug": "Gdl",
+  "title": "Gotas de luz",
+  "pillar": "Chico Xavier",
+  "author": "Casimiro Cunha",
+  "year": 1953,
+  "chapters": 42
+ },
+ {
+  "slug": "Gep",
+  "title": "Gratidão e paz",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1988,
+  "chapters": 25
+ },
+ {
+  "slug": "Hm",
+  "title": "Harmonização",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1990,
+  "chapters": 21
+ },
+ {
+  "slug": "Hdm",
+  "title": "História de Maricota",
+  "pillar": "Chico Xavier",
+  "author": "Casimiro Cunha",
+  "year": 1946,
+  "chapters": 16
+ },
+ {
+  "slug": "Hea",
+  "title": "Histórias e anotações",
+  "pillar": "Chico Xavier",
+  "author": "Irmão X",
+  "year": 1989,
+  "chapters": 21
+ },
+ {
+  "slug": "Ho",
+  "title": "Hoje",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1984,
+  "chapters": 21
+ },
+ {
+  "slug": "Hct",
+  "title": "Hora certa",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1987,
+  "chapters": 21
+ },
+ {
+  "slug": "Hl",
+  "title": "Horas de luz",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1984,
+  "chapters": 15
+ },
+ {
+  "slug": "Hna",
+  "title": "Humorismo no Além",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1983,
+  "chapters": 19
+ },
+ {
+  "slug": "Ha",
+  "title": "Há dois mil anos…",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1939,
+  "chapters": 21
+ },
+ {
+  "slug": "Ie",
+  "title": "Ideal espírita",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / Waldo Vieira",
+  "year": 1963,
+  "chapters": 102
+ },
+ {
+  "slug": "Ii",
+  "title": "Ideias e ilustrações",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1970,
+  "chapters": 41
+ },
+ {
+  "slug": "Opc10",
+  "title": "Indicações do caminho",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier — Carlos Augusto",
+  "year": 1994,
+  "chapters": 1
+ },
+ {
+  "slug": "In",
+  "title": "Indulgência",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1989,
+  "chapters": 21
+ },
+ {
+  "slug": "Isp",
+  "title": "Inspiração",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1978,
+  "chapters": 33
+ },
+ {
+  "slug": "Idt",
+  "title": "Instrumentos do tempo",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1974,
+  "chapters": 41
+ },
+ {
+  "slug": "Ips",
+  "title": "Instruções psicofônicas",
+  "pillar": "Chico Xavier",
+  "author": null,
+  "year": 1956,
+  "chapters": 71
+ },
+ {
+  "slug": "Idb",
+  "title": "Intercâmbio do bem",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1987,
+  "chapters": 17
+ },
+ {
+  "slug": "Iv",
+  "title": "Intervalos",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1981,
+  "chapters": 26
+ },
+ {
+  "slug": "Ivc",
+  "title": "Irmã Vera Cruz",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de Vera Cruz",
+  "year": 1980,
+  "chapters": 12
+ },
+ {
+  "slug": "Ir",
+  "title": "Irmão",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1980,
+  "chapters": 21
+ },
+ {
+  "slug": "Iu",
+  "title": "Irmãos unidos",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1988,
+  "chapters": 21
+ },
+ {
+  "slug": "Jpv",
+  "title": "Janela para a vida",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1979,
+  "chapters": 24
+ },
+ {
+  "slug": "Jdi",
+  "title": "Jardim da infância",
+  "pillar": "Chico Xavier",
+  "author": "João de Deus",
+  "year": 1963,
+  "chapters": 26
+ },
+ {
+  "slug": "Jen",
+  "title": "Jesus em nós",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel. — Entrevistas",
+  "year": 1987,
+  "chapters": 12
+ },
+ {
+  "slug": "Jnl",
+  "title": "Jesus no lar",
+  "pillar": "Chico Xavier",
+  "author": "Neio Lúcio",
+  "year": 1950,
+  "chapters": 51
+ },
+ {
+  "slug": "Ji",
+  "title": "Joia",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1985,
+  "chapters": 21
+ },
+ {
+  "slug": "Jna",
+  "title": "Jovens no Além",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1975,
+  "chapters": 28
+ },
+ {
+  "slug": "Opc02",
+  "title": "Juca Lambisca",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier/Waldo Vieira — Casimiro Cunha",
+  "year": 1961,
+  "chapters": 1
+ },
+ {
+  "slug": "Jv",
+  "title": "Juntos venceremos",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier. / Carlos A. Baccelli",
+  "year": 1985,
+  "chapters": 24
+ },
+ {
+  "slug": "Jdn",
+  "title": "Justiça divina",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1962,
+  "chapters": 83
+ },
+ {
+  "slug": "Lar",
+  "title": "Lar-oficina, esperança e trabalho",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1988,
+  "chapters": 15
+ },
+ {
+  "slug": "Lea",
+  "title": "Lealdade",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de Maurício G. Henrique",
+  "year": 1982,
+  "chapters": 13
+ },
+ {
+  "slug": "Lda",
+  "title": "Leis de amor",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel. — F. C. Xavier / Waldo Vieira",
+  "year": 1963,
+  "chapters": 9
+ },
+ {
+  "slug": "Les",
+  "title": "Levantar e seguir",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1992,
+  "chapters": 21
+ },
+ {
+  "slug": "Lib",
+  "title": "Libertação",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz",
+  "year": 1949,
+  "chapters": 21
+ },
+ {
+  "slug": "Ld",
+  "title": "Linha duzentos",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1981,
+  "chapters": 21
+ },
+ {
+  "slug": "Li",
+  "title": "Lira imortal",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1939,
+  "chapters": 62
+ },
+ {
+  "slug": "Le",
+  "title": "Livro da Esperança",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1964,
+  "chapters": 92
+ },
+ {
+  "slug": "Ldr",
+  "title": "Livro de respostas",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1980,
+  "chapters": 51
+ },
+ {
+  "slug": "Loa",
+  "title": "Loja de alegria",
+  "pillar": "Chico Xavier",
+  "author": "Jair Presente",
+  "year": 1985,
+  "chapters": 31
+ },
+ {
+  "slug": "La",
+  "title": "Luz acima",
+  "pillar": "Chico Xavier",
+  "author": "Irmão X",
+  "year": 1948,
+  "chapters": 51
+ },
+ {
+  "slug": "Lb",
+  "title": "Luz bendita",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel. — Depoimentos diversos",
+  "year": 1977,
+  "chapters": 104
+ },
+ {
+  "slug": "Luv",
+  "title": "Luz e vida",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1986,
+  "chapters": 21
+ },
+ {
+  "slug": "Lne",
+  "title": "Luz na Escola",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2010,
+  "chapters": 31
+ },
+ {
+  "slug": "Lnc",
+  "title": "Luz no caminho",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1992,
+  "chapters": 21
+ },
+ {
+  "slug": "Lnl",
+  "title": "Luz no lar",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1968,
+  "chapters": 66
+ },
+ {
+  "slug": "Lr",
+  "title": "Lázaro redivivo",
+  "pillar": "Chico Xavier",
+  "author": "Irmão X",
+  "year": 1946,
+  "chapters": 51
+ },
+ {
+  "slug": "Mlz",
+  "title": "Mais luz",
+  "pillar": "Chico Xavier",
+  "author": "Batuíra",
+  "year": 1970,
+  "chapters": 105
+ },
+ {
+  "slug": "Mpo",
+  "title": "Mais perto",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1983,
+  "chapters": 29
+ },
+ {
+  "slug": "Mv",
+  "title": "Mais vida",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / Euríclides Formiga",
+  "year": 1982,
+  "chapters": 20
+ },
+ {
+  "slug": "Mdc",
+  "title": "Marcas do caminho",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1979,
+  "chapters": 41
+ },
+ {
+  "slug": "Md",
+  "title": "Maria Dolores",
+  "pillar": "Chico Xavier",
+  "author": "A própria",
+  "year": 1977,
+  "chapters": 41
+ },
+ {
+  "slug": "Mac",
+  "title": "Material de construção",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1982,
+  "chapters": 51
+ },
+ {
+  "slug": "Mdm",
+  "title": "Mecanismos da mediunidade",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz. — F. C. Xavier / Waldo Vieira",
+  "year": 1960,
+  "chapters": 29
+ },
+ {
+  "slug": "Ms",
+  "title": "Mediunidade e sintonia",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1986,
+  "chapters": 21
+ },
+ {
+  "slug": "Mpm",
+  "title": "Mensagem do pequeno morto",
+  "pillar": "Chico Xavier",
+  "author": "Carlos por Neio Lúcio",
+  "year": 1997,
+  "chapters": 21
+ },
+ {
+  "slug": "Mic",
+  "title": "Mensagens de Inês de Castro",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier / Caio Ramacciotti. / Inês de Castro",
+  "year": 2019,
+  "chapters": 41
+ },
+ {
+  "slug": "Mqc",
+  "title": "Mensagens que confortam",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de Ricardo Tadeu",
+  "year": 1983,
+  "chapters": 51
+ },
+ {
+  "slug": "Mes",
+  "title": "Mentores e seareiros",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1992,
+  "chapters": 21
+ },
+ {
+  "slug": "Mi",
+  "title": "Migalha",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1993,
+  "chapters": 21
+ },
+ {
+  "slug": "Mna",
+  "title": "Militares no Além",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2008,
+  "chapters": 44
+ },
+ {
+  "slug": "Mdl",
+  "title": "Missionários da Luz",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz",
+  "year": 1945,
+  "chapters": 21
+ },
+ {
+  "slug": "Mis",
+  "title": "Missão cumprida…",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2004,
+  "chapters": 15
+ },
+ {
+  "slug": "Mdo",
+  "title": "Momentos de ouro",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1977,
+  "chapters": 33
+ },
+ {
+  "slug": "Mp",
+  "title": "Momentos de paz",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1980,
+  "chapters": 24
+ },
+ {
+  "slug": "Ma",
+  "title": "Monte acima",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1985,
+  "chapters": 21
+ },
+ {
+  "slug": "Mlu",
+  "title": "Moradias de Luz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1990,
+  "chapters": 21
+ },
+ {
+  "slug": "Me",
+  "title": "Mãe",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1971,
+  "chapters": 9
+ },
+ {
+  "slug": "Mms",
+  "title": "Mãos marcadas",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1973,
+  "chapters": 42
+ },
+ {
+  "slug": "Mu",
+  "title": "Mãos unidas",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1972,
+  "chapters": 51
+ },
+ {
+  "slug": "Nee",
+  "title": "Na era do Espírito",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / J. Herculano Pires",
+  "year": 1973,
+  "chapters": 30
+ },
+ {
+  "slug": "Nht",
+  "title": "Na hora do testemunho",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / J. Herculano Pires",
+  "year": 1978,
+  "chapters": 21
+ },
+ {
+  "slug": "Ner",
+  "title": "Nascer e renascer",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1985,
+  "chapters": 24
+ },
+ {
+  "slug": "Opc05",
+  "title": "Natal de Sabina",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier — Francisca Clotilde",
+  "year": 1973,
+  "chapters": 1
+ },
+ {
+  "slug": "Ni",
+  "title": "Neste instante",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 2000,
+  "chapters": 21
+ },
+ {
+  "slug": "Nim",
+  "title": "Ninguém morre",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1983,
+  "chapters": 13
+ },
+ {
+  "slug": "Nmc",
+  "title": "No mundo de Chico Xavier",
+  "pillar": "Chico Xavier",
+  "author": "Entrevistas. — F. C. Xavier/Elias Barbosa",
+  "year": 1968,
+  "chapters": 19
+ },
+ {
+  "slug": "Nmm",
+  "title": "No Mundo Maior",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz",
+  "year": 1947,
+  "chapters": 21
+ },
+ {
+  "slug": "Npl",
+  "title": "No portal da Luz",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1967,
+  "chapters": 23
+ },
+ {
+  "slug": "Ndm",
+  "title": "Nos domínios da mediunidade",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz",
+  "year": 1955,
+  "chapters": 31
+ },
+ {
+  "slug": "Nl",
+  "title": "Nosso Lar",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz",
+  "year": 1944,
+  "chapters": 52
+ },
+ {
+  "slug": "Nli",
+  "title": "Nosso livro",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1950,
+  "chapters": 82
+ },
+ {
+  "slug": "Nr",
+  "title": "Notáveis reportagens com Chico Xavier",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2002,
+  "chapters": 46
+ },
+ {
+  "slug": "Nda",
+  "title": "Notícias do Além",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / Euríclides Formiga",
+  "year": 1980,
+  "chapters": 20
+ },
+ {
+  "slug": "Nec",
+  "title": "Novamente em casa",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1984,
+  "chapters": 18
+ },
+ {
+  "slug": "Nms",
+  "title": "Novas mensagens",
+  "pillar": "Chico Xavier",
+  "author": "Humberto de Campos",
+  "year": 1940,
+  "chapters": 15
+ },
+ {
+  "slug": "Nmo",
+  "title": "Novo mundo",
+  "pillar": "Chico Xavier",
+  "author": "Entrevistas. — Emmanuel",
+  "year": 1991,
+  "chapters": 15
+ },
+ {
+  "slug": "Nh",
+  "title": "Novos horizontes",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1996,
+  "chapters": 17
+ },
+ {
+  "slug": "Ns",
+  "title": "Nós",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1985,
+  "chapters": 21
+ },
+ {
+  "slug": "Oco",
+  "title": "O caminho oculto",
+  "pillar": "Chico Xavier",
+  "author": "Veneranda",
+  "year": 1946,
+  "chapters": 21
+ },
+ {
+  "slug": "Ocs",
+  "title": "O Consolador",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1941,
+  "chapters": 43
+ },
+ {
+  "slug": "Oer",
+  "title": "O esperanto como revelação",
+  "pillar": "Chico Xavier",
+  "author": "Francisco V. Lorenz",
+  "year": 1976,
+  "chapters": 11
+ },
+ {
+  "slug": "Oev",
+  "title": "O Espírito da Verdade",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / Waldo Vieira",
+  "year": 1962,
+  "chapters": 105
+ },
+ {
+  "slug": "Oec",
+  "title": "O Espírito de Cornélio Pires",
+  "pillar": "Chico Xavier",
+  "author": "Cornélio Pires. — F. C. Xavier / Waldo Vieira",
+  "year": 1965,
+  "chapters": 22
+ },
+ {
+  "slug": "Oel",
+  "title": "O essencial",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1986,
+  "chapters": 31
+ },
+ {
+  "slug": "Ecx",
+  "title": "O Evangelho de Chico Xavier",
+  "pillar": "Chico Xavier",
+  "author": "O próprio. (Encarnado.)",
+  "year": 2000,
+  "chapters": 299
+ },
+ {
+  "slug": "Oee1",
+  "title": "O Evangelho por Emmanuel",
+  "pillar": "Chico Xavier",
+  "author": "Volume I",
+  "year": 2014,
+  "chapters": 33
+ },
+ {
+  "slug": "Oee2",
+  "title": "O Evangelho por Emmanuel",
+  "pillar": "Chico Xavier",
+  "author": "Volume II",
+  "year": 2014,
+  "chapters": 7
+ },
+ {
+  "slug": "Oee3",
+  "title": "O Evangelho por Emmanuel",
+  "pillar": "Chico Xavier",
+  "author": "Volume III",
+  "year": 2015,
+  "chapters": 10
+ },
+ {
+  "slug": "Oee4",
+  "title": "O Evangelho por Emmanuel",
+  "pillar": "Chico Xavier",
+  "author": "Volume IV",
+  "year": 2015,
+  "chapters": 14
+ },
+ {
+  "slug": "Oee5",
+  "title": "O Evangelho por Emmanuel",
+  "pillar": "Chico Xavier",
+  "author": "Volume V",
+  "year": 2016,
+  "chapters": 100
+ },
+ {
+  "slug": "Oee6",
+  "title": "O Evangelho por Emmanuel",
+  "pillar": "Chico Xavier",
+  "author": "Volume VI",
+  "year": 2017,
+  "chapters": 18
+ },
+ {
+  "slug": "Oee7",
+  "title": "O Evangelho por Emmanuel",
+  "pillar": "Chico Xavier",
+  "author": "Volume VII",
+  "year": 2002,
+  "chapters": 11
+ },
+ {
+  "slug": "Ove",
+  "title": "Obreiros da Vida Eterna",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz",
+  "year": 1946,
+  "chapters": 21
+ },
+ {
+  "slug": "Opc12",
+  "title": "Oferta de amigo",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier — Cornélio Pires",
+  "year": 1996,
+  "chapters": 1
+ },
+ {
+  "slug": "Oe",
+  "title": "Opinião espírita",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel / André Luiz. — F. C. Xavier / Waldo Vieira",
+  "year": 1963,
+  "chapters": 62
+ },
+ {
+  "slug": "Opc",
+  "title": "OPÚSCULOS",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1987,
+  "chapters": 13
+ },
+ {
+  "slug": "Ol",
+  "title": "Orvalho de Luz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1969,
+  "chapters": 40
+ },
+ {
+  "slug": "Odm",
+  "title": "Os dois maiores amores",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1983,
+  "chapters": 33
+ },
+ {
+  "slug": "Fgr",
+  "title": "Os filhos do Grande Rei",
+  "pillar": "Chico Xavier",
+  "author": "Veneranda",
+  "year": 1946,
+  "chapters": 21
+ },
+ {
+  "slug": "Om",
+  "title": "Os mensageiros",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz",
+  "year": 1944,
+  "chapters": 52
+ },
+ {
+  "slug": "Pac",
+  "title": "Paciência",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1983,
+  "chapters": 21
+ },
+ {
+  "slug": "Pno",
+  "title": "Pai nosso",
+  "pillar": "Chico Xavier",
+  "author": "Meimei",
+  "year": 1952,
+  "chapters": 9
+ },
+ {
+  "slug": "Psc",
+  "title": "Palavras da coragem",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / Carlos A. Baccelli",
+  "year": 1987,
+  "chapters": 24
+ },
+ {
+  "slug": "Plc",
+  "title": "Palavras de Chico Xavier",
+  "pillar": "Chico Xavier",
+  "author": "O próprio. (Encarnado)",
+  "year": 1995,
+  "chapters": 31
+ },
+ {
+  "slug": "Pve",
+  "title": "Palavras de Vida Eterna",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1964,
+  "chapters": 181
+ },
+ {
+  "slug": "Pc",
+  "title": "Palavras do Coração",
+  "pillar": "Chico Xavier",
+  "author": "Meimei",
+  "year": 1982,
+  "chapters": 30
+ },
+ {
+  "slug": "Pi",
+  "title": "Palavras do Infinito",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1966,
+  "chapters": 40
+ },
+ {
+  "slug": "Psu",
+  "title": "Palavras sublimes",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2014,
+  "chapters": 78
+ },
+ {
+  "slug": "Pco",
+  "title": "Palco iluminado",
+  "pillar": "Chico Xavier",
+  "author": "Jair Presente",
+  "year": 1988,
+  "chapters": 23
+ },
+ {
+  "slug": "Opc01",
+  "title": "Palpitante entrevista com o outro mundo",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier / Isaltino da Silveira Filho — Emmanuel",
+  "year": 1987,
+  "chapters": 1
+ },
+ {
+  "slug": "Pat",
+  "title": "Parnaso de Além-Túmulo",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1955,
+  "chapters": 58
+ },
+ {
+  "slug": "Pdv",
+  "title": "Passos da vida",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1969,
+  "chapters": 41
+ },
+ {
+  "slug": "Pe",
+  "title": "Paulo e Estêvão",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1942,
+  "chapters": 21
+ },
+ {
+  "slug": "Pz",
+  "title": "Paz",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1983,
+  "chapters": 21
+ },
+ {
+  "slug": "Pea",
+  "title": "Paz e alegria",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1981,
+  "chapters": 24
+ },
+ {
+  "slug": "Pza",
+  "title": "Paz e amor",
+  "pillar": "Chico Xavier",
+  "author": "Cornélio Pires",
+  "year": 1996,
+  "chapters": 28
+ },
+ {
+  "slug": "Pzl",
+  "title": "Paz e libertação",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1996,
+  "chapters": 21
+ },
+ {
+  "slug": "Per",
+  "title": "Paz e renovação",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1970,
+  "chapters": 51
+ },
+ {
+  "slug": "Pev",
+  "title": "Pedaços da Vida",
+  "pillar": "Chico Xavier",
+  "author": "Cornélio Pires",
+  "year": 1996,
+  "chapters": 26
+ },
+ {
+  "slug": "Pnv",
+  "title": "Pensamento e vida",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1958,
+  "chapters": 31
+ },
+ {
+  "slug": "Pj",
+  "title": "Perante Jesus",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1990,
+  "chapters": 21
+ },
+ {
+  "slug": "Pf",
+  "title": "Pinga-fogo",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel. — Entrevistas",
+  "year": 1984,
+  "chapters": 20
+ },
+ {
+  "slug": "Opc09",
+  "title": "Pingo de luz",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier — Carlos Augusto",
+  "year": 1994,
+  "chapters": 1
+ },
+ {
+  "slug": "Pp",
+  "title": "Plantão da paz",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1988,
+  "chapters": 21
+ },
+ {
+  "slug": "Pdr",
+  "title": "Plantão de respostas",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel. — Entrevistas",
+  "year": 1995,
+  "chapters": 41
+ },
+ {
+  "slug": "Pr",
+  "title": "Poetas redivivos",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1969,
+  "chapters": 117
+ },
+ {
+  "slug": "Pde",
+  "title": "Ponto de encontro",
+  "pillar": "Chico Xavier",
+  "author": "Jair Presente",
+  "year": 1986,
+  "chapters": 21
+ },
+ {
+  "slug": "Pec",
+  "title": "Pontos e contos",
+  "pillar": "Chico Xavier",
+  "author": "Irmão X",
+  "year": 1951,
+  "chapters": 51
+ },
+ {
+  "slug": "Pa",
+  "title": "Porto de alegria",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1990,
+  "chapters": 17
+ },
+ {
+  "slug": "Pda",
+  "title": "Praça da amizade",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1982,
+  "chapters": 16
+ },
+ {
+  "slug": "Pre",
+  "title": "Preito de amor",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1993,
+  "chapters": 29
+ },
+ {
+  "slug": "Pcx",
+  "title": "Presença de Chico Xavier",
+  "pillar": "Chico Xavier",
+  "author": "Depoimentos diversos / Mensagens familiares",
+  "year": 1983,
+  "chapters": 42
+ },
+ {
+  "slug": "Pl",
+  "title": "Presença de luz",
+  "pillar": "Chico Xavier",
+  "author": "Augusto Cezar",
+  "year": 1984,
+  "chapters": 20
+ },
+ {
+  "slug": "Ps",
+  "title": "Pronto Socorro",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1980,
+  "chapters": 41
+ },
+ {
+  "slug": "Pdf",
+  "title": "Páginas de fé",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / Carlos A. Baccelli",
+  "year": 1988,
+  "chapters": 25
+ },
+ {
+  "slug": "Pg",
+  "title": "Páginas de gratidão",
+  "pillar": "Chico Xavier",
+  "author": null,
+  "year": 2020,
+  "chapters": 7
+ },
+ {
+  "slug": "Pdc",
+  "title": "Páginas do Coração",
+  "pillar": "Chico Xavier",
+  "author": "Cartas de Irmã Candoca a Ricardo",
+  "year": 1951,
+  "chapters": 12
+ },
+ {
+  "slug": "Ph",
+  "title": "Pássaros humanos",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1993,
+  "chapters": 20
+ },
+ {
+  "slug": "Pn",
+  "title": "Pão nosso",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1950,
+  "chapters": 181
+ },
+ {
+  "slug": "Pdp",
+  "title": "Pétalas da primavera",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1990,
+  "chapters": 18
+ },
+ {
+  "slug": "Pvi",
+  "title": "Pétalas da Vida",
+  "pillar": "Chico Xavier",
+  "author": "Cornélio Pires",
+  "year": 1997,
+  "chapters": 26
+ },
+ {
+  "slug": "Qv",
+  "title": "Quando se pretende falar da Vida",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de Roberto Muszkat",
+  "year": 1984,
+  "chapters": 26
+ },
+ {
+  "slug": "Qa",
+  "title": "Queda e ascensão da casa dos benefícios",
+  "pillar": "Chico Xavier",
+  "author": "Bezerra de Menezes",
+  "year": 1991,
+  "chapters": 27
+ },
+ {
+  "slug": "Qs",
+  "title": "Quem são",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1982,
+  "chapters": 12
+ },
+ {
+  "slug": "Rp",
+  "title": "Rapidinho",
+  "pillar": "Chico Xavier",
+  "author": "Jair Presente",
+  "year": 1989,
+  "chapters": 33
+ },
+ {
+  "slug": "Rte",
+  "title": "Realmente…",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2005,
+  "chapters": 24
+ },
+ {
+  "slug": "Rva",
+  "title": "Recados da vida",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1983,
+  "chapters": 33
+ },
+ {
+  "slug": "Rda",
+  "title": "Recados do Além",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1978,
+  "chapters": 51
+ },
+ {
+  "slug": "Rdp",
+  "title": "Recanto de paz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1976,
+  "chapters": 29
+ },
+ {
+  "slug": "Rct",
+  "title": "Reconforto",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1986,
+  "chapters": 21
+ },
+ {
+  "slug": "Ree",
+  "title": "Reencontros",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1982,
+  "chapters": 11
+ },
+ {
+  "slug": "Rf",
+  "title": "Refúgio",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1989,
+  "chapters": 23
+ },
+ {
+  "slug": "Ri",
+  "title": "Registros imortais",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier e outros médiuns do Grupo Meimei. — Autores diversos",
+  "year": 2013,
+  "chapters": 96
+ },
+ {
+  "slug": "Rlv",
+  "title": "Relatos da vida",
+  "pillar": "Chico Xavier",
+  "author": "Irmão X",
+  "year": 1988,
+  "chapters": 21
+ },
+ {
+  "slug": "Rl",
+  "title": "Relicário de luz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1962,
+  "chapters": 120
+ },
+ {
+  "slug": "Rde",
+  "title": "Religião dos Espíritos",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1960,
+  "chapters": 92
+ },
+ {
+  "slug": "Res",
+  "title": "Renascimento espiritual",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1993,
+  "chapters": 15
+ },
+ {
+  "slug": "Rna",
+  "title": "Renúncia",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1943,
+  "chapters": 15
+ },
+ {
+  "slug": "Rat",
+  "title": "Reportagens de Além-túmulo",
+  "pillar": "Chico Xavier",
+  "author": "Humberto de Campos",
+  "year": 1943,
+  "chapters": 36
+ },
+ {
+  "slug": "Rea",
+  "title": "Resgate e amor",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de Tiaminho",
+  "year": 1986,
+  "chapters": 14
+ },
+ {
+  "slug": "Rdv",
+  "title": "Respostas da vida",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz",
+  "year": 1975,
+  "chapters": 41
+ },
+ {
+  "slug": "Rtc",
+  "title": "Retornaram contando",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1984,
+  "chapters": 15
+ },
+ {
+  "slug": "Rv",
+  "title": "Retratos da vida",
+  "pillar": "Chico Xavier",
+  "author": "Cornélio Pires",
+  "year": 1974,
+  "chapters": 21
+ },
+ {
+  "slug": "Rev",
+  "title": "Revelação",
+  "pillar": "Chico Xavier",
+  "author": "Jair Presente",
+  "year": 1992,
+  "chapters": 16
+ },
+ {
+  "slug": "Rol",
+  "title": "Rolando, uma vida de renúncia e trabalho",
+  "pillar": "Chico Xavier",
+  "author": "Rolando Ramacciotti",
+  "year": 2013,
+  "chapters": 16
+ },
+ {
+  "slug": "Rca",
+  "title": "Rosas com amor",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1977,
+  "chapters": 26
+ },
+ {
+  "slug": "Rdl",
+  "title": "Roseiral de luz",
+  "pillar": "Chico Xavier",
+  "author": "Trovadores diversos",
+  "year": 1988,
+  "chapters": 19
+ },
+ {
+  "slug": "Rot",
+  "title": "Roteiro",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1952,
+  "chapters": 41
+ },
+ {
+  "slug": "Rmc",
+  "title": "Rumo certo",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1971,
+  "chapters": 61
+ },
+ {
+  "slug": "Ruv",
+  "title": "Rumos da vida",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1981,
+  "chapters": 19
+ },
+ {
+  "slug": "Sdn",
+  "title": "Saudação do Natal",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1995,
+  "chapters": 21
+ },
+ {
+  "slug": "Sdf",
+  "title": "Seara de fé",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1990,
+  "chapters": 29
+ },
+ {
+  "slug": "Sdm",
+  "title": "Seara dos médiuns",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1961,
+  "chapters": 91
+ },
+ {
+  "slug": "Sg",
+  "title": "Segue-me",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1973,
+  "chapters": 84
+ },
+ {
+  "slug": "Sj",
+  "title": "Seguindo juntos",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1982,
+  "chapters": 33
+ },
+ {
+  "slug": "Stn",
+  "title": "Semeador em tempos novos",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1989,
+  "chapters": 23
+ },
+ {
+  "slug": "Slz",
+  "title": "Sementeira de luz",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares do Prof. Arthur Joviano, (Neio Lúcio) e outros",
+  "year": 2006,
+  "chapters": 226
+ },
+ {
+  "slug": "Sdp",
+  "title": "Sementeira de paz",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares do Prof. Arthur Joviano, (Neio Lúcio) e outros",
+  "year": 2010,
+  "chapters": 117
+ },
+ {
+  "slug": "Sdl",
+  "title": "Sementes de luz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / Carlos A. Baccelli",
+  "year": 1986,
+  "chapters": 18
+ },
+ {
+  "slug": "Spd",
+  "title": "Senda para Deus",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1997,
+  "chapters": 31
+ },
+ {
+  "slug": "Sda",
+  "title": "Sentinelas da alma",
+  "pillar": "Chico Xavier",
+  "author": "Meimei",
+  "year": 1982,
+  "chapters": 28
+ },
+ {
+  "slug": "Sel",
+  "title": "Sentinelas da luz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1990,
+  "chapters": 21
+ },
+ {
+  "slug": "Sna",
+  "title": "Servidores no Além",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1989,
+  "chapters": 24
+ },
+ {
+  "slug": "Sd",
+  "title": "Sexo e destino",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz. — F. C. Xavier/Waldo Vieira",
+  "year": 1963,
+  "chapters": 30
+ },
+ {
+  "slug": "Sdr",
+  "title": "Sinais de rumo",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1979,
+  "chapters": 39
+ },
+ {
+  "slug": "Sv",
+  "title": "Sinal verde",
+  "pillar": "Chico Xavier",
+  "author": "André Luiz",
+  "year": 1971,
+  "chapters": 51
+ },
+ {
+  "slug": "Sa",
+  "title": "Somente amor",
+  "pillar": "Chico Xavier",
+  "author": "Maria Dolores / Meimei",
+  "year": 1978,
+  "chapters": 33
+ },
+ {
+  "slug": "Ss",
+  "title": "Somos seis",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1976,
+  "chapters": 9
+ },
+ {
+  "slug": "Sp",
+  "title": "Sorrir e pensar",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1984,
+  "chapters": 17
+ },
+ {
+  "slug": "Tl",
+  "title": "Taça de luz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1972,
+  "chapters": 51
+ },
+ {
+  "slug": "Tdv",
+  "title": "Temas da vida",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1987,
+  "chapters": 21
+ },
+ {
+  "slug": "Tdl",
+  "title": "Tempo de luz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1978,
+  "chapters": 28
+ },
+ {
+  "slug": "Tea",
+  "title": "Tempo e amor",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier/Clóvis Tavares",
+  "year": 1984,
+  "chapters": 19
+ },
+ {
+  "slug": "Tba",
+  "title": "Tende bom ânimo",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / Carlos A. Baccelli",
+  "year": 1987,
+  "chapters": 25
+ },
+ {
+  "slug": "Ta",
+  "title": "Tesouro de alegria",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1993,
+  "chapters": 22
+ },
+ {
+  "slug": "Opc04",
+  "title": "Timbolão",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier/Waldo Vieira — Casimiro Cunha",
+  "year": 1962,
+  "chapters": 1
+ },
+ {
+  "slug": "Opc06",
+  "title": "Tintino… O espetáculo continua",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier — Francisca Clotilde",
+  "year": 1987,
+  "chapters": 1
+ },
+ {
+  "slug": "Tb",
+  "title": "Tocando o barco",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1984,
+  "chapters": 28
+ },
+ {
+  "slug": "Tv",
+  "title": "Toques da vida",
+  "pillar": "Chico Xavier",
+  "author": "Cornélio Pires",
+  "year": 1996,
+  "chapters": 26
+ },
+ {
+  "slug": "Tdi",
+  "title": "Trevo de ideias",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1987,
+  "chapters": 21
+ },
+ {
+  "slug": "Tlh",
+  "title": "Trilha de luz",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1990,
+  "chapters": 21
+ },
+ {
+  "slug": "Tda",
+  "title": "Trovadores do Além",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier / Waldo Vieira / Elias Barbosa",
+  "year": 1965,
+  "chapters": 3
+ },
+ {
+  "slug": "Trv",
+  "title": "Trovas da Vida",
+  "pillar": "Chico Xavier",
+  "author": "Cornélio Pires",
+  "year": 1999,
+  "chapters": 23
+ },
+ {
+  "slug": "Tdc",
+  "title": "Trovas do coração",
+  "pillar": "Chico Xavier",
+  "author": "Cornélio Pires",
+  "year": 1996,
+  "chapters": 26
+ },
+ {
+  "slug": "Tma",
+  "title": "Trovas do Mais-Além",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1971,
+  "chapters": 41
+ },
+ {
+  "slug": "Tom",
+  "title": "Trovas do Outro Mundo",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1968,
+  "chapters": 63
+ },
+ {
+  "slug": "Tvt",
+  "title": "Tudo virá a seu tempo",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de Elcio Tumenas",
+  "year": 2003,
+  "chapters": 27
+ },
+ {
+  "slug": "Tf",
+  "title": "Tão fácil",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1985,
+  "chapters": 18
+ },
+ {
+  "slug": "Uvc",
+  "title": "Uma vida de amor e caridade",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos. — F. C. Xavier/Izabel Bueno",
+  "year": 1992,
+  "chapters": 65
+ },
+ {
+  "slug": "Uej",
+  "title": "União em Jesus",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1994,
+  "chapters": 21
+ },
+ {
+  "slug": "Ur",
+  "title": "Urgência",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1980,
+  "chapters": 27
+ },
+ {
+  "slug": "Ven",
+  "title": "Venceram",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1983,
+  "chapters": 7
+ },
+ {
+  "slug": "Vea",
+  "title": "Verdade e amor",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 2015,
+  "chapters": 35
+ },
+ {
+  "slug": "Vlu",
+  "title": "Vereda de luz",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1990,
+  "chapters": 21
+ },
+ {
+  "slug": "Vsa",
+  "title": "Viagem sem adeus",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de Cláudio Rogério A. Nascimento",
+  "year": 1999,
+  "chapters": 25
+ },
+ {
+  "slug": "Vmc",
+  "title": "Viajaram mais cedo",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1985,
+  "chapters": 14
+ },
+ {
+  "slug": "Vr",
+  "title": "Viajor",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1985,
+  "chapters": 19
+ },
+ {
+  "slug": "Vdl",
+  "title": "Viajores da Luz",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1981,
+  "chapters": 7
+ },
+ {
+  "slug": "Vav",
+  "title": "Vida além da vida",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens familiares de Lineu de Paula Leão Jr",
+  "year": 1988,
+  "chapters": 13
+ },
+ {
+  "slug": "Vec",
+  "title": "Vida e caminho",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1994,
+  "chapters": 21
+ },
+ {
+  "slug": "Ves",
+  "title": "Vida e sexo",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1970,
+  "chapters": 27
+ },
+ {
+  "slug": "Vev",
+  "title": "Vida em vida",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1980,
+  "chapters": 33
+ },
+ {
+  "slug": "Vna",
+  "title": "Vida no Além",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1980,
+  "chapters": 7
+ },
+ {
+  "slug": "Vnv",
+  "title": "Vida nossa vida",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1983,
+  "chapters": 10
+ },
+ {
+  "slug": "Vl",
+  "title": "Vinha de luz",
+  "pillar": "Chico Xavier",
+  "author": "Emmanuel",
+  "year": 1952,
+  "chapters": 181
+ },
+ {
+  "slug": "Vn",
+  "title": "Visão nova",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1987,
+  "chapters": 21
+ },
+ {
+  "slug": "Vi",
+  "title": "Vitória",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1987,
+  "chapters": 20
+ },
+ {
+  "slug": "Vse",
+  "title": "Vivendo sempre",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1981,
+  "chapters": 21
+ },
+ {
+  "slug": "Vis",
+  "title": "Viveremos sempre",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1993,
+  "chapters": 10
+ },
+ {
+  "slug": "Vb",
+  "title": "Volta Bocage…",
+  "pillar": "Chico Xavier",
+  "author": "Manuel M. B. du Bocage",
+  "year": 1947,
+  "chapters": 15
+ },
+ {
+  "slug": "Vlt",
+  "title": "Voltei",
+  "pillar": "Chico Xavier",
+  "author": "Pelo Espírito do Irmão Jacob",
+  "year": 1949,
+  "chapters": 22
+ },
+ {
+  "slug": "Vom",
+  "title": "Vozes da Outra Margem",
+  "pillar": "Chico Xavier",
+  "author": "Familiares diversos",
+  "year": 1987,
+  "chapters": 20
+ },
+ {
+  "slug": "Vga",
+  "title": "Vozes do Grande Além",
+  "pillar": "Chico Xavier",
+  "author": "Mensagens psicofônicas de vários Espíritos recebidas no Grupo “Meimei” e organizadas por Arnaldo Rocha",
+  "year": 1957,
+  "chapters": 70
+ },
+ {
+  "slug": "Alo",
+  "title": "À luz da oração",
+  "pillar": "Chico Xavier",
+  "author": "Autores diversos",
+  "year": 1969,
+  "chapters": 6
+ },
+ {
+  "slug": "Eac",
+  "title": "… E o amor continua",
+  "pillar": "Chico Xavier",
+  "author": "F. C. Xavier / Divaldo P. Franco. — Familiares diversos",
+  "year": 1983,
+  "chapters": 8
+ }
+]

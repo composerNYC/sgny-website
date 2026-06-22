@@ -1,0 +1,144 @@
+---
+import Base from '../../../layouts/Base.astro';
+import books from '../../../data/biblioteca-pt-index.json';
+
+const pillarMeta = {
+  'Kardec':       { cls: 'grp-kardec', label: 'Kardec' },
+  'Bíblia':       { cls: 'grp-biblia', label: 'Bíblia' },
+  'Chico Xavier': { cls: 'grp-chico',  label: 'Chico Xavier' },
+};
+
+// Display label for the "author" line on each card.
+const authorLabel = (b) => {
+  if (b.pillar === 'Kardec') return 'Allan Kardec';
+  if (b.pillar === 'Bíblia') return 'Bíblia Sagrada';
+  if (b.author) return `${b.author} · psicografia de Chico Xavier`;
+  return 'Francisco Cândido Xavier';
+};
+// Short label for the spine foot.
+const spineFoot = (b) => {
+  if (b.pillar === 'Kardec') return 'Allan Kardec';
+  if (b.pillar === 'Bíblia') return 'Bíblia';
+  return b.author || 'Chico Xavier';
+};
+
+const collections = [
+  { key: 'all',          label: 'Todas',        count: books.length },
+  { key: 'Kardec',       label: 'Kardec',       count: books.filter((b) => b.pillar === 'Kardec').length },
+  { key: 'Bíblia',       label: 'Bíblia',       count: books.filter((b) => b.pillar === 'Bíblia').length },
+  { key: 'Chico Xavier', label: 'Chico Xavier', count: books.filter((b) => b.pillar === 'Chico Xavier').length },
+];
+
+// Distinct spiritual authors (for the Chico Xavier works), sorted.
+const authors = Array.from(new Set(books.filter((b) => b.author).map((b) => b.author))).sort((a, b) => a.localeCompare(b, 'pt'));
+
+const totalChapters = books.reduce((n, b) => n + b.chapters, 0);
+---
+<Base title="Biblioteca em Português" description="Uma biblioteca espírita completa em português — as obras de Allan Kardec, a Bíblia e a vasta obra mediúnica de Chico Xavier, para ler online e gratuitamente.">
+  <section class="hero" style="padding-block:clamp(2.5rem,6vw,4.5rem)">
+    <div class="container">
+      <p class="eyebrow" style="color:#e9c878">Biblioteca · Português</p>
+      <h1>A biblioteca espírita, em português</h1>
+      <p>Mais de {books.length} obras para ler online, gratuitamente: a Codificação de
+        Allan Kardec, a Bíblia e a extensa obra mediúnica psicografada por Francisco Cândido Xavier
+        &mdash; {totalChapters.toLocaleString('pt-BR')} capítulos ao todo.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <div class="lib-filters" data-pt-filters>
+        <div class="lib-search-wrap">
+          <input type="search" id="pt-q" class="lib-input" placeholder="Buscar por título ou autor…" autocomplete="off" aria-label="Buscar livros" />
+        </div>
+        <div class="lib-chips" role="group" aria-label="Filtrar por coleção">
+          {collections.map((c, i) => (
+            <button type="button" class={`lib-chip${i === 0 ? ' is-active' : ''}`} data-pillar={c.key}>
+              {c.label} <span class="lib-chip-n">{c.count}</span>
+            </button>
+          ))}
+        </div>
+        <label class="lib-select-wrap">
+          <span class="sr-only">Filtrar por autor espiritual</span>
+          <select id="pt-author" class="lib-select" aria-label="Filtrar por autor espiritual">
+            <option value="">Todos os autores</option>
+            {authors.map((a) => <option value={a}>{a}</option>)}
+          </select>
+        </label>
+      </div>
+
+      <p class="lib-resultcount muted" data-pt-count>{books.length} livros</p>
+
+      <div class="lib-grid" data-pt-grid>
+        {books.map((b) => (
+          <a class="lib-card pt-card"
+             href={`/virtual-library/portuguesa/${b.slug}`}
+             data-pillar={b.pillar}
+             data-author={b.author || ''}
+             data-title={b.title.toLowerCase()}>
+            <div class={`lib-spine ${pillarMeta[b.pillar]?.cls || ''}`}>
+              <span class="lib-spine-title">{b.title}</span>
+              <span class="lib-spine-foot">{spineFoot(b)}</span>
+            </div>
+            <div class="lib-meta">
+              <h3>{b.title}</h3>
+              <p class="muted">{authorLabel(b)}</p>
+              <span class="lib-count">{b.chapters} {b.chapters === 1 ? 'capítulo' : 'capítulos'} · Ler &rarr;</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <p class="lib-empty muted" data-pt-empty hidden>Nenhum livro encontrado. Tente outra busca.</p>
+    </div>
+  </section>
+</Base>
+
+<script>
+  function initPtLibrary() {
+    const root = document.querySelector('[data-pt-filters]');
+    if (!root) return;
+    const grid = document.querySelector('[data-pt-grid]');
+    const cards = Array.from(grid?.querySelectorAll('.pt-card') || []);
+    if (!cards.length) return;
+    const q = document.getElementById('pt-q');
+    const authorSel = document.getElementById('pt-author');
+    const chips = Array.from(root.querySelectorAll('.lib-chip'));
+    const countEl = document.querySelector('[data-pt-count]');
+    const emptyEl = document.querySelector('[data-pt-empty]');
+
+    let pillar = 'all';
+
+    const norm = (s) => (s || '').toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g, ''); // accent-insensitive
+
+    const apply = () => {
+      const term = norm(q && q.value);
+      const author = (authorSel && authorSel.value) || '';
+      let shown = 0;
+      for (const card of cards) {
+        const okPillar = pillar === 'all' || card.dataset.pillar === pillar;
+        const okAuthor = !author || card.dataset.author === author;
+        const okTerm = !term ||
+          norm(card.dataset.title).includes(term) ||
+          norm(card.dataset.author).includes(term);
+        const visible = okPillar && okAuthor && okTerm;
+        card.hidden = !visible;
+        if (visible) shown++;
+      }
+      if (countEl) countEl.textContent = `${shown} ${shown === 1 ? 'livro' : 'livros'}`;
+      if (emptyEl) emptyEl.hidden = shown !== 0;
+    };
+
+    q && q.addEventListener('input', apply);
+    authorSel && authorSel.addEventListener('change', apply);
+    chips.forEach((chip) => chip.addEventListener('click', () => {
+      pillar = chip.dataset.pillar;
+      chips.forEach((c) => c.classList.toggle('is-active', c === chip));
+      apply();
+    }));
+    apply();
+  }
+  initPtLibrary();
+  document.addEventListener('astro:page-load', initPtLibrary);
+</script>

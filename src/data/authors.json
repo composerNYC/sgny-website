@@ -1,0 +1,152 @@
+[
+  {
+    "slug": "francisco-xavier",
+    "name": "Francisco C. Xavier",
+    "count": 42,
+    "path": "/catalog/books/francisco-xavier"
+  },
+  {
+    "slug": "divaldo-franco",
+    "name": "Divaldo Franco",
+    "count": 23,
+    "path": "/catalog/books/divaldo-franco"
+  },
+  {
+    "slug": "allan-kardec",
+    "name": "Allan Kardec",
+    "count": 16,
+    "path": "/catalog/books/allan-kardec"
+  },
+  {
+    "slug": "luis-hu-rivas",
+    "name": "Luis Hu Rivas",
+    "count": 11,
+    "path": "/catalog/books/luis-hu-rivas"
+  },
+  {
+    "slug": "leon-denis",
+    "name": "Léon Denis",
+    "count": 5,
+    "path": "/catalog/books/leon-denis"
+  },
+  {
+    "slug": "jussara-korngold",
+    "name": "Jussara Korngold",
+    "count": 3,
+    "path": "/catalog/books/jussara-korngold"
+  },
+  {
+    "slug": "richard-simonetti",
+    "name": "Richard Simonetti",
+    "count": 3,
+    "path": "/catalog/books/richard-simonetti"
+  },
+  {
+    "slug": "andre-trigueiro",
+    "name": "André Trigueiro",
+    "count": 2,
+    "path": "/catalog/books/andre-trigueiro"
+  },
+  {
+    "slug": "cristina-cabral",
+    "name": "Cristina Cabral",
+    "count": 2,
+    "path": "/catalog/books/cristina-cabral"
+  },
+  {
+    "slug": "elsa-rossi",
+    "name": "Elsa Rossi",
+    "count": 2,
+    "path": "/catalog/books/elsa-rossi"
+  },
+  {
+    "slug": "gabriel-delanne",
+    "name": "Gabriel Delanne",
+    "count": 2,
+    "path": "/catalog/books/gabriel-delanne"
+  },
+  {
+    "slug": "gorete-newton",
+    "name": "Gorete Newton",
+    "count": 2,
+    "path": "/catalog/books/gorete-newton"
+  },
+  {
+    "slug": "guillermo-luis",
+    "name": "Guillermo Luis",
+    "count": 2,
+    "path": "/catalog/books/guillermo-luis"
+  },
+  {
+    "slug": "guy-lyon-playfair",
+    "name": "Guy Lyon Playfair",
+    "count": 2,
+    "path": "/catalog/books/guy-lyon-playfair"
+  },
+  {
+    "slug": "haroldo-dutra-dias",
+    "name": "Haroldo Dutra Dias",
+    "count": 2,
+    "path": "/catalog/books/haroldo-dutra-dias"
+  },
+  {
+    "slug": "heather-bollech-fonseca",
+    "name": "Heather Bollech-Fonseca",
+    "count": 2,
+    "path": "/catalog/books/heather-bollech-fonseca"
+  },
+  {
+    "slug": "herminio-miranda",
+    "name": "Hermínio C. Miranda",
+    "count": 2,
+    "path": "/catalog/books/herminio-miranda"
+  },
+  {
+    "slug": "hernani-guimaraes-andrade",
+    "name": "Hernani Guimarães Andrade",
+    "count": 2,
+    "path": "/catalog/books/hernani-guimaraes-andrade"
+  },
+  {
+    "slug": "jose-herculano-pires",
+    "name": "José Herculano Pires",
+    "count": 2,
+    "path": "/catalog/books/jose-herculano-pires"
+  },
+  {
+    "slug": "laura-bergallo",
+    "name": "Laura Bergallo",
+    "count": 2,
+    "path": "/catalog/books/laura-bergallo"
+  },
+  {
+    "slug": "nilson-souza-pereira",
+    "name": "Nilson de Souza Pereira",
+    "count": 2,
+    "path": "/catalog/books/nilson-souza-pereira"
+  },
+  {
+    "slug": "oceano-vieira-melo",
+    "name": "Oceano Vieira de Melo",
+    "count": 2,
+    "path": "/catalog/books/oceano-vieira-melo"
+  },
+  {
+    "slug": "therezinha-oliveira",
+    "name": "Therezinha Oliveira",
+    "count": 2,
+    "path": "/catalog/books/therezinha-oliveira"
+  },
+  {
+    "slug": "wallace-rodrigues",
+    "name": "Wallace E. L. Rodrigues",
+    "count": 2,
+    "path": "/catalog/books/wallace-rodrigues"
+  },
+  {
+    "slug": "yvonne-pereira",
+    "name": "Yvonne A. Pereira",
+    "count": 2,
+    "path": "/catalog/books/yvonne-pereira"
+  }
+]

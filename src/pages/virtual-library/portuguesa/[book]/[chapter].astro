@@ -1,0 +1,55 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import index from '../../../../data/biblioteca-pt-index.json';
+
+export function getStaticPaths() {
+  const files = import.meta.glob('../../../../data/biblioteca-pt/*.json', { eager: true });
+  const meta = Object.fromEntries(index.map((b) => [b.slug, b]));
+  const paths = [];
+  for (const mod of Object.values(files)) {
+    const data = mod.default ?? mod;
+    const m = meta[data.slug];
+    if (!m) continue;
+    const chapters = data.chapters;
+    chapters.forEach((c, i) => {
+      paths.push({
+        params: { book: data.slug, chapter: String(c.n) },
+        props: { meta: m, total: chapters.length, ch: c, idx: i, chapters: chapters.map((x) => x.n) },
+      });
+    });
+  }
+  return paths;
+}
+
+const { meta, total, ch, idx, chapters } = Astro.props;
+const paras = ch.paras ?? [];
+const prev = idx > 0 ? chapters[idx - 1] : null;
+const next = idx < total - 1 ? chapters[idx + 1] : null;
+
+const authorLine = meta.pillar === 'Kardec' ? 'Allan Kardec'
+  : meta.pillar === 'Bíblia' ? 'Bíblia Sagrada'
+  : meta.author ? `${meta.author} · Chico Xavier`
+  : 'Chico Xavier';
+---
+<Base title={`${ch.title} · ${meta.title}`} description={`${meta.title} — ${authorLine}. Capítulo ${idx + 1} de ${total}.`}>
+  <section class="block">
+    <div class="container article reader" style="max-width:740px" data-pagefind-ignore>
+      <nav class="crumbs">
+        <a href="/">Início</a> · <a href="/virtual-library/portuguesa">Biblioteca</a> ·
+        <a href={`/virtual-library/portuguesa/${meta.slug}`}>{meta.title}</a> · <span>{ch.title}</span>
+      </nav>
+      <p class="eyebrow">{meta.title} · {authorLine}</p>
+      <p class="reader-prog">Capítulo {idx + 1} de {total}</p>
+      <h1>{ch.title}</h1>
+      <div class="body reader-body">
+        {paras.map((p) => <p>{p}</p>)}
+      </div>
+
+      <nav class="reader-nav">
+        {prev != null ? <a class="btn btn-outline" href={`/virtual-library/portuguesa/${meta.slug}/${prev}`}>&larr; Anterior</a> : <span></span>}
+        <a class="btn btn-ghost" style="color:var(--brand);border-color:var(--line)" href={`/virtual-library/portuguesa/${meta.slug}`}>Conteúdo</a>
+        {next != null ? <a class="btn btn-outline" href={`/virtual-library/portuguesa/${meta.slug}/${next}`}>Próximo &rarr;</a> : <span></span>}
+      </nav>
+    </div>
+  </section>
+</Base>

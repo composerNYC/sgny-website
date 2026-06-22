@@ -1,0 +1,117 @@
+---
+import Base from '../layouts/Base.astro';
+import { videos, channelVideos } from '../data/videos.js';
+const fmtDate = (d) => d ? new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : '';
+---
+<Base title="Spiritist Videos" description="A curated gallery of Spiritist talks, symposia, and presentations — lectures on the Spiritist Doctrine by SGNY staff and speakers from around the world.">
+  <section class="hero" style="padding-block:clamp(2.5rem,6vw,4.5rem)">
+    <div class="container">
+      <p class="eyebrow" style="color:#e9c878">Watch & Learn</p>
+      <h1>Spiritist Videos</h1>
+      <p>A selection of talks, symposia, and presentations on the Spiritist Doctrine — chosen by
+        the SGNY staff as valuable supplementary study. Click any video to play it here.</p>
+    </div>
+  </section>
+
+  <section class="block" style="background:var(--surface);border-block:1px solid var(--line)">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Our channel</p>
+        <h2>Latest from SGNY on YouTube</h2>
+        <p>Our most recent uploads, newest first — click any to play it here.</p>
+      </div>
+      <div class="video-grid">
+        {channelVideos.map((v) => (
+          <button class="vid" data-id={v.id} data-title={v.title}>
+            <span class="vid-thumb">
+              <img src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`} alt={v.title} loading="lazy" />
+              <span class="vid-play" aria-hidden="true">▶</span>
+            </span>
+            <span class="vid-title">{v.title}</span>
+            {v.date && <span class="vid-author">{fmtDate(v.date)}</span>}
+          </button>
+        ))}
+      </div>
+      <div style="text-align:center;margin-top:2.5rem">
+        <a class="btn btn-outline" href="https://www.youtube.com/@SpiritistGroupofNewYork/videos" target="_blank" rel="noopener">See all videos on YouTube ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Selected study videos</p>
+        <h2>Talks &amp; presentations</h2>
+        <p>A selection of lectures and symposia chosen by the SGNY staff as valuable supplementary study.</p>
+      </div>
+      <div class="video-grid">
+        {videos.map((v) => (
+          <button class="vid" data-id={v.id} data-title={v.title}>
+            <span class="vid-thumb">
+              <img src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`} alt={v.title} loading="lazy" />
+              <span class="vid-play" aria-hidden="true">▶</span>
+            </span>
+            <span class="vid-title">{v.title}</span>
+            {v.author && <span class="vid-author">{v.author}</span>}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <dialog id="videoModal" class="video-modal" aria-label="Video player">
+    <button class="vm-close" aria-label="Close">×</button>
+    <div class="vm-frame-wrap"><iframe class="vm-frame" title="Video" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe></div>
+  </dialog>
+
+  <script>
+    const dlg = document.getElementById('videoModal');
+    const frame = dlg.querySelector('.vm-frame');
+    function close() { dlg.close(); frame.src = 'about:blank'; }
+    document.querySelectorAll('.vid').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-id');
+        frame.src = `https://www.youtube-nocookie.com/embed/${id}?rel=0&autoplay=1`;
+        dlg.showModal();
+      });
+    });
+    dlg.querySelector('.vm-close').addEventListener('click', close);
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) close(); });
+    dlg.addEventListener('close', () => { frame.src = 'about:blank'; });
+  </script>
+
+  <style>
+    .channel-embed { max-width: 920px; margin-inline: auto; aspect-ratio: 16/9; border-radius: 14px;
+      overflow: hidden; box-shadow: var(--shadow); background: var(--ink); }
+    .channel-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .video-grid { display: grid; gap: 1.8rem 1.5rem; grid-template-columns: repeat(3, 1fr); }
+    .vid { display: flex; flex-direction: column; gap: .6rem; text-align: left; background: none;
+      border: 0; padding: 0; cursor: pointer; font: inherit; color: inherit; }
+    .vid-thumb { position: relative; display: block; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden;
+      background: var(--ink); box-shadow: var(--shadow); }
+    .vid-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .25s ease, opacity .2s; }
+    .vid:hover .vid-thumb img { transform: scale(1.05); opacity: .85; }
+    .vid-play { position: absolute; inset: 0; margin: auto; width: 54px; height: 54px; display: grid;
+      place-items: center; border-radius: 50%; background: rgba(31,78,121,.92); color: #fff; font-size: 1.1rem;
+      padding-left: 4px; transition: transform .2s ease, background .2s; box-shadow: 0 4px 16px rgba(0,0,0,.3); }
+    .vid:hover .vid-play { transform: scale(1.12); background: var(--accent); color: #2a1d05; }
+    .vid-title { font-family: var(--serif); font-size: 1.02rem; line-height: 1.3; color: var(--ink); }
+    .vid-author { font-size: .85rem; color: var(--ink-soft); }
+    @media (max-width: 900px) { .video-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .video-grid { grid-template-columns: 1fr; } }
+
+    /* lightbox */
+    .video-modal { border: 0; border-radius: 14px; padding: 0; width: min(960px, 94vw); max-width: none;
+      background: #000; overflow: visible; box-shadow: 0 30px 80px rgba(15,22,35,.5); }
+    .video-modal[open] { display: block; }
+    .video-modal::backdrop { background: rgba(10,15,25,.8); backdrop-filter: blur(3px); }
+    .vm-frame-wrap { aspect-ratio: 16/9; width: 100%; border-radius: 14px; overflow: hidden; }
+    .vm-frame { width: 100%; height: 100%; border: 0; display: block; }
+    .vm-close { position: absolute; top: -16px; right: -16px; width: 40px; height: 40px; border: 0;
+      border-radius: 50%; background: #fff; color: var(--ink); font-size: 1.5rem; line-height: 1; cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0,0,0,.3); z-index: 2; }
+    .vm-close:hover { background: var(--accent-soft); }
+    @media (max-width: 560px) { .vm-close { top: 8px; right: 8px; } }
+  </style>
+</Base>

@@ -1,0 +1,63 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="About Us" description="The Spiritist Group of New York — who we are, the Spiritist Alliance for Books, and how to visit or contact us.">
+  <section class="hero" style="padding-block:clamp(2.5rem,6vw,4.5rem)">
+    <div class="container">
+      <p class="eyebrow" style="color:#e9c878">About Us</p>
+      <h1>Spiritist Group of New York</h1>
+      <p>A not-for-profit dedicated to promoting and disseminating Spiritism — the Spiritist
+        Doctrine according to the teachings of Allan Kardec. All of our meetings and services
+        are, and always will be, free.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container article" style="max-width:820px">
+      <h2>Who we are</h2>
+      <p>The Spiritist Group of New York (SGNY) brings together people who wish to study and live
+        the Spiritist Doctrine in English. Through regular study groups — held both in person and
+        online — we explore the nature, origin, and destiny of the spirit, and the practice of
+        fraternal charity in everyday life. Everyone is welcome, whether you are new to Spiritism
+        or have studied it for years.</p>
+      <p style="margin-top:.4rem"><a href="/about-sgny">Read our story — an interview with one of SGNY’s founders →</a></p>
+
+      <div class="card" style="margin:2.5rem 0;background:var(--accent-soft);border-color:var(--accent-soft)">
+        <h3 style="margin-top:0">The Spiritist Alliance for Books (SAB)</h3>
+        <p class="muted" style="margin-bottom:.6rem">Much of the English-language Spiritist
+          literature available today exists because volunteers chose to translate it. The Spiritist
+          Alliance for Books unites people around the world to translate, publish, and distribute
+          Spiritist works — at cost — so the teachings can reach new readers.</p>
+        <div style="display:flex;gap:.7rem;flex-wrap:wrap">
+          <a class="btn btn-outline" href="/about-sab">About SAB</a>
+          <a class="btn btn-outline" href="/catalog">Browse the catalog</a>
+        </div>
+      </div>
+
+      <h2 id="contact">Visit &amp; contact</h2>
+      <div class="contact-grid">
+        <div>
+          <h4>Where to find us</h4>
+          <p>939 8th Avenue, Suite 409<br/>New York, NY</p>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <p><a href="mailto:sab-books@sgny.org">sab-books@sgny.org</a></p>
+        </div>
+        <div>
+          <h4>Join a study</h4>
+          <p><a href="/activities-schedule">Schedule of activities</a><br/>
+             <a href="/activities-schedule#online">Joining online</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .contact-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    border-top: 1px solid var(--line); padding-top: 1.5rem; margin-top: 1rem; }
+  .contact-grid h4 { font-family: var(--sans); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 .5rem; }
+  .contact-grid p { margin: 0; color: var(--ink-soft); }
+</style>

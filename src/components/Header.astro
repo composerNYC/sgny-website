@@ -1,0 +1,70 @@
+---
+const { path = '' } = Astro.props;
+// Lean, intuitive nav — logo is "home", contact & centers live in the footer
+const nav = [
+  { label: 'About', href: '/about' },
+  { label: 'Learn', children: [
+    { label: 'A Guide to Spiritism', href: '/spiritism-guide' },
+    { label: 'Spiritist Videos', href: '/spiritist-videos' },
+    { label: 'Additional Readings', href: '/spiritist-materials' },
+  ]},
+  { label: 'Activities', href: '/activities-schedule' },
+  { label: 'Virtual Library', href: '/virtual-library' },
+  { label: 'Books', href: '/catalog' },
+];
+const active = (href) => href === '/' ? path === '/' : path.startsWith(href);
+const groupActive = (item) => item.children?.some((c) => active(c.href));
+---
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="/">
+      <img src="/uploads/2023/04/cropped-logo-SGNY-novo-192x192.jpeg" alt="" width="40" height="40" />
+      <span>Spiritist Group of New York<small>Allan Kardec · Spiritist Doctrine · Est. 2001</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" data-nav-toggle>☰</button>
+    <nav class="nav" aria-label="Primary" data-nav>
+      <ul>
+        {nav.map((item) => item.children ? (
+          <li class="has-dropdown">
+            <button class="dd-trigger" aria-expanded="false" aria-current={groupActive(item) ? 'true' : undefined}>
+              {item.label} <span aria-hidden="true" class="caret">▾</span>
+            </button>
+            <ul class="submenu">
+              {item.children.map((c) => (
+                <li><a href={c.href} aria-current={active(c.href) ? 'page' : undefined}>{c.label}</a></li>
+              ))}
+            </ul>
+          </li>
+        ) : (
+          <li><a href={item.href} aria-current={active(item.href) ? 'page' : undefined}>{item.label}</a></li>
+        ))}
+        <li><a class="btn btn-primary" href="/donations" style="color:#2a1d05">Donate</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<script>
+  const toggle = document.querySelector('[data-nav-toggle]');
+  const nav = document.querySelector('[data-nav]');
+  toggle?.addEventListener('click', () => {
+    const open = nav.getAttribute('data-open') === 'true';
+    nav.setAttribute('data-open', String(!open));
+    toggle.setAttribute('aria-expanded', String(!open));
+  });
+  document.querySelectorAll('.dd-trigger').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const li = btn.closest('.has-dropdown');
+      const open = li.classList.contains('open');
+      document.querySelectorAll('.has-dropdown.open').forEach((o) => o.classList.remove('open'));
+      if (!open) { li.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+      else btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.has-dropdown.open').forEach((o) => {
+      o.classList.remove('open');
+      o.querySelector('.dd-trigger')?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

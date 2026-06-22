@@ -1,0 +1,81 @@
+---
+import Base from '../../layouts/Base.astro';
+import { sessions, zoom, location } from '../../data/activities.js';
+
+export function getStaticPaths() {
+  return sessions.map((s) => ({ params: { session: s.slug }, props: { s } }));
+}
+const { s } = Astro.props;
+const showZoom = s.mode === 'online' || s.mode === 'hybrid';
+const showPlace = s.mode === 'in-person' || s.mode === 'hybrid';
+const modeLabel = { 'in-person': 'In person', online: 'Online', hybrid: 'In person & online' }[s.mode];
+---
+<Base title={`${s.name} — ${s.day}`} description={`${s.name} at SGNY · ${s.day}, ${s.time}. ${s.audience}.`}>
+  <section class="block">
+    <div class="container article" style="max-width:760px">
+      <nav class="crumbs">
+        <a href="/">Home</a> · <a href="/activities-schedule">Schedule</a> · <span>{s.name}</span>
+      </nav>
+
+      <span class="eyebrow" style="color:var(--accent)">{s.day} · {s.time}</span>
+      <h1 style="margin:.2em 0 .3em">{s.name}</h1>
+      <div class="meta-badges">
+        <span class={`mb ${s.mode}`}>{modeLabel}</span>
+        <span class="mb-text">{s.audience}</span>
+      </div>
+
+      {/* How to join */}
+      <div class="join">
+        {showZoom && (
+          <div class="join-card join-online">
+            <h3>Join online</h3>
+            <a class="btn btn-primary" href={zoom.url} target="_blank" rel="noopener">Open Zoom meeting →</a>
+            <dl>
+              <div><dt>Meeting ID</dt><dd>{zoom.id}</dd></div>
+              <div><dt>Password</dt><dd>{zoom.password}</dd></div>
+              <div><dt>By phone</dt><dd>{zoom.phone}</dd></div>
+            </dl>
+          </div>
+        )}
+        {showPlace && (
+          <div class="join-card">
+            <h3>{s.mode === 'hybrid' ? 'Or join in person' : 'Where'}</h3>
+            <p>{location}</p>
+            <p class="muted" style="font-size:.9rem;margin-top:.3rem">All are welcome — there is no fee.</p>
+          </div>
+        )}
+      </div>
+
+      {s.material && (<><h2>What we’re reading</h2><p>{s.material}</p></>)}
+      {s.objectives && (<><h2>Who it’s for</h2><p>{s.objectives}</p></>)}
+      {s.format && (<><h2>Format</h2><p>{s.format}</p></>)}
+      {s.notes && s.notes.length > 0 && (
+        <><h2>Good to know</h2><ul class="notes">{s.notes.map((n) => <li>{n}</li>)}</ul></>
+      )}
+
+      <p style="margin-top:2.5rem"><a href="/activities-schedule">← Back to the full schedule</a></p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .meta-badges { display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; margin-bottom: 1.8rem; }
+  .mb { font-size: .74rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+    padding: .25rem .7rem; border-radius: 20px; }
+  .mb.online { background: var(--accent-soft); color: var(--brand-dark); }
+  .mb.hybrid { background: var(--accent-soft); color: var(--brand-dark); }
+  .mb.in-person { background: var(--line); color: var(--ink-soft); }
+  .mb-text { color: var(--ink-soft); font-size: .95rem; }
+  .join { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-bottom: 1rem; }
+  .join-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 1.3rem 1.4rem; background: var(--surface); }
+  .join-online { background: linear-gradient(160deg, #f4f8fc, #fff); border-color: #cfe0f0; }
+  .join-card h3 { margin: 0 0 .8rem; }
+  .join-card .btn { width: 100%; justify-content: center; }
+  .join-card dl { margin: 1rem 0 0; display: grid; gap: .5rem; }
+  .join-card dl div { display: flex; justify-content: space-between; gap: 1rem; font-size: .92rem;
+    border-top: 1px solid var(--line); padding-top: .5rem; }
+  .join-card dt { color: var(--ink-soft); }
+  .join-card dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .notes { color: var(--ink-soft); }
+  .notes li { margin-bottom: .5rem; }
+</style>

@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+.netlify/
+
+# astro
+.astro/
+
+# local prayer-book data (local-dev storage only; production uses Netlify Blobs)
+.data/
+
+# secrets — never commit
+.env
+.env.local
+.env.production
+
+# os
+.DS_Store

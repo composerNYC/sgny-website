@@ -1,0 +1,76 @@
+---
+import { findInTracks } from '../data/guide-nav.js';
+const { path, pos = 'bottom' } = Astro.props;
+const nav = findInTracks(path);
+---
+{nav && pos === 'top' && (
+  <nav class="guide-bar" aria-label="Guide navigation (top)">
+    {nav.prev
+      ? <a class="gb gb-prev" href={nav.prev.path} title={nav.prev.label}>← Previous</a>
+      : <span class="gb gb-empty"></span>}
+    <a class="gb gb-mid" href={nav.track.index}>{nav.track.name} · {nav.index + 1}/{nav.total}</a>
+    {nav.next
+      ? <a class="gb gb-next" href={nav.next.path} title={nav.next.label}>Next →</a>
+      : <a class="gb gb-next" href={nav.track.index}>Finish ✓</a>}
+  </nav>
+)}
+
+{nav && pos === 'bottom' && (
+  <nav class="guide-nav" aria-label="Guide navigation">
+    <div class="guide-progress">
+      <a href={nav.track.index}>{nav.track.name}</a>
+      <span>Step {nav.index + 1} of {nav.total}</span>
+    </div>
+    <div class="guide-links">
+      {nav.prev ? (
+        <a class="gn gn-prev" href={nav.prev.path}>
+          <span class="gn-dir">← Previous</span>
+          <span class="gn-title">{nav.prev.label}</span>
+        </a>
+      ) : <span class="gn gn-empty" aria-hidden="true"></span>}
+      {nav.next ? (
+        <a class="gn gn-next" href={nav.next.path}>
+          <span class="gn-dir">Next →</span>
+          <span class="gn-title">{nav.next.label}</span>
+        </a>
+      ) : (
+        <a class="gn gn-next" href={nav.track.index}>
+          <span class="gn-dir">Finish ✓</span>
+          <span class="gn-title">Back to contents</span>
+        </a>
+      )}
+    </div>
+  </nav>
+)}
+
+<style>
+  /* compact top bar */
+  .guide-bar { max-width: 760px; margin: 0 auto 1.75rem; display: flex; align-items: center; gap: .75rem;
+    border: 1px solid var(--line); border-radius: 12px; padding: .5rem .6rem; background: var(--surface); }
+  .gb { text-decoration: none; font-size: .85rem; font-weight: 600; padding: .35rem .7rem; border-radius: 8px;
+    white-space: nowrap; }
+  .gb-prev:hover, .gb-next:hover { background: var(--accent-soft); color: var(--brand-dark); }
+  .gb-mid { flex: 1; text-align: center; color: var(--ink-soft); font-weight: 500; overflow: hidden;
+    text-overflow: ellipsis; }
+  .gb-next { margin-left: auto; color: var(--brand); }
+  .gb-prev { color: var(--brand); }
+  .gb-empty { width: 1px; }
+
+  /* full bottom cards */
+  .guide-nav { max-width: 760px; margin: 3.5rem auto 0; border-top: 1px solid var(--line); padding-top: 1.5rem; }
+  .guide-progress { display: flex; justify-content: space-between; align-items: center;
+    font-size: .85rem; color: var(--ink-soft); margin-bottom: 1rem; }
+  .guide-progress a { font-weight: 600; text-decoration: none; }
+  .guide-links { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .gn { display: flex; flex-direction: column; gap: .25rem; padding: 1rem 1.2rem; border: 1px solid var(--line);
+    border-radius: 12px; text-decoration: none; background: var(--surface); transition: border-color .15s, transform .08s; }
+  .gn:hover { border-color: var(--brand); transform: translateY(-1px); }
+  .gn-next { text-align: right; }
+  .gn-dir { font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--accent); }
+  .gn-title { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); }
+  .gn-empty { border: none; background: none; }
+  @media (max-width: 560px) {
+    .guide-links { grid-template-columns: 1fr; }
+    .gn-next, .gn-prev { text-align: left; }
+  }
+</style>

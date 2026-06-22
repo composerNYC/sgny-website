@@ -1,0 +1,354 @@
+---
+import Base from '../layouts/Base.astro';
+import { activities, schedule, sessions, zoom, location } from '../data/activities.js';
+const gridMode = { 'in-person': 'In person', online: 'Online', hybrid: 'Hybrid' };
+---
+<Base title="Schedule of Activities" description="The Spiritist Group of New York's regular weekly activities — study groups, prayer, fraternal assistance, and more. All free and open to everyone.">
+  <section class="hero" style="padding-block:clamp(2.5rem,6vw,4.5rem)">
+    <div class="container">
+      <p class="eyebrow" style="color:#e9c878">Join Us</p>
+      <h1>Schedule of Regular Activities</h1>
+      <p>Every one of our activities is free and open to all — whether you are exploring Spiritism
+        for the first time or have studied it for years. Many sessions are also held online.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#online">Join online</a>
+        <a class="btn btn-ghost" href="/about#contact">Ask a question</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weekly schedule -->
+  <section class="block">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">This week</p><h2>Weekly schedule</h2></div>
+      <div class="week-grid">
+        {schedule.map((d) => (
+          <div class="day-card">
+            <h3>{d.day}</h3>
+            <ul>
+              {d.sessions.map((s) => (
+                <li>
+                  <a class="sess" href={`/activities-schedule/${s.slug}`} data-slug={s.slug}
+                     data-day={d.day} data-time={s.time}
+                     data-restrict={s.tags.some((t) => /4th\s+sunday/i.test(t)) ? 'fourth-sunday' : undefined}>
+                    <span class="t">{s.time}</span>
+                    <span class="s">{s.name} <span class="arrow">→</span></span>
+                    <span class="tags">
+                      <span class={`tag ${s.mode !== 'in-person' ? 'tag-online' : ''}`}>{gridMode[s.mode]}</span>
+                      {s.tags.map((tag) => <span class="tag">{tag}</span>)}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <p class="muted" style="text-align:center;margin-top:1.5rem;font-size:.9rem">
+        Several sessions are held online, and a few are by appointment — please
+        <a href="/about#contact">contact us</a> to confirm details before your first visit.
+      </p>
+    </div>
+  </section>
+
+  <!-- Joining online (merged from the old Online Studies page) -->
+  <section class="block" id="online" style="background:var(--surface);border-block:1px solid var(--line)">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">Online</p><h2>Joining our online meetings</h2>
+        <p>Every online session uses the same Zoom room. Join from a computer, phone, or tablet —
+          or dial in by phone.</p>
+      </div>
+      <div class="online-wrap">
+        <div class="online-join">
+          <h3>One link for every online session</h3>
+          <a class="btn btn-primary" href={zoom.url} target="_blank" rel="noopener" style="width:100%;justify-content:center">Open Zoom →</a>
+          <dl class="online-creds">
+            <div><dt>Meeting ID</dt><dd>{zoom.id}</dd></div>
+            <div><dt>Password</dt><dd>{zoom.password}</dd></div>
+            <div><dt>By phone</dt><dd>{zoom.phone}</dd></div>
+          </dl>
+        </div>
+        <div class="online-tips">
+          <h3>Before you join</h3>
+          <ul>
+            <li>You can join up to 30 minutes early to check your audio and video.</li>
+            <li>Please keep your microphone muted to avoid background noise.</li>
+            <li>On a computer or smartphone you may turn your video off if you prefer.</li>
+            <li>To ask a question, use the “Raise hand” icon and the host will bring you in.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we offer -->
+  <section class="block" style="background:var(--surface);border-block:1px solid var(--line)">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow">What to expect</p><h2>Our regular activities</h2></div>
+      <div class="grid cards-3">
+        {activities.map((a) => (
+          <article class="card act-card">
+            <div class="ico">{a.icon}</div>
+            <h3>{a.name}</h3>
+            <span class="badge">{a.audience}</span>
+            <p class="muted">{a.desc}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <dialog id="sessionModal" class="session-modal" aria-label="Session details">
+    <div class="m-card">
+      <button class="m-close" aria-label="Close">×</button>
+      <div class="m-body"></div>
+    </div>
+  </dialog>
+
+  <section class="block">
+    <div class="container" style="text-align:center;max-width:60ch;margin-inline:auto">
+      <h2>Come as you are</h2>
+      <p class="muted">There is no membership and no fee — just walk in, or join us online. If you’d
+        like to know what to expect or confirm a time, we’re glad to help.</p>
+      <p style="margin-top:.4rem">939 8th Avenue, Suite 409, New York, NY · <a href="mailto:sab-books@sgny.org">sab-books@sgny.org</a></p>
+    </div>
+  </section>
+
+  <script define:vars={{ sessionsData: sessions, zoom, venue: location }}>
+    const map = Object.fromEntries(sessionsData.map((s) => [s.slug, s]));
+    const dlg = document.getElementById('sessionModal');
+    const body = dlg.querySelector('.m-body');
+    const esc = (x) => (x || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+    const modeLabel = { 'in-person': 'In person', online: 'Online', hybrid: 'In person & online' };
+
+    function render(s) {
+      const online = s.mode === 'online' || s.mode === 'hybrid';
+      const place = s.mode === 'in-person' || s.mode === 'hybrid';
+      let join = '';
+      if (online) {
+        const creds = [
+          ['Meeting ID', zoom.id, zoom.id.replace(/\s/g, '')],
+          ['Password', zoom.password, zoom.password],
+          ['Phone', zoom.phone, zoom.phone.replace(/[^\d+]/g, '')],
+        ];
+        join += `<div class="m-join">
+          <a class="btn btn-primary" href="${zoom.url}" target="_blank" rel="noopener">Open Zoom meeting →</a>
+          <div class="m-creds">${creds.map(([k, v, c]) => `
+            <div class="cred">
+              <div class="cred-info"><span class="cred-k">${k}</span><span class="cred-v">${esc(v)}</span></div>
+              <button class="cred-copy" type="button" data-copy="${esc(c)}">Copy</button>
+            </div>`).join('')}</div>
+        </div>`;
+      }
+      if (place) {
+        join += `<p class="m-place"><span>📍</span> ${online ? 'Or in person — ' : ''}${esc(venue)}</p>`;
+      }
+      const rows = [];
+      if (s.material) rows.push(['Reading', esc(s.material)]);
+      if (s.format) rows.push(['Format', esc(s.format)]);
+      const details = rows.length
+        ? `<dl class="m-details">${rows.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>`
+        : '';
+      const notes = s.notes && s.notes.length
+        ? `<ul class="m-notes">${s.notes.map((n) => `<li>${esc(n)}</li>`).join('')}</ul>` : '';
+      return `
+        <p class="m-eyebrow">${esc(s.day)} &middot; ${esc(s.time)}</p>
+        <h2 class="m-title">${esc(s.name)}</h2>
+        <p class="m-aud"><span class="m-badge ${s.mode}">${modeLabel[s.mode]}</span> ${esc(s.audience)}</p>
+        ${join}${details}${notes}`;
+    }
+
+    function open(slug) {
+      const s = map[slug];
+      if (!s) return;
+      body.innerHTML = render(s);
+      if (typeof dlg.showModal === 'function') dlg.showModal();
+      else dlg.setAttribute('open', '');
+    }
+    document.querySelectorAll('[data-slug]').forEach((a) => {
+      a.addEventListener('click', (e) => { e.preventDefault(); open(a.getAttribute('data-slug')); });
+    });
+    dlg.querySelector('.m-close').addEventListener('click', () => dlg.close());
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+
+    // copy-to-clipboard (works on iPhone Safari over https; falls back otherwise)
+    function copyText(t) {
+      if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(t);
+      return new Promise((res, rej) => {
+        const ta = document.createElement('textarea');
+        ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.focus(); ta.select();
+        try { document.execCommand('copy'); res(); } catch (err) { rej(err); }
+        document.body.removeChild(ta);
+      });
+    }
+    body.addEventListener('click', (e) => {
+      const btn = e.target.closest('.cred-copy');
+      if (!btn) return;
+      copyText(btn.getAttribute('data-copy')).then(() => {
+        btn.textContent = 'Copied!'; btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1500);
+      }).catch(() => {});
+    });
+    // optional deep-link: /activities-schedule?open=<slug>
+    const want = new URLSearchParams(location.search).get('open');
+    if (want && map[want]) open(want);
+  </script>
+
+  <script>
+    // Highlight the next upcoming session and advance it automatically as time passes.
+    // All comparisons are done in New York time so it's correct for any visitor.
+    function initUpcoming() {
+      const items = Array.from(document.querySelectorAll('.week-grid .sess'));
+      if (!items.length) return;
+      const DOW = { Sunday: 0, Monday: 1, Tuesday: 2, Wednesday: 3, Thursday: 4, Friday: 5, Saturday: 6 };
+
+      const apOf = (s) => (s.match(/([ap])\.?\s*m/i) || [, ''])[1].toLowerCase();
+      function toMinutes(part, fallbackAP) {
+        const m = part.match(/(\d{1,2}):(\d{2})/);
+        if (!m) return null;
+        let h = +m[1];
+        const min = +m[2];
+        const ap = apOf(part) || fallbackAP;
+        if (ap === 'p' && h !== 12) h += 12;
+        if (ap === 'a' && h === 12) h = 0;
+        return h * 60 + min;
+      }
+      function parseTime(str) {
+        const parts = (str || '').split(/\s*[–—-]\s*/);
+        if (parts.length < 2) return null;
+        const endAP = apOf(parts[1]);
+        const start = toMinutes(parts[0], apOf(parts[0]) || endAP);
+        const end = toMinutes(parts[1], endAP);
+        return (start == null || end == null) ? null : { start, end };
+      }
+
+      // current moment in America/New_York
+      const f = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York', weekday: 'long', hour: '2-digit', minute: '2-digit',
+        hour12: false, year: 'numeric', month: '2-digit', day: '2-digit',
+      });
+      const p = Object.fromEntries(f.formatToParts(new Date()).map((x) => [x.type, x.value]));
+      const todayDow = DOW[p.weekday];
+      const nowMin = (+p.hour % 24) * 60 + (+p.minute);
+      const Y = +p.year, M = +p.month, D = +p.day;
+      const isFourth = (dayOfMonth) => dayOfMonth >= 22 && dayOfMonth <= 28; // 4th occurrence of a weekday
+
+      let best = null;
+      for (const el of items) {
+        const t = parseTime(el.dataset.time);
+        const sDow = DOW[el.dataset.day];
+        if (!t || sDow === undefined) continue;
+        let daysAhead = (sDow - todayDow + 7) % 7;
+        if (daysAhead === 0 && t.end <= nowMin) daysAhead = 7;
+        if (el.dataset.restrict === 'fourth-sunday') {
+          let guard = 0;
+          while (guard++ < 10) {
+            const occ = new Date(Date.UTC(Y, M - 1, D + daysAhead));
+            if (isFourth(occ.getUTCDate())) break;
+            daysAhead += 7;
+          }
+        }
+        const untilStart = daysAhead * 1440 + t.start - nowMin;
+        const untilEnd = daysAhead * 1440 + t.end - nowMin;
+        if (untilEnd <= 0) continue;
+        if (!best || untilEnd < best.untilEnd) best = { el, untilEnd, untilStart };
+      }
+
+      items.forEach((el) => { el.classList.remove('is-upcoming'); el.removeAttribute('data-flag'); });
+      if (best) {
+        best.el.classList.add('is-upcoming');
+        best.el.setAttribute('data-flag', best.untilStart <= 0 ? 'Happening now' : 'Upcoming');
+      }
+    }
+    initUpcoming();
+    setInterval(initUpcoming, 30000); // re-check every 30s so it advances on its own
+    document.addEventListener('astro:page-load', initUpcoming);
+  </script>
+</Base>
+
+<style is:global>
+  .week-grid { display: grid; gap: 1rem; grid-template-columns: repeat(5, 1fr); margin-inline: auto; }
+  .day-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow); overflow: hidden; }
+  .day-card h3 { margin: 0; padding: .75rem 1.1rem; background: var(--brand); color: #fff; font-size: 1.05rem; }
+  .day-card ul { list-style: none; margin: 0; padding: .4rem 1.1rem .8rem; }
+  .day-card li { border-bottom: 1px solid var(--line); }
+  .day-card li:last-child { border-bottom: 0; }
+  .sess { display: flex; flex-direction: column; gap: .25rem; padding: .85rem 1.1rem; margin: 0 -1.1rem;
+    text-decoration: none; transition: background .12s; }
+  .sess:hover { background: var(--accent-soft); }
+  .sess:hover .arrow { opacity: 1; transform: translateX(2px); }
+  .arrow { color: var(--accent); opacity: 0; transition: opacity .12s, transform .12s; font-weight: 700; }
+  .day-card .t { font-variant-numeric: tabular-nums; color: var(--accent); font-weight: 700; font-size: .8rem;
+    letter-spacing: .01em; white-space: nowrap; }
+  .day-card .s { font-family: var(--serif); font-size: 1.05rem; line-height: 1.3; color: var(--ink); }
+  .tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .15rem; }
+  .tag { font-family: var(--sans); font-size: .62rem; text-transform: uppercase; letter-spacing: .05em;
+    font-weight: 600; background: var(--line); color: var(--ink-soft); padding: .12rem .45rem; border-radius: 6px; white-space: nowrap; }
+  .tag-online { background: var(--accent-soft); color: var(--brand-dark); }
+  /* next upcoming session highlight */
+  .sess.is-upcoming { position: relative; background: var(--accent-soft);
+    outline: 2px solid var(--accent); outline-offset: -2px; border-radius: 10px; }
+  .sess.is-upcoming .arrow { opacity: 1; }
+  .sess.is-upcoming::before { content: attr(data-flag); position: absolute; top: -8px; right: 10px;
+    background: var(--accent); color: #2a1d05; font-family: var(--sans); font-size: .58rem; font-weight: 800;
+    letter-spacing: .07em; text-transform: uppercase; padding: .16rem .5rem; border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(28,36,48,.2); }
+  @media (max-width: 980px) { .week-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 640px) { .week-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 440px) { .week-grid { grid-template-columns: 1fr; } }
+
+  /* ===== joining online ===== */
+  .online-wrap { display: grid; gap: 1.5rem; grid-template-columns: minmax(0, 360px) 1fr;
+    align-items: start; max-width: 880px; margin-inline: auto; }
+  .online-join { background: linear-gradient(160deg, #f4f8fc, #fff); border: 1px solid #cfe0f0;
+    border-radius: var(--radius); padding: 1.5rem; }
+  .online-join h3 { margin: 0 0 1rem; font-size: 1.15rem; }
+  .online-creds { margin: 1.1rem 0 0; display: grid; gap: .55rem; }
+  .online-creds div { display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--line);
+    padding-top: .55rem; font-size: .95rem; }
+  .online-creds dt { color: var(--ink-soft); }
+  .online-creds dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .online-tips h3 { margin: 0 0 .8rem; font-size: 1.15rem; }
+  .online-tips ul { margin: 0; padding-left: 1.1rem; color: var(--ink-soft); }
+  .online-tips li { margin-bottom: .6rem; }
+  @media (max-width: 640px) { .online-wrap { grid-template-columns: 1fr; } }
+
+  /* ===== session modal ===== */
+  .session-modal { border: 0; border-radius: 16px; padding: 0; max-width: 460px; width: calc(100% - 2rem);
+    box-shadow: 0 20px 60px rgba(20,30,45,.3); background: var(--surface); color: var(--ink); }
+  .session-modal::backdrop { background: rgba(22,30,45,.55); backdrop-filter: blur(2px); }
+  .m-card { position: relative; padding: 1.8rem; }
+  .m-close { position: absolute; top: .8rem; right: .9rem; width: 32px; height: 32px; border: 0; border-radius: 8px;
+    background: var(--bg); color: var(--ink-soft); font-size: 1.3rem; line-height: 1; cursor: pointer; }
+  .m-close:hover { background: var(--line); color: var(--ink); }
+  .m-eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .76rem; font-weight: 700;
+    color: var(--accent); margin: 0 2rem .2rem 0; }
+  .m-title { font-size: 1.6rem; margin: 0 1.5rem .6rem 0; }
+  .m-aud { color: var(--ink-soft); font-size: .92rem; margin: 0 0 1.1rem; display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+  .m-badge { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; padding: .2rem .55rem; border-radius: 20px; }
+  .m-badge.online, .m-badge.hybrid { background: var(--accent-soft); color: var(--brand-dark); }
+  .m-badge.in-person { background: var(--line); color: var(--ink-soft); }
+  .m-join { background: linear-gradient(160deg, #f4f8fc, #fff); border: 1px solid #cfe0f0; border-radius: 12px; padding: 1rem; margin-bottom: 1rem; }
+  .m-join .btn { width: 100%; justify-content: center; }
+  .m-creds { display: grid; gap: .5rem; margin-top: .9rem; }
+  .cred { display: flex; align-items: center; justify-content: space-between; gap: .8rem;
+    padding: .5rem .4rem .5rem .8rem; background: var(--bg); border: 1px solid var(--line); border-radius: 10px; }
+  .cred-info { display: grid; gap: .05rem; min-width: 0; }
+  .cred-k { font-size: .64rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); font-weight: 700; }
+  .cred-v { font-weight: 600; font-variant-numeric: tabular-nums; font-size: 1.02rem; overflow-wrap: anywhere; }
+  .cred-copy { flex: none; border: 1px solid var(--line); background: var(--surface); color: var(--brand);
+    font-weight: 600; font-size: .8rem; padding: .4rem .8rem; border-radius: 8px; cursor: pointer; }
+  .cred-copy:hover { border-color: var(--brand); }
+  .cred-copy.copied { background: var(--accent-soft); color: var(--brand-dark); border-color: var(--accent-soft); }
+  .m-place { font-size: .95rem; margin: 0 0 1rem; color: var(--ink-soft); }
+  .m-details { display: grid; gap: .7rem; margin: 0 0 1rem; }
+  .m-details div { display: grid; gap: .1rem; }
+  .m-details dt { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; font-weight: 700; color: var(--accent); }
+  .m-details dd { margin: 0; font-size: .95rem; }
+  .m-notes { margin: 0; padding-left: 1.1rem; color: var(--ink-soft); font-size: .88rem; }
+  .m-notes li { margin-bottom: .35rem; }
+  .act-card .badge { display: inline-block; font-size: .74rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+    color: var(--brand-dark); background: var(--accent-soft); padding: .2rem .6rem; border-radius: 20px; margin-bottom: .6rem; }
+</style>

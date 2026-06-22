@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import index from '../../data/library-kardec.json';
+const files = import.meta.glob('../../data/library/kardec/*.json', { eager: true });
+const load = (slug) => {
+  const hit = Object.entries(files).find(([p]) => p.endsWith(`/${slug}.json`));
+  const mod = hit && hit[1];
+  return mod ? (mod.default ?? mod) : null;
+};
+export function getStaticPaths() {
+  return index.map((b) => ({ params: { book: b.slug }, props: { meta: b } }));
+}
+const { meta } = Astro.props;
+const data = load(meta.slug);
+const chapters = data.chapters;
+---
+<Base title={`${meta.title} · Virtual Library`} description={meta.subtitle}>
+  <section class="block">
+    <div class="container article" style="max-width:820px">
+      <nav class="crumbs">
+        <a href="/">Home</a> · <a href="/virtual-library">Virtual Library</a> · <span>{meta.title}</span>
+      </nav>
+      <p class="eyebrow">Allan Kardec{meta.year ? ` · ${meta.year}` : ''}</p>
+      <h1>{meta.title}</h1>
+      {meta.subtitle && <p class="muted" style="font-size:1.12rem;margin-top:-.3rem">{meta.subtitle}</p>}
+      <p class="lib-count" style="margin:.6rem 0 2rem">{chapters.length} chapters · English translation · Free to read</p>
+
+      <a class="btn btn-primary" href={`/virtual-library/${meta.slug}/1`}>Start reading →</a>
+
+      <h2 style="margin-top:2.5rem">Contents</h2>
+      <ol class="lib-toc">
+        {chapters.map((c) => (
+          <li><a href={`/virtual-library/${meta.slug}/${c.n}`}><span class="toc-n">{c.n}</span><span class="toc-t">{c.title}</span></a></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+</Base>

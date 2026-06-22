@@ -1,0 +1,18 @@
+{
+  "name": "sgny-site",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/netlify": "^5.5.4",
+    "@netlify/blobs": "^10.7.9",
+    "astro": "^4.16.0",
+    "astro-pagefind": "^2.0.0",
+    "pagefind": "^1.5.2"
+  }
+}

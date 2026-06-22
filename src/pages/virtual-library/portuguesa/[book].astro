@@ -1,0 +1,48 @@
+---
+import Base from '../../../layouts/Base.astro';
+import index from '../../../data/biblioteca-pt-index.json';
+
+const files = import.meta.glob('../../../data/biblioteca-pt/*.json');
+const load = async (slug) => {
+  const entry = Object.entries(files).find(([p]) => p.endsWith(`/${slug}.json`));
+  const mod = entry ? await entry[1]() : null;
+  return mod ? (mod.default ?? mod) : null;
+};
+
+export function getStaticPaths() {
+  return index.map((b) => ({ params: { book: b.slug }, props: { meta: b } }));
+}
+
+const { meta } = Astro.props;
+const data = await load(meta.slug);
+const chapters = data?.chapters ?? [];
+
+const authorLine = meta.pillar === 'Kardec' ? 'Allan Kardec'
+  : meta.pillar === 'Bíblia' ? 'Bíblia Sagrada'
+  : meta.author ? `${meta.author} · psicografia de Chico Xavier`
+  : 'Francisco Cândido Xavier';
+---
+<Base title={`${meta.title} · Biblioteca em Português`} description={`${meta.title} — ${authorLine}. ${chapters.length} capítulos para ler online, gratuitamente.`}>
+  <section class="block">
+    <div class="container article" style="max-width:820px">
+      <nav class="crumbs">
+        <a href="/">Início</a> · <a href="/virtual-library">Virtual Library</a> ·
+        <a href="/virtual-library/portuguesa">Português</a> · <span>{meta.title}</span>
+      </nav>
+      <p class="eyebrow">{authorLine}</p>
+      <h1>{meta.title}</h1>
+      <p class="lib-count" style="margin:.6rem 0 2rem">{chapters.length} {chapters.length === 1 ? 'capítulo' : 'capítulos'} · Leitura gratuita</p>
+
+      {chapters.length > 0 && (
+        <a class="btn btn-primary" href={`/virtual-library/portuguesa/${meta.slug}/${chapters[0].n}`}>Começar a ler &rarr;</a>
+      )}
+
+      <h2 style="margin-top:2.5rem">Conteúdo</h2>
+      <ol class="lib-toc">
+        {chapters.map((c) => (
+          <li><a href={`/virtual-library/portuguesa/${meta.slug}/${c.n}`}><span class="toc-n">{c.n}</span><span class="toc-t">{c.title}</span></a></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+</Base>

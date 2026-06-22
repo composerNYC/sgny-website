@@ -1,0 +1,52 @@
+---
+const learn = [
+  { href: '/spiritism-guide', label: 'A Guide to Spiritism' },
+  { href: '/spiritism-guide#great-names', label: 'The Great Names' },
+  { href: '/spiritism-guide#biographies', label: 'Biographies' },
+  { href: '/spiritist-videos', label: 'Spiritist Videos' },
+  { href: '/spiritist-materials', label: 'Additional Readings' },
+];
+const participate = [
+  { href: '/activities-schedule', label: 'Schedule of Activities' },
+  { href: '/activities-schedule#online', label: 'Joining Online' },
+  { href: '/upcoming-events', label: 'Upcoming Events' },
+  { href: '/catalog', label: 'Book Catalog' },
+  { href: '/donations', label: 'Donations' },
+];
+const orgLinks = [
+  { href: '/about', label: 'About Us' },
+  { href: '/about-sab', label: 'About SAB' },
+  { href: '/other-spiritist-institutions', label: 'Other Spiritist Centers' },
+];
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>Spiritist Group of New York</h4>
+        <p class="muted" style="color:#aeb9c7;max-width:34ch">
+          A not-for-profit dedicated to promoting and disseminating Spiritism according to the
+          teachings of Allan Kardec. All services are free.
+        </p>
+        <p style="margin-top:1rem">939 8th Avenue, Suite 409<br/>New York, NY</p>
+        <p style="margin-top:.6rem"><a href="mailto:sab-books@sgny.org">sab-books@sgny.org</a></p>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>{learn.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+      </div>
+      <div>
+        <h4>Participate</h4>
+        <ul>{participate.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+      </div>
+      <div>
+        <h4>Organization</h4>
+        <ul>{orgLinks.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© {new Date().getFullYear()} Spiritist Group of New York. All rights reserved.</span>
+      <span><a href="/about#contact">Contact</a> · <a href="/donations">Donate</a></span>
+    </div>
+  </div>
+</footer>

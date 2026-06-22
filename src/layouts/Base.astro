@@ -1,0 +1,94 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
+import '../styles/global.css';
+const { title, description = 'Spiritist Group of New York — promoting and disseminating Spiritism according to the teachings of Allan Kardec.' } = Astro.props;
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title ? `${title} · SGNY` : 'Spiritist Group of New York'}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/uploads/2023/04/cropped-logo-SGNY-novo-32x32.jpeg" />
+    <ViewTransitions />
+  </head>
+  <body>
+    <button id="fullscreen-toggle" type="button" transition:persist aria-label="Enter full screen" title="Full screen">
+      <svg class="fs-enter" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3" />
+      </svg>
+      <svg class="fs-exit" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+        <path d="M4 8h3a1 1 0 0 0 1-1V4M20 8h-3a1 1 0 0 1-1-1V4M4 16h3a1 1 0 0 1 1 1v3M20 16h-3a1 1 0 0 0-1 1v3" />
+      </svg>
+    </button>
+    <Header path={path} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <style>
+      #fullscreen-toggle {
+        position: fixed;
+        top: 12px;
+        right: 12px;
+        z-index: 1000;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(6px);
+        color: #2a1d05;
+        cursor: pointer;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        transition: background 0.15s ease, opacity 0.15s ease;
+        opacity: 0.55;
+      }
+      #fullscreen-toggle:hover,
+      #fullscreen-toggle:focus-visible {
+        opacity: 1;
+        background: #fff;
+      }
+      @media print {
+        #fullscreen-toggle { display: none; }
+      }
+    </style>
+    <script>
+      const setState = (full) => {
+        const btn = document.getElementById('fullscreen-toggle');
+        const enterIcon = btn?.querySelector('.fs-enter');
+        const exitIcon = btn?.querySelector('.fs-exit');
+        if (!btn || !enterIcon || !exitIcon) return;
+        enterIcon.style.display = full ? 'none' : '';
+        exitIcon.style.display = full ? '' : 'none';
+        btn.setAttribute('aria-label', full ? 'Exit full screen' : 'Enter full screen');
+        btn.title = full ? 'Exit full screen' : 'Full screen';
+      };
+      const bind = () => {
+        const btn = document.getElementById('fullscreen-toggle');
+        if (!btn || btn.dataset.bound) return;
+        btn.dataset.bound = 'true';
+        btn.addEventListener('click', () => {
+          if (document.fullscreenElement) {
+            document.exitFullscreen?.();
+          } else {
+            document.documentElement.requestFullscreen?.();
+          }
+        });
+      };
+      // Bind once to the persisted button, and re-sync the icon after each navigation.
+      bind();
+      setState(!!document.fullscreenElement);
+      document.addEventListener('fullscreenchange', () => setState(!!document.fullscreenElement));
+      document.addEventListener('astro:page-load', () => { bind(); setState(!!document.fullscreenElement); });
+    </script>
+  </body>
+</html>

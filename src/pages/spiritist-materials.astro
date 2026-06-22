@@ -1,0 +1,124 @@
+---
+import Base from '../layouts/Base.astro';
+import { readingSections } from '../data/readings.js';
+const total = readingSections.reduce((n, s) => n + s.items.length, 0);
+---
+<Base title="Additional Readings" description="A free library of Spiritist study materials — mediumship courses, articles, and guides, available to read and download as PDFs.">
+  <section class="hero" style="padding-block:clamp(2.5rem,6vw,4.5rem)">
+    <div class="container">
+      <p class="eyebrow" style="color:#e9c878">Free Library</p>
+      <h1>Additional Readings</h1>
+      <p>A collection of {total} study materials — courses, articles, and guides that accompany
+        the catalog and the Guide to Spiritism. Click any cover to read or download the PDF.</p>
+    </div>
+  </section>
+
+  {readingSections.map((sec) => (
+    <section class="block reading-block">
+      <div class="container">
+        <div class="reading-head">
+          <h2>{sec.title}</h2>
+          {sec.blurb && <p class="muted">{sec.blurb}</p>}
+        </div>
+        <div class="reading-grid">
+          {sec.items.map((item) => (
+            <a class="doc" href={item.pdf} target="_blank" rel="noopener" data-title={item.title}>
+              <div class="doc-cover">
+                <img src={item.cover} alt={`First page of ${item.title}`} loading="lazy" />
+                <span class="doc-badge">PDF</span>
+                <span class="doc-open">Read →</span>
+              </div>
+              <div class="doc-title">{item.title}</div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="block">
+    <div class="container" style="text-align:center;max-width:60ch;margin-inline:auto">
+      <p class="muted">Looking for full books? Browse the <a href="/catalog">catalog</a>, or begin with
+        <a href="/spiritism-guide"> A Guide to Spiritism</a>.</p>
+    </div>
+  </section>
+
+  <dialog id="pdfModal" class="pdf-modal" aria-label="Document viewer">
+    <div class="pdf-head">
+      <span class="pdf-title"></span>
+      <div class="pdf-actions">
+        <a class="pdf-link pdf-open" target="_blank" rel="noopener">Open in new tab ↗</a>
+        <a class="pdf-link pdf-dl" download>Download</a>
+        <button class="pdf-close" aria-label="Close">×</button>
+      </div>
+    </div>
+    <iframe class="pdf-frame" title="PDF document"></iframe>
+  </dialog>
+
+  <script>
+    const dlg = document.getElementById('pdfModal');
+    const frame = dlg.querySelector('.pdf-frame');
+    const titleEl = dlg.querySelector('.pdf-title');
+    const openLink = dlg.querySelector('.pdf-open');
+    const dlLink = dlg.querySelector('.pdf-dl');
+    function close() { dlg.close(); frame.src = 'about:blank'; }
+    document.querySelectorAll('.doc').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const url = a.getAttribute('href');
+        titleEl.textContent = a.getAttribute('data-title') || 'Document';
+        openLink.href = url; dlLink.href = url; frame.src = url;
+        dlg.showModal();
+      });
+    });
+    dlg.querySelector('.pdf-close').addEventListener('click', close);
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) close(); });
+    dlg.addEventListener('close', () => { frame.src = 'about:blank'; });
+  </script>
+</Base>
+
+<style>
+  .reading-block { padding-block: clamp(1.8rem, 4vw, 3rem); }
+  .reading-block:nth-child(even) { background: var(--surface); border-block: 1px solid var(--line); }
+  .reading-head { margin-bottom: 1.6rem; }
+  .reading-head h2 { margin: 0 0 .2rem; }
+  .reading-grid { display: grid; gap: 1.6rem 1.4rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .doc { text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: .6rem; }
+  .doc-cover { position: relative; aspect-ratio: 3/4; border-radius: 10px; overflow: hidden;
+    background: #fff; border: 1px solid var(--line);
+    box-shadow: 0 1px 2px rgba(28,36,48,.05), 0 10px 22px rgba(28,36,48,.10);
+    transition: transform .18s ease, box-shadow .18s ease; }
+  .doc-cover img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+  .doc:hover .doc-cover { transform: translateY(-5px); box-shadow: 0 6px 10px rgba(28,36,48,.08), 0 18px 36px rgba(28,36,48,.18); }
+  .doc-badge { position: absolute; top: .5rem; left: .5rem; font-size: .6rem; font-weight: 700;
+    letter-spacing: .06em; background: var(--brand); color: #fff; padding: .15rem .45rem; border-radius: 5px; }
+  .doc-open { position: absolute; inset: auto 0 0 0; background: linear-gradient(to top, rgba(31,78,121,.92), rgba(31,78,121,0));
+    color: #fff; font-weight: 600; font-size: .85rem; text-align: center; padding: 1.6rem .5rem .6rem;
+    opacity: 0; transform: translateY(6px); transition: opacity .18s ease, transform .18s ease; }
+  .doc:hover .doc-open { opacity: 1; transform: translateY(0); }
+  .doc-title { font-family: var(--serif); font-size: .96rem; line-height: 1.25; }
+
+  /* ===== PDF viewer modal ===== */
+  .pdf-modal { border: 0; border-radius: 14px; padding: 0; width: min(1000px, 94vw); height: min(90vh, 1100px);
+    max-width: none; max-height: none; overflow: hidden; background: #2b2f33;
+    box-shadow: 0 30px 80px rgba(15,22,35,.45); }
+  .pdf-modal[open] { display: flex; flex-direction: column; }
+  .pdf-modal::backdrop { background: rgba(15,22,35,.7); backdrop-filter: blur(3px); }
+  .pdf-head { display: flex; align-items: center; gap: 1rem; padding: .6rem .7rem .6rem 1.1rem;
+    background: var(--ink); color: #fff; flex: none; }
+  .pdf-title { font-family: var(--serif); font-size: 1rem; flex: 1; min-width: 0;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .pdf-actions { display: flex; align-items: center; gap: .35rem; flex: none; }
+  .pdf-link { color: #dbe6f1; text-decoration: none; font-size: .85rem; font-weight: 600;
+    padding: .4rem .7rem; border-radius: 7px; white-space: nowrap; }
+  .pdf-link:hover { background: rgba(255,255,255,.12); color: #fff; }
+  .pdf-close { background: rgba(255,255,255,.1); border: 0; color: #fff; width: 34px; height: 34px;
+    border-radius: 7px; font-size: 1.4rem; line-height: 1; cursor: pointer; }
+  .pdf-close:hover { background: rgba(255,255,255,.22); }
+  .pdf-frame { flex: 1; width: 100%; border: 0; background: #525659; }
+  @media (max-width: 640px) {
+    .pdf-modal { width: 100vw; height: 100dvh; border-radius: 0; }
+    .pdf-link { padding: .4rem .5rem; font-size: .8rem; }
+  }
+</style>

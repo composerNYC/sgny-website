@@ -1,0 +1,218 @@
+[
+ {
+  "slug": "Lde",
+  "title": "The Spirits’ Book",
+  "subtitle": "The foundation of Spiritism — the principles of the doctrine in question-and-answer form.",
+  "year": 1860,
+  "group": "codification",
+  "order": 1,
+  "chapters": 31
+ },
+ {
+  "slug": "Ldm",
+  "title": "The Mediums’ Book",
+  "subtitle": "The practical guide to mediumship and communication with spirits.",
+  "year": 1861,
+  "group": "codification",
+  "order": 2,
+  "chapters": 38
+ },
+ {
+  "slug": "Ev",
+  "title": "The Gospel According to Spiritism",
+  "subtitle": "The moral teachings of Jesus explained through the Spiritist doctrine.",
+  "year": 1864,
+  "group": "codification",
+  "order": 3,
+  "chapters": 34
+ },
+ {
+  "slug": "Ci",
+  "title": "Heaven and Hell",
+  "subtitle": "Divine justice and the afterlife, with examples of spirit communications.",
+  "year": 1865,
+  "group": "codification",
+  "order": 4,
+  "chapters": 79
+ },
+ {
+  "slug": "Ge",
+  "title": "Genesis",
+  "subtitle": "Miracles and predictions according to Spiritism; science and faith reconciled.",
+  "year": 1868,
+  "group": "codification",
+  "order": 5,
+  "chapters": 41
+ },
+ {
+  "slug": "1Lde",
+  "title": "The Spirits’ Book — First Edition",
+  "subtitle": "Kardec’s original 1857 edition, of historical interest.",
+  "year": 1857,
+  "group": "other",
+  "order": 10,
+  "chapters": 67
+ },
+ {
+  "slug": "Op",
+  "title": "Posthumous Works",
+  "subtitle": "Essays and writings published after Kardec’s death.",
+  "year": 1890,
+  "group": "other",
+  "order": 11,
+  "chapters": 64
+ },
+ {
+  "slug": "Qe1",
+  "title": "What Is Spiritism",
+  "subtitle": "A concise introduction to the doctrine for newcomers and skeptics.",
+  "year": 1859,
+  "group": "other",
+  "order": 12,
+  "chapters": 6
+ },
+ {
+  "slug": "Qe2",
+  "title": "What Is Spiritism — Summary",
+  "subtitle": "A short summary edition of the introduction.",
+  "year": 1859,
+  "group": "other",
+  "order": 13,
+  "chapters": 4
+ },
+ {
+  "slug": "Oes",
+  "title": "Spiritism in Its Simplest Expression",
+  "subtitle": "A brief overview of Spiritism’s history and principles.",
+  "year": 1862,
+  "group": "other",
+  "order": 14,
+  "chapters": 4
+ },
+ {
+  "slug": "Ipr",
+  "title": "Practical Instruction on Spiritist Manifestations",
+  "subtitle": "An early practical manual on mediumistic phenomena.",
+  "year": 1858,
+  "group": "other",
+  "order": 15,
+  "chapters": 15
+ },
+ {
+  "slug": "Ve",
+  "title": "Spiritist Journey in 1862",
+  "subtitle": "Kardec’s account of his 1862 travels and lectures.",
+  "year": 1862,
+  "group": "other",
+  "order": 16,
+  "chapters": 18
+ },
+ {
+  "slug": "Re58",
+  "title": "Spiritist Review — 1858",
+  "subtitle": "Kardec’s monthly journal, year 1858 (Revue Spirite).",
+  "year": 1858,
+  "group": "review",
+  "order": 1858,
+  "chapters": 107
+ },
+ {
+  "slug": "Re59",
+  "title": "Spiritist Review — 1859",
+  "subtitle": "Kardec’s monthly journal, year 1859 (Revue Spirite).",
+  "year": 1859,
+  "group": "review",
+  "order": 1859,
+  "chapters": 94
+ },
+ {
+  "slug": "Re60",
+  "title": "Spiritist Review — 1860",
+  "subtitle": "Kardec’s monthly journal, year 1860 (Revue Spirite).",
+  "year": 1860,
+  "group": "review",
+  "order": 1860,
+  "chapters": 148
+ },
+ {
+  "slug": "Re61",
+  "title": "Spiritist Review — 1861",
+  "subtitle": "Kardec’s monthly journal, year 1861 (Revue Spirite).",
+  "year": 1861,
+  "group": "review",
+  "order": 1861,
+  "chapters": 131
+ },
+ {
+  "slug": "Re62",
+  "title": "Spiritist Review — 1862",
+  "subtitle": "Kardec’s monthly journal, year 1862 (Revue Spirite).",
+  "year": 1862,
+  "group": "review",
+  "order": 1862,
+  "chapters": 125
+ },
+ {
+  "slug": "Re63",
+  "title": "Spiritist Review — 1863",
+  "subtitle": "Kardec’s monthly journal, year 1863 (Revue Spirite).",
+  "year": 1863,
+  "group": "review",
+  "order": 1863,
+  "chapters": 118
+ },
+ {
+  "slug": "Re64",
+  "title": "Spiritist Review — 1864",
+  "subtitle": "Kardec’s monthly journal, year 1864 (Revue Spirite).",
+  "year": 1864,
+  "group": "review",
+  "order": 1864,
+  "chapters": 102
+ },
+ {
+  "slug": "Re65",
+  "title": "Spiritist Review — 1865",
+  "subtitle": "Kardec’s monthly journal, year 1865 (Revue Spirite).",
+  "year": 1865,
+  "group": "review",
+  "order": 1865,
+  "chapters": 102
+ },
+ {
+  "slug": "Re66",
+  "title": "Spiritist Review — 1866",
+  "subtitle": "Kardec’s monthly journal, year 1866 (Revue Spirite).",
+  "year": 1866,
+  "group": "review",
+  "order": 1866,
+  "chapters": 93
+ },
+ {
+  "slug": "Re67",
+  "title": "Spiritist Review — 1867",
+  "subtitle": "Kardec’s monthly journal, year 1867 (Revue Spirite).",
+  "year": 1867,
+  "group": "review",
+  "order": 1867,
+  "chapters": 109
+ },
+ {
+  "slug": "Re68",
+  "title": "Spiritist Review — 1868",
+  "subtitle": "Kardec’s monthly journal, year 1868 (Revue Spirite).",
+  "year": 1868,
+  "group": "review",
+  "order": 1868,
+  "chapters": 97
+ },
+ {
+  "slug": "Re69",
+  "title": "Spiritist Review — 1869",
+  "subtitle": "Kardec’s monthly journal, year 1869 (Revue Spirite).",
+  "year": 1869,
+  "group": "review",
+  "order": 1869,
+  "chapters": 122
+ }
+]

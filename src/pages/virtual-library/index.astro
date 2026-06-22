@@ -1,0 +1,56 @@
+---
+import Base from '../../layouts/Base.astro';
+import Search from 'astro-pagefind/components/Search.astro';
+import books from '../../data/library-kardec.json';
+const groups = [
+  { key: 'codification', label: 'The Codification', blurb: 'The five fundamental works in which Allan Kardec set down the Spiritist Doctrine.' },
+  { key: 'other', label: 'Other Works', blurb: 'Further writings, introductions, and historical editions by Kardec.' },
+  { key: 'review', label: 'The Spiritist Review', blurb: 'Kardec’s monthly journal (Revue Spirite), 1858–1869 — twelve complete volumes.' },
+];
+const byGroup = (k) => books.filter((b) => b.group === k);
+---
+<Base title="Virtual Library" description="A free, online English library of the works of Allan Kardec — the complete Spiritist Codification and more, translated and readable in full.">
+  <section class="hero" style="padding-block:clamp(2.5rem,6vw,4.5rem)">
+    <div class="container">
+      <p class="eyebrow" style="color:#e9c878">Virtual Library</p>
+      <h1>The works of Allan Kardec, in English</h1>
+      <p>Read the foundational works of Spiritism online, free and in full — newly translated from
+        the original French and Portuguese. We begin with the complete library of Allan Kardec;
+        more authors will follow.</p>
+      <div class="lib-search">
+        <Search className="lib-pagefind" />
+        <p class="lib-search-hint">Search every chapter — try “reincarnation”, “the nature of the soul”, or “charity”.</p>
+      </div>
+      <p class="lib-lang-cta">
+        Prefere ler em português?
+        <a class="btn btn-primary" href="/virtual-library/portuguesa" style="color:#2a1d05;margin-left:.6rem">Biblioteca em Português &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+  {groups.map((g) => (
+    <section class="block">
+      <div class="container">
+        <div class="section-head" style="text-align:left;margin-bottom:1.5rem;max-width:60ch">
+          <h2>{g.label}</h2>
+          <p class="muted">{g.blurb}</p>
+        </div>
+        <div class="lib-grid">
+          {byGroup(g.key).map((b) => (
+            <a class="lib-card" href={`/virtual-library/${b.slug}`}>
+              <div class={`lib-spine grp-${b.group}`}>
+                <span class="lib-spine-title">{b.title}</span>
+                <span class="lib-spine-foot">Allan Kardec{b.year ? ` · ${b.year}` : ''}</span>
+              </div>
+              <div class="lib-meta">
+                <h3>{b.title}</h3>
+                {b.subtitle && <p class="muted">{b.subtitle}</p>}
+                <span class="lib-count">{b.chapters} chapters · Read free →</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+</Base>

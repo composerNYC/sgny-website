@@ -1,0 +1,48 @@
+---
+import Base from '../../../layouts/Base.astro';
+import index from '../../../data/library-kardec.json';
+export function getStaticPaths() {
+  const files = import.meta.glob('../../../data/library/kardec/*.json', { eager: true });
+  const meta = Object.fromEntries(index.map((b) => [b.slug, b]));
+  const paths = [];
+  for (const [path, mod] of Object.entries(files)) {
+    const data = mod.default ?? mod;
+    const m = meta[data.slug];
+    if (!m) continue;
+    for (const c of data.chapters) {
+      paths.push({ params: { book: data.slug, chapter: String(c.n) }, props: { meta: m, total: data.chapters.length, ch: c } });
+    }
+  }
+  return paths;
+}
+const { meta, total, ch } = Astro.props;
+const n = ch.n;
+const paras = ch.paras ?? [];
+const prev = n > 1 ? n - 1 : null;
+const next = n < total ? n + 1 : null;
+---
+<Base title={`${ch.title} · ${meta.title}`} description={`${meta.title} by Allan Kardec — chapter ${n} of ${total}, in English.`}>
+  <section class="block">
+    <div class="container article reader" style="max-width:740px"
+         data-pagefind-body
+         data-pagefind-meta={`book:${meta.title}`}
+         data-pagefind-filter={`Book:${meta.title}`}>
+      <nav class="crumbs" data-pagefind-ignore>
+        <a href="/">Home</a> · <a href="/virtual-library">Library</a> ·
+        <a href={`/virtual-library/${meta.slug}`}>{meta.title}</a> · <span>Chapter {n}</span>
+      </nav>
+      <p class="eyebrow">{meta.title} · Allan Kardec</p>
+      <p class="reader-prog">Chapter {n} of {total}</p>
+      <h1>{ch.title}</h1>
+      <div class="body reader-body">
+        {paras.map((p) => <p>{p}</p>)}
+      </div>
+
+      <nav class="reader-nav">
+        {prev ? <a class="btn btn-outline" href={`/virtual-library/${meta.slug}/${prev}`}>← Previous</a> : <span></span>}
+        <a class="btn btn-ghost" style="color:var(--brand);border-color:var(--line)" href={`/virtual-library/${meta.slug}`}>Contents</a>
+        {next ? <a class="btn btn-outline" href={`/virtual-library/${meta.slug}/${next}`}>Next →</a> : <span></span>}
+      </nav>
+    </div>
+  </section>
+</Base>

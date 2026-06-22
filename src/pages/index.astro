@@ -1,0 +1,150 @@
+---
+import Base from '../layouts/Base.astro';
+import catalog from '../data/catalog.json';
+import { schedule } from '../data/activities.js';
+const modeLabel = { 'in-person': 'In person', online: 'Online', hybrid: 'Hybrid' };
+const books = catalog.filter((b) => b.type === 'book' && b.cover);
+// Lead with Allan Kardec's core codification — the most recognizable Spiritist works.
+const preferred = [
+  'spirits-book', 'mediums-book', 'gospel-according-to-spiritism',
+  'heaven-and-hell-divine-justice-according-to-spiritism',
+  'genesis-miracles-and-predictions-according-to-spiritism', 'what-is-spiritism',
+];
+const bySlug = (s) => books.find((b) => b.author === 'allan-kardec' && b.slug === s);
+const featured = [...preferred.map(bySlug).filter(Boolean),
+  ...books.filter((b) => b.forSale && !preferred.includes(b.slug))].slice(0, 6);
+const pillars = [
+  { ico: '📖', title: 'Study', text: 'Online and in-person study groups exploring the Spiritist Doctrine, open to all and always free.' },
+  { ico: '🕊️', title: 'Practice', text: 'Regular meetings, prayer, and the practice of fraternal charity in everyday life.' },
+  { ico: '🌐', title: 'Share', text: 'A growing library of books, talks, and resources disseminating Kardec’s teachings in English.' },
+];
+---
+<Base title="Home">
+  <section class="hero">
+    <div class="hero-mist" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <div class="container" style="position:relative;z-index:1">
+      <p class="eyebrow" style="color:#e9c878">Allan Kardec · Spiritist Doctrine</p>
+      <h1>Understanding life, death, and the immortal spirit.</h1>
+      <p>The Spiritist Group of New York is a not-for-profit dedicated to promoting and
+        disseminating Spiritism according to the teachings of Allan Kardec. All our
+        meetings and services are free.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/spiritism-guide">Start with the Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="background:var(--surface);border-block:1px solid var(--line)">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Join us</p>
+        <h2>This week at SGNY</h2>
+        <p>All activities are free and open to all — many are also held online. Tap a session for details.</p>
+      </div>
+      <div class="week-grid">
+        {schedule.map((d) => (
+          <div class="day-card">
+            <h3>{d.day}</h3>
+            <ul>
+              {d.sessions.map((s) => (
+                <li>
+                  <a class="sess" href={`/activities-schedule?open=${s.slug}`}>
+                    <span class="t">{s.time}</span>
+                    <span class="s">{s.name} <span class="arrow">→</span></span>
+                    <span class="tags">
+                      <span class={`tag ${s.mode !== 'in-person' ? 'tag-online' : ''}`}>{modeLabel[s.mode]}</span>
+                      {s.tags.map((tag) => <span class="tag">{tag}</span>)}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div style="text-align:center;margin-top:2.5rem">
+        <a class="btn btn-outline" href="/activities-schedule">View full schedule →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">From our catalog</p>
+        <h2>Spiritist books in English</h2>
+        <p>Published and distributed at cost by the Spiritist Alliance Books (SAB) program.</p>
+      </div>
+      <div class="book-grid">
+        {featured.map((b) => (
+          <a class="book" href={b.path}>
+            <div class="cover">{b.cover && <img src={b.cover} alt={`Cover of ${b.title}`} loading="lazy" />}</div>
+            <div class="title">{b.title}</div>
+            <div class="by">{b.authorName}</div>
+            {b.price && <div class="price">{b.price}</div>}
+          </a>
+        ))}
+      </div>
+      <div style="text-align:center;margin-top:2.5rem">
+        <a class="btn btn-outline" href="/catalog">Browse the full catalog →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="background:var(--surface);border-block:1px solid var(--line)">
+    <div class="container">
+      <div class="grid cards-3">
+        {pillars.map((p) => (
+          <article class="card">
+            <div class="ico">{p.ico}</div>
+            <h3>{p.title}</h3>
+            <p class="muted">{p.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container" style="display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:center">
+      <div>
+        <p class="eyebrow">New to Spiritism?</p>
+        <h2>A philosophy with a scientific and moral basis</h2>
+        <p class="muted">Spiritism studies the nature, origin, and destiny of spirits, and their
+          relationship with the physical world. Begin with our guided introduction, written for
+          newcomers and long-time students alike.</p>
+        <a class="btn btn-outline" href="/spiritism-guide" style="margin-top:.5rem">Read the introduction</a>
+      </div>
+      <div class="card" style="background:var(--accent-soft);border-color:var(--accent-soft)">
+        <h3 style="margin-top:0">Join us this week</h3>
+        <p class="muted">Most of our studies are also held online so you can take part from anywhere.</p>
+        <a class="btn btn-primary" href="/activities-schedule#online">How to join online →</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .week-grid { display: grid; gap: 1rem; grid-template-columns: repeat(5, 1fr); margin-inline: auto; }
+    .day-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+      box-shadow: var(--shadow); overflow: hidden; }
+    .day-card h3 { margin: 0; padding: .75rem 1.1rem; background: var(--brand); color: #fff; font-size: 1.05rem; }
+    .day-card ul { list-style: none; margin: 0; padding: .4rem 1.1rem .8rem; }
+    .day-card li { border-bottom: 1px solid var(--line); }
+    .day-card li:last-child { border-bottom: 0; }
+    .sess { display: flex; flex-direction: column; gap: .25rem; padding: .85rem 1.1rem; margin: 0 -1.1rem;
+      text-decoration: none; transition: background .12s; }
+    .sess:hover { background: var(--accent-soft); }
+    .sess:hover .arrow { opacity: 1; transform: translateX(2px); }
+    .arrow { color: var(--accent); opacity: 0; transition: opacity .12s, transform .12s; font-weight: 700; }
+    .day-card .t { font-variant-numeric: tabular-nums; color: var(--accent); font-weight: 700; font-size: .8rem;
+      letter-spacing: .01em; white-space: nowrap; }
+    .day-card .s { font-family: var(--serif); font-size: 1.05rem; line-height: 1.3; color: var(--ink); }
+    .tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .15rem; }
+    .tag { font-family: var(--sans); font-size: .62rem; text-transform: uppercase; letter-spacing: .05em;
+      font-weight: 600; background: var(--line); color: var(--ink-soft); padding: .12rem .45rem; border-radius: 6px; white-space: nowrap; }
+    .tag-online { background: var(--accent-soft); color: var(--brand-dark); }
+    @media (max-width: 980px) { .week-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 640px) { .week-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 440px) { .week-grid { grid-template-columns: 1fr; } }
+  </style>
+</Base>
