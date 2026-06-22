@@ -19,8 +19,8 @@ export const sessions = [
     notes: [],
   },
   {
-    slug: 'monday-fraternal-assistance', day: 'Monday', time: '7:00 – 7:30 PM',
-    name: 'Fraternal Assistance', mode: 'in-person', tags: [],
+    slug: 'monday-fraternal-assistance', day: 'Monday', time: '7:00 – 8:00 PM',
+    name: 'Fraternal Assistance (Passes)', mode: 'in-person', tags: [],
     audience: 'Open to the public',
     format: 'A brief lecture followed by the laying on of hands (passes).',
     material: 'Currently reading “Living Spring,” from the spirit Emmanuel through the mediumship of Francisco C. Xavier.',
@@ -30,7 +30,7 @@ export const sessions = [
     ],
   },
   {
-    slug: 'monday-mediumship', day: 'Monday', time: '7:30 – 8:30 PM',
+    slug: 'monday-mediumship', day: 'Monday', time: '8:00 – 9:00 PM',
     name: 'Mediumship Meeting', mode: 'in-person', tags: ['Members only'],
     audience: 'Closed to the public',
     format: 'The mediumistic work of the group — fraternal assistance to errant spirits, carried out by prepared volunteers.',
