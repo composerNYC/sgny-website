@@ -1,0 +1,129 @@
+---
+import Base from '../layouts/Base.astro';
+// The form submits directly to our Google Form, which collects responses in a
+// private Google Sheet shared with our prayer volunteers. The submission posts
+// into a hidden iframe so the visitor stays on this page and sees a thank-you.
+const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSfIHTR-BSzhT2fboUsORewCUSqnlMbQZ6v5Fda8njt-zK8-Eg/formResponse';
+const FIELD = {
+  lovedOne: 'entry.107947625',
+  category: 'entry.1821236352',
+  note: 'entry.585532151',
+};
+---
+<Base
+  title="Prayer Requests"
+  description="Submit the name of a loved one to be held in prayer by the Spiritist Group of New York — for a physical (health), spiritual, or recently discarnated need."
+>
+  <section class="hero" style="padding-block:clamp(2.5rem,6vw,4.5rem)">
+    <div class="container">
+      <p class="eyebrow" style="color:#e9c878">Prayer</p>
+      <h1>Ask for a prayer</h1>
+      <p>Share the name of someone you love who is in need — whether the need is
+        physical (health), spiritual, or for someone recently discarnated. Their name
+        will be held in prayer by our group. There is no charge, and you do not need to
+        give your own name.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container" style="max-width:680px">
+      <div id="prayer-banner" class="banner ok" hidden>Thank you. Your loved one will be held in prayer by our group. 🕊️</div>
+
+      <form id="prayer-form" class="prayer-form card" method="POST" action={GOOGLE_FORM_ACTION} target="prayer_sink">
+        <!-- Honeypot: hidden from people, tempting to bots. Leave it empty. -->
+        <div class="hp" aria-hidden="true">
+          <label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+        </div>
+
+        <div class="field">
+          <label for="name">Name of your loved one <span class="req">*</span></label>
+          <input id="name" name={FIELD.lovedOne} type="text" maxlength="120" required
+                 placeholder="e.g. Maria Silva" autocomplete="off" />
+        </div>
+
+        <fieldset class="field">
+          <legend>What kind of need? <span class="req">*</span></legend>
+          <div class="choices">
+            <label class="choice">
+              <input type="radio" name={FIELD.category} value="Physical (health)" required />
+              <span><strong>Physical / Health</strong><small>illness, recovery, the body</small></span>
+            </label>
+            <label class="choice">
+              <input type="radio" name={FIELD.category} value="Spiritual" />
+              <span><strong>Spiritual</strong><small>peace, guidance, the spirit</small></span>
+            </label>
+            <label class="choice">
+              <input type="radio" name={FIELD.category} value="Recently Discarnated" />
+              <span><strong>Recently Discarnated</strong><small>a loved one who has passed</small></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="note">A few words (optional)</label>
+          <textarea id="note" name={FIELD.note} rows="4" maxlength="1000"
+                    placeholder="Anything you'd like us to keep in mind."></textarea>
+        </div>
+
+        <!-- Helps Google accept the cross-site submission cleanly. -->
+        <input type="hidden" name="fvv" value="1" />
+        <input type="hidden" name="pageHistory" value="0" />
+
+        <button class="btn btn-primary" type="submit">Add to our prayers</button>
+        <p class="muted privacy">Names are seen only by our prayer volunteers and are
+          never shared or published.</p>
+      </form>
+
+      <!-- Submissions post to Google in this hidden frame so the visitor stays here. -->
+      <iframe name="prayer_sink" title="prayer submission" style="display:none" aria-hidden="true"></iframe>
+    </div>
+  </section>
+
+  <style>
+    .banner { border-radius: var(--radius); padding: .9rem 1.1rem; margin-bottom: 1.25rem; font-weight: 600; }
+    .banner.ok { background: var(--accent-soft); color: var(--brand-dark); border: 1px solid var(--accent); }
+    .banner.err { background: #fdeaea; color: #8a1c1c; border: 1px solid #e3a3a3; }
+    .prayer-form { display: grid; gap: 1.4rem; }
+    .field { display: grid; gap: .45rem; border: 0; padding: 0; margin: 0; }
+    .field label, .field legend { font-weight: 600; color: var(--ink); padding: 0; }
+    .req { color: var(--accent); }
+    .field input[type="text"], .field textarea {
+      width: 100%; font: inherit; color: var(--ink); background: var(--bg);
+      border: 1px solid var(--line); border-radius: 10px; padding: .7rem .85rem; }
+    .field input:focus, .field textarea:focus {
+      outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px var(--accent-soft); }
+    .choices { display: grid; gap: .6rem; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+    .choice { display: flex; align-items: flex-start; gap: .6rem; cursor: pointer;
+      border: 1px solid var(--line); border-radius: 10px; padding: .75rem .85rem; transition: border-color .12s, background .12s; }
+    .choice:hover { border-color: var(--brand); }
+    .choice:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+    .choice input { margin-top: .25rem; }
+    .choice span { display: grid; line-height: 1.25; }
+    .choice small { color: var(--ink-soft); font-weight: 500; }
+    .privacy { font-size: .85rem; margin: 0; }
+    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    @media (max-width: 480px) { .choices { grid-template-columns: 1fr; } }
+  </style>
+
+  <script>
+    const form = document.getElementById('prayer-form');
+    const sink = document.querySelector('iframe[name="prayer_sink"]');
+    const banner = document.getElementById('prayer-banner');
+    let pending = false;
+    form.addEventListener('submit', () => {
+      // Honeypot: if a bot filled the hidden field, silently drop the submission.
+      const hp = form.querySelector('input[name="website"]');
+      if (hp && hp.value) { return; }
+      // Native required-field validation runs first; reaching here means it's valid.
+      pending = true;
+    });
+    sink.addEventListener('load', () => {
+      if (!pending) return; // ignore the initial blank load of the iframe
+      pending = false;
+      form.reset();
+      form.style.display = 'none';
+      banner.hidden = false;
+      banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  </script>
+</Base>
