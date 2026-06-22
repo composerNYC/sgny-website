@@ -48,7 +48,9 @@ const pillars = [
             <ul>
               {d.sessions.map((s) => (
                 <li>
-                  <a class="sess" href={`/activities-schedule?open=${s.slug}`}>
+                  <a class="sess" href={`/activities-schedule?open=${s.slug}`}
+                     data-day={d.day} data-time={s.time}
+                     data-restrict={s.tags.some((t) => /4th\s+sunday/i.test(t)) ? 'fourth-sunday' : undefined}>
                     <span class="t">{s.time}</span>
                     <span class="s">{s.name} <span class="arrow">→</span></span>
                     <span class="tags">
@@ -143,8 +145,86 @@ const pillars = [
     .tag { font-family: var(--sans); font-size: .62rem; text-transform: uppercase; letter-spacing: .05em;
       font-weight: 600; background: var(--line); color: var(--ink-soft); padding: .12rem .45rem; border-radius: 6px; white-space: nowrap; }
     .tag-online { background: var(--accent-soft); color: var(--brand-dark); }
+    /* next upcoming session highlight (matches the activities page) */
+    .sess.is-upcoming { position: relative; background: var(--accent-soft);
+      outline: 2px solid var(--accent); outline-offset: -2px; border-radius: 10px; }
+    .sess.is-upcoming .arrow { opacity: 1; }
+    .sess.is-upcoming::before { content: attr(data-flag); position: absolute; top: -8px; right: 10px;
+      background: var(--accent); color: #2a1d05; font-family: var(--sans); font-size: .58rem; font-weight: 800;
+      letter-spacing: .07em; text-transform: uppercase; padding: .16rem .5rem; border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(28,36,48,.2); }
     @media (max-width: 980px) { .week-grid { grid-template-columns: repeat(3, 1fr); } }
     @media (max-width: 640px) { .week-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 440px) { .week-grid { grid-template-columns: 1fr; } }
   </style>
+
+  <script>
+    // Highlight the next upcoming session in the weekly grid and advance it as time passes.
+    // All comparisons are done in New York time so it's correct for any visitor.
+    function initUpcoming() {
+      const items = Array.from(document.querySelectorAll('.week-grid .sess'));
+      if (!items.length) return;
+      const DOW = { Sunday: 0, Monday: 1, Tuesday: 2, Wednesday: 3, Thursday: 4, Friday: 5, Saturday: 6 };
+
+      const apOf = (s) => (s.match(/([ap])\.?\s*m/i) || [, ''])[1].toLowerCase();
+      function toMinutes(part, fallbackAP) {
+        const m = part.match(/(\d{1,2}):(\d{2})/);
+        if (!m) return null;
+        let h = +m[1];
+        const min = +m[2];
+        const ap = apOf(part) || fallbackAP;
+        if (ap === 'p' && h !== 12) h += 12;
+        if (ap === 'a' && h === 12) h = 0;
+        return h * 60 + min;
+      }
+      function parseTime(str) {
+        const parts = (str || '').split(/\s*[–—-]\s*/);
+        if (parts.length < 2) return null;
+        const endAP = apOf(parts[1]);
+        const start = toMinutes(parts[0], apOf(parts[0]) || endAP);
+        const end = toMinutes(parts[1], endAP);
+        return (start == null || end == null) ? null : { start, end };
+      }
+
+      const f = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York', weekday: 'long', hour: '2-digit', minute: '2-digit',
+        hour12: false, year: 'numeric', month: '2-digit', day: '2-digit',
+      });
+      const p = Object.fromEntries(f.formatToParts(new Date()).map((x) => [x.type, x.value]));
+      const todayDow = DOW[p.weekday];
+      const nowMin = (+p.hour % 24) * 60 + (+p.minute);
+      const Y = +p.year, M = +p.month, D = +p.day;
+      const isFourth = (dayOfMonth) => dayOfMonth >= 22 && dayOfMonth <= 28;
+
+      let best = null;
+      for (const el of items) {
+        const t = parseTime(el.dataset.time);
+        const sDow = DOW[el.dataset.day];
+        if (!t || sDow === undefined) continue;
+        let daysAhead = (sDow - todayDow + 7) % 7;
+        if (daysAhead === 0 && t.end <= nowMin) daysAhead = 7;
+        if (el.dataset.restrict === 'fourth-sunday') {
+          let guard = 0;
+          while (guard++ < 10) {
+            const occ = new Date(Date.UTC(Y, M - 1, D + daysAhead));
+            if (isFourth(occ.getUTCDate())) break;
+            daysAhead += 7;
+          }
+        }
+        const untilStart = daysAhead * 1440 + t.start - nowMin;
+        const untilEnd = daysAhead * 1440 + t.end - nowMin;
+        if (untilEnd <= 0) continue;
+        if (!best || untilEnd < best.untilEnd) best = { el, untilEnd, untilStart };
+      }
+
+      items.forEach((el) => { el.classList.remove('is-upcoming'); el.removeAttribute('data-flag'); });
+      if (best) {
+        best.el.classList.add('is-upcoming');
+        best.el.setAttribute('data-flag', best.untilStart <= 0 ? 'Happening now' : 'Upcoming');
+      }
+    }
+    initUpcoming();
+    setInterval(initUpcoming, 30000);
+    document.addEventListener('astro:page-load', initUpcoming);
+  </script>
 </Base>

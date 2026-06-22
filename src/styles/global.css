@@ -45,6 +45,9 @@ h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
 .brand img { width: 40px; height: 40px; border-radius: 8px; }
 .brand small { display: block; font-family: var(--sans); font-size: .68rem;
   letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+.brand .est { font-family: var(--sans); font-size: .58rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-soft); margin-left: .55rem; white-space: nowrap;
+  vertical-align: middle; }
 .nav { margin-left: auto; }
 .nav > ul { display: flex; gap: .25rem; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; align-items: center; }
 .submenu { list-style: none; }
