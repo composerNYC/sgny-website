@@ -11,8 +11,7 @@ const gridMode = { 'in-person': 'In person', online: 'Online', hybrid: 'Hybrid' 
       <p>Every one of our activities is free and open to all — whether you are exploring Spiritism
         for the first time or have studied it for years. Many sessions are also held online.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="#online">Join online</a>
-        <a class="btn btn-ghost" href="/about#contact">Ask a question</a>
+        <a class="btn btn-primary" href="/about#contact">Ask a question</a>
       </div>
     </div>
   </section>
@@ -48,36 +47,6 @@ const gridMode = { 'in-person': 'In person', online: 'Online', hybrid: 'Hybrid' 
         Several sessions are held online, and a few are by appointment — please
         <a href="/about#contact">contact us</a> to confirm details before your first visit.
       </p>
-    </div>
-  </section>
-
-  <!-- Joining online (merged from the old Online Studies page) -->
-  <section class="block" id="online" style="background:var(--surface);border-block:1px solid var(--line)">
-    <div class="container">
-      <div class="section-head"><p class="eyebrow">Online</p><h2>Joining our online meetings</h2>
-        <p>Every online session uses the same Zoom room. Join from a computer, phone, or tablet —
-          or dial in by phone.</p>
-      </div>
-      <div class="online-wrap">
-        <div class="online-join">
-          <h3>One link for every online session</h3>
-          <a class="btn btn-primary" href={zoom.url} target="_blank" rel="noopener" style="width:100%;justify-content:center">Open Zoom →</a>
-          <dl class="online-creds">
-            <div><dt>Meeting ID</dt><dd>{zoom.id}</dd></div>
-            <div><dt>Password</dt><dd>{zoom.password}</dd></div>
-            <div><dt>By phone</dt><dd>{zoom.phone}</dd></div>
-          </dl>
-        </div>
-        <div class="online-tips">
-          <h3>Before you join</h3>
-          <ul>
-            <li>You can join up to 30 minutes early to check your audio and video.</li>
-            <li>Please keep your microphone muted to avoid background noise.</li>
-            <li>On a computer or smartphone you may turn your video off if you prefer.</li>
-            <li>To ask a question, use the “Raise hand” icon and the host will bring you in.</li>
-          </ul>
-        </div>
-      </div>
     </div>
   </section>
 

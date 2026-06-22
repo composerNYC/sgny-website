@@ -12,7 +12,7 @@ export default defineConfig({
   build: { format: 'directory' },
   // Pages merged into other pages; keep the old URLs working.
   redirects: {
-    '/online-studies': '/activities-schedule#online',
+    '/online-studies': '/activities-schedule',
     // Biographies + Lexicon were consolidated into the Guide to Spiritism one-pager.
     '/biographies': '/spiritism-guide#biographies',
     '/spiritist-lexicon': '/spiritism-guide#great-names',
