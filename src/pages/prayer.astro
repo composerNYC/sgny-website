@@ -8,6 +8,8 @@ const FIELD = {
   lovedOne: 'entry.107947625',
   category: 'entry.1821236352',
   note: 'entry.585532151',
+  yourName: 'entry.163617234',
+  yourEmail: 'entry.2090933426',
 };
 ---
 <Base
@@ -22,6 +24,8 @@ const FIELD = {
         physical (health), spiritual, or for someone recently discarnated. Their name
         will be held in prayer by our group. There is no charge, and you do not need to
         give your own name.</p>
+      <p class="prayer-meet">We are a group of dedicated workers who gather each Tuesday from
+        10:00–10:30 AM to hold vibrations for all the names in our prayer book.</p>
     </div>
   </section>
 
@@ -65,6 +69,18 @@ const FIELD = {
                     placeholder="Anything you'd like us to keep in mind."></textarea>
         </div>
 
+        <div class="field">
+          <label for="from-name">Your name (optional)</label>
+          <input id="from-name" name={FIELD.yourName} type="text" maxlength="120"
+                 placeholder="If you'd like us to know who is asking" autocomplete="name" />
+        </div>
+
+        <div class="field">
+          <label for="from-email">Your email (optional)</label>
+          <input id="from-email" name={FIELD.yourEmail} type="email" maxlength="160"
+                 placeholder="So we can reach you if needed" autocomplete="email" />
+        </div>
+
         <!-- Helps Google accept the cross-site submission cleanly. -->
         <input type="hidden" name="fvv" value="1" />
         <input type="hidden" name="pageHistory" value="0" />
@@ -87,7 +103,7 @@ const FIELD = {
     .field { display: grid; gap: .45rem; border: 0; padding: 0; margin: 0; }
     .field label, .field legend { font-weight: 600; color: var(--ink); padding: 0; }
     .req { color: var(--accent); }
-    .field input[type="text"], .field textarea {
+    .field input[type="text"], .field input[type="email"], .field textarea {
       width: 100%; font: inherit; color: var(--ink); background: var(--bg);
       border: 1px solid var(--line); border-radius: 10px; padding: .7rem .85rem; }
     .field input:focus, .field textarea:focus {
