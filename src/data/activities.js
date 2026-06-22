@@ -37,7 +37,7 @@ export const sessions = [
     notes: ['This is a closed working session and is not open to visitors.'],
   },
   {
-    slug: 'tuesday-prayer-group', day: 'Tuesday', time: '10:30 – 11:30 AM',
+    slug: 'tuesday-prayer-group', day: 'Tuesday', time: '10:00 – 10:30 AM',
     name: 'Prayer Group', mode: 'online', tags: ['By appointment'],
     audience: 'By appointment only',
     format: 'A gathering for prayer, held online.',
