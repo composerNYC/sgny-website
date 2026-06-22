@@ -3,9 +3,9 @@ import Base from '../../layouts/Base.astro';
 import Search from 'astro-pagefind/components/Search.astro';
 import books from '../../data/library-kardec.json';
 const groups = [
-  { key: 'codification', label: 'The Codification', blurb: 'The five fundamental works in which Allan Kardec set down the Spiritist Doctrine.' },
-  { key: 'other', label: 'Other Works', blurb: 'Further writings, introductions, and historical editions by Kardec.' },
   { key: 'review', label: 'The Spiritist Review', blurb: 'Kardec’s monthly journal (Revue Spirite), 1858–1869 — twelve complete volumes.' },
+  { key: 'other', label: 'Other Works', blurb: 'Further writings, introductions, and historical editions by Kardec.' },
+  { key: 'codification', label: 'The Codification', blurb: 'The five fundamental works in which Allan Kardec set down the Spiritist Doctrine.' },
 ];
 const byGroup = (k) => books.filter((b) => b.group === k);
 ---
