@@ -9,6 +9,10 @@ export function getStaticPaths() {
     .map((p) => ({ params: { path: p.path.replace(/^\/catalog\//, '') }, props: { page: p } }));
 }
 const { page } = Astro.props;
+// Only show child links to catalog pages that still exist — this drops links to
+// the removed collection / "and other authors" / category pages (no more dead links).
+const validPaths = new Set(catalog.map((p) => p.path.replace(/\/$/, '')));
+const children = (page.children ?? []).filter((c) => validPaths.has(String(c.href).replace(/\/$/, '')));
 
 const segs = page.path.split('/').filter(Boolean);
 const crumbs = segs.map((s, i) => ({
@@ -79,9 +83,9 @@ const paypal = page.type === 'book' && page.forSale && page.amount;
       ) : (
         <div>
           <h1>{page.title}</h1>
-          {page.intro && page.children.length === 0 && <p class="muted" style="max-width:60ch">{page.intro}</p>}
+          {page.intro && children.length === 0 && <p class="muted" style="max-width:60ch">{page.intro}</p>}
           <div class="book-grid" style="margin-top:2rem">
-            {page.children.map((c) => (
+            {children.map((c) => (
               <a class="book" href={c.href}>
                 <div class="cover">
                   {c.cover

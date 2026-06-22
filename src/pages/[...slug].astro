@@ -8,7 +8,7 @@ export function getStaticPaths() {
   // Pages that have a hand-built custom template (must not also be generated here)
   const CUSTOM = new Set(['/spiritism-guide', '/biographies', '/spiritist-lexicon', '/activities-schedule', '/spiritist-materials', '/online-studies', '/spiritist-videos']);
   return pages
-    .filter((p) => p.urlPath !== '/' && !p.urlPath.startsWith('/catalog') && !CUSTOM.has(p.urlPath))
+    .filter((p) => p.urlPath !== '/' && !p.urlPath.startsWith('/catalog') && !p.urlPath.startsWith('/bibliogra') && !CUSTOM.has(p.urlPath))
     .map((p) => ({
       params: { slug: p.urlPath.replace(/^\//, '') },
       props: { page: p },

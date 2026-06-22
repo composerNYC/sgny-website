@@ -23,6 +23,10 @@ export default defineConfig({
   // Pages merged into other pages; keep the old URLs working.
   redirects: {
     '/online-studies': '/activities-schedule',
+    // retired stale duplicates of the /biographies section
+    '/bibliographies/allan-kardec': '/biographies/allan-kardec',
+    '/bibliographies/francisco-xavier': '/biographies/francisco-xavier',
+    '/bibliograhies/henry-sausse': '/spiritism-guide#biographies',
     // Biographies + Lexicon were consolidated into the Guide to Spiritism one-pager.
     '/biographies': '/spiritism-guide#biographies',
     '/spiritist-lexicon': '/spiritism-guide#great-names',
