@@ -54,7 +54,7 @@ export const sessions = [
   },
   {
     slug: 'wednesday-book-club', day: 'Wednesday', time: '7:00 – 8:00 PM',
-    name: 'Book Club', mode: 'hybrid', tags: [],
+    name: 'Book Club', mode: 'online', tags: [],
     audience: 'Open to the public · no appointment needed',
     material: '“Prelude to the Divine Kingdom” by Divaldo Franco and Amália Rodrigues (spirit). The book is available for purchase at SGNY.',
     format: 'Reading and discussion.',
