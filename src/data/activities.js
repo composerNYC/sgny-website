@@ -75,14 +75,14 @@ export const sessions = [
     slug: 'thursday-study-group', day: 'Thursday', time: '7:00 – 8:00 PM',
     name: 'Study Group', mode: 'hybrid', tags: [],
     audience: 'Open to the public',
-    format: 'Reading and discussion of the Spiritist Doctrine, offered both in person and online.',
+    format: 'Reading and discussion of Spiritism, offered both in person and online.',
     notes: [],
   },
   {
     slug: 'sunday-study-group', day: 'Sunday', time: '11:00 AM – 1:00 PM',
     name: 'Study Group', mode: 'online', tags: [],
     audience: 'Open to the public',
-    format: 'Reading and discussion of the Spiritist Doctrine, held online.',
+    format: 'Reading and discussion of Spiritism, held online.',
     notes: [],
   },
   {

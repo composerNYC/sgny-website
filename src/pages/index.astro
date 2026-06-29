@@ -14,7 +14,7 @@ const bySlug = (s) => books.find((b) => b.author === 'allan-kardec' && b.slug ==
 const featured = [...preferred.map(bySlug).filter(Boolean),
   ...books.filter((b) => b.forSale && !preferred.includes(b.slug))].slice(0, 6);
 const pillars = [
-  { ico: '📖', title: 'Study', text: 'Online and in-person study groups exploring the Spiritist Doctrine, open to all and always free.' },
+  { ico: '📖', title: 'Study', text: 'Online and in-person study groups exploring Spiritism, open to all and always free.' },
   { ico: '🕊️', title: 'Practice', text: 'Regular meetings, prayer, and the practice of fraternal charity in everyday life.' },
   { ico: '🌐', title: 'Share', text: 'A growing library of books, talks, and resources disseminating Kardec’s teachings in English.' },
 ];
@@ -23,7 +23,7 @@ const pillars = [
   <section class="hero">
     <div class="hero-mist" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
     <div class="container" style="position:relative;z-index:1">
-      <p class="eyebrow" style="color:#e9c878">Allan Kardec · Spiritist Doctrine</p>
+      <p class="eyebrow" style="color:#e9c878">Allan Kardec · Spiritism</p>
       <h1>Understanding life, death, and the immortal spirit.</h1>
       <p>The Spiritist Group of New York is a not-for-profit dedicated to promoting and
         disseminating Spiritism according to the teachings of Allan Kardec. All our
