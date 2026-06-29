@@ -8,7 +8,6 @@ const byAuthor = new Map(authors.map((a) => [a.slug, { ...a, books: [] }]));
 for (const b of books) if (byAuthor.has(b.author)) byAuthor.get(b.author).books.push(b);
 const groups = [...byAuthor.values()].filter((g) => g.books.length);
 const total = books.length;
-const featured = books.find((b) => b.newRelease);
 ---
 <Base title="Book Catalog" description="Spiritist books in English, published and distributed at cost by the Spiritist Alliance Books program.">
   <section class="hero" style="padding-block:clamp(2.5rem,6vw,4rem)">
@@ -22,25 +21,6 @@ const featured = books.find((b) => b.newRelease);
       </div>
     </div>
   </section>
-
-  {featured && (
-    <section class="block" style="padding-bottom:0">
-      <div class="container">
-        <a class="feature" href={featured.path}>
-          <div class="feature-cover">
-            {featured.cover && <img src={featured.cover} alt={`Cover of ${featured.title}`} />}
-          </div>
-          <div class="feature-body">
-            <p class="eyebrow" style="margin-bottom:.5rem">★ New Release{featured.releaseLabel ? ` · ${featured.releaseLabel}` : ''}</p>
-            <h2 style="margin:.1rem 0 .3rem;font-size:clamp(1.5rem,3vw,2rem)">{featured.title}</h2>
-            {featured.authorName && <p class="muted" style="margin:0 0 .9rem">by {featured.authorName}</p>}
-            {featured.synopsis && <p style="margin:0;max-width:60ch">{featured.synopsis.split(/\n+/)[0]}</p>}
-            <span class="btn btn-primary" style="margin-top:1.25rem">View this book →</span>
-          </div>
-        </a>
-      </div>
-    </section>
-  )}
 
   <section class="block">
     <div class="container">
@@ -65,19 +45,3 @@ const featured = books.find((b) => b.newRelease);
     </div>
   </section>
 </Base>
-
-<style>
-  .feature { display: grid; grid-template-columns: minmax(120px, 200px) 1fr; gap: clamp(1.25rem, 4vw, 2.5rem);
-    align-items: center; padding: clamp(1.25rem, 3vw, 2rem); border: 1px solid var(--line);
-    border-radius: var(--radius); background: var(--accent-soft); box-shadow: var(--shadow);
-    text-decoration: none; color: inherit; }
-  .feature:hover { border-color: var(--accent); }
-  .feature-cover { aspect-ratio: 2/3; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow);
-    background: var(--surface); }
-  .feature-cover img { width: 100%; height: 100%; object-fit: cover; }
-  .feature-body h2 { font-family: var(--serif); color: var(--brand-dark); }
-  @media (max-width: 560px) {
-    .feature { grid-template-columns: 1fr; justify-items: center; text-align: center; }
-    .feature-cover { max-width: 180px; }
-  }
-</style>
