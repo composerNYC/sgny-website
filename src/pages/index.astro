@@ -13,11 +13,6 @@ const preferred = [
 const bySlug = (s) => books.find((b) => b.author === 'allan-kardec' && b.slug === s);
 const featured = [...preferred.map(bySlug).filter(Boolean),
   ...books.filter((b) => b.forSale && !preferred.includes(b.slug))].slice(0, 6);
-const pillars = [
-  { ico: '📖', title: 'Study', text: 'Online and in-person study groups exploring Spiritism, open to all and always free.' },
-  { ico: '🕊️', title: 'Practice', text: 'Regular meetings, prayer, and the practice of fraternal charity in everyday life.' },
-  { ico: '🌐', title: 'Share', text: 'A growing library of books, talks, and resources disseminating Kardec’s teachings in English.' },
-];
 ---
 <Base title="Home">
   <section class="hero">
@@ -90,20 +85,6 @@ const pillars = [
       </div>
       <div style="text-align:center;margin-top:2.5rem">
         <a class="btn btn-outline" href="/catalog">Browse the full catalog →</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" style="background:var(--surface);border-block:1px solid var(--line)">
-    <div class="container">
-      <div class="grid cards-3">
-        {pillars.map((p) => (
-          <article class="card">
-            <div class="ico">{p.ico}</div>
-            <h3>{p.title}</h3>
-            <p class="muted">{p.text}</p>
-          </article>
-        ))}
       </div>
     </div>
   </section>

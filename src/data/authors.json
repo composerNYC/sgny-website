@@ -54,12 +54,6 @@
     "path": "/catalog/books/cristina-cabral"
   },
   {
-    "slug": "elsa-rossi",
-    "name": "Elsa Rossi",
-    "count": 1,
-    "path": "/catalog/books/elsa-rossi"
-  },
-  {
     "slug": "gabriel-delanne",
     "name": "Gabriel Delanne",
     "count": 1,
