@@ -31,7 +31,7 @@ export const sessions = [
   },
   {
     slug: 'monday-mediumship', day: 'Monday', time: '8:00 – 9:00 PM',
-    name: 'Mediumship Meeting', mode: 'in-person', tags: ['Members only'],
+    name: 'Mediumship Meeting', mode: 'in-person', tags: ['Invitation only'],
     audience: 'Closed to the public',
     format: 'The mediumistic work of the group — fraternal assistance to errant spirits, carried out by prepared volunteers.',
     notes: ['This is a closed working session and is not open to visitors.'],
