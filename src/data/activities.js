@@ -20,9 +20,9 @@ export const sessions = [
   },
   {
     slug: 'monday-fraternal-assistance', day: 'Monday', time: '7:00 – 8:00 PM',
-    name: 'Fraternal Assistance (Passes)', mode: 'in-person', tags: [],
+    name: 'Fraternal Assistance (Passes)', mode: 'hybrid', tags: ['Passes: in-person only'],
     audience: 'Open to the public',
-    format: 'A brief lecture followed by the laying on of hands (passes).',
+    format: 'A brief lecture (streamed online) followed by the laying on of hands (passes), given in person only.',
     material: 'Currently reading “Living Spring,” from the spirit Emmanuel through the mediumship of Francisco C. Xavier.',
     notes: [
       'Please be prompt — doors close at 7:00 PM, or once we reach full capacity. Late arrivals cannot be admitted.',
