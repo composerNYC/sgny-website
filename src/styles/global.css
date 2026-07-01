@@ -92,6 +92,14 @@ h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
   background: radial-gradient(120% 120% at 30% 20%, transparent 40%, rgba(8,18,34,.45));
 }
 /* ethereal drifting, pulsing "spirit" mist */
+.hero-anniversary-badge {
+  position: absolute; top: 1.25rem; right: 1.25rem; z-index: 2;
+  width: clamp(93px, 12.1vw, 165px); height: auto;
+  padding: .6rem;
+  background: rgba(255,255,255,.92);
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.35);
+}
 .hero-mist { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
 .hero-mist span {
   position: absolute; border-radius: 50%;
