@@ -662,7 +662,7 @@
         "href": "/catalog/books/divaldo-franco/living-and-loving",
         "text": "Living and Loving",
         "cover": "/uploads/2020/01/living-and-loving.png",
-        "price": "US$10.00",
+        "price": "",
         "isBook": true
       },
       {
@@ -739,10 +739,8 @@
     "authorName": "Divaldo Franco",
     "slug": "living-and-loving",
     "cover": "/uploads/2020/01/living-and-loving.png",
-    "price": "US$10.00",
     "format": "paperback",
-    "forSale": true,
-    "amount": "10.00",
+    "forSale": false,
     "synopsis": "Inspirational messages to promote health and well-being. The authors dedicated these pages to the growing number of people who are disappointed with life and love, in addition to all the bitter souls, hoping that they may help themselves to reconsider pessimistic attitudes, start a new life of love, and have enough love to be able to experience happiness.",
     "blurb": "Inspirational messages to promote health and well-being. The authors dedicated these pages to the growing number of people who are disappointed with life and love, in addition to all the bitter souls, hoping that they may help themselves to"
   },
