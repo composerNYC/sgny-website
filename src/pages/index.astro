@@ -15,6 +15,10 @@ const featured = [...preferred.map(bySlug).filter(Boolean),
   ...books.filter((b) => b.forSale && !preferred.includes(b.slug))].slice(0, 6);
 ---
 <Base title="Home">
+  <div style="background:#e63946;color:#fff;text-align:center;padding:1.25rem 1rem;font-family:var(--sans);font-size:1.25rem;font-weight:800;letter-spacing:.03em;text-transform:uppercase;">
+    🚧 TEST BANNER — This is a preview build 🚧
+  </div>
+
   <section class="hero">
     <div class="hero-mist" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
     <div class="container" style="position:relative;z-index:1">
