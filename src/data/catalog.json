@@ -2229,14 +2229,14 @@
         "href": "/catalog/books/jussara-korngold/eternal-voices",
         "text": "Eternal Voices",
         "cover": "/uploads/2020/01/eternal-voices.png",
-        "price": "",
+        "price": "US$15.00",
         "isBook": true
       },
       {
         "href": "/catalog/books/jussara-korngold/practical-guide-for-magnetic-and-spiritual-healing",
         "text": "A Practical Guide for Magnetic and Spiritual Healing",
         "cover": "/uploads/2020/01/practical-guide-for-magnetic-and-spiritual-healing.png",
-        "price": "",
+        "price": "US$15.00",
         "isBook": true
       },
       {
@@ -2251,6 +2251,20 @@
         "text": "The Prism of Grief",
         "cover": "/uploads/2026/04/the-prism-of-grief.jpg",
         "price": "US$12.99",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/jussara-korngold/inner-transformation",
+        "text": "Inner Transformation",
+        "cover": "/uploads/2024/08/inner-transformation.jpg",
+        "price": "US$12.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/jussara-korngold/transcendence-life-in-the-hereafter",
+        "text": "Transcendence: Life in the Hereafter",
+        "cover": "/uploads/2024/08/transcendence-life-in-the-hereafter.jpg",
+        "price": "US$12.00",
         "isBook": true
       }
     ]
@@ -3256,5 +3270,35 @@
     "amount": "12.99",
     "synopsis": "In The Prism of Grief, Jussara Pretti Korngold invites you to look at your sorrow through a different lens. Drawing on the profound insights of transcendental psychology and a spiritual perspective, this book traces the \"colors\" of loss—from the blue shadows of childhood to the silvering of maturity. This is not a book about \"getting over\" loss; it is an active healing itinerary for the metamorphosis that occurs when we move through it. It guides the soul from the fragmentation of the self toward a state of Reintegrated Light—a place where every shadow of your history is woven into a new, brilliant whole. Discover how the fissures in your life are exactly where the strength of wisdom is meant to take root. Learn that the \"cracks\" left by loss are not signs of permanent damage, but the very places where your inner light becomes most visible. What remains at the end of the journey is not a return to who you were before, but the emergence of a soul that is stronger for having been broken.",
     "blurb": "In The Prism of Grief, Jussara Pretti Korngold invites you to look at your sorrow through a different lens. Drawing on the profound insights of transcendental psychology and a spiritual perspective, this book traces the \"colors\" of loss."
+  },
+  {
+    "path": "/catalog/books/jussara-korngold/inner-transformation",
+    "title": "Inner Transformation",
+    "type": "book",
+    "author": "jussara-korngold",
+    "authorName": "Jussara Korngold",
+    "slug": "inner-transformation",
+    "cover": "/uploads/2024/08/inner-transformation.jpg",
+    "price": "US$12.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "12.00",
+    "synopsis": "This book serves as a guide to help readers develop self-awareness and inner transformation. Drawing from Jesus's Sermon on the Mount and Benjamin Franklin's thirteen virtues, it offers profound insights into virtuous living. The Sermon provides spiritual guidance on compassion and humility, while Franklin's virtues offer a practical framework for integrity and diligence. Together, these teachings provide comprehensive guidance for moral transformation. Embrace these teachings with an open heart and mind, letting them guide you towards moral enlightenment and empowering you to lead a life of purpose, integrity, and spiritual fulfillment.",
+    "blurb": "This book serves as a guide to help readers develop self-awareness and inner transformation. Drawing from Jesus's Sermon on the Mount and Benjamin Franklin's thirteen virtues, it offers profound insights into virtuous living."
+  },
+  {
+    "path": "/catalog/books/jussara-korngold/transcendence-life-in-the-hereafter",
+    "title": "Transcendence: Life in the Hereafter",
+    "type": "book",
+    "author": "jussara-korngold",
+    "authorName": "Jussara Korngold",
+    "slug": "transcendence-life-in-the-hereafter",
+    "cover": "/uploads/2024/08/transcendence-life-in-the-hereafter.jpg",
+    "price": "US$12.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "12.00",
+    "synopsis": "Dive into the spiritual journey of a lifetime in \"Transcendence: Life in the Hereafter.\" Since a pivotal mediumship meeting on December 19th, 1980, the author's life has been profoundly transformed by encounters with the spirit world, channeling messages of profound wisdom and insight into the afterlife from Spiritist Institutions across Brazil, England, and the United States. This captivating book shares diverse experiences, from encounters with suffering spirits seeking solace to enlightened entities offering guidance and wisdom. The author reveals the sanctity and enduring connections forged during these gatherings, showcasing the transformative power of spiritual communication. Join the author on an extraordinary voyage through the spirit world, where love, hope, and enlightenment await in \"Transcendence: Life in the Hereafter.\"",
+    "blurb": "Dive into the spiritual journey of a lifetime in \"Transcendence: Life in the Hereafter.\" Since a pivotal mediumship meeting on December 19th, 1980, the author's life has been profoundly transformed by encounters with the spirit world."
   }
 ]
