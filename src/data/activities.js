@@ -80,7 +80,7 @@ export const sessions = [
     notes: [],
   },
   {
-    slug: 'sunday-study-group', day: 'Sunday', time: '11:00 AM – 1:00 PM',
+    slug: 'sunday-study-group', day: 'Sunday', time: '11:00 AM – 12:30 PM',
     name: 'Study Group', mode: 'online', tags: [],
     audience: 'Open to the public',
     format: 'Reading and discussion of Spiritism, held online.',
