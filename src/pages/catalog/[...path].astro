@@ -36,21 +36,27 @@ const paypal = page.type === 'book' && page.forSale && page.amount;
               <div class="cover" style="aspect-ratio:2/3;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);background:var(--accent-soft)">
                 {page.cover && <img src={page.cover} alt={`Cover of ${page.title}`} style="width:100%;height:100%;object-fit:cover" />}
               </div>
-              {page.price && (
+              {page.type === 'book' && (
                 <div class="card" style="margin-top:1.25rem;text-align:center">
-                  <div style="font-size:1.5rem;font-family:var(--serif);color:var(--brand-dark)">{page.price}</div>
-                  {page.format && <div class="muted" style="font-size:.85rem;text-transform:capitalize">{page.format}</div>}
-                  {paypal ? (
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal" style="margin-top:.9rem">
-                      <input type="hidden" name="cmd" value="_xclick" />
-                      <input type="hidden" name="business" value="sab-books@sgny.org" />
-                      <input type="hidden" name="item_name" value={page.title} />
-                      <input type="hidden" name="amount" value={page.amount} />
-                      <input type="hidden" name="currency_code" value="USD" />
-                      <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Buy with PayPal</button>
-                    </form>
+                  {page.price ? (
+                    <>
+                      <div style="font-size:1.5rem;font-family:var(--serif);color:var(--brand-dark)">{page.price}</div>
+                      {page.format && <div class="muted" style="font-size:.85rem;text-transform:capitalize">{page.format}</div>}
+                      {paypal ? (
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal" style="margin-top:.9rem">
+                          <input type="hidden" name="cmd" value="_xclick" />
+                          <input type="hidden" name="business" value="sab-books@sgny.org" />
+                          <input type="hidden" name="item_name" value={page.title} />
+                          <input type="hidden" name="amount" value={page.amount} />
+                          <input type="hidden" name="currency_code" value="USD" />
+                          <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Buy with PayPal</button>
+                        </form>
+                      ) : (
+                        <a class="btn btn-outline" href="/contact-us" style="margin-top:.9rem;width:100%;justify-content:center">Ask about availability</a>
+                      )}
+                    </>
                   ) : (
-                    <a class="btn btn-outline" href="/contact-us" style="margin-top:.9rem;width:100%;justify-content:center">Ask about availability</a>
+                    <div class="muted" style="font-size:1.1rem">Not available</div>
                   )}
                 </div>
               )}
