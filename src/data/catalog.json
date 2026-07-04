@@ -1,50 +1,5 @@
 [
   {
-    "path": "/catalog/books/allan-kardec/genesis-miracles-and-predictions-according-to-spiritism",
-    "title": "Genesis: Miracles and Predictions According to Spiritism",
-    "type": "book",
-    "author": "allan-kardec",
-    "authorName": "Allan Kardec",
-    "slug": "genesis-miracles-and-predictions-according-to-spiritism",
-    "cover": "/uploads/2025/02/61M4DsgG6FL._AC_UY436_QL65_-200x300.jpg",
-    "price": "US$15.00",
-    "format": "Paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "This is the last of the five books of the Spiritist Codification, published in 1868. It provides a scientific perspective to the Spiritist Doctrine whose foundations are evenly distributed among religion, philosophy, and science. Written with the scientific knowledge available to Allan Kardec during the mid-XIX century, this is perhaps one of the most difficult books of the Spiritist Codification in that it shows the reader how important it is for religion and philosophy to be associated with scientific knowledge. With his inimitable pedagogical style, Allan Kardec divides the book into three main parts: the first explains the spiritist views on the creation and related dogmas as it explores in great detail such subjects as God, the ideas of good and evil, human evolution, cosmology (uranography), and the earth sciences as understood in 1868. The second part deals with the dogma of miracles, and the book presents more rational and scientific explanations to these phenomena, be it to their origins or the teachings involved therein. It is a solid approach towards dispelling the idea of the supernatural in any aspect of earthly life and an invitation altogether for all to study and elucidate what at first may appear as a transgression of the natural or universal laws. In the same vein, the third part deals with the concept of future predictions, alluding to the fact that such phenomena are basic impossibilities and that Christian biblical predictions of the future, whether apocalyptic or not, should not be understood through the light of science. This book is one of the five basic works that make up the Codification of Spiritism, and it is the author’s most scientific work. It deals with themes regarded as incontestable by religion in the light of the immortality of the soul, unifying Christian thought and scientific discoveries. It offers a unique opportunity for the reader to know and study themes of universal interest, discussed in a logical, rational and revealing manner. The book is divided into three parts: the first part analyses the origin of planet Earth and avoids the mysterious or magical interpretations about its creation; the second part addresses the question of miracles, explaining the nature of fluids and the extraordinary phenomena contained in the Gospel; and the third part focuses on the prophecies in the Gospel, the signs of the times and the new generation, whose advent will be the beginning of a new era for humankind based on the practice of justice, peace and fraternity.",
-    "blurb": "This is the last of the five books of the Spiritist Codification, published in 1868. It provides a scientific perspective to the Spiritist Doctrine whose foundations are evenly distributed among religion, philosophy, and science. Written wi"
-  },
-  {
-    "path": "/catalog/books/allan-kardec/gospel-according-to-spiritism",
-    "title": "The Gospel According to Spiritism",
-    "type": "book",
-    "author": "allan-kardec",
-    "authorName": "Allan Kardec",
-    "slug": "gospel-according-to-spiritism",
-    "cover": "/uploads/2020/01/gospel-according-to-spiritism.png",
-    "price": "US$15.00",
-    "format": "Paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "This is the third book of the Spiritist Codification, published in 1864. Ahead of the biblical scholarship of today, the spiritual benefactors explain in great detail throughout this book the true meaning of many of the most known verses of the Gospel, taking into consideration the lore, traditions, and the atmosphere wherein these events originally occurred. It also clarifies the ethical teachings Jesus intended with his words and actions. The chapters reinforce the connection between Spiritism and the direct teachings of Jesus, but rather outside of the religious dogmatic meaning given to them latter on in human history. The book also explores the much earlier teachings of the Greek philosophers Socrates and Plato and how these men touched upon theories Jesus would clarify centuries latter.",
-    "blurb": "This is the third book of the Spiritist Codification, published in 1864. Ahead of the biblical scholarship of today, the spiritual benefactors explain in great detail throughout this book the true meaning of many of the most known verses of"
-  },
-  {
-    "path": "/catalog/books/allan-kardec/heaven-and-hell-divine-justice-according-to-spiritism",
-    "title": "Heaven and Hell: Divine Justice According to Spiritism",
-    "type": "book",
-    "author": "allan-kardec",
-    "authorName": "Allan Kardec",
-    "slug": "heaven-and-hell-divine-justice-according-to-spiritism",
-    "cover": "/uploads/2020/01/heaven-and-hell-divine-justice-according-to-spiritism.png",
-    "price": "US$15.00",
-    "format": "Paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "This is the fourth book of the Spiritist Codification, first published in 1865. Following the explanations of the mediumistic phenomena, the universal laws, and the teachings of Christ, all approached and explained in the three previous books of the codification, Allan Kardec now enlightens us with a dissected view of Divine Justice seen from the spiritist perspective. The book is divided into two parts, namely “The Doctrine” and “The Examples”. The first part shows a a comparative analysis of the concepts of different faiths about heaven, purgatory and hell, angels and demons, and future punishment and rewards, whilst the author delves deeply into subjects such as future life, the fear of death, the myth of eternal punishment, angels and demons. The dogma of eternal punishment is especially discussed and refuted by arguments taken from the universal laws. The second part consists of numerous communications with discarnate spirits at different stages of evolution, exploring the characteristics of each of their continued existences as it sheds light on the state of the soul after death and its passage from the physical life to the spiritual life, which until then had been obscure and feared. In addition, it explores topics such as suicide and the origins of our earthly trials. In this book, Allan Kardec approaches divine justice from the point of view of Spiritism. The first part is a comparative analysis of the concepts of different faiths about heaven, purgatory and hell, angels and demons, and future punishments and rewards. The dogma of eternal punishments is specially discussed and refuted by arguments taken from the laws of nature. The second part presents numerous communications with spirits in different situations, and sheds light on the state of the soul after death and its passage from the physical life to the spiritual life, which until recently had been obscure and feared.",
-    "blurb": "This is the fourth book of the Spiritist Codification, first published in 1865. Following the explanations of the mediumistic phenomena, the universal laws, and the teachings of Christ, all approached and explained in the three previous boo"
-  },
-  {
     "path": "/catalog/books/allan-kardec",
     "title": "Allan Kardec",
     "type": "listing",
@@ -89,6 +44,13 @@
         "isBook": true
       },
       {
+        "href": "/catalog/books/allan-kardec/what-is-spiritism",
+        "text": "What is Spiritism?",
+        "cover": "/uploads/2020/01/what-is-spiritism.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
         "href": "/catalog/books/allan-kardec/spiritism-in-its-simplest-expression",
         "text": "Spiritism in its Simplest Expression",
         "cover": "/uploads/2020/01/spiritism-in-its-simplest-expression.png",
@@ -103,13 +65,6 @@
         "isBook": true
       },
       {
-        "href": "/catalog/books/allan-kardec/spiritist-prayers",
-        "text": "Spiritist Prayers",
-        "cover": "/uploads/2020/01/spiritist-prayers.png",
-        "price": "US$8.00",
-        "isBook": true
-      },
-      {
         "href": "/catalog/books/allan-kardec/spiritist-review-collection",
         "text": "The Spiritist Review",
         "cover": "",
@@ -117,13 +72,28 @@
         "isBook": false
       },
       {
-        "href": "/catalog/books/allan-kardec/what-is-spiritism",
-        "text": "What is Spiritism?",
-        "cover": "/uploads/2020/01/what-is-spiritism.png",
-        "price": "US$15.00",
+        "href": "/catalog/books/allan-kardec/spiritist-prayers",
+        "text": "Spiritist Prayers",
+        "cover": "/uploads/2020/01/spiritist-prayers.png",
+        "price": "US$8.00",
         "isBook": true
       }
     ]
+  },
+  {
+    "path": "/catalog/books/allan-kardec/spirits-book",
+    "title": "The Spirits’ Book",
+    "type": "book",
+    "author": "allan-kardec",
+    "authorName": "Allan Kardec",
+    "slug": "spirits-book",
+    "cover": "/uploads/2025/02/610H5zQBuBL._AC_UY436_QL65_-200x300.jpg",
+    "price": "US$15.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "Where it all began. This is the first book of the Spiritist Codification, published in 1857. It takes the form of 1019 questions and answers divided into 29 chapters. In this incredible work, Allan Kardec, a pedagogue and educator, presents questions with an astounding methodical approach, as well as the answers given to him by the spiritual instructors, which significantly helps the reading and understanding processes. This work, which revolutionized our view on life, death, God, and the immortal spirit, is the completion of the teachings started by Jesus Christ over two thousand years ago. Among the many subjects that are explored in great depth it includes God, humanity, Earth and the origin of the universe, reincarnation, spiritual evolution, the universal laws, the spirit in daily life, the social law, the law of progress, ethics, and the future of human life. Allan Kardec is considered the Codifier of the Spiritist Doctrine for his work on the five books of the Codification—”The Spirits’ Book,” “The Mediums’ Book,” “The Gospel According to Spiritism,” “Heaven and Hell,” and “Genesis: Miracles and Predictions According to Spiritism.”",
+    "blurb": "Where it all began. This is the first book of the Spiritist Codification, published in 1857. It takes the form of 1019 questions and answers divided into 29 chapters. In this incredible work, Allan Kardec, a pedagogue and educator, presents"
   },
   {
     "path": "/catalog/books/allan-kardec/mediums-book",
@@ -139,6 +109,66 @@
     "amount": "15.00",
     "synopsis": "This is the second book of the Spiritist Codification, first published in 1861. Composed of 32 chapters, the book is divided into two main sections. The first part is an overview of Spiritism and a discussion of the many theories used to refute or discredit spiritism, as well as the many inconsistencies in them. The second part comprises a detailed classification of many paranormal phenomena, particularly those that produce communications, and thorough descriptions of the mechanisms that are involved therein. The book also contains serious warnings against unguided use of the ability of mediumship, especially when it is attached to simple curiosity and/or frivolousness. This book helps to clarify why mediumship is a powerful ability, but also a serious responsibility.",
     "blurb": "This is the second book of the Spiritist Codification, first published in 1861. Composed of 32 chapters, the book is divided into two main sections. The first part is an overview of Spiritism and a discussion of the many theories used to re"
+  },
+  {
+    "path": "/catalog/books/allan-kardec/gospel-according-to-spiritism",
+    "title": "The Gospel According to Spiritism",
+    "type": "book",
+    "author": "allan-kardec",
+    "authorName": "Allan Kardec",
+    "slug": "gospel-according-to-spiritism",
+    "cover": "/uploads/2020/01/gospel-according-to-spiritism.png",
+    "price": "US$15.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "This is the third book of the Spiritist Codification, published in 1864. Ahead of the biblical scholarship of today, the spiritual benefactors explain in great detail throughout this book the true meaning of many of the most known verses of the Gospel, taking into consideration the lore, traditions, and the atmosphere wherein these events originally occurred. It also clarifies the ethical teachings Jesus intended with his words and actions. The chapters reinforce the connection between Spiritism and the direct teachings of Jesus, but rather outside of the religious dogmatic meaning given to them latter on in human history. The book also explores the much earlier teachings of the Greek philosophers Socrates and Plato and how these men touched upon theories Jesus would clarify centuries latter.",
+    "blurb": "This is the third book of the Spiritist Codification, published in 1864. Ahead of the biblical scholarship of today, the spiritual benefactors explain in great detail throughout this book the true meaning of many of the most known verses of"
+  },
+  {
+    "path": "/catalog/books/allan-kardec/heaven-and-hell-divine-justice-according-to-spiritism",
+    "title": "Heaven and Hell: Divine Justice According to Spiritism",
+    "type": "book",
+    "author": "allan-kardec",
+    "authorName": "Allan Kardec",
+    "slug": "heaven-and-hell-divine-justice-according-to-spiritism",
+    "cover": "/uploads/2020/01/heaven-and-hell-divine-justice-according-to-spiritism.png",
+    "price": "US$15.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "This is the fourth book of the Spiritist Codification, first published in 1865. Following the explanations of the mediumistic phenomena, the universal laws, and the teachings of Christ, all approached and explained in the three previous books of the codification, Allan Kardec now enlightens us with a dissected view of Divine Justice seen from the spiritist perspective. The book is divided into two parts, namely “The Doctrine” and “The Examples”. The first part shows a a comparative analysis of the concepts of different faiths about heaven, purgatory and hell, angels and demons, and future punishment and rewards, whilst the author delves deeply into subjects such as future life, the fear of death, the myth of eternal punishment, angels and demons. The dogma of eternal punishment is especially discussed and refuted by arguments taken from the universal laws. The second part consists of numerous communications with discarnate spirits at different stages of evolution, exploring the characteristics of each of their continued existences as it sheds light on the state of the soul after death and its passage from the physical life to the spiritual life, which until then had been obscure and feared. In addition, it explores topics such as suicide and the origins of our earthly trials. In this book, Allan Kardec approaches divine justice from the point of view of Spiritism. The first part is a comparative analysis of the concepts of different faiths about heaven, purgatory and hell, angels and demons, and future punishments and rewards. The dogma of eternal punishments is specially discussed and refuted by arguments taken from the laws of nature. The second part presents numerous communications with spirits in different situations, and sheds light on the state of the soul after death and its passage from the physical life to the spiritual life, which until recently had been obscure and feared.",
+    "blurb": "This is the fourth book of the Spiritist Codification, first published in 1865. Following the explanations of the mediumistic phenomena, the universal laws, and the teachings of Christ, all approached and explained in the three previous boo"
+  },
+  {
+    "path": "/catalog/books/allan-kardec/genesis-miracles-and-predictions-according-to-spiritism",
+    "title": "Genesis: Miracles and Predictions According to Spiritism",
+    "type": "book",
+    "author": "allan-kardec",
+    "authorName": "Allan Kardec",
+    "slug": "genesis-miracles-and-predictions-according-to-spiritism",
+    "cover": "/uploads/2025/02/61M4DsgG6FL._AC_UY436_QL65_-200x300.jpg",
+    "price": "US$15.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "This is the last of the five books of the Spiritist Codification, published in 1868. It provides a scientific perspective to the Spiritist Doctrine whose foundations are evenly distributed among religion, philosophy, and science. Written with the scientific knowledge available to Allan Kardec during the mid-XIX century, this is perhaps one of the most difficult books of the Spiritist Codification in that it shows the reader how important it is for religion and philosophy to be associated with scientific knowledge. With his inimitable pedagogical style, Allan Kardec divides the book into three main parts: the first explains the spiritist views on the creation and related dogmas as it explores in great detail such subjects as God, the ideas of good and evil, human evolution, cosmology (uranography), and the earth sciences as understood in 1868. The second part deals with the dogma of miracles, and the book presents more rational and scientific explanations to these phenomena, be it to their origins or the teachings involved therein. It is a solid approach towards dispelling the idea of the supernatural in any aspect of earthly life and an invitation altogether for all to study and elucidate what at first may appear as a transgression of the natural or universal laws. In the same vein, the third part deals with the concept of future predictions, alluding to the fact that such phenomena are basic impossibilities and that Christian biblical predictions of the future, whether apocalyptic or not, should not be understood through the light of science. This book is one of the five basic works that make up the Codification of Spiritism, and it is the author’s most scientific work. It deals with themes regarded as incontestable by religion in the light of the immortality of the soul, unifying Christian thought and scientific discoveries. It offers a unique opportunity for the reader to know and study themes of universal interest, discussed in a logical, rational and revealing manner. The book is divided into three parts: the first part analyses the origin of planet Earth and avoids the mysterious or magical interpretations about its creation; the second part addresses the question of miracles, explaining the nature of fluids and the extraordinary phenomena contained in the Gospel; and the third part focuses on the prophecies in the Gospel, the signs of the times and the new generation, whose advent will be the beginning of a new era for humankind based on the practice of justice, peace and fraternity.",
+    "blurb": "This is the last of the five books of the Spiritist Codification, published in 1868. It provides a scientific perspective to the Spiritist Doctrine whose foundations are evenly distributed among religion, philosophy, and science. Written wi"
+  },
+  {
+    "path": "/catalog/books/allan-kardec/what-is-spiritism",
+    "title": "What is Spiritism?",
+    "type": "book",
+    "author": "allan-kardec",
+    "authorName": "Allan Kardec",
+    "slug": "what-is-spiritism",
+    "cover": "/uploads/2020/01/what-is-spiritism.png",
+    "price": "US$15.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "A work that is still up-to-date, What is Spiritism? is useful for adherents of Spiritism as well as for those who want to understand the nature of the Spiritist Doctrine and its fundamental points. Allan Kardec’s impeccable logic and rationale are patent in this book as he confounds detractors of Spiritism with his answers to the questions of those who believe in and aspire to a superior life. The book is divided into three chapters. The first is composed of separate dialogues between Allan Kardec and a critic, a skeptic, and a priest. The dialogues provide answers to those who do not yet understand the basic principles of Spiritism and it is a formidable introduction to Spiritism. In addition, it also presents appropriate refutations to the opponents of Spiritism. The second chapter presents practical and experimental aspects of the science and is a very concise summary of The Mediums’ Book , the second book of the Spiritist Codification. The third chapter is a short synthesis of The Spirits’ Book , with solutions to psychological, moral, and philosophical problems as they are analyzed and interpreted according to Spiritism. The book is prefaced with an abridged version of Henri Sausse’s biography of Allan Kardec.",
+    "blurb": "A work that is still up-to-date, What is Spiritism? is useful for adherents of Spiritism as well as for those who want to understand the nature of the Spiritist Doctrine and its fundamental points. Allan Kardec’s impeccable logic and ration"
   },
   {
     "path": "/catalog/books/allan-kardec/spiritism-in-its-simplest-expression",
@@ -169,21 +199,6 @@
     "amount": "10.00",
     "synopsis": "When Allan Kardec set out for his historical journey of 1862 not even he could have foreseen the immense growth Spiritism would undergo in France after its introduction with the publication of The Spirits’ Book in Paris just five years before. In a time when there was neither radio nor any other means of mass communication except for the printed word, his achievements were remarkable for the standards of the time. Offering some rare glimpses into the Codifier’s way of thinking, this book covers some practical aspects of the nascent Spiritism while keenly narrating its quiet triumph against formidable odds and opposition.",
     "blurb": "When Allan Kardec set out for his historical journey of 1862 not even he could have foreseen the immense growth Spiritism would undergo in France after its introduction with the publication of The Spirits’ Book in Paris just five years befo"
-  },
-  {
-    "path": "/catalog/books/allan-kardec/spiritist-prayers",
-    "title": "Spiritist Prayers",
-    "type": "book",
-    "author": "allan-kardec",
-    "authorName": "Allan Kardec",
-    "slug": "spiritist-prayers",
-    "cover": "/uploads/2020/01/spiritist-prayers.png",
-    "price": "US$8.00",
-    "format": "Paperback",
-    "forSale": true,
-    "amount": "8.00",
-    "synopsis": "From the book The Gospel According to Spiritism, this set of prayers offers a support to our thoughts at the moment of prayer. This book includes prayers to address our Father, the Sunday communion as well as prayers for spiritual meetings, mediums, oneself, sick people, and deceased relatives Extract: \"The Spirits do not prescribe any absolute formulaic prayers; when they suggest it, it is to fix the ideas and especially to call attention to certain principles of the spiritist doctrine \" Those who pray enthusiastically and confidently have more strength to withstand the temptations of evil, and to get help from the good spirits sent by God to assist them. Such help is never refused when asked for with sincerity. Form is unimportant, thought is everything. Everyone should pray according to their convictions and in the manner that affects them the most deeply; a good thought is better than many words without the heart being in them.",
-    "blurb": "From the book The Gospel According to Spiritism, this set of prayers offers a support to our thoughts at the moment of prayer. This book includes prayers to address our Father, the Sunday communion as well as prayers for spiritual meetings,"
   },
   {
     "path": "/catalog/books/allan-kardec/spiritist-review-collection",
@@ -228,38 +243,22 @@
         "cover": "/uploads/2020/01/spiritist-review-1862.png",
         "price": "US$20.00",
         "isBook": true
+      },
+      {
+        "href": "/catalog/books/allan-kardec/spiritist-review-collection/spiritrev-1863",
+        "text": "1863",
+        "cover": "/uploads/2024/11/the-spiritist-review-1863-195x300.jpeg",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/allan-kardec/spiritist-review-collection/the-spiritist-review-1864",
+        "text": "1864",
+        "cover": "/uploads/2024/11/the-spiritist-review-1864-front-201x300.jpg",
+        "price": "US$20.00",
+        "isBook": true
       }
     ]
-  },
-  {
-    "path": "/catalog/books/allan-kardec/spiritist-review-collection/spiritrev-1863",
-    "title": "The Spiritist Review (1863)",
-    "type": "book",
-    "author": "allan-kardec",
-    "authorName": "Allan Kardec",
-    "slug": "spiritrev-1863",
-    "cover": "/uploads/2024/11/the-spiritist-review-1863-195x300.jpeg",
-    "price": "US$20.00",
-    "format": "",
-    "forSale": true,
-    "amount": "20.00",
-    "synopsis": "Kindle ). --> Overview and",
-    "blurb": "Kindle ). --> Overview and"
-  },
-  {
-    "path": "/catalog/books/allan-kardec/spiritist-review-collection/the-spiritist-review-1864",
-    "title": "The Spiritist Review (1864)",
-    "type": "book",
-    "author": "allan-kardec",
-    "authorName": "Allan Kardec",
-    "slug": "the-spiritist-review-1864",
-    "cover": "/uploads/2024/11/the-spiritist-review-1864-front-201x300.jpg",
-    "price": "US$20.00",
-    "format": "",
-    "forSale": true,
-    "amount": "20.00",
-    "synopsis": "Kindle ). --> Overview and",
-    "blurb": "Kindle ). --> Overview and"
   },
   {
     "path": "/catalog/books/allan-kardec/spiritist-review-collection/year-1858",
@@ -337,34 +336,49 @@
     "blurb": "(PayPal purchase) Other Volumes of this Periodical View the entire collection (1858–1869, volumes 1–12). Book Information Title: The Spiritist Review Volume V, issues 1-12 (combined single tome), year 1862 Author(s): Allan Kardec Language:"
   },
   {
-    "path": "/catalog/books/allan-kardec/spirits-book",
-    "title": "The Spirits’ Book",
+    "path": "/catalog/books/allan-kardec/spiritist-review-collection/spiritrev-1863",
+    "title": "The Spiritist Review (1863)",
     "type": "book",
     "author": "allan-kardec",
     "authorName": "Allan Kardec",
-    "slug": "spirits-book",
-    "cover": "/uploads/2025/02/610H5zQBuBL._AC_UY436_QL65_-200x300.jpg",
-    "price": "US$15.00",
-    "format": "Paperback",
+    "slug": "spiritrev-1863",
+    "cover": "/uploads/2024/11/the-spiritist-review-1863-195x300.jpeg",
+    "price": "US$20.00",
+    "format": "",
     "forSale": true,
-    "amount": "15.00",
-    "synopsis": "Where it all began. This is the first book of the Spiritist Codification, published in 1857. It takes the form of 1019 questions and answers divided into 29 chapters. In this incredible work, Allan Kardec, a pedagogue and educator, presents questions with an astounding methodical approach, as well as the answers given to him by the spiritual instructors, which significantly helps the reading and understanding processes. This work, which revolutionized our view on life, death, God, and the immortal spirit, is the completion of the teachings started by Jesus Christ over two thousand years ago. Among the many subjects that are explored in great depth it includes God, humanity, Earth and the origin of the universe, reincarnation, spiritual evolution, the universal laws, the spirit in daily life, the social law, the law of progress, ethics, and the future of human life. Allan Kardec is considered the Codifier of the Spiritist Doctrine for his work on the five books of the Codification—”The Spirits’ Book,” “The Mediums’ Book,” “The Gospel According to Spiritism,” “Heaven and Hell,” and “Genesis: Miracles and Predictions According to Spiritism.”",
-    "blurb": "Where it all began. This is the first book of the Spiritist Codification, published in 1857. It takes the form of 1019 questions and answers divided into 29 chapters. In this incredible work, Allan Kardec, a pedagogue and educator, presents"
+    "amount": "20.00",
+    "synopsis": "Kindle ). --> Overview and",
+    "blurb": "Kindle ). --> Overview and"
   },
   {
-    "path": "/catalog/books/allan-kardec/what-is-spiritism",
-    "title": "What is Spiritism?",
+    "path": "/catalog/books/allan-kardec/spiritist-review-collection/the-spiritist-review-1864",
+    "title": "The Spiritist Review (1864)",
     "type": "book",
     "author": "allan-kardec",
     "authorName": "Allan Kardec",
-    "slug": "what-is-spiritism",
-    "cover": "/uploads/2020/01/what-is-spiritism.png",
-    "price": "US$15.00",
+    "slug": "the-spiritist-review-1864",
+    "cover": "/uploads/2024/11/the-spiritist-review-1864-front-201x300.jpg",
+    "price": "US$20.00",
+    "format": "",
+    "forSale": true,
+    "amount": "20.00",
+    "synopsis": "Kindle ). --> Overview and",
+    "blurb": "Kindle ). --> Overview and"
+  },
+  {
+    "path": "/catalog/books/allan-kardec/spiritist-prayers",
+    "title": "Spiritist Prayers",
+    "type": "book",
+    "author": "allan-kardec",
+    "authorName": "Allan Kardec",
+    "slug": "spiritist-prayers",
+    "cover": "/uploads/2020/01/spiritist-prayers.png",
+    "price": "US$8.00",
     "format": "Paperback",
     "forSale": true,
-    "amount": "15.00",
-    "synopsis": "A work that is still up-to-date, What is Spiritism? is useful for adherents of Spiritism as well as for those who want to understand the nature of the Spiritist Doctrine and its fundamental points. Allan Kardec’s impeccable logic and rationale are patent in this book as he confounds detractors of Spiritism with his answers to the questions of those who believe in and aspire to a superior life. The book is divided into three chapters. The first is composed of separate dialogues between Allan Kardec and a critic, a skeptic, and a priest. The dialogues provide answers to those who do not yet understand the basic principles of Spiritism and it is a formidable introduction to Spiritism. In addition, it also presents appropriate refutations to the opponents of Spiritism. The second chapter presents practical and experimental aspects of the science and is a very concise summary of The Mediums’ Book , the second book of the Spiritist Codification. The third chapter is a short synthesis of The Spirits’ Book , with solutions to psychological, moral, and philosophical problems as they are analyzed and interpreted according to Spiritism. The book is prefaced with an abridged version of Henri Sausse’s biography of Allan Kardec.",
-    "blurb": "A work that is still up-to-date, What is Spiritism? is useful for adherents of Spiritism as well as for those who want to understand the nature of the Spiritist Doctrine and its fundamental points. Allan Kardec’s impeccable logic and ration"
+    "amount": "8.00",
+    "synopsis": "From the book The Gospel According to Spiritism, this set of prayers offers a support to our thoughts at the moment of prayer. This book includes prayers to address our Father, the Sunday communion as well as prayers for spiritual meetings, mediums, oneself, sick people, and deceased relatives Extract: \"The Spirits do not prescribe any absolute formulaic prayers; when they suggest it, it is to fix the ideas and especially to call attention to certain principles of the spiritist doctrine \" Those who pray enthusiastically and confidently have more strength to withstand the temptations of evil, and to get help from the good spirits sent by God to assist them. Such help is never refused when asked for with sincerity. Form is unimportant, thought is everything. Everyone should pray according to their convictions and in the manner that affects them the most deeply; a good thought is better than many words without the heart being in them.",
+    "blurb": "From the book The Gospel According to Spiritism, this set of prayers offers a support to our thoughts at the moment of prayer. This book includes prayers to address our Father, the Sunday communion as well as prayers for spiritual meetings,"
   },
   {
     "path": "/catalog/books/andre-trigueiro/living-is-best-choice",
