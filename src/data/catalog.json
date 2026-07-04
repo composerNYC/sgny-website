@@ -257,6 +257,20 @@
         "cover": "/uploads/2024/11/the-spiritist-review-1864-front-201x300.jpg",
         "price": "US$20.00",
         "isBook": true
+      },
+      {
+        "href": "/catalog/books/allan-kardec/spiritist-review-collection/the-spiritist-review-1865",
+        "text": "1865",
+        "cover": "/uploads/2025/03/the-spiritist-review-1865-front-199x300.jpeg",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/allan-kardec/spiritist-review-collection/the-spiritist-review-1866",
+        "text": "1866",
+        "cover": "/uploads/2025/08/the-spiritist-review-1866-front-200x300.jpg",
+        "price": "US$20.00",
+        "isBook": true
       }
     ]
   },
@@ -364,6 +378,36 @@
     "amount": "20.00",
     "synopsis": "Kindle ). --> Overview and",
     "blurb": "Kindle ). --> Overview and"
+  },
+  {
+    "path": "/catalog/books/allan-kardec/spiritist-review-collection/the-spiritist-review-1865",
+    "title": "The Spiritist Review (1865)",
+    "type": "book",
+    "author": "allan-kardec",
+    "authorName": "Allan Kardec",
+    "slug": "the-spiritist-review-1865",
+    "cover": "/uploads/2025/03/the-spiritist-review-1865-front-199x300.jpeg",
+    "price": "US$20.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "20.00",
+    "synopsis": "Other Volumes of this Periodical: view the entire collection (1858–1869, volumes 1–12). Book Information: Title: The Spiritist Review Volume VIII, issues 1-12 (combined single tome), year 1865. Author(s): Allan Kardec. Language: English. Publisher: United States Spiritist Council (USSC). Publication Date: March 8, 2025 (1st edition). Number of pages: 604. ISBN-10: 1948109441. ISBN-13: 978-1948109444. Book format(s): Paperback. Original Material Title: Revue Spirite (1865). Publisher: Union Spirite Française et Francophone. Location: Paris, France. Publication Date: 1865 (annual periodical with 12 monthly issues). Language: French.",
+    "blurb": "Other Volumes of this Periodical: view the entire collection (1858–1869, volumes 1–12). Book Information: Title: The Spiritist Review Volume VIII, issues 1-12 (combined single tome), year 1865."
+  },
+  {
+    "path": "/catalog/books/allan-kardec/spiritist-review-collection/the-spiritist-review-1866",
+    "title": "The Spiritist Review (1866)",
+    "type": "book",
+    "author": "allan-kardec",
+    "authorName": "Allan Kardec",
+    "slug": "the-spiritist-review-1866",
+    "cover": "/uploads/2025/08/the-spiritist-review-1866-front-200x300.jpg",
+    "price": "US$20.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "20.00",
+    "synopsis": "Other Volumes of this Periodical: view the entire collection (1858–1869, volumes 1–12). Book Information: Title: The Spiritist Review Volume IX, issues 1-12 (combined single tome), year 1866. Author(s): Allan Kardec. Language: English. Publisher: United States Spiritist Council (USSC). Publication Date: August 29, 2025 (1st edition). Number of pages: 600. ISBN-10: 194810945X. ISBN-13: 978-1948109451. Book format(s): Paperback. Original Material Title: Revue Spirite (1866). Publisher: Union Spirite Française et Francophone. Location: Paris, France. Publication Date: 1866 (annual periodical with 12 monthly issues). Language: French.",
+    "blurb": "Other Volumes of this Periodical: view the entire collection (1858–1869, volumes 1–12). Book Information: Title: The Spiritist Review Volume IX, issues 1-12 (combined single tome), year 1866."
   },
   {
     "path": "/catalog/books/allan-kardec/spiritist-prayers",
