@@ -2156,7 +2156,7 @@
     "author": "jose-herculano-pires",
     "authorName": "José Herculano Pires",
     "slug": "jose-herculano-pires",
-    "intro": "The list below shows books authored by José Herculano Pires . Back to Book Catalog . The books are alphabetically listed by title (ignore \"a,\" \"an,\" and \"the\"): Conception of God Mediumship: Life and Communication",
+    "intro": "The list below shows books authored by José Herculano Pires . Back to Book Catalog . The books are alphabetically listed by title (ignore \"a,\" \"an,\" and \"the\"): Conception of God Mediumship: Life and Communication Missives of Hope",
     "children": [
       {
         "href": "/catalog/books/jose-herculano-pires/conception-of-god",
@@ -2169,6 +2169,13 @@
         "href": "/catalog/books/jose-herculano-pires/mediumship-life-and-communication",
         "text": "Mediumship: Life and Communication",
         "cover": "/uploads/2014/07/mediumship-101x150.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/jose-herculano-pires/missives-of-hope",
+        "text": "Missives of Hope",
+        "cover": "/uploads/2020/01/missives-of-hope.png",
         "price": "US$15.00",
         "isBook": true
       }
@@ -2188,6 +2195,21 @@
     "amount": "15.00",
     "synopsis": "This book is an exposure of mediumship problems by someone who has lived them, and still does, guided down winding pathways by Kardec’s compass, the only truly valid one, and approved by the Spirit of Truth, who symbolizes spiritual wisdom in communion with human wisdom. Those who do not understand the need for this combination in dealing with spiritual problems are not apt to deal with Spiritism, a doctrine that covers the complete human knowledge, and adds to it the spiritual dimensions, which the other initially lacked for grasping reality in its entirety. The world is its object, reason its method, and mediumship its laboratory.",
     "blurb": "This book is an exposure of mediumship problems by someone who has lived them, and still does, guided down winding pathways by Kardec’s compass, the only truly valid one, and approved by the Spirit of Truth, who symbolizes spiritual wisdom"
+  },
+  {
+    "path": "/catalog/books/jose-herculano-pires/missives-of-hope",
+    "title": "Missives of Hope",
+    "type": "book",
+    "author": "jose-herculano-pires",
+    "authorName": "José Herculano Pires",
+    "slug": "missives-of-hope",
+    "cover": "/uploads/2020/01/missives-of-hope.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "This book is a compilation of messages originally published in the Brazilian newspaper O Diário de São Paulo . They were later collected for publication as a set of four books. Each message is the result of a partnership between two of the greatest names in spiritist literature, Francisco Cândido (Chico) Xavier and Prof. José Herculano Pires. The present work has a significant historic value in that it brings together these two great contributors of the spiritist literature for the first time.",
+    "blurb": "This book is a compilation of messages originally published in the Brazilian newspaper O Diário de São Paulo . They were later collected for publication as a set of four books. Each message is the result of a partnership between two of the"
   },
   {
     "path": "/catalog/books/jose-raul-teixeira",

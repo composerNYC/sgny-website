@@ -1,5 +1,11 @@
 [
   {
+    "slug": "allan-kardec",
+    "name": "Allan Kardec",
+    "count": 16,
+    "path": "/catalog/books/allan-kardec"
+  },
+  {
     "slug": "francisco-xavier",
     "name": "Francisco C. Xavier",
     "count": 36,
@@ -12,18 +18,6 @@
     "path": "/catalog/books/divaldo-franco"
   },
   {
-    "slug": "allan-kardec",
-    "name": "Allan Kardec",
-    "count": 16,
-    "path": "/catalog/books/allan-kardec"
-  },
-  {
-    "slug": "luis-hu-rivas",
-    "name": "Luis Hu Rivas",
-    "count": 10,
-    "path": "/catalog/books/luis-hu-rivas"
-  },
-  {
     "slug": "leon-denis",
     "name": "Léon Denis",
     "count": 5,
@@ -34,12 +28,6 @@
     "name": "Jussara Korngold",
     "count": 3,
     "path": "/catalog/books/jussara-korngold"
-  },
-  {
-    "slug": "richard-simonetti",
-    "name": "Richard Simonetti",
-    "count": 3,
-    "path": "/catalog/books/richard-simonetti"
   },
   {
     "slug": "andre-trigueiro",
@@ -84,27 +72,9 @@
     "path": "/catalog/books/haroldo-dutra-dias"
   },
   {
-    "slug": "heather-bollech-fonseca",
-    "name": "Heather Bollech-Fonseca",
-    "count": 1,
-    "path": "/catalog/books/heather-bollech-fonseca"
-  },
-  {
-    "slug": "herminio-miranda",
-    "name": "Hermínio C. Miranda",
-    "count": 1,
-    "path": "/catalog/books/herminio-miranda"
-  },
-  {
-    "slug": "hernani-guimaraes-andrade",
-    "name": "Hernani Guimarães Andrade",
-    "count": 1,
-    "path": "/catalog/books/hernani-guimaraes-andrade"
-  },
-  {
     "slug": "jose-herculano-pires",
     "name": "José Herculano Pires",
-    "count": 2,
+    "count": 3,
     "path": "/catalog/books/jose-herculano-pires"
   },
   {
@@ -112,6 +82,12 @@
     "name": "Laura Bergallo",
     "count": 2,
     "path": "/catalog/books/laura-bergallo"
+  },
+  {
+    "slug": "luis-hu-rivas",
+    "name": "Luis Hu Rivas",
+    "count": 10,
+    "path": "/catalog/books/luis-hu-rivas"
   },
   {
     "slug": "nilson-souza-pereira",
@@ -126,16 +102,16 @@
     "path": "/catalog/books/oceano-vieira-melo"
   },
   {
+    "slug": "richard-simonetti",
+    "name": "Richard Simonetti",
+    "count": 3,
+    "path": "/catalog/books/richard-simonetti"
+  },
+  {
     "slug": "therezinha-oliveira",
     "name": "Therezinha Oliveira",
     "count": 2,
     "path": "/catalog/books/therezinha-oliveira"
-  },
-  {
-    "slug": "wallace-rodrigues",
-    "name": "Wallace E. L. Rodrigues",
-    "count": 1,
-    "path": "/catalog/books/wallace-rodrigues"
   },
   {
     "slug": "yvonne-pereira",
