@@ -2,6 +2,10 @@
 
 // Latest uploads from the SGNY channel (newest first). Full archive: youtube.com/@SpiritistGroupofNewYork
 export const channelVideos = [
+  { id: '0njPt0N4G-0', title: "Distaste for Life - Suicide (continuation)", date: "2026-07-03" },
+  { id: '5oTRqzggwpg', title: "Distaste for Life - Suicide", date: "2026-06-26" },
+  { id: '7oBLSCVEmDc', title: "Synoptic Table of the Different Varieties of Mediums", date: "2026-06-21" },
+  { id: 't5zM9Vo9mHU', title: "Antipathetic Relationships, Fear of Death", date: "2026-06-19" },
   { id: '7hEsaya3uOM', title: "In my Father's House there are many Mansions", date: "2026-06-14" },
   { id: 'SakISNKkiAo', title: "Loss of Loved Ones, Disappointments - Ingratitude", date: "2026-06-12" },
   { id: '5kpF-wMeXYk', title: "Collective Expiations", date: "2026-06-07" },

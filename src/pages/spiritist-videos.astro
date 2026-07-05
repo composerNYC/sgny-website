@@ -1,15 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
-import { videos, channelVideos } from '../data/videos.js';
+import { channelVideos } from '../data/videos.js';
 const fmtDate = (d) => d ? new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : '';
+// Only show uploads from the last month — older ones drop off automatically as new videos are added.
+const oneMonthAgo = Date.now() - 30 * 24 * 60 * 60 * 1000;
+const recentChannelVideos = channelVideos.filter((v) => v.date && new Date(v.date + 'T00:00:00').getTime() >= oneMonthAgo);
 ---
-<Base title="Spiritist Videos" description="A curated gallery of Spiritist talks, symposia, and presentations — lectures on Spiritism by SGNY staff and speakers from around the world.">
+<Base title="Spiritist Videos" description="Our latest Spiritist talks and study sessions on YouTube — recorded and shared for anyone to watch.">
   <section class="hero" style="padding-block:clamp(2.5rem,6vw,4.5rem)">
     <div class="container">
       <p class="eyebrow" style="color:#e9c878">Watch & Learn</p>
       <h1>Spiritist Videos</h1>
-      <p>A selection of talks, symposia, and presentations on Spiritism — chosen by
-        the SGNY staff as valuable supplementary study. Click any video to play it here.</p>
+      <p>Our latest talks and study sessions on YouTube. Click any video to play it here.</p>
     </div>
   </section>
 
@@ -18,10 +20,10 @@ const fmtDate = (d) => d ? new Date(d + 'T00:00:00').toLocaleDateString('en-US',
       <div class="section-head">
         <p class="eyebrow">Our channel</p>
         <h2>Latest from SGNY on YouTube</h2>
-        <p>Our most recent uploads, newest first — click any to play it here.</p>
+        <p>Our uploads from the last month, newest first — click any to play it here.</p>
       </div>
       <div class="video-grid">
-        {channelVideos.map((v) => (
+        {recentChannelVideos.map((v) => (
           <button class="vid" data-id={v.id} data-title={v.title}>
             <span class="vid-thumb">
               <img src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`} alt={v.title} loading="lazy" />
@@ -34,28 +36,6 @@ const fmtDate = (d) => d ? new Date(d + 'T00:00:00').toLocaleDateString('en-US',
       </div>
       <div style="text-align:center;margin-top:2.5rem">
         <a class="btn btn-outline" href="https://www.youtube.com/@SpiritistGroupofNewYork/videos" target="_blank" rel="noopener">See all videos on YouTube ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Selected study videos</p>
-        <h2>Talks &amp; presentations</h2>
-        <p>A selection of lectures and symposia chosen by the SGNY staff as valuable supplementary study.</p>
-      </div>
-      <div class="video-grid">
-        {videos.map((v) => (
-          <button class="vid" data-id={v.id} data-title={v.title}>
-            <span class="vid-thumb">
-              <img src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`} alt={v.title} loading="lazy" />
-              <span class="vid-play" aria-hidden="true">▶</span>
-            </span>
-            <span class="vid-title">{v.title}</span>
-            {v.author && <span class="vid-author">{v.author}</span>}
-          </button>
-        ))}
       </div>
     </div>
   </section>
