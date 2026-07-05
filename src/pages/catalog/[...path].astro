@@ -3,16 +3,17 @@ import Base from '../../layouts/Base.astro';
 import catalog from '../../data/catalog.json';
 
 export function getStaticPaths() {
-  // Every catalog page EXCEPT the /catalog landing (handled by index.astro)
+  // Every catalog page EXCEPT the /catalog landing (handled by index.astro) and
+  // non-page entries like section headings (which have no path of their own).
   return catalog
-    .filter((p) => p.path !== '/catalog')
+    .filter((p) => p.path && p.path !== '/catalog')
     .map((p) => ({ params: { path: p.path.replace(/^\/catalog\//, '') }, props: { page: p } }));
 }
 const { page } = Astro.props;
 // Only show child links to catalog pages that still exist — this drops links to
 // the removed collection / "and other authors" / category pages (no more dead links).
-const validPaths = new Set(catalog.map((p) => p.path.replace(/\/$/, '')));
-const children = (page.children ?? []).filter((c) => validPaths.has(String(c.href).replace(/\/$/, '')));
+const validPaths = new Set(catalog.filter((p) => p.path).map((p) => p.path.replace(/\/$/, '')));
+const children = (page.children ?? []).filter((c) => c.heading || validPaths.has(String(c.href).replace(/\/$/, '')));
 
 const segs = page.path.split('/').filter(Boolean);
 const crumbs = segs.map((s, i) => ({
@@ -92,15 +93,19 @@ const paypal = page.type === 'book' && page.forSale && page.amount;
           {page.intro && children.length === 0 && <p class="muted" style="max-width:60ch">{page.intro}</p>}
           <div class="book-grid" style="margin-top:2rem">
             {children.map((c) => (
-              <a class="book" href={c.href}>
-                <div class="cover">
-                  {c.cover
-                    ? <img src={c.cover} alt={`Cover of ${c.text}`} loading="lazy" />
-                    : <span style="font-family:var(--serif);color:var(--brand);padding:1rem;text-align:center;font-size:1rem">{c.text}</span>}
-                </div>
-                <div class="title">{c.text}</div>
-                {c.price && <div class="price">{c.price}</div>}
-              </a>
+              c.heading ? (
+                <h2 class="group-heading" style={`grid-column:1/-1;font-size:1.2rem;color:var(--brand-dark);border-bottom:1px solid var(--line);padding-bottom:.5rem;${c.first ? '' : 'margin-top:1rem;'}`}>{c.text}</h2>
+              ) : (
+                <a class="book" href={c.href}>
+                  <div class="cover">
+                    {c.cover
+                      ? <img src={c.cover} alt={`Cover of ${c.text}`} loading="lazy" />
+                      : <span style="font-family:var(--serif);color:var(--brand);padding:1rem;text-align:center;font-size:1rem">{c.text}</span>}
+                  </div>
+                  <div class="title">{c.text}</div>
+                  {c.price && <div class="price">{c.price}</div>}
+                </a>
+              )
             ))}
           </div>
         </div>
