@@ -1016,138 +1016,291 @@
     "synopsis": "Peace is all we need! This book is the result of true efforts to create a new climate of awareness on health fostered by inner peace. At the 10 th anniversary of the Spiritist Society of Baltimore, Divaldo Franco launched the first Peace and You movement in the United States, which was held in Baltimore, MD, on October 19, 2008. The main theme of the event was \"Transform Your Health with Inner Peace.\" Divaldo Franco hosted the event in the presence of the following guest speakers: renowned scientist Gary E. Schwartz, Ph. D., acclaimed writer and broadcaster Zohara Meyerhoff Hieronimus; New Thought spiritual leader Rev. Dr. Jeffrey Proctor, and the Brazilian Air Force General Brigadier and Counselor of the Brazilian Spiritist Federation Jorge Godinho Nery. Each one of the speakers received the Peace and You Award from the Ambassador of Peace, Divaldo Franco, for their efforts to movements of goodness and peace in their fields of activity. May the amazing words and actions of these peacemaking speakers uplift you and help you nourish the peacemaker within.",
     "blurb": "Peace is all we need! This book is the result of true efforts to create a new climate of awareness on health fostered by inner peace. At the 10 th anniversary of the Spiritist Society of Baltimore, Divaldo Franco launched the first Peace an"
   },
-  {
-    "path": "/catalog/books/francisco-xavier/light-ahead",
-    "title": "Light Ahead",
-    "type": "book",
+            {
+    "path": "/catalog/books/francisco-xavier",
+    "title": "Francisco Xavier",
+    "type": "listing",
     "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier and Several Spirits",
-    "slug": "light-ahead",
-    "cover": "/uploads/2021/04/46ce0c73-cae7-4db1-9ff0-ab808255d7dd-206x300.jpg",
-    "price": "US$10.00",
-    "format": "Paperback",
-    "forSale": true,
-    "amount": "10.00",
-    "newRelease": true,
-    "releaseLabel": "Latest English release",
-    "synopsis": "This book is a compilation of spirit messages selected from some of the more than 400 books psychographed by the medium Francisco C. Xavier throughout his life, most of which published in English for the very first time.\nThey were translated from Portuguese with great care and dedication by a team of volunteer translators, who worked very hard to maintain unaltered the fundamental meaning of each lesson — namely, that after all, there is always light ahead.",
-    "bibliography": {
-      "Author(s)": "Francisco C. Xavier and Several Spirits",
-      "Language": "English",
-      "Translation": "Barbara Hawksley and Jussara Korngold",
-      "Editing": "David Alan Hawksley",
-      "Publisher": "United States Spiritist Federation",
-      "Location": "New York, USA",
-      "Publication Date": "2021 (1st edition)",
-      "Number of pages": "244",
-      "ISBN (13)": "978-1-948109-22-2",
-      "Book size (W×H×T)": "5½″ × 8½″ × 1.1″ (14.0cm × 21.0cm × 1.3cm)",
-      "Print type": "Black font on white background",
-      "Format(s)": "Paperback"
-    }
+    "authorName": "Francisco C. Xavier",
+    "slug": "francisco-xavier",
+    "intro": "The list below shows the books psychographed by Francisco Xavier. They are organized by the spirit author who dictated them: first the Emmanuel collection, then the André Luiz collection, and finally other spiritual authors and mediums. Within each group, titles are listed alphabetically (ignoring \"a,\" \"an,\" and \"the\").",
+    "children": [
+      {
+        "href": "/catalog/books/francisco-xavier/paul-and-stephen",
+        "text": "Paul and Stephen",
+        "cover": "/uploads/2020/01/paul-and-stephen.png",
+        "price": "US$22.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/two-thousand-years-ago",
+        "text": "Two Thousand Years Ago",
+        "cover": "/uploads/2020/01/two-thousand-years-ago.png",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/fifty-years-later",
+        "text": "Fifty Years Later",
+        "cover": "/uploads/2020/01/fifty-years-later.png",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/hail-christ",
+        "text": "Hail, Christ!",
+        "cover": "/uploads/2020/01/hail-christ.png",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/renunciation",
+        "text": "Renunciation",
+        "cover": "/uploads/2020/01/renunciation.png",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/our-daily-bread",
+        "text": "Our Daily Bread",
+        "cover": "/uploads/2020/05/our-daily-bread.png",
+        "price": "US$10.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/living-spring",
+        "text": "Living Spring",
+        "cover": "/uploads/2020/01/living-spring.png",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/way-truth-and-life",
+        "text": "The Way, the Truth,and the Life",
+        "cover": "/uploads/2020/01/way-truth-and-life.png",
+        "price": "US$16.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/words-of-eternal-life",
+        "text": "Words of Eternal Life",
+        "cover": "/uploads/2025/01/9786555706802-194x300.jpg",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/on-the-way-to-the-light",
+        "text": "On the Way to the Light",
+        "cover": "/uploads/2020/01/on-the-way-to-the-light.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/thought-and-life",
+        "text": "Thought and Life",
+        "cover": "/uploads/2020/01/thought-and-life.png",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/the-consoler",
+        "text": "The Consoler",
+        "cover": "/uploads/2024/11/PHOTO-2024-11-25-16-30-14-199x300.jpg",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/money",
+        "text": "Money",
+        "cover": "/uploads/2020/01/money.png",
+        "price": "US$10.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/nosso-lar",
+        "text": "Nosso Lar",
+        "cover": "/uploads/2025/07/61AOkY5btL._SY522_-199x300.jpg",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/messengers",
+        "text": "The Messengers",
+        "cover": "/uploads/2020/01/messengers.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/missionaries-of-the-light",
+        "text": "Missionaries of the Light",
+        "cover": "/uploads/2020/01/missionaries-of-the-light.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/workers-of-life-eternal",
+        "text": "Workers of the Life Eternal",
+        "cover": "/uploads/2020/01/workers-of-life-eternal.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/in-the-greater-world",
+        "text": "In the Greater World",
+        "cover": "/uploads/2020/01/in-the-greater-world.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/between-heaven-and-earth",
+        "text": "Between Heaven and Earth",
+        "cover": "/uploads/2020/01/between-heaven-and-earth.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/liberation",
+        "text": "Liberation",
+        "cover": "/uploads/2020/01/liberation.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/in-domains-of-mediumship",
+        "text": "In the Domainsof Mediumship",
+        "cover": "/uploads/2020/01/in-the-domains-of-mediumship.png",
+        "price": "US$12.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/action-and-reaction",
+        "text": "Action and Reaction",
+        "cover": "/uploads/2020/01/action-and-reaction.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/evolution-in-two-worlds",
+        "text": "Evolution in Two Worlds",
+        "cover": "/uploads/2020/01/evolution-in-two-worlds.png",
+        "price": "US$18.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/mechanisms-of-mediumship",
+        "text": "Mechanisms of Mediumship",
+        "cover": "/uploads/2020/01/mechanisms-of-mediumship.png",
+        "price": "US$18.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/sex-and-destiny",
+        "text": "Sex and Destiny",
+        "cover": "/uploads/2020/01/sex-and-destiny.png",
+        "price": "US$18.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/and-life-goes-on",
+        "text": "And Life Goes on",
+        "cover": "/uploads/2020/01/and-life-goes-on.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/disobsession",
+        "text": "Disobsession",
+        "cover": "/uploads/2020/01/disobsession.png",
+        "price": "US$12.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/among-brothers-of-other-lands",
+        "text": "Among Brothersof Other Lands",
+        "cover": "/uploads/2020/01/among-brothers-of-other-lands.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/heart-and-soul",
+        "text": "Heart and Soul",
+        "cover": "/uploads/2020/01/heart-and-soul.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/jesus-in-the-home",
+        "text": "Jesus in the Home",
+        "cover": "/uploads/2025/02/71VT7ezUFJL._AC_UY436_QL65_-208x300.jpg",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/light-ahead",
+        "text": "Light Ahead",
+        "cover": "/uploads/2021/04/46ce0c73-cae7-4db1-9ff0-ab808255d7dd-206x300.jpg",
+        "price": "US$10.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/message-from-a-teen-in-the-spirit-world",
+        "text": "Message from a Teenin the Spirit World",
+        "cover": "/uploads/2020/01/message-from-a-teen-in-the-spirit-world.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/missives-of-hope",
+        "text": "Missives of Hope",
+        "cover": "/uploads/2020/01/missives-of-hope.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/pinga-fogo-with-francisco-xavier",
+        "text": "Pinga Fogo with Francisco Xavier",
+        "cover": "/uploads/2013/11/pinga-fogo-with-francisco-xavier-ee01-02-113x150.png",
+        "price": "US$25.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/francisco-xavier/primer-on-being-good",
+        "text": "A Primer on Being Good",
+        "cover": "/uploads/2020/01/primer-on-being-good.png",
+        "price": "US$12.00",
+        "isBook": true
+      }
+    ]
   },
   {
-    "path": "/catalog/books/francisco-xavier/action-and-reaction",
-    "title": "Action and Reaction",
+    "path": "/catalog/books/francisco-xavier/paul-and-stephen",
+    "title": "Paul and Stephen",
     "type": "book",
     "author": "francisco-xavier",
     "authorName": "Francisco C. Xavier",
-    "slug": "action-and-reaction",
-    "cover": "/uploads/2020/01/action-and-reaction.png",
-    "price": "US$15.00",
+    "slug": "paul-and-stephen",
+    "cover": "/uploads/2020/01/paul-and-stephen.png",
+    "price": "US$22.00",
     "format": "paperback",
     "forSale": true,
-    "amount": "15.00",
-    "synopsis": "In this volume you will find a description of the lower regions of the spiritual realm and the suffering to which the guilty conscience is subjected after death of the physical body. André Luiz presents studies of real-life cases and offers guidance regarding paying one’s spiritual debts, the law of cause and effect, preparations for reincarnation, collective expiations, and the value of prayer. The spiritual author shows us that the possibilities of our current existence are connected to our actions in past existences, just as our actions of today will condition our possibilities in the future.",
-    "blurb": "In this volume you will find a description of the lower regions of the spiritual realm and the suffering to which the guilty conscience is subjected after death of the physical body. André Luiz presents studies of real-life cases and offers"
+    "amount": "22.00",
+    "synopsis": "It is the most famous and the thickest novel of the Spiritist literature. The spirit Emmanuel, through the mediumship of Francisco Xavier, describes one of the most symbolic moments of early Christianity: the history of Paul of Tarsus, better known as Saint Paul. The richness of the narrative takes the reader to the Galilee of twenty centuries ago, revealing the spiritual events behind the expansion of Christianity. Besides offering new information on Paul’s conversion at the gates of Damascus, his escape to the desert and his travels, the book talks about the relationship between Paul and Stephen, the first martyr of Christianity. Paul and Stephen is considered one of the top ten Spiritist books of the XX century.",
+    "blurb": "It is the most famous and the thickest novel of the Spiritist literature. The spirit Emmanuel, through the mediumship of Francisco Xavier, describes one of the most symbolic moments of early Christianity: the history of Paul of Tarsus, bett"
   },
   {
-    "path": "/catalog/books/francisco-xavier/among-brothers-of-other-lands",
-    "title": "Among Brothers of Other Lands",
+    "path": "/catalog/books/francisco-xavier/two-thousand-years-ago",
+    "title": "Two Thousand Years Ago",
     "type": "book",
     "author": "francisco-xavier",
     "authorName": "Francisco C. Xavier",
-    "slug": "among-brothers-of-other-lands",
-    "cover": "/uploads/2020/01/among-brothers-of-other-lands.png",
-    "price": "US$15.00",
+    "slug": "two-thousand-years-ago",
+    "cover": "/uploads/2020/01/two-thousand-years-ago.png",
+    "price": "US$20.00",
     "format": "paperback",
     "forSale": true,
-    "amount": "15.00",
-    "synopsis": "In 1965, the Brazilian mediums Francisco Xavier and Waldo Vieira traveled to several countries, including the United States of America, England and France, to exchange Spiritist knowledge and visit some friends. The first part of the book contains mediumistic messages received in Brazilian Portuguese. Among these messages, there are interesting interviews with Brother X and William James, and many other respectable people from other nations. The second part of the book is composed of messages received in English. This is a book that brings us eloquent teachings in Spiritism and Christ consciousness for it approaches the following topics: reincarnation, mediumship, obsession, and culture. It opens new perspectives for a greater understanding of our brothers and sisters of all lands.",
-    "blurb": "In 1965, the Brazilian mediums Francisco Xavier and Waldo Vieira traveled to several countries, including the United States of America, England and France, to exchange Spiritist knowledge and visit some friends. The first part of the book c"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/and-life-goes-on",
-    "title": "And Life Goes on",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "and-life-goes-on",
-    "cover": "/uploads/2020/01/and-life-goes-on.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "This book presents a description of the spirit after the death of the physical body and demonstrates that the mental state directly impacts our existence in the spiritual world. In twenty six chapters, the book brings the story of real characters, who receive the help of spiritual friends upon discarnation. Those friends encourage them to renew themselves spiritually through study and work in order for them to prepare themselves to review and untangle the meaning of the lives they have just finished, therefore enabling them to pursue a more constructive course of behavior for their future. It teaches us to examine our lives continually, knowing that, according to the laws of God, life does in fact go on, full of hope, effort, progress, and accomplishments after death.",
-    "blurb": "This book presents a description of the spirit after the death of the physical body and demonstrates that the mental state directly impacts our existence in the spiritual world. In twenty six chapters, the book brings the story of real char"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/between-heaven-and-earth",
-    "title": "Between Heaven and Earth",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "between-heaven-and-earth",
-    "cover": "/uploads/2020/01/between-heaven-and-earth.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "This novel offers information about the relationship that exists in the activities of the spirit on the two planes of life. Renewing his interest in our inner improvement, André Luiz tells the moving story of Amaro, Zulmira, Odila, and other characters, recounting the events of their previous lives from the time of Brazil’s war with Paraguay (1864-1870) until the days of old Rio de Janeiro (early 1900s). In its preface, Emmanuel assures us that \" The basic pictures of the narrative are intimately familiar to us ,\" such as family dysfunctions, the torment of jealousy, and the daily struggle for moral progress. Each page of this book discloses new knowledge and emotions.",
-    "blurb": "This novel offers information about the relationship that exists in the activities of the spirit on the two planes of life. Renewing his interest in our inner improvement, André Luiz tells the moving story of Amaro, Zulmira, Odila, and othe"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/disobsession",
-    "title": "Disobsession",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "disobsession",
-    "cover": "/uploads/2020/01/disobsession.png",
-    "price": "US$12.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "12.00",
-    "synopsis": "The faculty of mediumship, with its various manifestations, has been the dominant factor in proving the reality of the afterlife and the transcendental nature of the universe. Through this faculty, a multitude of phenomena has been witnessed, demonstrating to the astonishment of many that intelligence is not merely a product of brain cells. Among the several types of mediumship known today, psychography is the most often used within Spiritism, especially for the writing of books and messages. André Luiz’ purpose in writing this book was to recruit new groups of workers of goodness, whose intent is to aid in the readjustment of those no longer in the physical plane and who have become distanced from reality. There is nothing more appropriate and just for if ignorance needs the dedication of teachers, and psychopathology awaits the abnegation of doctors who use of techniques of balanced dialogue in the practice of psychoanalysis, so it is that mental alienation of the discarnate beings demands the fraternal assistance of friendly hearts with enough understanding and an abundance of love to aid them at spiritist centers. Through the work of several collaborators, this volume is an important synthesis in the effort to aid those suffering from obsessive processes. It is characterized by its absolute simplicity in the explanation of the circumstances that are indispensable for the constitution and maintenance of spiritist groups, which are devoted to the liberation and healing task of disobsession.",
-    "blurb": "The faculty of mediumship, with its various manifestations, has been the dominant factor in proving the reality of the afterlife and the transcendental nature of the universe. Through this faculty, a multitude of phenomena has been witnesse"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/endearing-gems-from-francisco-xavier",
-    "title": "Endearing Gems from Francisco Cândido Xavier",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "endearing-gems-from-francisco-xavier",
-    "cover": "/uploads/2020/01/endearing-gems-from-francisco-xavier.png",
-    "format": "paperback",
-    "forSale": false,
-    "synopsis": "The reader will be delightfully pleased with some of the enlightening messages and examples of Mr Xavier’s life. Always touching upon his outlooks: love for his neighbors, indifference towards personal or material gains, and a constant and exclusive concern with the happiness of others. Francisco de Paula Cândido Xavier , or “Chico” Xavier, was born on April 2, 1910 in Pedro Leopoldo, State of Minas Gerais, Brazil. He became recognized as the expressive worker of Spiritism through his mediumship as well as in the field of assistance, social, and spiritual promotion of human beings. Through psychography he published 409 books that have sold an estimated 25 million copies, the profits of which have all been channeled to charitable organizations. He passed away on June 30, 2002.",
-    "blurb": "The reader will be delightfully pleased with some of the enlightening messages and examples of Mr Xavier’s life. Always touching upon his outlooks: love for his neighbors, indifference towards personal or material gains, and a constant and"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/evolution-in-two-worlds",
-    "title": "Evolution in Two Worlds",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "evolution-in-two-worlds",
-    "cover": "/uploads/2020/01/evolution-in-two-worlds.png",
-    "price": "US$18.00",
-    "format": "Paperback",
-    "forSale": true,
-    "amount": "18.00",
-    "synopsis": "Psychographed by Francisco Xavier and Waldo Vieira, Evolution in Two Worlds is divided into two parts. The first connects words of Christ to concepts such as the existence of the perispirit and spiritual body, the cosmic fluid, heredity, evolution and sex, nourishment in the spirit realm, and the mechanics of the mind, among others. The second part combines questions and answers related to marriage, divorce, pregnancy and abortion. The spirit André Luiz combines scientific and evangelical concepts to promote a study of the evolutionary process of the being and the soul in the two realms of our existence – the material world and the spirit world – establishing an intellectual challenge to all those who practice and wish to know the Spiritist Doctrine.",
-    "blurb": "Psychographed by Francisco Xavier and Waldo Vieira, Evolution in Two Worlds is divided into two parts. The first connects words of Christ to concepts such as the existence of the perispirit and spiritual body, the cosmic fluid, heredity, ev"
+    "amount": "20.00",
+    "synopsis": "Emmanuel, the spiritual author of this amazing book, describes one of his reincarnations into a place of power, passion and conspiracy. It was the period when he lived as Publius Lentulus, a powerful senator of the Roman Empire, in Palestine during the time of Christ. He tells about his meeting with Jesus and the healing of his daughter. The book focuses on important episodes of the history of Christianity during the 1 st century. There are unforgettable moments such as the deaths of the first Christian martyrs. On the banks of Lake Gennesaret, Publius Lentulus (Emmanuel) has an encounter with Christ Publius has gone to beseech JEsus to heal his little daughter, Flávia, who has contracted leprosy. Moved and magnetized by emotions he has never felt before, he hears the Master tell him: ‘It would have been better if you had come publicly and in broad daylight in order to learn the sublime lesson of faith and humility once and for all.’ ‘After many years of deviation from the path of good due to your blatant wrongs, today you have come to the turning point for the regeneration of your entire life.’ ‘It is up to you, however, to take advantage of it either now or a few millennia from now.’ ‘But no one can impose an act that is against your conscience if it is your desire to spurn this blessed moment indefinitely!’ Emmanuel then realizes that Jesus is praying. That very night his daughter begins to improve noticeably until she is completely well. What are the consequences of this encounter with the Divine Master? Flávia is healed. Lívia, Publius’ wife and a patrician woman, converts to Christianity. Publius returns to his political affairs refusing to believe that Jesus was responsible for his daughter’s recovery. Emmanuel narrates this personal experience with the richness of details that characterizes all his books so that we may ponder the precious moments that we are offered throughout our lives; moments that are often wasted, consequently retarding our progress and evolution.",
+    "blurb": "Emmanuel, the spiritual author of this amazing book, describes one of his reincarnations into a place of power, passion and conspiracy. It was the period when he lived as Publius Lentulus, a powerful senator of the Roman Empire, in Palestin"
   },
   {
     "path": "/catalog/books/francisco-xavier/fifty-years-later",
@@ -1180,491 +1333,19 @@
     "blurb": "Hail, Christ! Those who will live forever glorify and salute you! The partnership between the medium Franciso Cândido Xavier and the spirit Emmanuel reveal the story of Quintus Varrus and Tacianus, two souls connected by many reincarnations"
   },
   {
-    "path": "/catalog/books/francisco-xavier/heart-and-soul",
-    "title": "Heart and Soul",
+    "path": "/catalog/books/francisco-xavier/renunciation",
+    "title": "Renunciation",
     "type": "book",
     "author": "francisco-xavier",
     "authorName": "Francisco C. Xavier",
-    "slug": "heart-and-soul",
-    "cover": "/uploads/2020/01/heart-and-soul.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "At this time when many have their peace disturbed and countless households are struggling, disarranging and dissolving, thereby aggravating the sufferings of humanity, the world is more than ever in need and eager for solace. Our lives need a light that springs from the heart and soul, no more from the cold and cloudy brain. The lines from this book have flown from the pen of someone who, having made of healthy spiritualism an act of most sacred priesthood, has devoted his entire life to ease the moral and physical pain of his neighbor, both through his actions and his words as a result not only of a theoretical background but through an active practice of goodness. Therefore, the reader shall find in this tome and encouraging message, distributed throughout sixty short chapters on several topics, all converging much like streams of light towards he same ocean of truth, which is God, wherefore they shall quench the thirst of their pilgrim-like souls no matter who they are or from whence they come.",
-    "blurb": "At this time when many have their peace disturbed and countless households are struggling, disarranging and dissolving, thereby aggravating the sufferings of humanity, the world is more than ever in need and eager for solace. Our lives need"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/in-domains-of-mediumship",
-    "title": "In the Domain of Mediumship",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "in-domains-of-mediumship",
-    "cover": "/uploads/2020/01/in-the-domains-of-mediumship.png",
-    "price": "US$12.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "12.00",
-    "synopsis": "In this book, André Luiz analyzes the various aspects of mediumship, emphasizing the efforts of mediums who are faithful to the spiritual mandate received prior to their reincarnation. He also warns of the risks involved in poor exchanges between the two worlds. It talks about trance, somnambulism, possession, clairvoyance, out-of-body experiences, fascination, psychometry, and the mediumship of physical effect, among others. It is a technical study of great relevance that discloses the ways in which Spirits act during intricate processes of communication with the incarnate beings. It conveys concepts of spirituality received from enlightened mentors, which contain explanations of philosophical, scientific, and evangelical nature, indispensable to those who are dedicated to the study of mediumship.",
-    "blurb": "In this book, André Luiz analyzes the various aspects of mediumship, emphasizing the efforts of mediums who are faithful to the spiritual mandate received prior to their reincarnation. He also warns of the risks involved in poor exchanges b"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/in-the-greater-world",
-    "title": "In the Greater World",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "in-the-greater-world",
-    "cover": "/uploads/2020/01/in-the-greater-world.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "In this volume, André Luiz focuses on aspects of life in the spirit world and the communication between discarnates and incarnates, especially during the sleep of the physical body. The spiritual author explains the causes of mental disturbances and presents their respective spiritual treatments. In the form of a novel, he also analyzes topics such as abortion, epilepsy, schizophrenia, and Down syndrome, and highlights the immediate rescue given the invisible workers to those who need help in order to avoid, as much as possible, madness, suicide, and extreme moral disasters.",
-    "blurb": "In this volume, André Luiz focuses on aspects of life in the spirit world and the communication between discarnates and incarnates, especially during the sleep of the physical body. The spiritual author explains the causes of mental disturb"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier",
-    "title": "Francisco Xavier",
-    "type": "listing",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "francisco-xavier",
-    "intro": "The list below shows the books psychographed by Francisco Xavier . You may browse the alphabetical list of titles or select one of the following collections: The André Luiz collection The Life in the Spiritual World collection The Emmanuel collection The Living Spring collection Books by Francisco Xavier and other authors and/or mediums Books by Francisco Xavier and other spiritual authors The books are alphabetically listed by title (ignore \"a,\" \"an,\" and \"the\"): A B C D E F G H I J K L M N O P Q R S T U V W Y X Z Action and Reaction Among Brothers of Other Lands And Life Goes on Between Heav",
-    "children": [
-      {
-        "href": "/catalog/books/francisco-xavier/andre-luiz-collection",
-        "text": "André Luiz",
-        "cover": "/uploads/2020/01/action-and-reaction.png",
-        "price": "",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/andre-luiz-collection/life-in-spiritual-world-collection",
-        "text": "Life in the Spiritual World",
-        "cover": "/uploads/2020/01/nosso-lar.png",
-        "price": "",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/emmanuel-collection",
-        "text": "Emmanuel",
-        "cover": "/uploads/2020/01/fifty-years-later.png",
-        "price": "",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/emmanuel-collection/living-spring-collection",
-        "text": "Living Spring",
-        "cover": "/uploads/2020/01/living-spring.png",
-        "price": "",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/and-other-authors",
-        "text": "other authors and/or mediums",
-        "cover": "/uploads/2020/01/among-brothers-of-other-lands.png",
-        "price": "",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/and-other-spiritual-authors",
-        "text": "other spiritual authors",
-        "cover": "/uploads/2020/01/among-brothers-of-other-lands.png",
-        "price": "",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/action-and-reaction",
-        "text": "Action and Reaction",
-        "cover": "/uploads/2020/01/action-and-reaction.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/among-brothers-of-other-lands",
-        "text": "Among Brothersof Other Lands",
-        "cover": "/uploads/2020/01/among-brothers-of-other-lands.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/and-life-goes-on",
-        "text": "And Life Goes on",
-        "cover": "/uploads/2020/01/and-life-goes-on.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/between-heaven-and-earth",
-        "text": "Between Heaven and Earth",
-        "cover": "/uploads/2020/01/between-heaven-and-earth.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/disobsession",
-        "text": "Disobsession",
-        "cover": "/uploads/2020/01/disobsession.png",
-        "price": "US$12.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/endearing-gems-from-francisco-xavier",
-        "text": "Endearing Gems fromFrancisco Cândido Xavier",
-        "cover": "/uploads/2020/01/endearing-gems-from-francisco-xavier.png",
-        "price": "US$10.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/evolution-in-two-worlds",
-        "text": "Evolution in Two Worlds",
-        "cover": "/uploads/2020/01/evolution-in-two-worlds.png",
-        "price": "US$18.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/fifty-years-later",
-        "text": "Fifty Years Later",
-        "cover": "/uploads/2020/01/fifty-years-later.png",
-        "price": "US$20.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/hail-christ",
-        "text": "Hail, Christ!",
-        "cover": "/uploads/2020/01/hail-christ.png",
-        "price": "US$20.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/heart-and-soul",
-        "text": "Heart and Soul",
-        "cover": "/uploads/2020/01/heart-and-soul.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/in-domains-of-mediumship",
-        "text": "In the Domainsof Mediumship",
-        "cover": "/uploads/2020/01/in-the-domains-of-mediumship.png",
-        "price": "US$12.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/in-the-greater-world",
-        "text": "In the Greater World",
-        "cover": "/uploads/2020/01/in-the-greater-world.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/jesus-in-the-home",
-        "text": "Jesus in the Home",
-        "cover": "/uploads/2025/02/71VT7ezUFJL._AC_UY436_QL65_-208x300.jpg",
-        "price": "US$20.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/liberation",
-        "text": "Liberation",
-        "cover": "/uploads/2020/01/liberation.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/living-spring",
-        "text": "Living Spring",
-        "cover": "/uploads/2020/01/living-spring.png",
-        "price": "US$20.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/mechanisms-of-mediumship",
-        "text": "Mechanisms of Mediumship",
-        "cover": "/uploads/2020/01/mechanisms-of-mediumship.png",
-        "price": "US$18.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/message-from-a-teen-in-the-spirit-world",
-        "text": "Message from a Teenin the Spirit World",
-        "cover": "/uploads/2020/01/message-from-a-teen-in-the-spirit-world.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/messengers",
-        "text": "The Messengers",
-        "cover": "/uploads/2020/01/messengers.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/missionaries-of-the-light",
-        "text": "Missionaries of the Light",
-        "cover": "/uploads/2020/01/missionaries-of-the-light.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/missives-of-hope",
-        "text": "Missives of Hope",
-        "cover": "/uploads/2020/01/missives-of-hope.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/money",
-        "text": "Money",
-        "cover": "/uploads/2020/01/money.png",
-        "price": "US$10.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/nosso-lar",
-        "text": "Nosso Lar",
-        "cover": "/uploads/2025/07/61AOkY5btL._SY522_-199x300.jpg",
-        "price": "US$20.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/on-the-way-to-the-light",
-        "text": "On the Way to the Light",
-        "cover": "/uploads/2020/01/on-the-way-to-the-light.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/our-daily-bread",
-        "text": "Our Daily Bread",
-        "cover": "/uploads/2020/05/our-daily-bread.png",
-        "price": "US$10.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/paul-and-stephen",
-        "text": "Paul and Stephen",
-        "cover": "/uploads/2020/01/paul-and-stephen.png",
-        "price": "US$22.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/primer-on-being-good",
-        "text": "A Primer on Being Good",
-        "cover": "/uploads/2020/01/primer-on-being-good.png",
-        "price": "US$12.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/renunciation",
-        "text": "Renunciation",
-        "cover": "/uploads/2020/01/renunciation.png",
-        "price": "US$20.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/sex-and-destiny",
-        "text": "Sex and Destiny",
-        "cover": "/uploads/2020/01/sex-and-destiny.png",
-        "price": "US$18.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/thought-and-life",
-        "text": "Thought and Life",
-        "cover": "/uploads/2020/01/thought-and-life.png",
-        "price": "US$20.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/two-thousand-years-ago",
-        "text": "Two Thousand Years Ago",
-        "cover": "/uploads/2020/01/two-thousand-years-ago.png",
-        "price": "US$20.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/way-truth-and-life",
-        "text": "The Way, the Truth,and the Life",
-        "cover": "/uploads/2020/01/way-truth-and-life.png",
-        "price": "US$16.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/workers-of-life-eternal",
-        "text": "Workers of the Life Eternal",
-        "cover": "/uploads/2020/01/workers-of-life-eternal.png",
-        "price": "US$15.00",
-        "isBook": true
-      }
-    ]
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/jesus-in-the-home",
-    "title": "Jesus in the Home",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "jesus-in-the-home",
-    "cover": "/uploads/2025/02/71VT7ezUFJL._AC_UY436_QL65_-208x300.jpg",
-    "price": "US$20.00",
-    "format": "paperback",
-    "forSale": false,
-    "amount": "",
-    "synopsis": "This book contains lessons taught by Jesus during meetings at Simon Peter’s house, where the first Christian home worship was held. It addresses themes such as love for one’s neighbor, the value of service, compassion, education, etc. It demonstrates the ongoing relevance of the evangelical message. Easy to understand by all age groups, it emphasizes the need for one’s inner reformation by renewing one’s thoughts, actions, postures and attitudes, thereby seeking to adjust them to authentic Christian morality. The weekly gathering around the Gospel is one of the most useful practices in which Christians can take part. It is recommended that “Jesus in the Home” be used in conjunction with “The Gospel According to Spiritism,” “The Spirits’ Book,” or any other book chosen by the group.",
-    "blurb": "This book contains lessons taught by Jesus during meetings at Simon Peter’s house, where the first Christian home worship was held. It addresses themes such as love for one’s neighbor, the value of service, compassion, education, etc. It de"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/liberation",
-    "title": "Liberation",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "liberation",
-    "cover": "/uploads/2020/01/liberation.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "In this compelling narrative, André Luiz emphasizes the work of high-order spirits in the effort to convert the spirit Gregorio to the Good, an effort that culminates with the unforgettable reencounter with his mother—herself a highly evolved spirit—wherein he surrenders to the irresistible call of Love. The book also contains information on how unhappy spirits act as they try to involve incarnates in their wiles. The spirit author tells of the intercession of high order spirits on behalf of human beings, demonstrating the divine compassion that grants to all the blessed opportunity to free themselves by means of study, labor and persevering service in the practice of the Good.",
-    "blurb": "In this compelling narrative, André Luiz emphasizes the work of high-order spirits in the effort to convert the spirit Gregorio to the Good, an effort that culminates with the unforgettable reencounter with his mother—herself a highly evolv"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/living-spring",
-    "title": "Living Spring",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "living-spring",
-    "cover": "/uploads/2020/01/living-spring.png",
-    "price": "US$20.00",
-    "format": "paperback",
-    "forSale": false,
-    "amount": "",
-    "synopsis": "This book is part of an outstanding collection that includes Our Daily Bread , The Way, the Truth, and the Life , Living Spring , and Vineyard of Light . The collection was written by the spirit Emmanuel, who seeks to guide spiritists in the practice of Christian principles, leading them to find in the teachings of Jesus their inner transformation, which cannot be postponed. In this book’s 180 chapters, the author brilliantly comments on several verses from the New Testament. From each page springs the depth of concept and the lightness of form in which they are outlined. The spiritual author shows that Spiritism duly based on the lessons of the New Testament as being an opportunity for work and growth for those who long for the renewal of their minds.",
-    "blurb": "This book is part of an outstanding collection that includes Our Daily Bread , The Way, the Truth, and the Life , Living Spring , and Vineyard of Light . The collection was written by the spirit Emmanuel, who seeks to guide spiritists in th"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/mechanisms-of-mediumship",
-    "title": "Mechanisms of Mediumship",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "mechanisms-of-mediumship",
-    "cover": "/uploads/2020/01/mechanisms-of-mediumship.png",
-    "price": "US$18.00",
-    "format": "Paperback",
-    "forSale": true,
-    "amount": "18.00",
-    "synopsis": "Using the physical sciences of the material world as a reference, André Luiz offers an enlightening study of the intricate mechanisms of mediumship. He offers mediums and students of mediumistic phenomena the resources needed for understanding complex questions pertaining to physics and physiology, which are intelligently related to the many aspects of mediumship. HE emphasizes the importance of a mediumship centered on the teachings of Jesus, exaplining that besides the knowledge required, both discipline and responsibility appear as factors for the progress of individuals who devote themselves to communicating wit the Greater World according to the principles of the Gospel and the Spiritist Doctrine.",
-    "blurb": "Using the physical sciences of the material world as a reference, André Luiz offers an enlightening study of the intricate mechanisms of mediumship. He offers mediums and students of mediumistic phenomena the resources needed for understand"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/message-from-a-teen-in-the-spirit-world",
-    "title": "Message from a Teen in the Spirit World",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "message-from-a-teen-in-the-spirit-world",
-    "cover": "/uploads/2020/01/message-from-a-teen-in-the-spirit-world.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "This is a young people’s book dictated by the spirit Meimei to the medium Francisco Xavier. The spirit of Carlos, the deceased child referred to in the title, writes to his brother Dirceu, who is still reincarnated on Earth. Carlos tells about how the soul leaves the body and his impressions at the beginning of his new life with his relatives and new friends; he affirms that life after death is the continuation of life in the physical body, and he emphasizes the fact that we need to live in accordance with the teachings of Jesus.",
-    "blurb": "This is a young people’s book dictated by the spirit Meimei to the medium Francisco Xavier. The spirit of Carlos, the deceased child referred to in the title, writes to his brother Dirceu, who is still reincarnated on Earth. Carlos tells ab"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/messengers",
-    "title": "The Messengers",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "messengers",
-    "cover": "/uploads/2020/01/messengers.png",
+    "slug": "renunciation",
+    "cover": "/uploads/2020/01/renunciation.png",
     "price": "US$20.00",
     "format": "paperback",
     "forSale": true,
     "amount": "20.00",
-    "synopsis": "This book unveils that spiritual life after death is always evolving. In 51 chapters, it describes the experiences of a number of spirits who reincarnated with pre-planned endeavors needed for their personal spiritual growth. Moreover, it also deals with subjects such as the Gospel worship at home, the benefits of practicing the good, carelessness regarding one’s spiritual obligations, and fear of death. The spiritual author focuses on the opportunities of service for mediums, warning them about the need to practice at a personal level what they learn in order to avoid returning to the spiritual world without having fulfilled the duties assumed before reincarnating.",
-    "blurb": "This book unveils that spiritual life after death is always evolving. In 51 chapters, it describes the experiences of a number of spirits who reincarnated with pre-planned endeavors needed for their personal spiritual growth. Moreover, it a"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/missionaries-of-the-light",
-    "title": "Missionaries of the Light",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "missionaries-of-the-light",
-    "cover": "/uploads/2020/01/missionaries-of-the-light.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "In this volume, André Luiz unveils the secrets of reincarnation and the task of missionary spirits in charge of the rebirth process. The spiritual author affirms that physical death is not the end. He also stresses the importance of self-effort in the struggle for self-improvement. In twenty chapters, André Luiz talks about his continued learning experience in the spiritual world, the perispirit as a living body that molds the cells that compose the physical body, the reincarnation process, which is guided by high-order spirits, and the different aspects of mediumistic manifestations. Missionaries of the Light teaches that Divine Providence always grants people new arenas of work through the incessant renewal of life by means of reincarnation.",
-    "blurb": "In this volume, André Luiz unveils the secrets of reincarnation and the task of missionary spirits in charge of the rebirth process. The spiritual author affirms that physical death is not the end. He also stresses the importance of self-ef"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/missives-of-hope",
-    "title": "Missives of Hope",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "missives-of-hope",
-    "cover": "/uploads/2020/01/missives-of-hope.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "This book is a compilation of messages originally published in the Brazilian newspaper O Diário de São Paulo . They were later collected for publication as a set of four books. Each message is the result of a partnership between two of the greatest names in spiritist literature, Francisco Cândido (Chico) Xavier and Prof. José Herculano Pires. The present work has a significant historic value in that it brings together these two great contributors of the spiritist literature for the first time.",
-    "blurb": "This book is a compilation of messages originally published in the Brazilian newspaper O Diário de São Paulo . They were later collected for publication as a set of four books. Each message is the result of a partnership between two of the"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/money",
-    "title": "Money",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "money",
-    "cover": "/uploads/2020/01/money.png",
-    "price": "US$10.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "10.00",
-    "synopsis": "This book explains that money is actually a neutral tool in all human endeavors and that it is our stewardship that actually grants it a constructive outcome. It is a collection of thoughts on the importance of money in our lives. As such, Emmanuel brilliantly shows us that it is our free will that ultimately determines the consequences of what money can do for ourselves and for society in general. Whether used to create jobs and employment, which ultimately gives human beings the ability to provide for themselves, or to improve social and intellectual development, money retains a remarkable similarity to blood: it is only useful when in circulation, and it is vital for progress and the perpetuity of our society. To understand its importance is first and foremost to learn how it can be employed to generate progress for all, thereby being able to transform the earthly coins into heavenly ones.",
-    "blurb": "This book explains that money is actually a neutral tool in all human endeavors and that it is our stewardship that actually grants it a constructive outcome. It is a collection of thoughts on the importance of money in our lives. As such,"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/nosso-lar",
-    "title": "Nosso Lar",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "nosso-lar",
-    "cover": "/uploads/2025/07/61AOkY5btL._SY522_-199x300.jpg",
-    "price": "US$20.00",
-    "format": "paperback",
-    "forSale": false,
-    "amount": "",
-    "synopsis": "Nosso Lar, Portuguese for “Our Home,” is the name of the spiritual colony that the spirit André Luiz introduces to us in the first book of his acclaimed series, “Life in the Spiritual World.” The book, whose full title is “Nosso Lar: an Account of Life in a Spiritual Colony in the World of Spirits,” is a compelling narrative wherein the author tells us of his impressions and discoveries about life in the spiritual world as he acts as a sort of journalist, who records his own experiences as they occur. André Luiz unveils an exciting world, filled with life and activity, and which is organized in an exemplary way. It is a place where discarnate spirits go through a recovery stage and a spiritual educational process supervised by high-order spirits. Nosso Lar enables us to get a glimpse of the spirit world that awaits us after we leave our physical bodies.",
-    "blurb": "Nosso Lar, Portuguese for “Our Home,” is the name of the spiritual colony that the spirit André Luiz introduces to us in the first book of his acclaimed series, “Life in the Spiritual World.” The book, whose full title is “Nosso Lar: an Acc"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/on-the-way-to-the-light",
-    "title": "On the Way to the Light",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "on-the-way-to-the-light",
-    "cover": "/uploads/2020/01/on-the-way-to-the-light.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "Those who are trying to understand our world and its origins will find the answers in this book. In this notable work of historic synthesis, the spiritual author highlights the most relevant events, situations, and individuals who significantly contributed to the progress of humanity throughout time by analyzing the missions of spirits such as Krishna, Buddha, Plato, Muhammad, the Hebrew Prophets, the Apostles, Paul of Tarsus, St. Francis of Assisi, Luther, and Allan Kardec. The book narrates the history of civilization from a Spiritist perspective, showing the true position of the Gospel of Christ in the light of Earth’s religions and philosophies. It addresses the first inhabitants of the Earth, touching on the historical pages of peoples, great empires, and the changes that followed one another. In this book Emmanuel shows us that we are all on our way to the light by divine determinism!",
-    "blurb": "Those who are trying to understand our world and its origins will find the answers in this book. In this notable work of historic synthesis, the spiritual author highlights the most relevant events, situations, and individuals who significa"
+    "synopsis": "In what constellation might Alcyone live, soul of his soul and life of his life? The sweet Alcyone asks to return to the Earth to accompany the great love of her past, Charles, in a new lifetime of trials, sacrifices, and reparations. In an example of profound devotion to her neighbor, she demonstrates her complete loyalty to assist the one for whom she has interceded so much on the spirit plane. In this gripping historical novel, the spirit Emmanuel takes us back to the frivolous Paris of the 17th century, a city replete with violent sentiments and materialistic illusions that conflict with the eternal truths of the soul. By means of the psychography of Francisco Cândido Xavier, the spiritual author’s collaborator, we are introduced to another one of Emmanuel’s incarnations, this time as Father Damiano, vicar of St. Vincent’s Church in Avila, Spain, and the couple’s contemporary protagonist.",
+    "blurb": "In what constellation might Alcyone live, soul of his soul and life of his life? The sweet Alcyone asks to return to the Earth to accompany the great love of her past, Charles, in a new lifetime of trials, sacrifices, and reparations. In an"
   },
   {
     "path": "/catalog/books/francisco-xavier/our-daily-bread",
@@ -1682,124 +1363,19 @@
     "blurb": "Presently, the distress of everyday life is so compelling that it usually deviates us from the urgent responsibility we should bear towards our spiritual improvement. The stress caused by our customary duties and the unavoidable appeal of t"
   },
   {
-    "path": "/catalog/books/francisco-xavier/paul-and-stephen",
-    "title": "Paul and Stephen",
+    "path": "/catalog/books/francisco-xavier/living-spring",
+    "title": "Living Spring",
     "type": "book",
     "author": "francisco-xavier",
     "authorName": "Francisco C. Xavier",
-    "slug": "paul-and-stephen",
-    "cover": "/uploads/2020/01/paul-and-stephen.png",
-    "price": "US$22.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "22.00",
-    "synopsis": "It is the most famous and the thickest novel of the Spiritist literature. The spirit Emmanuel, through the mediumship of Francisco Xavier, describes one of the most symbolic moments of early Christianity: the history of Paul of Tarsus, better known as Saint Paul. The richness of the narrative takes the reader to the Galilee of twenty centuries ago, revealing the spiritual events behind the expansion of Christianity. Besides offering new information on Paul’s conversion at the gates of Damascus, his escape to the desert and his travels, the book talks about the relationship between Paul and Stephen, the first martyr of Christianity. Paul and Stephen is considered one of the top ten Spiritist books of the XX century.",
-    "blurb": "It is the most famous and the thickest novel of the Spiritist literature. The spirit Emmanuel, through the mediumship of Francisco Xavier, describes one of the most symbolic moments of early Christianity: the history of Paul of Tarsus, bett"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/pinga-fogo-with-francisco-xavier",
-    "title": "Pinga Fogo with Francisco Xavier",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "pinga-fogo-with-francisco-xavier",
-    "cover": "/uploads/2013/11/pinga-fogo-with-francisco-xavier-ee01-02-113x150.png",
-    "price": "US$25.00",
-    "format": "",
-    "forSale": true,
-    "amount": "25.00",
-    "synopsis": "Overview This special two-DVD edition with English subtitles retrieves the historic program Pinga-Fogo with Francisco Xavier, a veritable milestone of the Brazilian Spiritist Movement. It brings more than two hours of extra footage with interviews, documentaries, and bonus information. On the evenings of July 28 and December 21 in 1971, the broadcast corporation TV Tupi, channel 4 of São Paulo presented in their news program Pinga-Fogo—loosely translated into \"On the line of Fire\"—the spiritist medium Francisco Xavier answering questions from news reporters Saulo Gomes, Reali Jr., Helle Alves, and Herculano Pires; the catholic intellectual João de Scantimburgo, and scientist Dr. Hernani Guimarães Andrade. In those two programs, Francisco Xavier left teachings for millions of individuals from all social and cultural standings concerning the biggest questions in life such as whom we are and where we go after death of the physical body, among many other topics. During the interviews, Francisco Xavier also discussed the following topics: collective deaths, communication with departed relatives, the moment of death, plastic surgery, cremation, the death penalty, Emmanuel (his spiritual guide) and the priest Manoel da Nóbrega, cryopreservation of the physical body, family planning, abortion, organ transplantation, spiritual materializations, spiritual censorship, psychography, double sight, spiritual surgeries, catholic psychography, the question \"Are spiritists conformists?,\" contact with other planets, the arrival of men on the moon, marriage and divorce, reincarnations, free sex, homosexuality, weapons of mass destruction, and the Vietnam war. The bonus footage includes: the news reporter and the medium, the great surprise to all news reporters, the emotion 35 years later, the importance of the program Pinga Fogo, remembering Francisco Xavier, honoring Francisco Xavier, and Francisco Xavier—A Story of Love. It also features interviews with other members of the Brazilian spiritist movement such as Francisco Galves, Nena Galves, Dr. Tuffik Mattar, Dr. Marlene Nobre, and Zita Ghilardi.",
-    "blurb": "Overview This special two-DVD edition with English subtitles retrieves the historic program Pinga-Fogo with Francisco Xavier, a veritable milestone of the Brazilian Spiritist Movement. It brings more than two hours of extra footage with int"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/primer-on-being-good",
-    "title": "A Primer on Being Good",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "primer-on-being-good",
-    "cover": "/uploads/2020/01/primer-on-being-good.png",
-    "price": "US$12.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "12.00",
-    "synopsis": "The Spirit Meimei explains in simple language, appropriate for children, two paths in life: the path of good and the path of evil. God has granted us the freedom to choose either one. The book depicts the use of hands to do good, promote happiness, make friends, help people, and work so that the world may be a better place.",
-    "blurb": "The Spirit Meimei explains in simple language, appropriate for children, two paths in life: the path of good and the path of evil. God has granted us the freedom to choose either one. The book depicts the use of hands to do good, promote ha"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/renunciation",
-    "title": "Renunciation",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "renunciation",
-    "cover": "/uploads/2020/01/renunciation.png",
-    "price": "US$20.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "20.00",
-    "synopsis": "In what constellation might Alcyone live, soul of his soul and life of his life? The sweet Alcyone asks to return to the Earth to accompany the great love of her past, Charles, in a new lifetime of trials, sacrifices, and reparations. In an example of profound devotion to her neighbor, she demonstrates her complete loyalty to assist the one for whom she has interceded so much on the spirit plane. In this gripping historical novel, the spirit Emmanuel takes us back to the frivolous Paris of the 17th century, a city replete with violent sentiments and materialistic illusions that conflict with the eternal truths of the soul. By means of the psychography of Francisco Cândido Xavier, the spiritual author’s collaborator, we are introduced to another one of Emmanuel’s incarnations, this time as Father Damiano, vicar of St. Vincent’s Church in Avila, Spain, and the couple’s contemporary protagonist.",
-    "blurb": "In what constellation might Alcyone live, soul of his soul and life of his life? The sweet Alcyone asks to return to the Earth to accompany the great love of her past, Charles, in a new lifetime of trials, sacrifices, and reparations. In an"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/sex-and-destiny",
-    "title": "Sex and Destiny",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "sex-and-destiny",
-    "cover": "/uploads/2020/01/sex-and-destiny.png",
-    "price": "US$18.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "18.00",
-    "synopsis": "What effects will the sexual experiences and conduct of incarnates have on the immortal spirit in their future life, their destiny? Rich in detail, the books by André Luiz depict the spirit world: how spirits live, their habitats and the relations of cause and effect that influence the evolutionary trajectory both of incarnates and discarnates, delineating their future life, their destiny. In this book, readers will find the answers to their questions about human sexual relationships and their implications for the future life of the immortal spirit, enabling it to \"learn by using the library of experience.\" Sex and destiny, love and conscience, freedom and commitment, guilt and redemption, home and reincarnation are the topics of this book born in the forge of everyday reality.",
-    "blurb": "What effects will the sexual experiences and conduct of incarnates have on the immortal spirit in their future life, their destiny? Rich in detail, the books by André Luiz depict the spirit world: how spirits live, their habitats and the re"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/the-consoler",
-    "title": "The Consoler",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "the-consoler",
-    "cover": "/uploads/2024/11/PHOTO-2024-11-25-16-30-14-199x300.jpg",
-    "price": "US$20.00",
-    "format": "Paperback",
-    "forSale": false,
-    "amount": "",
-    "synopsis": "In this book of questions and answers, Emmanuel presents a comprehensive study of Spiritism, delving into topics suggested by those who see Spiritism as the Consoler promised by Christ. The work offers valuable insights on various aspects of Spiritism, including Science, Society, Determinism, Free Will, Sex Education, Mediumship and more. It is enriched with the wisdom and moral authority of the Spirit author, providing invaluable clarity on these profound subjects",
-    "blurb": "In this book of questions and answers, Emmanuel presents a comprehensive study of Spiritism, delving into topics suggested by those who see Spiritism as the Consoler promised by Christ. The work offers valuable insights on various aspects o"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/thought-and-life",
-    "title": "Thought and Life",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "thought-and-life",
-    "cover": "/uploads/2020/01/thought-and-life.png",
+    "slug": "living-spring",
+    "cover": "/uploads/2020/01/living-spring.png",
     "price": "US$20.00",
     "format": "paperback",
     "forSale": false,
     "amount": "",
-    "synopsis": "What part do thoughts play in our lives? The spiritual writer Emmanuel explains how thoughts act powerfully in shaping our lives: “Today, we are heirs to the positive reflexes from our past experiences, having the mains to change their direction towards true happiness.” Emmanuel goes on to explain with simplicity, through clear and intelligent ideas together with comparisons based on everyday life, the effects that thought creates in the intimacy of each one, including the ambient in which a person may live. He further explains the connection between emotion and thought, showing that human beings have the capacity to supervise and control them in benefit of progress.",
-    "blurb": "What part do thoughts play in our lives? The spiritual writer Emmanuel explains how thoughts act powerfully in shaping our lives: “Today, we are heirs to the positive reflexes from our past experiences, having the mains to change their dire"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/two-thousand-years-ago",
-    "title": "Two Thousand Years Ago",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "two-thousand-years-ago",
-    "cover": "/uploads/2020/01/two-thousand-years-ago.png",
-    "price": "US$20.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "20.00",
-    "synopsis": "Emmanuel, the spiritual author of this amazing book, describes one of his reincarnations into a place of power, passion and conspiracy. It was the period when he lived as Publius Lentulus, a powerful senator of the Roman Empire, in Palestine during the time of Christ. He tells about his meeting with Jesus and the healing of his daughter. The book focuses on important episodes of the history of Christianity during the 1 st century. There are unforgettable moments such as the deaths of the first Christian martyrs. On the banks of Lake Gennesaret, Publius Lentulus (Emmanuel) has an encounter with Christ Publius has gone to beseech JEsus to heal his little daughter, Flávia, who has contracted leprosy. Moved and magnetized by emotions he has never felt before, he hears the Master tell him: ‘It would have been better if you had come publicly and in broad daylight in order to learn the sublime lesson of faith and humility once and for all.’ ‘After many years of deviation from the path of good due to your blatant wrongs, today you have come to the turning point for the regeneration of your entire life.’ ‘It is up to you, however, to take advantage of it either now or a few millennia from now.’ ‘But no one can impose an act that is against your conscience if it is your desire to spurn this blessed moment indefinitely!’ Emmanuel then realizes that Jesus is praying. That very night his daughter begins to improve noticeably until she is completely well. What are the consequences of this encounter with the Divine Master? Flávia is healed. Lívia, Publius’ wife and a patrician woman, converts to Christianity. Publius returns to his political affairs refusing to believe that Jesus was responsible for his daughter’s recovery. Emmanuel narrates this personal experience with the richness of details that characterizes all his books so that we may ponder the precious moments that we are offered throughout our lives; moments that are often wasted, consequently retarding our progress and evolution.",
-    "blurb": "Emmanuel, the spiritual author of this amazing book, describes one of his reincarnations into a place of power, passion and conspiracy. It was the period when he lived as Publius Lentulus, a powerful senator of the Roman Empire, in Palestin"
+    "synopsis": "This book is part of an outstanding collection that includes Our Daily Bread , The Way, the Truth, and the Life , Living Spring , and Vineyard of Light . The collection was written by the spirit Emmanuel, who seeks to guide spiritists in the practice of Christian principles, leading them to find in the teachings of Jesus their inner transformation, which cannot be postponed. In this book’s 180 chapters, the author brilliantly comments on several verses from the New Testament. From each page springs the depth of concept and the lightness of form in which they are outlined. The spiritual author shows that Spiritism duly based on the lessons of the New Testament as being an opportunity for work and growth for those who long for the renewal of their minds.",
+    "blurb": "This book is part of an outstanding collection that includes Our Daily Bread , The Way, the Truth, and the Life , Living Spring , and Vineyard of Light . The collection was written by the spirit Emmanuel, who seeks to guide spiritists in th"
   },
   {
     "path": "/catalog/books/francisco-xavier/way-truth-and-life",
@@ -1832,6 +1408,111 @@
     "blurb": "This book is part of an outstanding collection that includes O ur Daily Bread, Living Fountain , Vineyard of Light and The Way, the Truth and the Life . The collection was dictated by the spirit Emmanuel with the intent of guiding Spiritist"
   },
   {
+    "path": "/catalog/books/francisco-xavier/on-the-way-to-the-light",
+    "title": "On the Way to the Light",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "on-the-way-to-the-light",
+    "cover": "/uploads/2020/01/on-the-way-to-the-light.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "Those who are trying to understand our world and its origins will find the answers in this book. In this notable work of historic synthesis, the spiritual author highlights the most relevant events, situations, and individuals who significantly contributed to the progress of humanity throughout time by analyzing the missions of spirits such as Krishna, Buddha, Plato, Muhammad, the Hebrew Prophets, the Apostles, Paul of Tarsus, St. Francis of Assisi, Luther, and Allan Kardec. The book narrates the history of civilization from a Spiritist perspective, showing the true position of the Gospel of Christ in the light of Earth’s religions and philosophies. It addresses the first inhabitants of the Earth, touching on the historical pages of peoples, great empires, and the changes that followed one another. In this book Emmanuel shows us that we are all on our way to the light by divine determinism!",
+    "blurb": "Those who are trying to understand our world and its origins will find the answers in this book. In this notable work of historic synthesis, the spiritual author highlights the most relevant events, situations, and individuals who significa"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/thought-and-life",
+    "title": "Thought and Life",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "thought-and-life",
+    "cover": "/uploads/2020/01/thought-and-life.png",
+    "price": "US$20.00",
+    "format": "paperback",
+    "forSale": false,
+    "amount": "",
+    "synopsis": "What part do thoughts play in our lives? The spiritual writer Emmanuel explains how thoughts act powerfully in shaping our lives: “Today, we are heirs to the positive reflexes from our past experiences, having the mains to change their direction towards true happiness.” Emmanuel goes on to explain with simplicity, through clear and intelligent ideas together with comparisons based on everyday life, the effects that thought creates in the intimacy of each one, including the ambient in which a person may live. He further explains the connection between emotion and thought, showing that human beings have the capacity to supervise and control them in benefit of progress.",
+    "blurb": "What part do thoughts play in our lives? The spiritual writer Emmanuel explains how thoughts act powerfully in shaping our lives: “Today, we are heirs to the positive reflexes from our past experiences, having the mains to change their dire"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/the-consoler",
+    "title": "The Consoler",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "the-consoler",
+    "cover": "/uploads/2024/11/PHOTO-2024-11-25-16-30-14-199x300.jpg",
+    "price": "US$20.00",
+    "format": "Paperback",
+    "forSale": false,
+    "amount": "",
+    "synopsis": "In this book of questions and answers, Emmanuel presents a comprehensive study of Spiritism, delving into topics suggested by those who see Spiritism as the Consoler promised by Christ. The work offers valuable insights on various aspects of Spiritism, including Science, Society, Determinism, Free Will, Sex Education, Mediumship and more. It is enriched with the wisdom and moral authority of the Spirit author, providing invaluable clarity on these profound subjects",
+    "blurb": "In this book of questions and answers, Emmanuel presents a comprehensive study of Spiritism, delving into topics suggested by those who see Spiritism as the Consoler promised by Christ. The work offers valuable insights on various aspects o"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/money",
+    "title": "Money",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "money",
+    "cover": "/uploads/2020/01/money.png",
+    "price": "US$10.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "10.00",
+    "synopsis": "This book explains that money is actually a neutral tool in all human endeavors and that it is our stewardship that actually grants it a constructive outcome. It is a collection of thoughts on the importance of money in our lives. As such, Emmanuel brilliantly shows us that it is our free will that ultimately determines the consequences of what money can do for ourselves and for society in general. Whether used to create jobs and employment, which ultimately gives human beings the ability to provide for themselves, or to improve social and intellectual development, money retains a remarkable similarity to blood: it is only useful when in circulation, and it is vital for progress and the perpetuity of our society. To understand its importance is first and foremost to learn how it can be employed to generate progress for all, thereby being able to transform the earthly coins into heavenly ones.",
+    "blurb": "This book explains that money is actually a neutral tool in all human endeavors and that it is our stewardship that actually grants it a constructive outcome. It is a collection of thoughts on the importance of money in our lives. As such,"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/nosso-lar",
+    "title": "Nosso Lar",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "nosso-lar",
+    "cover": "/uploads/2025/07/61AOkY5btL._SY522_-199x300.jpg",
+    "price": "US$20.00",
+    "format": "paperback",
+    "forSale": false,
+    "amount": "",
+    "synopsis": "Nosso Lar, Portuguese for “Our Home,” is the name of the spiritual colony that the spirit André Luiz introduces to us in the first book of his acclaimed series, “Life in the Spiritual World.” The book, whose full title is “Nosso Lar: an Account of Life in a Spiritual Colony in the World of Spirits,” is a compelling narrative wherein the author tells us of his impressions and discoveries about life in the spiritual world as he acts as a sort of journalist, who records his own experiences as they occur. André Luiz unveils an exciting world, filled with life and activity, and which is organized in an exemplary way. It is a place where discarnate spirits go through a recovery stage and a spiritual educational process supervised by high-order spirits. Nosso Lar enables us to get a glimpse of the spirit world that awaits us after we leave our physical bodies.",
+    "blurb": "Nosso Lar, Portuguese for “Our Home,” is the name of the spiritual colony that the spirit André Luiz introduces to us in the first book of his acclaimed series, “Life in the Spiritual World.” The book, whose full title is “Nosso Lar: an Acc"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/messengers",
+    "title": "The Messengers",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "messengers",
+    "cover": "/uploads/2020/01/messengers.png",
+    "price": "US$20.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "20.00",
+    "synopsis": "This book unveils that spiritual life after death is always evolving. In 51 chapters, it describes the experiences of a number of spirits who reincarnated with pre-planned endeavors needed for their personal spiritual growth. Moreover, it also deals with subjects such as the Gospel worship at home, the benefits of practicing the good, carelessness regarding one’s spiritual obligations, and fear of death. The spiritual author focuses on the opportunities of service for mediums, warning them about the need to practice at a personal level what they learn in order to avoid returning to the spiritual world without having fulfilled the duties assumed before reincarnating.",
+    "blurb": "This book unveils that spiritual life after death is always evolving. In 51 chapters, it describes the experiences of a number of spirits who reincarnated with pre-planned endeavors needed for their personal spiritual growth. Moreover, it a"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/missionaries-of-the-light",
+    "title": "Missionaries of the Light",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "missionaries-of-the-light",
+    "cover": "/uploads/2020/01/missionaries-of-the-light.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "In this volume, André Luiz unveils the secrets of reincarnation and the task of missionary spirits in charge of the rebirth process. The spiritual author affirms that physical death is not the end. He also stresses the importance of self-effort in the struggle for self-improvement. In twenty chapters, André Luiz talks about his continued learning experience in the spiritual world, the perispirit as a living body that molds the cells that compose the physical body, the reincarnation process, which is guided by high-order spirits, and the different aspects of mediumistic manifestations. Missionaries of the Light teaches that Divine Providence always grants people new arenas of work through the incessant renewal of life by means of reincarnation.",
+    "blurb": "In this volume, André Luiz unveils the secrets of reincarnation and the task of missionary spirits in charge of the rebirth process. The spiritual author affirms that physical death is not the end. He also stresses the importance of self-ef"
+  },
+  {
     "path": "/catalog/books/francisco-xavier/workers-of-life-eternal",
     "title": "Workers of the Life Eternal",
     "type": "book",
@@ -1845,6 +1526,291 @@
     "amount": "15.00",
     "synopsis": "Five people, who have devoted their entire lives to the practice of the good, are at the end of their physical lives. Due to their merit, they are entitled to the help of a spiritual rescue team. The spiritual author André Luiz, tells about his experience as a member of the team. This is an enthralling narrative that reveals details of the tasks performed by spirits at the moment of the death of the physical body. In this book, André Luiz confirms the principles revealed by the Spiritist Doctrine regarding the existence of the spiritual world, where discarnate spirits dwell, living a new life while preparing to return once again to the earthly journey. \" …Death does not extinguish friendly cooperation, mutual support, comforting intercession or the evolutionary endeavor. The vibratory dimensions of the universe are infinite, as infinite as are the worlds that populate the immensity of space .\"",
     "blurb": "Five people, who have devoted their entire lives to the practice of the good, are at the end of their physical lives. Due to their merit, they are entitled to the help of a spiritual rescue team. The spiritual author André Luiz, tells about"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/in-the-greater-world",
+    "title": "In the Greater World",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "in-the-greater-world",
+    "cover": "/uploads/2020/01/in-the-greater-world.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "In this volume, André Luiz focuses on aspects of life in the spirit world and the communication between discarnates and incarnates, especially during the sleep of the physical body. The spiritual author explains the causes of mental disturbances and presents their respective spiritual treatments. In the form of a novel, he also analyzes topics such as abortion, epilepsy, schizophrenia, and Down syndrome, and highlights the immediate rescue given the invisible workers to those who need help in order to avoid, as much as possible, madness, suicide, and extreme moral disasters.",
+    "blurb": "In this volume, André Luiz focuses on aspects of life in the spirit world and the communication between discarnates and incarnates, especially during the sleep of the physical body. The spiritual author explains the causes of mental disturb"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/between-heaven-and-earth",
+    "title": "Between Heaven and Earth",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "between-heaven-and-earth",
+    "cover": "/uploads/2020/01/between-heaven-and-earth.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "This novel offers information about the relationship that exists in the activities of the spirit on the two planes of life. Renewing his interest in our inner improvement, André Luiz tells the moving story of Amaro, Zulmira, Odila, and other characters, recounting the events of their previous lives from the time of Brazil’s war with Paraguay (1864-1870) until the days of old Rio de Janeiro (early 1900s). In its preface, Emmanuel assures us that \" The basic pictures of the narrative are intimately familiar to us ,\" such as family dysfunctions, the torment of jealousy, and the daily struggle for moral progress. Each page of this book discloses new knowledge and emotions.",
+    "blurb": "This novel offers information about the relationship that exists in the activities of the spirit on the two planes of life. Renewing his interest in our inner improvement, André Luiz tells the moving story of Amaro, Zulmira, Odila, and othe"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/liberation",
+    "title": "Liberation",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "liberation",
+    "cover": "/uploads/2020/01/liberation.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "In this compelling narrative, André Luiz emphasizes the work of high-order spirits in the effort to convert the spirit Gregorio to the Good, an effort that culminates with the unforgettable reencounter with his mother—herself a highly evolved spirit—wherein he surrenders to the irresistible call of Love. The book also contains information on how unhappy spirits act as they try to involve incarnates in their wiles. The spirit author tells of the intercession of high order spirits on behalf of human beings, demonstrating the divine compassion that grants to all the blessed opportunity to free themselves by means of study, labor and persevering service in the practice of the Good.",
+    "blurb": "In this compelling narrative, André Luiz emphasizes the work of high-order spirits in the effort to convert the spirit Gregorio to the Good, an effort that culminates with the unforgettable reencounter with his mother—herself a highly evolv"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/in-domains-of-mediumship",
+    "title": "In the Domain of Mediumship",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "in-domains-of-mediumship",
+    "cover": "/uploads/2020/01/in-the-domains-of-mediumship.png",
+    "price": "US$12.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "12.00",
+    "synopsis": "In this book, André Luiz analyzes the various aspects of mediumship, emphasizing the efforts of mediums who are faithful to the spiritual mandate received prior to their reincarnation. He also warns of the risks involved in poor exchanges between the two worlds. It talks about trance, somnambulism, possession, clairvoyance, out-of-body experiences, fascination, psychometry, and the mediumship of physical effect, among others. It is a technical study of great relevance that discloses the ways in which Spirits act during intricate processes of communication with the incarnate beings. It conveys concepts of spirituality received from enlightened mentors, which contain explanations of philosophical, scientific, and evangelical nature, indispensable to those who are dedicated to the study of mediumship.",
+    "blurb": "In this book, André Luiz analyzes the various aspects of mediumship, emphasizing the efforts of mediums who are faithful to the spiritual mandate received prior to their reincarnation. He also warns of the risks involved in poor exchanges b"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/action-and-reaction",
+    "title": "Action and Reaction",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "action-and-reaction",
+    "cover": "/uploads/2020/01/action-and-reaction.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "In this volume you will find a description of the lower regions of the spiritual realm and the suffering to which the guilty conscience is subjected after death of the physical body. André Luiz presents studies of real-life cases and offers guidance regarding paying one’s spiritual debts, the law of cause and effect, preparations for reincarnation, collective expiations, and the value of prayer. The spiritual author shows us that the possibilities of our current existence are connected to our actions in past existences, just as our actions of today will condition our possibilities in the future.",
+    "blurb": "In this volume you will find a description of the lower regions of the spiritual realm and the suffering to which the guilty conscience is subjected after death of the physical body. André Luiz presents studies of real-life cases and offers"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/evolution-in-two-worlds",
+    "title": "Evolution in Two Worlds",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "evolution-in-two-worlds",
+    "cover": "/uploads/2020/01/evolution-in-two-worlds.png",
+    "price": "US$18.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "18.00",
+    "synopsis": "Psychographed by Francisco Xavier and Waldo Vieira, Evolution in Two Worlds is divided into two parts. The first connects words of Christ to concepts such as the existence of the perispirit and spiritual body, the cosmic fluid, heredity, evolution and sex, nourishment in the spirit realm, and the mechanics of the mind, among others. The second part combines questions and answers related to marriage, divorce, pregnancy and abortion. The spirit André Luiz combines scientific and evangelical concepts to promote a study of the evolutionary process of the being and the soul in the two realms of our existence – the material world and the spirit world – establishing an intellectual challenge to all those who practice and wish to know the Spiritist Doctrine.",
+    "blurb": "Psychographed by Francisco Xavier and Waldo Vieira, Evolution in Two Worlds is divided into two parts. The first connects words of Christ to concepts such as the existence of the perispirit and spiritual body, the cosmic fluid, heredity, ev"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/mechanisms-of-mediumship",
+    "title": "Mechanisms of Mediumship",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "mechanisms-of-mediumship",
+    "cover": "/uploads/2020/01/mechanisms-of-mediumship.png",
+    "price": "US$18.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "18.00",
+    "synopsis": "Using the physical sciences of the material world as a reference, André Luiz offers an enlightening study of the intricate mechanisms of mediumship. He offers mediums and students of mediumistic phenomena the resources needed for understanding complex questions pertaining to physics and physiology, which are intelligently related to the many aspects of mediumship. HE emphasizes the importance of a mediumship centered on the teachings of Jesus, exaplining that besides the knowledge required, both discipline and responsibility appear as factors for the progress of individuals who devote themselves to communicating wit the Greater World according to the principles of the Gospel and the Spiritist Doctrine.",
+    "blurb": "Using the physical sciences of the material world as a reference, André Luiz offers an enlightening study of the intricate mechanisms of mediumship. He offers mediums and students of mediumistic phenomena the resources needed for understand"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/sex-and-destiny",
+    "title": "Sex and Destiny",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "sex-and-destiny",
+    "cover": "/uploads/2020/01/sex-and-destiny.png",
+    "price": "US$18.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "18.00",
+    "synopsis": "What effects will the sexual experiences and conduct of incarnates have on the immortal spirit in their future life, their destiny? Rich in detail, the books by André Luiz depict the spirit world: how spirits live, their habitats and the relations of cause and effect that influence the evolutionary trajectory both of incarnates and discarnates, delineating their future life, their destiny. In this book, readers will find the answers to their questions about human sexual relationships and their implications for the future life of the immortal spirit, enabling it to \"learn by using the library of experience.\" Sex and destiny, love and conscience, freedom and commitment, guilt and redemption, home and reincarnation are the topics of this book born in the forge of everyday reality.",
+    "blurb": "What effects will the sexual experiences and conduct of incarnates have on the immortal spirit in their future life, their destiny? Rich in detail, the books by André Luiz depict the spirit world: how spirits live, their habitats and the re"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/and-life-goes-on",
+    "title": "And Life Goes on",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "and-life-goes-on",
+    "cover": "/uploads/2020/01/and-life-goes-on.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "This book presents a description of the spirit after the death of the physical body and demonstrates that the mental state directly impacts our existence in the spiritual world. In twenty six chapters, the book brings the story of real characters, who receive the help of spiritual friends upon discarnation. Those friends encourage them to renew themselves spiritually through study and work in order for them to prepare themselves to review and untangle the meaning of the lives they have just finished, therefore enabling them to pursue a more constructive course of behavior for their future. It teaches us to examine our lives continually, knowing that, according to the laws of God, life does in fact go on, full of hope, effort, progress, and accomplishments after death.",
+    "blurb": "This book presents a description of the spirit after the death of the physical body and demonstrates that the mental state directly impacts our existence in the spiritual world. In twenty six chapters, the book brings the story of real char"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/disobsession",
+    "title": "Disobsession",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "disobsession",
+    "cover": "/uploads/2020/01/disobsession.png",
+    "price": "US$12.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "12.00",
+    "synopsis": "The faculty of mediumship, with its various manifestations, has been the dominant factor in proving the reality of the afterlife and the transcendental nature of the universe. Through this faculty, a multitude of phenomena has been witnessed, demonstrating to the astonishment of many that intelligence is not merely a product of brain cells. Among the several types of mediumship known today, psychography is the most often used within Spiritism, especially for the writing of books and messages. André Luiz’ purpose in writing this book was to recruit new groups of workers of goodness, whose intent is to aid in the readjustment of those no longer in the physical plane and who have become distanced from reality. There is nothing more appropriate and just for if ignorance needs the dedication of teachers, and psychopathology awaits the abnegation of doctors who use of techniques of balanced dialogue in the practice of psychoanalysis, so it is that mental alienation of the discarnate beings demands the fraternal assistance of friendly hearts with enough understanding and an abundance of love to aid them at spiritist centers. Through the work of several collaborators, this volume is an important synthesis in the effort to aid those suffering from obsessive processes. It is characterized by its absolute simplicity in the explanation of the circumstances that are indispensable for the constitution and maintenance of spiritist groups, which are devoted to the liberation and healing task of disobsession.",
+    "blurb": "The faculty of mediumship, with its various manifestations, has been the dominant factor in proving the reality of the afterlife and the transcendental nature of the universe. Through this faculty, a multitude of phenomena has been witnesse"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/among-brothers-of-other-lands",
+    "title": "Among Brothers of Other Lands",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "among-brothers-of-other-lands",
+    "cover": "/uploads/2020/01/among-brothers-of-other-lands.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "In 1965, the Brazilian mediums Francisco Xavier and Waldo Vieira traveled to several countries, including the United States of America, England and France, to exchange Spiritist knowledge and visit some friends. The first part of the book contains mediumistic messages received in Brazilian Portuguese. Among these messages, there are interesting interviews with Brother X and William James, and many other respectable people from other nations. The second part of the book is composed of messages received in English. This is a book that brings us eloquent teachings in Spiritism and Christ consciousness for it approaches the following topics: reincarnation, mediumship, obsession, and culture. It opens new perspectives for a greater understanding of our brothers and sisters of all lands.",
+    "blurb": "In 1965, the Brazilian mediums Francisco Xavier and Waldo Vieira traveled to several countries, including the United States of America, England and France, to exchange Spiritist knowledge and visit some friends. The first part of the book c"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/heart-and-soul",
+    "title": "Heart and Soul",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "heart-and-soul",
+    "cover": "/uploads/2020/01/heart-and-soul.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "At this time when many have their peace disturbed and countless households are struggling, disarranging and dissolving, thereby aggravating the sufferings of humanity, the world is more than ever in need and eager for solace. Our lives need a light that springs from the heart and soul, no more from the cold and cloudy brain. The lines from this book have flown from the pen of someone who, having made of healthy spiritualism an act of most sacred priesthood, has devoted his entire life to ease the moral and physical pain of his neighbor, both through his actions and his words as a result not only of a theoretical background but through an active practice of goodness. Therefore, the reader shall find in this tome and encouraging message, distributed throughout sixty short chapters on several topics, all converging much like streams of light towards he same ocean of truth, which is God, wherefore they shall quench the thirst of their pilgrim-like souls no matter who they are or from whence they come.",
+    "blurb": "At this time when many have their peace disturbed and countless households are struggling, disarranging and dissolving, thereby aggravating the sufferings of humanity, the world is more than ever in need and eager for solace. Our lives need"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/jesus-in-the-home",
+    "title": "Jesus in the Home",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "jesus-in-the-home",
+    "cover": "/uploads/2025/02/71VT7ezUFJL._AC_UY436_QL65_-208x300.jpg",
+    "price": "US$20.00",
+    "format": "paperback",
+    "forSale": false,
+    "amount": "",
+    "synopsis": "This book contains lessons taught by Jesus during meetings at Simon Peter’s house, where the first Christian home worship was held. It addresses themes such as love for one’s neighbor, the value of service, compassion, education, etc. It demonstrates the ongoing relevance of the evangelical message. Easy to understand by all age groups, it emphasizes the need for one’s inner reformation by renewing one’s thoughts, actions, postures and attitudes, thereby seeking to adjust them to authentic Christian morality. The weekly gathering around the Gospel is one of the most useful practices in which Christians can take part. It is recommended that “Jesus in the Home” be used in conjunction with “The Gospel According to Spiritism,” “The Spirits’ Book,” or any other book chosen by the group.",
+    "blurb": "This book contains lessons taught by Jesus during meetings at Simon Peter’s house, where the first Christian home worship was held. It addresses themes such as love for one’s neighbor, the value of service, compassion, education, etc. It de"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/light-ahead",
+    "title": "Light Ahead",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier and Several Spirits",
+    "slug": "light-ahead",
+    "cover": "/uploads/2021/04/46ce0c73-cae7-4db1-9ff0-ab808255d7dd-206x300.jpg",
+    "price": "US$10.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "10.00",
+    "newRelease": true,
+    "releaseLabel": "Latest English release",
+    "synopsis": "This book is a compilation of spirit messages selected from some of the more than 400 books psychographed by the medium Francisco C. Xavier throughout his life, most of which published in English for the very first time.\nThey were translated from Portuguese with great care and dedication by a team of volunteer translators, who worked very hard to maintain unaltered the fundamental meaning of each lesson — namely, that after all, there is always light ahead.",
+    "bibliography": {
+      "Author(s)": "Francisco C. Xavier and Several Spirits",
+      "Language": "English",
+      "Translation": "Barbara Hawksley and Jussara Korngold",
+      "Editing": "David Alan Hawksley",
+      "Publisher": "United States Spiritist Federation",
+      "Location": "New York, USA",
+      "Publication Date": "2021 (1st edition)",
+      "Number of pages": "244",
+      "ISBN (13)": "978-1-948109-22-2",
+      "Book size (W×H×T)": "5½″ × 8½″ × 1.1″ (14.0cm × 21.0cm × 1.3cm)",
+      "Print type": "Black font on white background",
+      "Format(s)": "Paperback"
+    }
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/message-from-a-teen-in-the-spirit-world",
+    "title": "Message from a Teen in the Spirit World",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "message-from-a-teen-in-the-spirit-world",
+    "cover": "/uploads/2020/01/message-from-a-teen-in-the-spirit-world.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "This is a young people’s book dictated by the spirit Meimei to the medium Francisco Xavier. The spirit of Carlos, the deceased child referred to in the title, writes to his brother Dirceu, who is still reincarnated on Earth. Carlos tells about how the soul leaves the body and his impressions at the beginning of his new life with his relatives and new friends; he affirms that life after death is the continuation of life in the physical body, and he emphasizes the fact that we need to live in accordance with the teachings of Jesus.",
+    "blurb": "This is a young people’s book dictated by the spirit Meimei to the medium Francisco Xavier. The spirit of Carlos, the deceased child referred to in the title, writes to his brother Dirceu, who is still reincarnated on Earth. Carlos tells ab"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/missives-of-hope",
+    "title": "Missives of Hope",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "missives-of-hope",
+    "cover": "/uploads/2020/01/missives-of-hope.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "This book is a compilation of messages originally published in the Brazilian newspaper O Diário de São Paulo . They were later collected for publication as a set of four books. Each message is the result of a partnership between two of the greatest names in spiritist literature, Francisco Cândido (Chico) Xavier and Prof. José Herculano Pires. The present work has a significant historic value in that it brings together these two great contributors of the spiritist literature for the first time.",
+    "blurb": "This book is a compilation of messages originally published in the Brazilian newspaper O Diário de São Paulo . They were later collected for publication as a set of four books. Each message is the result of a partnership between two of the"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/pinga-fogo-with-francisco-xavier",
+    "title": "Pinga Fogo with Francisco Xavier",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "pinga-fogo-with-francisco-xavier",
+    "cover": "/uploads/2013/11/pinga-fogo-with-francisco-xavier-ee01-02-113x150.png",
+    "price": "US$25.00",
+    "format": "",
+    "forSale": true,
+    "amount": "25.00",
+    "synopsis": "Overview This special two-DVD edition with English subtitles retrieves the historic program Pinga-Fogo with Francisco Xavier, a veritable milestone of the Brazilian Spiritist Movement. It brings more than two hours of extra footage with interviews, documentaries, and bonus information. On the evenings of July 28 and December 21 in 1971, the broadcast corporation TV Tupi, channel 4 of São Paulo presented in their news program Pinga-Fogo—loosely translated into \"On the line of Fire\"—the spiritist medium Francisco Xavier answering questions from news reporters Saulo Gomes, Reali Jr., Helle Alves, and Herculano Pires; the catholic intellectual João de Scantimburgo, and scientist Dr. Hernani Guimarães Andrade. In those two programs, Francisco Xavier left teachings for millions of individuals from all social and cultural standings concerning the biggest questions in life such as whom we are and where we go after death of the physical body, among many other topics. During the interviews, Francisco Xavier also discussed the following topics: collective deaths, communication with departed relatives, the moment of death, plastic surgery, cremation, the death penalty, Emmanuel (his spiritual guide) and the priest Manoel da Nóbrega, cryopreservation of the physical body, family planning, abortion, organ transplantation, spiritual materializations, spiritual censorship, psychography, double sight, spiritual surgeries, catholic psychography, the question \"Are spiritists conformists?,\" contact with other planets, the arrival of men on the moon, marriage and divorce, reincarnations, free sex, homosexuality, weapons of mass destruction, and the Vietnam war. The bonus footage includes: the news reporter and the medium, the great surprise to all news reporters, the emotion 35 years later, the importance of the program Pinga Fogo, remembering Francisco Xavier, honoring Francisco Xavier, and Francisco Xavier—A Story of Love. It also features interviews with other members of the Brazilian spiritist movement such as Francisco Galves, Nena Galves, Dr. Tuffik Mattar, Dr. Marlene Nobre, and Zita Ghilardi.",
+    "blurb": "Overview This special two-DVD edition with English subtitles retrieves the historic program Pinga-Fogo with Francisco Xavier, a veritable milestone of the Brazilian Spiritist Movement. It brings more than two hours of extra footage with int"
+  },
+  {
+    "path": "/catalog/books/francisco-xavier/primer-on-being-good",
+    "title": "A Primer on Being Good",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "primer-on-being-good",
+    "cover": "/uploads/2020/01/primer-on-being-good.png",
+    "price": "US$12.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "12.00",
+    "synopsis": "The Spirit Meimei explains in simple language, appropriate for children, two paths in life: the path of good and the path of evil. God has granted us the freedom to choose either one. The book depicts the use of hands to do good, promote happiness, make friends, help people, and work so that the world may be a better place.",
+    "blurb": "The Spirit Meimei explains in simple language, appropriate for children, two paths in life: the path of good and the path of evil. God has granted us the freedom to choose either one. The book depicts the use of hands to do good, promote ha"
   },
   {
     "path": "/catalog/books/gabriel-delanne/reincarnation",
@@ -2324,6 +2290,19 @@
     "children": []
   },
   {
+    "path": "/catalog/books/jussara-korngold/endearing-gems-from-francisco-xavier",
+    "title": "Endearing Gems from Francisco Cândido Xavier",
+    "type": "book",
+    "author": "jussara-korngold",
+    "authorName": "Jussara Korngold",
+    "slug": "endearing-gems-from-francisco-xavier",
+    "cover": "/uploads/2020/01/endearing-gems-from-francisco-xavier.png",
+    "format": "paperback",
+    "forSale": false,
+    "synopsis": "The reader will be delightfully pleased with some of the enlightening messages and examples of Mr Xavier’s life. Always touching upon his outlooks: love for his neighbors, indifference towards personal or material gains, and a constant and exclusive concern with the happiness of others. Francisco de Paula Cândido Xavier , or “Chico” Xavier, was born on April 2, 1910 in Pedro Leopoldo, State of Minas Gerais, Brazil. He became recognized as the expressive worker of Spiritism through his mediumship as well as in the field of assistance, social, and spiritual promotion of human beings. Through psychography he published 409 books that have sold an estimated 25 million copies, the profits of which have all been channeled to charitable organizations. He passed away on June 30, 2002.",
+    "blurb": "The reader will be delightfully pleased with some of the enlightening messages and examples of Mr Xavier’s life. Always touching upon his outlooks: love for his neighbors, indifference towards personal or material gains, and a constant and"
+  },
+  {
     "path": "/catalog/books/jussara-korngold/eternal-voices",
     "title": "Eternal Voices",
     "type": "book",
@@ -2347,6 +2326,13 @@
     "slug": "jussara-korngold",
     "intro": "The list below shows books authored by Jussara Korngold . Back to Book Catalog . The books are alphabetically listed by title (ignore \"a,\" \"an,\" and \"the\"): Eternal Voices A Practical Guide for Magnetic and Spiritual Healing Those Left Behind",
     "children": [
+      {
+        "href": "/catalog/books/jussara-korngold/endearing-gems-from-francisco-xavier",
+        "text": "Endearing Gems fromFrancisco Cândido Xavier",
+        "cover": "/uploads/2020/01/endearing-gems-from-francisco-xavier.png",
+        "price": "US$10.00",
+        "isBook": true
+      },
       {
         "href": "/catalog/books/jussara-korngold/eternal-voices",
         "text": "Eternal Voices",
