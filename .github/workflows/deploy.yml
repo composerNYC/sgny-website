@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # Daily rebuild so the Spiritist Videos page picks up new YouTube uploads
+    # without needing a manual push. 13:00 UTC = 9am ET (8am during EDT).
+    - cron: '0 13 * * *'
 
 permissions:
   contents: read

@@ -1,10 +1,43 @@
 ---
 import Base from '../layouts/Base.astro';
-import { channelVideos } from '../data/videos.js';
+import { channelVideos as fallbackVideos } from '../data/videos.js';
+
+const CHANNEL_ID = 'UC8IaYwI9obGOFko2kwXQb8A'; // Spiritist Group of New York
+
+const decodeEntities = (s) => s
+  .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+  .replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+
+// Pull the channel's current uploads straight from its YouTube RSS feed at build
+// time, so new videos show up automatically on the next rebuild — no manual data
+// entry needed. Falls back to the last known list if the feed can't be reached.
+let channelVideos = fallbackVideos;
+try {
+  const res = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`);
+  if (res.ok) {
+    const xml = await res.text();
+    const parsed = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)]
+      .map(([, entry]) => {
+        const id = entry.match(/<yt:videoId>([^<]+)<\/yt:videoId>/)?.[1];
+        const title = entry.match(/<title>([^<]+)<\/title>/)?.[1];
+        const published = entry.match(/<published>([^<]+)<\/published>/)?.[1];
+        return id && title && published
+          ? { id, title: decodeEntities(title), date: published.slice(0, 10) }
+          : null;
+      })
+      .filter(Boolean);
+    if (parsed.length) channelVideos = parsed;
+  }
+} catch {
+  // Network unavailable at build time (e.g. local dev without internet) — use the fallback list.
+}
+
 const fmtDate = (d) => d ? new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : '';
-// Only show uploads from the last month — older ones drop off automatically as new videos are added.
+// Show the last month's uploads (newest first); if that's fewer than 9, pad with
+// slightly older ones so the section doesn't look sparse in a slow month. Cap at 9.
 const oneMonthAgo = Date.now() - 30 * 24 * 60 * 60 * 1000;
-const recentChannelVideos = channelVideos.filter((v) => v.date && new Date(v.date + 'T00:00:00').getTime() >= oneMonthAgo);
+const lastMonth = channelVideos.filter((v) => v.date && new Date(v.date + 'T00:00:00').getTime() >= oneMonthAgo);
+const recentChannelVideos = (lastMonth.length >= 9 ? lastMonth : channelVideos).slice(0, 9);
 ---
 <Base title="Spiritist Videos" description="Our latest Spiritist talks and study sessions on YouTube — recorded and shared for anyone to watch.">
   <section class="hero" style="padding-block:clamp(2.5rem,6vw,4.5rem)">
