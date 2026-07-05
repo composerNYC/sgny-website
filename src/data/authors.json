@@ -2,7 +2,7 @@
   {
     "slug": "allan-kardec",
     "name": "Allan Kardec",
-    "count": 18,
+    "count": 20,
     "path": "/catalog/books/allan-kardec"
   },
   {
@@ -20,7 +20,7 @@
   {
     "slug": "leon-denis",
     "name": "Léon Denis",
-    "count": 5,
+    "count": 6,
     "path": "/catalog/books/leon-denis"
   },
   {
@@ -86,7 +86,7 @@
   {
     "slug": "luis-hu-rivas",
     "name": "Luis Hu Rivas",
-    "count": 10,
+    "count": 15,
     "path": "/catalog/books/luis-hu-rivas"
   },
   {
@@ -102,6 +102,12 @@
     "path": "/catalog/books/oceano-vieira-melo"
   },
   {
+    "slug": "regis-de-morais",
+    "name": "Regis de Morais",
+    "count": 1,
+    "path": "/catalog/books/regis-de-morais"
+  },
+  {
     "slug": "richard-simonetti",
     "name": "Richard Simonetti",
     "count": 3,
@@ -110,8 +116,14 @@
   {
     "slug": "therezinha-oliveira",
     "name": "Therezinha Oliveira",
-    "count": 2,
+    "count": 4,
     "path": "/catalog/books/therezinha-oliveira"
+  },
+  {
+    "slug": "various-authors",
+    "name": "Various Authors",
+    "count": 1,
+    "path": "/catalog/books/various-authors"
   },
   {
     "slug": "yvonne-pereira",

@@ -44,6 +44,13 @@
         "isBook": true
       },
       {
+        "href": "/catalog/books/allan-kardec/posthumous-works",
+        "text": "Posthumous Works",
+        "cover": "/uploads/2026/07/posthumous-works-200x300.jpg",
+        "price": "US$14.99",
+        "isBook": true
+      },
+      {
         "href": "/catalog/books/allan-kardec/what-is-spiritism",
         "text": "What is Spiritism?",
         "cover": "/uploads/2020/01/what-is-spiritism.png",
@@ -76,6 +83,13 @@
         "text": "Spiritist Prayers",
         "cover": "/uploads/2020/01/spiritist-prayers.png",
         "price": "US$8.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/allan-kardec/kardecs-select-speeches",
+        "text": "Kardec's Select Speeches",
+        "cover": "/uploads/2026/07/kardec-select-speeches-200x300.jpg",
+        "price": "US$12.00",
         "isBook": true
       }
     ]
@@ -154,6 +168,21 @@
     "amount": "15.00",
     "synopsis": "This is the last of the five books of the Spiritist Codification, published in 1868. It provides a scientific perspective to the Spiritist Doctrine whose foundations are evenly distributed among religion, philosophy, and science. Written with the scientific knowledge available to Allan Kardec during the mid-XIX century, this is perhaps one of the most difficult books of the Spiritist Codification in that it shows the reader how important it is for religion and philosophy to be associated with scientific knowledge. With his inimitable pedagogical style, Allan Kardec divides the book into three main parts: the first explains the spiritist views on the creation and related dogmas as it explores in great detail such subjects as God, the ideas of good and evil, human evolution, cosmology (uranography), and the earth sciences as understood in 1868. The second part deals with the dogma of miracles, and the book presents more rational and scientific explanations to these phenomena, be it to their origins or the teachings involved therein. It is a solid approach towards dispelling the idea of the supernatural in any aspect of earthly life and an invitation altogether for all to study and elucidate what at first may appear as a transgression of the natural or universal laws. In the same vein, the third part deals with the concept of future predictions, alluding to the fact that such phenomena are basic impossibilities and that Christian biblical predictions of the future, whether apocalyptic or not, should not be understood through the light of science. This book is one of the five basic works that make up the Codification of Spiritism, and it is the author’s most scientific work. It deals with themes regarded as incontestable by religion in the light of the immortality of the soul, unifying Christian thought and scientific discoveries. It offers a unique opportunity for the reader to know and study themes of universal interest, discussed in a logical, rational and revealing manner. The book is divided into three parts: the first part analyses the origin of planet Earth and avoids the mysterious or magical interpretations about its creation; the second part addresses the question of miracles, explaining the nature of fluids and the extraordinary phenomena contained in the Gospel; and the third part focuses on the prophecies in the Gospel, the signs of the times and the new generation, whose advent will be the beginning of a new era for humankind based on the practice of justice, peace and fraternity.",
     "blurb": "This is the last of the five books of the Spiritist Codification, published in 1868. It provides a scientific perspective to the Spiritist Doctrine whose foundations are evenly distributed among religion, philosophy, and science. Written wi"
+  },
+  {
+    "path": "/catalog/books/allan-kardec/posthumous-works",
+    "title": "Posthumous Works",
+    "type": "book",
+    "author": "allan-kardec",
+    "authorName": "Allan Kardec",
+    "slug": "posthumous-works",
+    "cover": "/uploads/2026/07/posthumous-works-200x300.jpg",
+    "price": "US$14.99",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "14.99",
+    "synopsis": "The volume includes texts authored by Allan Kardec, as well as contributions from contemporaries, such as the moving speech delivered by Camille Flammarion at Kardec's burial ceremony. Across its pages, readers will find reflections on the institutional organization of Spiritism, insights into Kardec's life and missionary path, and a selection of his personal notes—offering a more intimate perspective on his work and dedication. Together, these writings form a valuable complement to Kardec's foundational works, deepening the understanding of his mission and the enduring principles of Spiritism. Publisher: United States Spiritist Council (USSC). Publication Date: March 31, 2026. Language: English. Number of pages: 356. ISBN(10): 1948109514. ISBN(13): 978-1948109512. Book format(s): Paperback.",
+    "blurb": "The volume includes texts authored by Allan Kardec, as well as contributions from contemporaries, such as the moving speech delivered by Camille Flammarion at Kardec's burial ceremony. Across its pages, readers will find reflections on the in"
   },
   {
     "path": "/catalog/books/allan-kardec/what-is-spiritism",
@@ -423,6 +452,21 @@
     "amount": "8.00",
     "synopsis": "From the book The Gospel According to Spiritism, this set of prayers offers a support to our thoughts at the moment of prayer. This book includes prayers to address our Father, the Sunday communion as well as prayers for spiritual meetings, mediums, oneself, sick people, and deceased relatives Extract: \"The Spirits do not prescribe any absolute formulaic prayers; when they suggest it, it is to fix the ideas and especially to call attention to certain principles of the spiritist doctrine \" Those who pray enthusiastically and confidently have more strength to withstand the temptations of evil, and to get help from the good spirits sent by God to assist them. Such help is never refused when asked for with sincerity. Form is unimportant, thought is everything. Everyone should pray according to their convictions and in the manner that affects them the most deeply; a good thought is better than many words without the heart being in them.",
     "blurb": "From the book The Gospel According to Spiritism, this set of prayers offers a support to our thoughts at the moment of prayer. This book includes prayers to address our Father, the Sunday communion as well as prayers for spiritual meetings,"
+  },
+  {
+    "path": "/catalog/books/allan-kardec/kardecs-select-speeches",
+    "title": "Kardec's Select Speeches",
+    "type": "book",
+    "author": "allan-kardec",
+    "authorName": "Allan Kardec",
+    "slug": "kardecs-select-speeches",
+    "cover": "/uploads/2026/07/kardec-select-speeches-200x300.jpg",
+    "price": "US$12.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "12.00",
+    "synopsis": "The Spiritist Review was a very reputable monthly journal written and published by Allan Kardec from January 1858 to April 1869. In total, there were 136 issues, later organized into 12 volumes of monthly issues each contained within its corresponding year—the largest collection of Spiritist writings by Allan Kardec. This volume gathers a selection of his most notable speeches published throughout the Review's run. Publisher: United States Spiritist Council (USSC). Publication Date: February 18, 2022. Language: English. Number of pages: 238. ISBN(13): 979-8419333833. Book format(s): Paperback.",
+    "blurb": "The Spiritist Review was a very reputable monthly journal written and published by Allan Kardec from January 1858 to April 1869. In total, there were 136 issues, later organized into 12 volumes of monthly issues each contained within its corr"
   },
   {
     "path": "/catalog/books/andre-trigueiro/living-is-best-choice",
@@ -2491,6 +2535,13 @@
         "isBook": true
       },
       {
+        "href": "/catalog/books/leon-denis/joan-of-arc-medium",
+        "text": "Joan of Arc Medium",
+        "cover": "/uploads/2026/07/joan-of-arc-medium-201x300.jpg",
+        "price": "US$13.99",
+        "isBook": true
+      },
+      {
         "href": "/catalog/books/leon-denis/problem-of-life-and-destiny",
         "text": "The Problem ofLife and Destiny",
         "cover": "/uploads/2020/01/problem-of-life-and-destiny.png",
@@ -2520,6 +2571,21 @@
     "amount": "15.00",
     "synopsis": "For the first time in English, this legendary book tells it all about the spiritual world and its manifestations. From Europe to the UK, and all over the US, not forgetting places as unusual as Brazil, and from the distant past of humanity, \"Into the Unseen\" does justice to them all, while revealing Léon Denis’ very personal take on Spiritism and New Spiritualism in general. The book produces a fascinating narrative, and it is backed by a plethora of extraordinary cases thoroughly researched by the author. Léon Denis deserves a distinctive place among the great apostles of Spiritism, particularly as the logical follower of Allan Kardec. Although he approached all three components of Spiritism—science, philosophy, and religion—he devoted most of his works to the philosophical aspects of the Spiritist Doctrine.",
     "blurb": "For the first time in English, this legendary book tells it all about the spiritual world and its manifestations. From Europe to the UK, and all over the US, not forgetting places as unusual as Brazil, and from the distant past of humanity,"
+  },
+  {
+    "path": "/catalog/books/leon-denis/joan-of-arc-medium",
+    "title": "Joan of Arc Medium",
+    "type": "book",
+    "author": "leon-denis",
+    "authorName": "Léon Denis",
+    "slug": "joan-of-arc-medium",
+    "cover": "/uploads/2026/07/joan-of-arc-medium-201x300.jpg",
+    "price": "US$13.99",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "13.99",
+    "synopsis": "Born among the humble, Joan endured injustice, betrayal, and an early martyrdom—yet her light still shines across the centuries. Warrior and peacemaker, visionary and saint, she united hearts and transformed nations. Canonized in 1920 before thousands in Rome, Joan continues to inspire believers and seekers alike. Admirers such as Alexandre Dumas, Louis Pasteur, and Sir Arthur Conan Doyle recognized in her the mark of divine mission—the spark that ended a century of war and awakened faith in countless souls. Her love, her charity, her unshakable faith—these remain her eternal legacy. Publisher: United States Spiritist Council (USSC). Publication Date: December 12, 2025. Language: English. Number of pages: 340. ISBN(10): 1948109476. ISBN(13): 978-1948109475.",
+    "blurb": "Born among the humble, Joan endured injustice, betrayal, and an early martyrdom—yet her light still shines across the centuries. Warrior and peacemaker, visionary and saint, she united hearts and transformed nations. Canonized in 1920 before t"
   },
   {
     "path": "/catalog/books/leon-denis/problem-of-life-and-destiny",
@@ -2582,6 +2648,21 @@
     "blurb": "(Buy with Paypal) Synopsis About the Author(s) Bibliographic Information Title: The Gospel 101 According to Spiritism Author(s): Luis Hu Rivas Illustrator(s): Luis Hu Rivas Language: English Source: Translated material from the original Bra"
   },
   {
+    "path": "/catalog/books/luis-hu-rivas/little-indigo-riding-hood",
+    "title": "Little Indigo Riding Hood",
+    "type": "book",
+    "author": "luis-hu-rivas",
+    "authorName": "Luis Hu Rivas",
+    "slug": "little-indigo-riding-hood",
+    "cover": "/uploads/2026/07/little-indigo-riding-hood-231x300.jpg",
+    "price": "US$12.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "12.00",
+    "synopsis": "There comes Little Indigo Riding Hood—well, this one is different from the story you already know! She is wearing a blue hoodie, not a red one. This story tells of an indigo child as she talks about reincarnation, mediumship, planetary transition, ecology, and love for others. This wonderful story will surely warm your heart, and the children's too.",
+    "blurb": "There comes Little Indigo Riding Hood—well, this one is different from the story you already know! She is wearing a blue hoodie, not a red one. This story tells of an indigo child as she talks about reincarnation, mediumship, planetary trans"
+  },
+  {
     "path": "/catalog/books/luis-hu-rivas",
     "title": "Luis Hu Rivas",
     "type": "listing",
@@ -2605,9 +2686,23 @@
         "isBook": true
       },
       {
+        "href": "/catalog/books/luis-hu-rivas/little-indigo-riding-hood",
+        "text": "Little Indigo Riding Hood",
+        "cover": "/uploads/2026/07/little-indigo-riding-hood-231x300.jpg",
+        "price": "US$12.00",
+        "isBook": true
+      },
+      {
         "href": "/catalog/books/luis-hu-rivas/my-pals-divaldo-and-nilson",
         "text": "My Pals Divaldo and Nílson",
         "cover": "/uploads/2020/01/my-pals-divaldo-and-nilson.png",
+        "price": "US$12.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/luis-hu-rivas/perispirit",
+        "text": "Perispirit (in PT, ES, & EN)",
+        "cover": "/uploads/2026/07/perispirit-222x300.jpg",
         "price": "US$12.00",
         "isBook": true
       },
@@ -2659,6 +2754,27 @@
         "cover": "/uploads/2020/01/spiritism-kids-v3.png",
         "price": "US$12.00",
         "isBook": true
+      },
+      {
+        "href": "/catalog/books/luis-hu-rivas/spiritism-kids-magazine-1",
+        "text": "Spiritism Kids Magazine #1",
+        "cover": "/uploads/2026/07/spiritism-kids-magazine-1-226x300.jpg",
+        "price": "US$12.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/luis-hu-rivas/spiritism-kids-magazine-2",
+        "text": "Spiritism Kids Magazine #2",
+        "cover": "/uploads/2026/07/spiritism-kids-magazine-2-224x300.jpg",
+        "price": "US$12.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/luis-hu-rivas/spiritism-kids-magazine-3",
+        "text": "Spiritism Kids Magazine #3",
+        "cover": "/uploads/2026/07/spiritism-kids-magazine-3-227x300.jpg",
+        "price": "US$12.00",
+        "isBook": true
       }
     ]
   },
@@ -2676,6 +2792,21 @@
     "amount": "12.00",
     "synopsis": "We are about to embark on a big adventure! We’ll her two stories about courage and perseverance and learn many lessons on love with our pals: Divaldo and Nilson. Enjoy this adventure and learn the Gospel with your newest friends. Free puzzle included!",
     "blurb": "We are about to embark on a big adventure! We’ll her two stories about courage and perseverance and learn many lessons on love with our pals: Divaldo and Nilson. Enjoy this adventure and learn the Gospel with your newest friends. Free puzzl"
+  },
+  {
+    "path": "/catalog/books/luis-hu-rivas/perispirit",
+    "title": "Perispirit (in PT, ES, & EN)",
+    "type": "book",
+    "author": "luis-hu-rivas",
+    "authorName": "Luis Hu Rivas",
+    "slug": "perispirit",
+    "cover": "/uploads/2026/07/perispirit-222x300.jpg",
+    "price": "US$12.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "12.00",
+    "synopsis": "Alongside Pericles and Catarina you will have real fun! Embark on an exciting illustrated story with many inspiring teachings. Using your imagination, you will discover answers to questions such as: What happens in dreams? Can we make friends while we sleep? What is the importance of prayer before bed? What is the perispirit? This edition presents the story in Portuguese, Spanish, and English.",
+    "blurb": "Alongside Pericles and Catarina you will have real fun! Embark on an exciting illustrated story with many inspiring teachings. Using your imagination, you will discover answers to questions such as: What happens in dreams? Can we make friend"
   },
   {
     "path": "/catalog/books/luis-hu-rivas/planetary-transition-101",
@@ -2781,6 +2912,51 @@
     "amount": "12.00",
     "synopsis": "(Buy with Paypal) Synopsis About the Author(s) Bibliographic Information Title: The Spiritual Hen Author(s): Luis Hu Rivas Illustrator(s): Luis Hu Rivas Language: English Source: Translated material from the original Brazilian Portuguese edition Translation: Cláudia Nune Revision: Larissa Santos Editing: Jussara Korngold Publisher: United States Spiritist Federal (USSF) Location: New York, NY, USA Publication Date: August 16, 2017 (1 st edition) Number of pages: 33 ISBN(10): 0-9986481-5-9 ISBN(13): 978-0-9986481-5-6 Book size (W H T): 8 \" 11\" \" (21.6cm 27.9cm 0.3cm) Print type: Black font on colored glossy background Book format(s): Paperback Original Material Title: Galinha Espiritinha Publisher: Federação Espírita Brasileira (FEB) Location: Brasília – DF, Brazil Publication Date: — Language: Brazilian Portuguese",
     "blurb": "(Buy with Paypal) Synopsis About the Author(s) Bibliographic Information Title: The Spiritual Hen Author(s): Luis Hu Rivas Illustrator(s): Luis Hu Rivas Language: English Source: Translated material from the original Brazilian Portuguese ed"
+  },
+  {
+    "path": "/catalog/books/luis-hu-rivas/spiritism-kids-magazine-1",
+    "title": "Spiritism Kids Magazine #1",
+    "type": "book",
+    "author": "luis-hu-rivas",
+    "authorName": "Luis Hu Rivas",
+    "slug": "spiritism-kids-magazine-1",
+    "cover": "/uploads/2026/07/spiritism-kids-magazine-1-226x300.jpg",
+    "price": "US$12.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "12.00",
+    "synopsis": "A monthly magazine aiming to bring moral values and spirituality to children and teenagers, in a fun way.",
+    "blurb": "A monthly magazine aiming to bring moral values and spirituality to children and teenagers, in a fun way."
+  },
+  {
+    "path": "/catalog/books/luis-hu-rivas/spiritism-kids-magazine-2",
+    "title": "Spiritism Kids Magazine #2",
+    "type": "book",
+    "author": "luis-hu-rivas",
+    "authorName": "Luis Hu Rivas",
+    "slug": "spiritism-kids-magazine-2",
+    "cover": "/uploads/2026/07/spiritism-kids-magazine-2-224x300.jpg",
+    "price": "US$12.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "12.00",
+    "synopsis": "A monthly magazine (vol. 2) aiming to bring moral values and spirituality to children and teenagers, in a fun way.",
+    "blurb": "A monthly magazine (vol. 2) aiming to bring moral values and spirituality to children and teenagers, in a fun way."
+  },
+  {
+    "path": "/catalog/books/luis-hu-rivas/spiritism-kids-magazine-3",
+    "title": "Spiritism Kids Magazine #3",
+    "type": "book",
+    "author": "luis-hu-rivas",
+    "authorName": "Luis Hu Rivas",
+    "slug": "spiritism-kids-magazine-3",
+    "cover": "/uploads/2026/07/spiritism-kids-magazine-3-227x300.jpg",
+    "price": "US$12.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "12.00",
+    "synopsis": "A monthly magazine aiming to bring moral values and spirituality to children and teenagers, in a fun way.",
+    "blurb": "A monthly magazine aiming to bring moral values and spirituality to children and teenagers, in a fun way."
   },
   {
     "path": "/catalog/books/nilson-souza-pereira/getting-to-the-light-spiritist-therapy-for-discarnate-spirits",
@@ -2899,6 +3075,20 @@
     "intro": "The list below shows books authored by Therezinha Oliveira . Back to Book Catalog . The books are alphabetically listed by title (ignore \"a,\" \"an,\" and \"the\"): Talking to Spirits in Mediumistic Meetings When Spiritism Speaks",
     "children": [
       {
+        "href": "/catalog/books/therezinha-oliveira/initiation-into-spiritism",
+        "text": "Initiation into Spiritism",
+        "cover": "/uploads/2026/07/initiation-into-spiritism-194x300.jpg",
+        "price": "US$12.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/therezinha-oliveira/mediumship",
+        "text": "Mediumship",
+        "cover": "/uploads/2026/07/mediumship-199x300.jpg",
+        "price": "US$12.00",
+        "isBook": true
+      },
+      {
         "href": "/catalog/books/therezinha-oliveira/talking-to-spirits-in-mediumistic-meetings",
         "text": "Talking to Spirits inMediumistic Meetings",
         "cover": "/uploads/2020/01/talking-to-spirits-in-mediumistic-meetings.png",
@@ -2913,6 +3103,36 @@
         "isBook": true
       }
     ]
+  },
+  {
+    "path": "/catalog/books/therezinha-oliveira/initiation-into-spiritism",
+    "title": "Initiation into Spiritism",
+    "type": "book",
+    "author": "therezinha-oliveira",
+    "authorName": "Therezinha Oliveira",
+    "slug": "initiation-into-spiritism",
+    "cover": "/uploads/2026/07/initiation-into-spiritism-194x300.jpg",
+    "price": "US$12.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "12.00",
+    "synopsis": "With an extraordinary scope, this book covers dozens of relevant topics in its well-argued thirty-seven chapters, presented by the renowned author Therezinha Oliveira, one of the major authorities in the field. Initiation into Spiritism should be read not only by Spiritists but also by Spiritualists and sympathizers in general, since it deals with several contemporary topics with clarity and profundity. It also presents practical solutions to challenges of everyday life, teaching how to face and transcend them. One quick glance at its contents reveals its thoroughness: God; Spirits; Classification of Spirits and Worlds; Spirits' Action upon Fluids; Miracle or Phenomenon?; Spiritism and Its Practices; Mediumship; Law of Cause and Effect; Reincarnation, and many others. Publisher: United States Spiritist Council (USSC). Publication Date: December 19, 2021. Language: English. Number of pages: 274. ISBN(10): 1948109247. ISBN(13): 978-1948109246.",
+    "blurb": "With an extraordinary scope, this book covers dozens of relevant topics in its well-argued thirty-seven chapters, presented by the renowned author Therezinha Oliveira, one of the major authorities in the field. Initiation into Spiritism shoul"
+  },
+  {
+    "path": "/catalog/books/therezinha-oliveira/mediumship",
+    "title": "Mediumship",
+    "type": "book",
+    "author": "therezinha-oliveira",
+    "authorName": "Therezinha Oliveira",
+    "slug": "mediumship",
+    "cover": "/uploads/2026/07/mediumship-199x300.jpg",
+    "price": "US$12.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "12.00",
+    "synopsis": "The scope of this book is truly extraordinary. At last, a practical guide on mediumship that does not leave out the necessary historical, scientific, and philosophical background. Publisher: United States Spiritist Council (USSC). Publication Date: December 18, 2022. Language: English. Number of pages: 224. ISBN(10): 1948109271. ISBN(13): 978-1948109277.",
+    "blurb": "The scope of this book is truly extraordinary. At last, a practical guide on mediumship that does not leave out the necessary historical, scientific, and philosophical background. Publisher: United States Spiritist Council (USSC)."
   },
   {
     "path": "/catalog/books/therezinha-oliveira/talking-to-spirits-in-mediumistic-meetings",
@@ -3378,5 +3598,71 @@
     "amount": "12.00",
     "synopsis": "Dive into the spiritual journey of a lifetime in \"Transcendence: Life in the Hereafter.\" Since a pivotal mediumship meeting on December 19th, 1980, the author's life has been profoundly transformed by encounters with the spirit world, channeling messages of profound wisdom and insight into the afterlife from Spiritist Institutions across Brazil, England, and the United States. This captivating book shares diverse experiences, from encounters with suffering spirits seeking solace to enlightened entities offering guidance and wisdom. The author reveals the sanctity and enduring connections forged during these gatherings, showcasing the transformative power of spiritual communication. Join the author on an extraordinary voyage through the spirit world, where love, hope, and enlightenment await in \"Transcendence: Life in the Hereafter.\"",
     "blurb": "Dive into the spiritual journey of a lifetime in \"Transcendence: Life in the Hereafter.\" Since a pivotal mediumship meeting on December 19th, 1980, the author's life has been profoundly transformed by encounters with the spirit world."
+  },
+  {
+    "path": "/catalog/books/regis-de-morais",
+    "title": "Regis de Morais",
+    "type": "listing",
+    "author": "regis-de-morais",
+    "authorName": "Regis de Morais",
+    "slug": "regis-de-morais",
+    "intro": "The list below shows books authored by Regis de Morais . Back to Book Catalog . The books are alphabetically listed by title (ignore \"a,\" \"an,\" and \"the\"): God's Breath is Everywhere",
+    "children": [
+      {
+        "href": "/catalog/books/regis-de-morais/gods-breath-is-everywhere",
+        "text": "God's Breath is Everywhere",
+        "cover": "/uploads/2026/07/gods-breath-is-everywhere-192x300.jpg",
+        "price": "US$11.99",
+        "isBook": true
+      }
+    ]
+  },
+  {
+    "path": "/catalog/books/regis-de-morais/gods-breath-is-everywhere",
+    "title": "God's Breath is Everywhere",
+    "type": "book",
+    "author": "regis-de-morais",
+    "authorName": "Regis de Morais",
+    "slug": "gods-breath-is-everywhere",
+    "cover": "/uploads/2026/07/gods-breath-is-everywhere-192x300.jpg",
+    "price": "US$11.99",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "11.99",
+    "synopsis": "From Krishna to Buddha, Moses to Jesus, Augustine to Francis of Assisi, or Allan Kardec to Albert Einstein with his revolutionary E = mc², and even recently, in these dismal times we live in, the wind of God has blown when and where it wishes: sometimes with fearsome strength; at times so subtle it can go unnoticed by those who spend life like jaded spectators. Erudite but vibrant, after forty years at the service of Spiritism, the author offers a wealth of information in this precious book, a gesture of goodwill toward the worldwide reader. By scrutinizing ancient and modern spiritual beliefs and practices, along with other pressing issues, Regis de Morais endeavors to demonstrate that God's breath has never ceased to be with us everywhere since time immemorial. About the author: Regis de Morais was born in Brazil in 1940. He specialized in Philosophy and Social Sciences, having taught for decades at prestigious universities in Brazil, Latin America, and Europe, and wrote and published over sixty books on philosophy, sociology, and literature.",
+    "blurb": "From Krishna to Buddha, Moses to Jesus, Augustine to Francis of Assisi, or Allan Kardec to Albert Einstein with his revolutionary E = mc², and even recently, in these dismal times we live in, the wind of God has blown when and where it wishe"
+  },
+  {
+    "path": "/catalog/books/various-authors",
+    "title": "Various Authors",
+    "type": "listing",
+    "author": "various-authors",
+    "authorName": "Various Authors",
+    "slug": "various-authors",
+    "intro": "The list below shows books by various authors. Back to Book Catalog . The books are alphabetically listed by title (ignore \"a,\" \"an,\" and \"the\"): Your God, My God, Our God",
+    "children": [
+      {
+        "href": "/catalog/books/various-authors/your-god-my-god-our-god",
+        "text": "Your God, My God, Our God",
+        "cover": "/uploads/2026/07/your-god-my-god-our-god-200x300.jpg",
+        "price": "US$12.99",
+        "isBook": true
+      }
+    ]
+  },
+  {
+    "path": "/catalog/books/various-authors/your-god-my-god-our-god",
+    "title": "Your God, My God, Our God",
+    "type": "book",
+    "author": "various-authors",
+    "authorName": "Various Authors",
+    "slug": "your-god-my-god-our-god",
+    "cover": "/uploads/2026/07/your-god-my-god-our-god-200x300.jpg",
+    "price": "US$12.99",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "12.99",
+    "synopsis": "Your God, My God, Our God brings together twelve Spiritist reflections originally published in the Revue Spirite, offering a rich dialogue between science, philosophy, and spirituality. The authors explore the evolving human perception of the Divine, inviting readers to move beyond inherited concepts and to cultivate a faith enlightened by reason, experience, and inner transformation. More than a collection of essays, this anthology is an invitation to reflection, encouraging each reader to examine their personal understanding of God and to rediscover the sacred presence that permeates creation. Publisher: United States Spiritist Council (USSC). Publication Date: February 26, 2026. Language: English. Number of pages: 178. ISBN(10): 1948109484. ISBN(13): 978-1948109482. Book format(s): Paperback.",
+    "blurb": "Your God, My God, Our God brings together twelve Spiritist reflections originally published in the Revue Spirite, offering a rich dialogue between science, philosophy, and spirituality. The authors explore the evolving human perception of th"
   }
 ]
