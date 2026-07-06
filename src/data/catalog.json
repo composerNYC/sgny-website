@@ -496,6 +496,164 @@
     "synopsis": "This book is also available for purchase in digital format ( Kindle ). Overview",
     "blurb": "This book is also available for purchase in digital format ( Kindle ). Overview"
   },
+        {
+    "path": "/catalog/books/divaldo-franco",
+    "title": "Divaldo Franco",
+    "type": "listing",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "divaldo-franco",
+    "intro": "The list below shows the books psychographed by Divaldo Franco. They are organized by the spirit author who dictated them: first the Joanna de Angelis collection, then other spiritual authors and mediums. Within each group, titles are listed alphabetically (ignoring \"a,\" \"an,\" and \"the\").",
+    "children": [
+      {
+        "heading": true,
+        "first": true,
+        "text": "Joanna de Angelis"
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/adolescence-and-life",
+        "text": "Adolescence and Life",
+        "cover": "/uploads/2020/01/adolescence-and-life.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/after-the-storm",
+        "text": "After the Storm",
+        "cover": "/uploads/2020/01/after-the-storm.png",
+        "price": "US$5.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/child-of-god",
+        "text": "Child of God",
+        "cover": "/uploads/2020/01/child-of-god.png",
+        "price": "US$10.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/conscious-being",
+        "text": "The Conscious Being",
+        "cover": "/uploads/2020/01/conscious-being.png",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/existential-conflicts",
+        "text": "Existential Conflicts",
+        "cover": "/uploads/2020/01/existential-conflicts.png",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/family-constellation",
+        "text": "Family Constellation",
+        "cover": "/uploads/2020/01/family-constellation.png",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/happy-life",
+        "text": "Happy Life",
+        "cover": "/uploads/2020/01/happy-life.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/jesus-in-our-days",
+        "text": "Jesus in Our Days",
+        "cover": "/uploads/2020/01/jesus-in-our-days.png",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/living-and-loving",
+        "text": "Living and Loving",
+        "cover": "/uploads/2020/01/living-and-loving.png",
+        "price": "",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/psychology-of-gratitude",
+        "text": "The Psychologyof Gratitude",
+        "cover": "/uploads/2020/01/psychology-of-gratitude.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/recipes-for-peace",
+        "text": "Recipes for Peace",
+        "cover": "/uploads/2020/01/recipes-for-peace.png",
+        "price": "US$10.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/self-discovery-an-inner-search",
+        "text": "Self-Discovery:an Inner Search",
+        "cover": "/uploads/2020/01/self-discovery-an-inner-search.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "heading": true,
+        "text": "Others"
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/aesthesis",
+        "text": "Aesthesis",
+        "cover": "/uploads/2020/01/aesthesis.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/free-birds",
+        "text": "Free Birds",
+        "cover": "/uploads/2020/01/free-birds.png",
+        "price": "US$12.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/guidelines-for-safety",
+        "text": "Guidelines for Safety",
+        "cover": "/uploads/2020/01/guidelines-for-safety.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/obsession",
+        "text": "Obsession",
+        "cover": "/uploads/2020/01/obsession.png",
+        "price": "",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/planetary-transition",
+        "text": "Planetary Transition",
+        "cover": "/uploads/2020/01/planetary-transition.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/prelude-to-divine-kingdom",
+        "text": "Prelude to theDivine Kingdom",
+        "cover": "/uploads/2020/01/prelude-to-divine-kingdom.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/transform-your-health-with-inner-peace",
+        "text": "Transform Your Healthwith Inner Peace",
+        "cover": "/uploads/2020/01/transform-your-health-with-inner-peace.png",
+        "price": "US$15.00",
+        "isBook": true
+      }
+    ]
+  },
+  {
+    "type": "heading",
+    "author": "divaldo-franco",
+    "text": "Joanna de Angelis"
+  },
   {
     "path": "/catalog/books/divaldo-franco/adolescence-and-life",
     "title": "Adolescence and Life",
@@ -510,21 +668,6 @@
     "amount": "15.00",
     "synopsis": "Parents and educators have an imminent commitment to re-evaluate the moral conduct that should be administered to the new generations in order to prevent the downfall of our culture and civilization, which are at their somberest period in history. With this in mind, the spirit Joanna de Ângelis, by means of the medium Divaldo Pereira Franco, presents to you here several topics related to adolescence in the hope of providing some contribution to the thrilling question that has been challenging all of us, and parents in particular, as to how we should guide our adolescents.",
     "blurb": "Parents and educators have an imminent commitment to re-evaluate the moral conduct that should be administered to the new generations in order to prevent the downfall of our culture and civilization, which are at their somberest period in h"
-  },
-  {
-    "path": "/catalog/books/divaldo-franco/aesthesis",
-    "title": "Aesthesis",
-    "type": "book",
-    "author": "divaldo-franco",
-    "authorName": "Divaldo Franco",
-    "slug": "aesthesis",
-    "cover": "/uploads/2020/01/aesthesis.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "The spirit Rabindranath Tagore returns after his discarnation with the same lyricism and poetry as evidenced in the psychographed work Aesthesis: \" Immortal, before time and beyond eras, I bow down at the window of eternity so that the magic of Your work unites me ever more with You, intoxicating me with happiness… \" \" Wordly richness weighs down on he who possesses it, forcing him lower. The treasure of love lifts him up to fly, free and happy, up the gully of infinity.\"",
-    "blurb": "The spirit Rabindranath Tagore returns after his discarnation with the same lyricism and poetry as evidenced in the psychographed work Aesthesis: \" Immortal, before time and beyond eras, I bow down at the window of eternity so that the magi"
   },
   {
     "path": "/catalog/books/divaldo-franco/after-the-storm",
@@ -564,7 +707,7 @@
     "authorName": "Divaldo Franco",
     "slug": "conscious-being",
     "cover": "/uploads/2020/01/conscious-being.png",
-    "price": "US$15.00",
+    "price": "US$20.00",
     "format": "paperback",
     "forSale": false,
     "amount": "",
@@ -602,6 +745,114 @@
     "blurb": "The direction society takes is invariably connected to the destiny of the family, given that the latter consists of the starting point for experiences of universal fraternity. In this beautiful work composed of thirty themes, Joanna de &Aci"
   },
   {
+    "path": "/catalog/books/divaldo-franco/happy-life",
+    "title": "Happy Life",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "happy-life",
+    "cover": "/uploads/2020/01/happy-life.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": false,
+    "amount": "",
+    "synopsis": "Millions of hearts thirsting for love and understanding are seeking guidelines to relieve their anxieties and uncertainties. In this short but grand work, spiritual author Joanna de Ângelis assists them in their search for a happy life by providing 200 messages that bear encouragement, optimism, and hope. This book will bring new vitality to all whose objective is to attain a happy life.",
+    "blurb": "Millions of hearts thirsting for love and understanding are seeking guidelines to relieve their anxieties and uncertainties. In this short but grand work, spiritual author Joanna de Ângelis assists them in their search for a happy life by p"
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/jesus-in-our-days",
+    "title": "Jesus in Our Days",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "jesus-in-our-days",
+    "cover": "/uploads/2020/01/jesus-in-our-days.png",
+    "price": "US$20.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "20.00",
+    "synopsis": "Jesus’ examples continue to amaze even the most skeptical scholars of current times regarding the ever complex and challenging human problems. With a profound understanding of the human psyche, Jesus confidently probed the innermost recesses of the individual and discovered the real causes of the afflictions that the unconscious mind tries to hide. By means of more time-consuming processes, Depth Psychology has arrived at the same results that He achieved so easily over two thousand years ago. While unbridled ambition drives people to paroxysm and the illusion of possessions, fame, glory, and blind competition, Jesus fully resurfaces jovial and friendly in the human consciousness, beatified by His humanitarian nature and self-confidence. The present desperately needs and uncrucified Jesus, a companion and therapist offering emergency assistance to stop us from going over the edge. With such pressing issue in mind, the Venerable Benefactress addresses in this magnificent little book twenty situations that trouble our current society. She looks for answers in Jesus’ therapy, the results of which are health, peace and happiness as experiences that men and women do not yet enjoy whether individually or collectively.",
+    "blurb": "Jesus’ examples continue to amaze even the most skeptical scholars of current times regarding the ever complex and challenging human problems. With a profound understanding of the human psyche, Jesus confidently probed the innermost recesse"
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/living-and-loving",
+    "title": "Living and Loving",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "living-and-loving",
+    "cover": "/uploads/2020/01/living-and-loving.png",
+    "format": "paperback",
+    "forSale": false,
+    "synopsis": "Inspirational messages to promote health and well-being. The authors dedicated these pages to the growing number of people who are disappointed with life and love, in addition to all the bitter souls, hoping that they may help themselves to reconsider pessimistic attitudes, start a new life of love, and have enough love to be able to experience happiness.",
+    "blurb": "Inspirational messages to promote health and well-being. The authors dedicated these pages to the growing number of people who are disappointed with life and love, in addition to all the bitter souls, hoping that they may help themselves to"
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/psychology-of-gratitude",
+    "title": "The Psychology of Gratitude",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "psychology-of-gratitude",
+    "cover": "/uploads/2020/01/psychology-of-gratitude.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "The psychology of gratitude becomes a competent instrument along the Self-ego axis, and it should be exercised at all moments of the corporeal existence as a secure guide in fulfilling its reality. Daughter of psychological maturity, those who cultivate gratitude are enriched with peace and happiness. In these days of violence and cruelty, as well as indifference for the relevant moral and emotional values, gratitude has a significant role regarding the integral health of human beings. This magnificent work presents a profound and encompassing analysis of gratitude whilst assisting the modern men and women in the great enterprise of self-realization.",
+    "blurb": "The psychology of gratitude becomes a competent instrument along the Self-ego axis, and it should be exercised at all moments of the corporeal existence as a secure guide in fulfilling its reality. Daughter of psychological maturity, those"
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/recipes-for-peace",
+    "title": "Recipes for Peace",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "recipes-for-peace",
+    "cover": "/uploads/2020/01/recipes-for-peace.png",
+    "price": "US$10.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "10.00",
+    "synopsis": "\"We have gathered in this book some pages inspired by spiritual teachings, which we offer to the reader as recipes for peace in various situations, be it in sickness or in health, when facing conflicts or difficulties \"",
+    "blurb": "\"We have gathered in this book some pages inspired by spiritual teachings, which we offer to the reader as recipes for peace in various situations, be it in sickness or in health, when facing conflicts or difficulties \""
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/self-discovery-an-inner-search",
+    "title": "Self-Discovery: an Inner Search",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "self-discovery-an-inner-search",
+    "cover": "/uploads/2020/01/self-discovery-an-inner-search.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "The psychology of gratitude becomes a competent instrument along the Self-ego axis, and it should be exercised at all moments of the corporeal existence as a secure guide in fulfilling its reality. Daughter of psychological maturity, those who cultivate gratitude are enriched with peace and happiness. In these days of violence and cruelty, as well as indifference for the relevant moral and emotional values, gratitude has a significant role regarding the integral health of human beings. This magnificent work presents a profound and encompassing analysis of gratitude whilst assisting the modern men and women in the great enterprise of self-realization.",
+    "blurb": "The psychology of gratitude becomes a competent instrument along the Self-ego axis, and it should be exercised at all moments of the corporeal existence as a secure guide in fulfilling its reality. Daughter of psychological maturity, those"
+  },
+  {
+    "type": "heading",
+    "author": "divaldo-franco",
+    "text": "Others"
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/aesthesis",
+    "title": "Aesthesis",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "aesthesis",
+    "cover": "/uploads/2020/01/aesthesis.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "The spirit Rabindranath Tagore returns after his discarnation with the same lyricism and poetry as evidenced in the psychographed work Aesthesis: \" Immortal, before time and beyond eras, I bow down at the window of eternity so that the magic of Your work unites me ever more with You, intoxicating me with happiness… \" \" Wordly richness weighs down on he who possesses it, forcing him lower. The treasure of love lifts him up to fly, free and happy, up the gully of infinity.\"",
+    "blurb": "The spirit Rabindranath Tagore returns after his discarnation with the same lyricism and poetry as evidenced in the psychographed work Aesthesis: \" Immortal, before time and beyond eras, I bow down at the window of eternity so that the magi"
+  },
+  {
     "path": "/catalog/books/divaldo-franco/free-birds",
     "title": "Free Birds",
     "type": "book",
@@ -632,221 +883,6 @@
     "blurb": "Profound and simple questions were important components of the formidable occasions of fortunate learning during the entire period of Jesus Christ’s Gospel. Therefore, when we see our brothers and sisters of earthly struggles meet to study"
   },
   {
-    "path": "/catalog/books/divaldo-franco/happy-life",
-    "title": "Happy Life",
-    "type": "book",
-    "author": "divaldo-franco",
-    "authorName": "Divaldo Franco",
-    "slug": "happy-life",
-    "cover": "/uploads/2020/01/happy-life.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": false,
-    "amount": "",
-    "synopsis": "Millions of hearts thirsting for love and understanding are seeking guidelines to relieve their anxieties and uncertainties. In this short but grand work, spiritual author Joanna de Ângelis assists them in their search for a happy life by providing 200 messages that bear encouragement, optimism, and hope. This book will bring new vitality to all whose objective is to attain a happy life.",
-    "blurb": "Millions of hearts thirsting for love and understanding are seeking guidelines to relieve their anxieties and uncertainties. In this short but grand work, spiritual author Joanna de Ângelis assists them in their search for a happy life by p"
-  },
-  {
-    "path": "/catalog/books/divaldo-franco",
-    "title": "Divaldo Franco",
-    "type": "listing",
-    "author": "divaldo-franco",
-    "authorName": "Divaldo Franco",
-    "slug": "divaldo-franco",
-    "intro": "The list below shows the books psychographed by Divaldo Franco . You may browse the alphabetical list of titles or select one of the following collections: The Joanna de &Acirc;ngelis collection The Psychology Series collection Books by Divaldo Franco and other authors/or mediums Books by Divaldo Franco and other spiritual authors The books are listed by title in alphabetical order (ignore \"a,\" \"an,\" and \"the\"): A B C D E F G H I J K L M N O P Q R S T U V W Y X Z Adolescence and Life Aesthesis After the Storm Child of God The Conscious Being Existential Conflicts Family Constellation Free Bird",
-    "children": [
-      {
-        "href": "/catalog/books/divaldo-franco/joanna-de-angelis-collection",
-        "text": "Joanna de &Acirc;ngelis",
-        "cover": "/uploads/2020/01/adolescence-and-life.png",
-        "price": "",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/joanna-de-angelis-collection/psychology-collection",
-        "text": "Psychology Series",
-        "cover": "/uploads/2020/01/jesus-in-our-days.png",
-        "price": "",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/and-other-authors",
-        "text": "other authors/or mediums",
-        "cover": "",
-        "price": "",
-        "isBook": false
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/and-other-spiritual-authors",
-        "text": "other spiritual authors",
-        "cover": "/uploads/2020/01/aesthesis.png",
-        "price": "",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/adolescence-and-life",
-        "text": "Adolescence and Life",
-        "cover": "/uploads/2020/01/adolescence-and-life.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/aesthesis",
-        "text": "Aesthesis",
-        "cover": "/uploads/2020/01/aesthesis.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/after-the-storm",
-        "text": "After the Storm",
-        "cover": "/uploads/2020/01/after-the-storm.png",
-        "price": "US$5.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/child-of-god",
-        "text": "Child of God",
-        "cover": "/uploads/2020/01/child-of-god.png",
-        "price": "US$10.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/conscious-being",
-        "text": "The Conscious Being",
-        "cover": "/uploads/2020/01/conscious-being.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/existential-conflicts",
-        "text": "Existential Conflicts",
-        "cover": "/uploads/2020/01/existential-conflicts.png",
-        "price": "US$20.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/family-constellation",
-        "text": "Family Constellation",
-        "cover": "/uploads/2020/01/family-constellation.png",
-        "price": "US$20.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/free-birds",
-        "text": "Free Birds",
-        "cover": "/uploads/2020/01/free-birds.png",
-        "price": "US$12.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/guidelines-for-safety",
-        "text": "Guidelines for Safety",
-        "cover": "/uploads/2020/01/guidelines-for-safety.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/happy-life",
-        "text": "Happy Life",
-        "cover": "/uploads/2020/01/happy-life.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/jesus-in-our-days",
-        "text": "Jesus in Our Days",
-        "cover": "/uploads/2020/01/jesus-in-our-days.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/living-and-loving",
-        "text": "Living and Loving",
-        "cover": "/uploads/2020/01/living-and-loving.png",
-        "price": "",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/obsession",
-        "text": "Obsession",
-        "cover": "/uploads/2020/01/obsession.png",
-        "price": "",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/planetary-transition",
-        "text": "Planetary Transition",
-        "cover": "/uploads/2020/01/planetary-transition.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/prelude-to-divine-kingdom",
-        "text": "Prelude to theDivine Kingdom",
-        "cover": "/uploads/2020/01/prelude-to-divine-kingdom.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/psychology-of-gratitude",
-        "text": "The Psychologyof Gratitude",
-        "cover": "/uploads/2020/01/psychology-of-gratitude.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/recipes-for-peace",
-        "text": "Recipes for Peace",
-        "cover": "/uploads/2020/01/recipes-for-peace.png",
-        "price": "US$10.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/self-discovery-an-inner-search",
-        "text": "Self-Discovery:an Inner Search",
-        "cover": "/uploads/2020/01/self-discovery-an-inner-search.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/transform-your-health-with-inner-peace",
-        "text": "Transform Your Healthwith Inner Peace",
-        "cover": "/uploads/2020/01/transform-your-health-with-inner-peace.png",
-        "price": "US$15.00",
-        "isBook": true
-      }
-    ]
-  },
-  {
-    "path": "/catalog/books/divaldo-franco/jesus-in-our-days",
-    "title": "Jesus in Our Days",
-    "type": "book",
-    "author": "divaldo-franco",
-    "authorName": "Divaldo Franco",
-    "slug": "jesus-in-our-days",
-    "cover": "/uploads/2020/01/jesus-in-our-days.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "Jesus’ examples continue to amaze even the most skeptical scholars of current times regarding the ever complex and challenging human problems. With a profound understanding of the human psyche, Jesus confidently probed the innermost recesses of the individual and discovered the real causes of the afflictions that the unconscious mind tries to hide. By means of more time-consuming processes, Depth Psychology has arrived at the same results that He achieved so easily over two thousand years ago. While unbridled ambition drives people to paroxysm and the illusion of possessions, fame, glory, and blind competition, Jesus fully resurfaces jovial and friendly in the human consciousness, beatified by His humanitarian nature and self-confidence. The present desperately needs and uncrucified Jesus, a companion and therapist offering emergency assistance to stop us from going over the edge. With such pressing issue in mind, the Venerable Benefactress addresses in this magnificent little book twenty situations that trouble our current society. She looks for answers in Jesus’ therapy, the results of which are health, peace and happiness as experiences that men and women do not yet enjoy whether individually or collectively.",
-    "blurb": "Jesus’ examples continue to amaze even the most skeptical scholars of current times regarding the ever complex and challenging human problems. With a profound understanding of the human psyche, Jesus confidently probed the innermost recesse"
-  },
-  {
-    "path": "/catalog/books/divaldo-franco/living-and-loving",
-    "title": "Living and Loving",
-    "type": "book",
-    "author": "divaldo-franco",
-    "authorName": "Divaldo Franco",
-    "slug": "living-and-loving",
-    "cover": "/uploads/2020/01/living-and-loving.png",
-    "format": "paperback",
-    "forSale": false,
-    "synopsis": "Inspirational messages to promote health and well-being. The authors dedicated these pages to the growing number of people who are disappointed with life and love, in addition to all the bitter souls, hoping that they may help themselves to reconsider pessimistic attitudes, start a new life of love, and have enough love to be able to experience happiness.",
-    "blurb": "Inspirational messages to promote health and well-being. The authors dedicated these pages to the growing number of people who are disappointed with life and love, in addition to all the bitter souls, hoping that they may help themselves to"
-  },
-  {
     "path": "/catalog/books/divaldo-franco/obsession",
     "title": "Obsession",
     "type": "book",
@@ -858,6 +894,51 @@
     "forSale": false,
     "synopsis": "“I approached her and noticed she felt my presence I touched her and she shivered I grabbed her arms and they became my arms. I got a little dizzy and she swayed. I thought and she responded. I lifted her and we walked together Then, through her I slapped his face, crazy with hatred, overjoyed to find her insane with me, the two of us acting as one. And we are still one, and we’re going to remain so.” This is, in his own words, how a discarnate spirit took possession of a high-society girl exactly on her fifteenth birthday party. The party breaks up, naturally, and the girl is committed to a mental hospital. Had she become insane of mad, according to the usual standards of behavior? Or was she possessed by an evil spirit? Should she be submitted to the orthodox medical routine for such cases, or else should she be exorcised? This book tells her story. Why she had become involved in the process, exposing herself to her plight and what a dedicated group of both incarnate and discarnate people did to release not only her, but also those who became entangled with her in an ugly story way back in a previous incarnation.",
     "blurb": "“I approached her and noticed she felt my presence I touched her and she shivered I grabbed her arms and they became my arms. I got a little dizzy and she swayed. I thought and she responded. I lifted her and we walked together Then, throug"
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/planetary-transition",
+    "title": "Planetary Transition",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "planetary-transition",
+    "cover": "/uploads/2020/01/planetary-transition.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "All rooms in the great mansion of Our Father are inhabited and they are progressing towards the plenitude that awaits all of us, His children. But since the Creator is constantly at work, the many orbs in the universe are not all at the same level of moral and intellectual development. And so it is with planet Earth, which is now moving through a transitional phase by means of which it will cease to be a world of trials and expiation to become one of regeneration, where good will prevail over evil. It is important for us human beings to understand that this transition is not a physical one, but a consequence of our own moral and intellectual progress. Neither is the transition to be effected overnight or within a few days; rather, it has already begun and it is occurring all around us in a gradual and ever-improving manner. This change is the very collective desire for improvement in every sector of human society and our lives. As we, the spirits who inhabit this planet, improve ourselves, we contribute to pull this event ever so forward, making it unstoppable. There are some spirits, however, who do not understand this progressive movement and act against it out of ignorance. As the world and life progress, these spirits, be they incarnate or discarnate beings, become more recalcitrant and defiant to everything that is happening around them, and in this behaviour they set themselves apart so much from the mainstream progress that they perceive the new world being built today as a threatening environment for them. Our Father, however, is all mercy and understanding. It is a divine decree that all His children shall rise to plenitude. Hence, these recalcitrant spirits will continue their journey towards their improvement in other worlds, where they will find the conditions to integrate themselves in the societies therein. As our world gradually becomes one of regeneration, more and more of these ignorant brothers and sisters will leave us to inhabit other orbs in the great mansion of Our Father. They are leaving us through the death of their physical bodies and their future reincarnations on other orbs. This book discusses the transition period and the repercussions of our actions and thoughts for this process. It also shows the importance of mutual understanding and integration of different sectors of the human population, especially when facing tragedies such as the Indian Ocean tsunami of 2004, when so many had their journey in the physical realm cut short. Why so many deaths in a single event? Why did it happen? These and many other questions populate our minds and leave us in shock and perturbation. This extraordinary book comes to our rescue at times like this, showing to all of us the important of our working together as humankind, no longer as a nationality or a single religious belief. The book reiterates our desire to be as one family, to see the other as a fellow being, and to place rational faith in the divine works, whose intention is always our progress towards the Creator of all things. Let your heart be filled with the touching scenes narrated in this book, which were extracted from real rescue situations. And perchance our sensitivities will improve beyond the need of having tragedies or the temporary separation of recalcitrant spirits in order to move us to work as brothers and sisters in a world that was created for one large family.",
+    "blurb": "All rooms in the great mansion of Our Father are inhabited and they are progressing towards the plenitude that awaits all of us, His children. But since the Creator is constantly at work, the many orbs in the universe are not all at the sam"
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/prelude-to-divine-kingdom",
+    "title": "Prelude to the Divine Kingdom",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "prelude-to-divine-kingdom",
+    "cover": "/uploads/2020/01/prelude-to-divine-kingdom.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "Prelude to the Divine Kingdom is a remarkable book dictated by the spirit Amélia Rodrigues to the medium Divaldo Pereira Franco. Woven together by the brilliant prose of the celebrated discarnate Brazilian poet and writer, this book is a true poem to Jesus Christ and His gospel. The evangelical narratives reappear in a new language, updated and timely, teaching the word of life to today’s suffering humankind. With excellent \"bits of history\" that situate Jesus’ impressive message in His lifetime, Amélia Rodrigues also delves into the origins of the Gospel, presenting a map of ancient Palestine to allow readers to situate themselves easily as they follow those unforgettable stories. This is a book that should be a staple in spiritist libraries and enjoyed by a large number of Spiritists everywhere.",
+    "blurb": "Prelude to the Divine Kingdom is a remarkable book dictated by the spirit Amélia Rodrigues to the medium Divaldo Pereira Franco. Woven together by the brilliant prose of the celebrated discarnate Brazilian poet and writer, this book is a tr"
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/transform-your-health-with-inner-peace",
+    "title": "Transform Your Health with Inner Peace",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "transform-your-health-with-inner-peace",
+    "cover": "/uploads/2020/01/transform-your-health-with-inner-peace.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "Peace is all we need! This book is the result of true efforts to create a new climate of awareness on health fostered by inner peace. At the 10 th anniversary of the Spiritist Society of Baltimore, Divaldo Franco launched the first Peace and You movement in the United States, which was held in Baltimore, MD, on October 19, 2008. The main theme of the event was \"Transform Your Health with Inner Peace.\" Divaldo Franco hosted the event in the presence of the following guest speakers: renowned scientist Gary E. Schwartz, Ph. D., acclaimed writer and broadcaster Zohara Meyerhoff Hieronimus; New Thought spiritual leader Rev. Dr. Jeffrey Proctor, and the Brazilian Air Force General Brigadier and Counselor of the Brazilian Spiritist Federation Jorge Godinho Nery. Each one of the speakers received the Peace and You Award from the Ambassador of Peace, Divaldo Franco, for their efforts to movements of goodness and peace in their fields of activity. May the amazing words and actions of these peacemaking speakers uplift you and help you nourish the peacemaker within.",
+    "blurb": "Peace is all we need! This book is the result of true efforts to create a new climate of awareness on health fostered by inner peace. At the 10 th anniversary of the Spiritist Society of Baltimore, Divaldo Franco launched the first Peace an"
   },
   {
     "path": "/catalog/books/divaldo-franco/other-spiritual-authors",
@@ -925,96 +1006,6 @@
         "isBook": false
       }
     ]
-  },
-  {
-    "path": "/catalog/books/divaldo-franco/planetary-transition",
-    "title": "Planetary Transition",
-    "type": "book",
-    "author": "divaldo-franco",
-    "authorName": "Divaldo Franco",
-    "slug": "planetary-transition",
-    "cover": "/uploads/2020/01/planetary-transition.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "All rooms in the great mansion of Our Father are inhabited and they are progressing towards the plenitude that awaits all of us, His children. But since the Creator is constantly at work, the many orbs in the universe are not all at the same level of moral and intellectual development. And so it is with planet Earth, which is now moving through a transitional phase by means of which it will cease to be a world of trials and expiation to become one of regeneration, where good will prevail over evil. It is important for us human beings to understand that this transition is not a physical one, but a consequence of our own moral and intellectual progress. Neither is the transition to be effected overnight or within a few days; rather, it has already begun and it is occurring all around us in a gradual and ever-improving manner. This change is the very collective desire for improvement in every sector of human society and our lives. As we, the spirits who inhabit this planet, improve ourselves, we contribute to pull this event ever so forward, making it unstoppable. There are some spirits, however, who do not understand this progressive movement and act against it out of ignorance. As the world and life progress, these spirits, be they incarnate or discarnate beings, become more recalcitrant and defiant to everything that is happening around them, and in this behaviour they set themselves apart so much from the mainstream progress that they perceive the new world being built today as a threatening environment for them. Our Father, however, is all mercy and understanding. It is a divine decree that all His children shall rise to plenitude. Hence, these recalcitrant spirits will continue their journey towards their improvement in other worlds, where they will find the conditions to integrate themselves in the societies therein. As our world gradually becomes one of regeneration, more and more of these ignorant brothers and sisters will leave us to inhabit other orbs in the great mansion of Our Father. They are leaving us through the death of their physical bodies and their future reincarnations on other orbs. This book discusses the transition period and the repercussions of our actions and thoughts for this process. It also shows the importance of mutual understanding and integration of different sectors of the human population, especially when facing tragedies such as the Indian Ocean tsunami of 2004, when so many had their journey in the physical realm cut short. Why so many deaths in a single event? Why did it happen? These and many other questions populate our minds and leave us in shock and perturbation. This extraordinary book comes to our rescue at times like this, showing to all of us the important of our working together as humankind, no longer as a nationality or a single religious belief. The book reiterates our desire to be as one family, to see the other as a fellow being, and to place rational faith in the divine works, whose intention is always our progress towards the Creator of all things. Let your heart be filled with the touching scenes narrated in this book, which were extracted from real rescue situations. And perchance our sensitivities will improve beyond the need of having tragedies or the temporary separation of recalcitrant spirits in order to move us to work as brothers and sisters in a world that was created for one large family.",
-    "blurb": "All rooms in the great mansion of Our Father are inhabited and they are progressing towards the plenitude that awaits all of us, His children. But since the Creator is constantly at work, the many orbs in the universe are not all at the sam"
-  },
-  {
-    "path": "/catalog/books/divaldo-franco/prelude-to-divine-kingdom",
-    "title": "Prelude to the Divine Kingdom",
-    "type": "book",
-    "author": "divaldo-franco",
-    "authorName": "Divaldo Franco",
-    "slug": "prelude-to-divine-kingdom",
-    "cover": "/uploads/2020/01/prelude-to-divine-kingdom.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "Prelude to the Divine Kingdom is a remarkable book dictated by the spirit Amélia Rodrigues to the medium Divaldo Pereira Franco. Woven together by the brilliant prose of the celebrated discarnate Brazilian poet and writer, this book is a true poem to Jesus Christ and His gospel. The evangelical narratives reappear in a new language, updated and timely, teaching the word of life to today’s suffering humankind. With excellent \"bits of history\" that situate Jesus’ impressive message in His lifetime, Amélia Rodrigues also delves into the origins of the Gospel, presenting a map of ancient Palestine to allow readers to situate themselves easily as they follow those unforgettable stories. This is a book that should be a staple in spiritist libraries and enjoyed by a large number of Spiritists everywhere.",
-    "blurb": "Prelude to the Divine Kingdom is a remarkable book dictated by the spirit Amélia Rodrigues to the medium Divaldo Pereira Franco. Woven together by the brilliant prose of the celebrated discarnate Brazilian poet and writer, this book is a tr"
-  },
-  {
-    "path": "/catalog/books/divaldo-franco/psychology-of-gratitude",
-    "title": "The Psychology of Gratitude",
-    "type": "book",
-    "author": "divaldo-franco",
-    "authorName": "Divaldo Franco",
-    "slug": "psychology-of-gratitude",
-    "cover": "/uploads/2020/01/psychology-of-gratitude.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "The psychology of gratitude becomes a competent instrument along the Self-ego axis, and it should be exercised at all moments of the corporeal existence as a secure guide in fulfilling its reality. Daughter of psychological maturity, those who cultivate gratitude are enriched with peace and happiness. In these days of violence and cruelty, as well as indifference for the relevant moral and emotional values, gratitude has a significant role regarding the integral health of human beings. This magnificent work presents a profound and encompassing analysis of gratitude whilst assisting the modern men and women in the great enterprise of self-realization.",
-    "blurb": "The psychology of gratitude becomes a competent instrument along the Self-ego axis, and it should be exercised at all moments of the corporeal existence as a secure guide in fulfilling its reality. Daughter of psychological maturity, those"
-  },
-  {
-    "path": "/catalog/books/divaldo-franco/recipes-for-peace",
-    "title": "Recipes for Peace",
-    "type": "book",
-    "author": "divaldo-franco",
-    "authorName": "Divaldo Franco",
-    "slug": "recipes-for-peace",
-    "cover": "/uploads/2020/01/recipes-for-peace.png",
-    "price": "US$10.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "10.00",
-    "synopsis": "\"We have gathered in this book some pages inspired by spiritual teachings, which we offer to the reader as recipes for peace in various situations, be it in sickness or in health, when facing conflicts or difficulties \"",
-    "blurb": "\"We have gathered in this book some pages inspired by spiritual teachings, which we offer to the reader as recipes for peace in various situations, be it in sickness or in health, when facing conflicts or difficulties \""
-  },
-  {
-    "path": "/catalog/books/divaldo-franco/self-discovery-an-inner-search",
-    "title": "Self-Discovery: an Inner Search",
-    "type": "book",
-    "author": "divaldo-franco",
-    "authorName": "Divaldo Franco",
-    "slug": "self-discovery-an-inner-search",
-    "cover": "/uploads/2020/01/self-discovery-an-inner-search.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "The psychology of gratitude becomes a competent instrument along the Self-ego axis, and it should be exercised at all moments of the corporeal existence as a secure guide in fulfilling its reality. Daughter of psychological maturity, those who cultivate gratitude are enriched with peace and happiness. In these days of violence and cruelty, as well as indifference for the relevant moral and emotional values, gratitude has a significant role regarding the integral health of human beings. This magnificent work presents a profound and encompassing analysis of gratitude whilst assisting the modern men and women in the great enterprise of self-realization.",
-    "blurb": "The psychology of gratitude becomes a competent instrument along the Self-ego axis, and it should be exercised at all moments of the corporeal existence as a secure guide in fulfilling its reality. Daughter of psychological maturity, those"
-  },
-  {
-    "path": "/catalog/books/divaldo-franco/transform-your-health-with-inner-peace",
-    "title": "Transform Your Health with Inner Peace",
-    "type": "book",
-    "author": "divaldo-franco",
-    "authorName": "Divaldo Franco",
-    "slug": "transform-your-health-with-inner-peace",
-    "cover": "/uploads/2020/01/transform-your-health-with-inner-peace.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "Peace is all we need! This book is the result of true efforts to create a new climate of awareness on health fostered by inner peace. At the 10 th anniversary of the Spiritist Society of Baltimore, Divaldo Franco launched the first Peace and You movement in the United States, which was held in Baltimore, MD, on October 19, 2008. The main theme of the event was \"Transform Your Health with Inner Peace.\" Divaldo Franco hosted the event in the presence of the following guest speakers: renowned scientist Gary E. Schwartz, Ph. D., acclaimed writer and broadcaster Zohara Meyerhoff Hieronimus; New Thought spiritual leader Rev. Dr. Jeffrey Proctor, and the Brazilian Air Force General Brigadier and Counselor of the Brazilian Spiritist Federation Jorge Godinho Nery. Each one of the speakers received the Peace and You Award from the Ambassador of Peace, Divaldo Franco, for their efforts to movements of goodness and peace in their fields of activity. May the amazing words and actions of these peacemaking speakers uplift you and help you nourish the peacemaker within.",
-    "blurb": "Peace is all we need! This book is the result of true efforts to create a new climate of awareness on health fostered by inner peace. At the 10 th anniversary of the Spiritist Society of Baltimore, Divaldo Franco launched the first Peace an"
   },
               {
     "path": "/catalog/books/francisco-xavier",
