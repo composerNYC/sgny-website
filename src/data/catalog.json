@@ -2479,37 +2479,7 @@
     "synopsis": "Many themes in Allan Kardec’s The Spirits’ Book are adequate and understandable to children and teenagers. However, other themes may seem too complex and out of reach, or even uninteresting to such young minds. In The Little Spirits’ Book, specific questions and answers were selected from The Spirits’ Book that are more in tune with the interest and the universe of children and teenagers. The language was modernized and adapted, making it easier for the young and/or novice public to understand, while staying faithful to everything that Allan Kardec and the spirits meant to transmit. The main goal of The Little Spirits’ Book is to serve as a stimulus so that young and novice readers may fully engage the essence of the wonderful book that is Allan Kardec’s The Spirits’ Book later in life or when maturity permits.",
     "blurb": "Many themes in Allan Kardec’s The Spirits’ Book are adequate and understandable to children and teenagers. However, other themes may seem too complex and out of reach, or even uninteresting to such young minds. In The Little Spirits’ Book,"
   },
-  {
-    "path": "/catalog/books/leon-denis/after-death",
-    "title": "After Death",
-    "type": "book",
-    "author": "leon-denis",
-    "authorName": "Léon Denis",
-    "slug": "after-death",
-    "cover": "/uploads/2020/01/after-death.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "Among the great apostles of Spiritism, the presence of Léon Denis deserves a very distinctive place, particularly in view of having been the logical follower of llan Kardec’s work. Despite his intense devotion to the study of Spiritism in its three aspects—science, philosophy, and religion—he dedicated mostly to its philosophical aspect. Among his works, After Death is one of the most important books of classic Spiritist literature. In his poetic prose, a style that we find in his books, Léon Denis presents a scientific and rational solution regarding the problems of life and death, and of the nature and destiny of the human ego in its successive lives. This book is an able and luminous account of the phenomena and doctrines included under the term \"Spiritualism,\" their relation to modern science and their influence on conduct. It is therefore not surprising that After Death has been translated into several languages and that it continues to elate people all over the world.",
-    "blurb": "Among the great apostles of Spiritism, the presence of Léon Denis deserves a very distinctive place, particularly in view of having been the logical follower of llan Kardec’s work. Despite his intense devotion to the study of Spiritism in i"
-  },
-  {
-    "path": "/catalog/books/leon-denis/big-enigma-god-and-universe",
-    "title": "The Big Enigma",
-    "type": "book",
-    "author": "leon-denis",
-    "authorName": "Léon Denis",
-    "slug": "big-enigma-god-and-universe",
-    "cover": "/uploads/2020/01/big-enigma-god-and-universe.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "Perhaps the most personal and metaphysical of Léon Denis’ many books, The Big Enigma often reaches sublimity in unforgettable passages that are definitely not from this world. Deeply moving and quite formidable thoughts succeed one another endlessly, leaving the reader in awe as a result of the author’s absolute certainty and conviction. There is a ring of sterling truth in all the philosophical and spiritual teachings of this brilliant thinker, who matured over the years throughout his long and difficult life. This is an inspired book, which can nurture the reader’s mind and soul with genuine greatness and knowledge: in essence, a life changer. Denis pays tribute to his Celtic and Gallic ancestors, letting his text flow with abandon, thus showing that perhaps the biggest enigma of all was actually himself, as both a thinker and a writer, in the light of Spiritism.",
-    "blurb": "Perhaps the most personal and metaphysical of Léon Denis’ many books, The Big Enigma often reaches sublimity in unforgettable passages that are definitely not from this world. Deeply moving and quite formidable thoughts succeed one another"
-  },
-  {
+    {
     "path": "/catalog/books/leon-denis",
     "title": "Léon Denis",
     "type": "listing",
@@ -2526,24 +2496,10 @@
         "isBook": true
       },
       {
-        "href": "/catalog/books/leon-denis/big-enigma-god-and-universe",
-        "text": "The Big Enigma",
-        "cover": "/uploads/2020/01/big-enigma-god-and-universe.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
         "href": "/catalog/books/leon-denis/into-the-unseen",
         "text": "Into the Unseen",
         "cover": "/uploads/2020/01/into-the-unseen.png",
         "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/leon-denis/joan-of-arc-medium",
-        "text": "Joan of Arc Medium",
-        "cover": "/uploads/2026/07/joan-of-arc-medium-201x300.jpg",
-        "price": "US$13.99",
         "isBook": true
       },
       {
@@ -2559,8 +2515,37 @@
         "cover": "/uploads/2020/01/spiritism-in-arts.png",
         "price": "US$12.00",
         "isBook": true
+      },
+      {
+        "href": "/catalog/books/leon-denis/joan-of-arc-medium",
+        "text": "Joan of Arc Medium",
+        "cover": "/uploads/2026/07/joan-of-arc-medium-201x300.jpg",
+        "price": "US$13.99",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/leon-denis/big-enigma-god-and-universe",
+        "text": "The Big Enigma",
+        "cover": "/uploads/2020/01/big-enigma-god-and-universe.png",
+        "price": "US$15.00",
+        "isBook": true
       }
     ]
+  },
+  {
+    "path": "/catalog/books/leon-denis/after-death",
+    "title": "After Death",
+    "type": "book",
+    "author": "leon-denis",
+    "authorName": "Léon Denis",
+    "slug": "after-death",
+    "cover": "/uploads/2020/01/after-death.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "Among the great apostles of Spiritism, the presence of Léon Denis deserves a very distinctive place, particularly in view of having been the logical follower of llan Kardec’s work. Despite his intense devotion to the study of Spiritism in its three aspects—science, philosophy, and religion—he dedicated mostly to its philosophical aspect. Among his works, After Death is one of the most important books of classic Spiritist literature. In his poetic prose, a style that we find in his books, Léon Denis presents a scientific and rational solution regarding the problems of life and death, and of the nature and destiny of the human ego in its successive lives. This book is an able and luminous account of the phenomena and doctrines included under the term \"Spiritualism,\" their relation to modern science and their influence on conduct. It is therefore not surprising that After Death has been translated into several languages and that it continues to elate people all over the world.",
+    "blurb": "Among the great apostles of Spiritism, the presence of Léon Denis deserves a very distinctive place, particularly in view of having been the logical follower of llan Kardec’s work. Despite his intense devotion to the study of Spiritism in i"
   },
   {
     "path": "/catalog/books/leon-denis/into-the-unseen",
@@ -2576,21 +2561,6 @@
     "amount": "15.00",
     "synopsis": "For the first time in English, this legendary book tells it all about the spiritual world and its manifestations. From Europe to the UK, and all over the US, not forgetting places as unusual as Brazil, and from the distant past of humanity, \"Into the Unseen\" does justice to them all, while revealing Léon Denis’ very personal take on Spiritism and New Spiritualism in general. The book produces a fascinating narrative, and it is backed by a plethora of extraordinary cases thoroughly researched by the author. Léon Denis deserves a distinctive place among the great apostles of Spiritism, particularly as the logical follower of Allan Kardec. Although he approached all three components of Spiritism—science, philosophy, and religion—he devoted most of his works to the philosophical aspects of the Spiritist Doctrine.",
     "blurb": "For the first time in English, this legendary book tells it all about the spiritual world and its manifestations. From Europe to the UK, and all over the US, not forgetting places as unusual as Brazil, and from the distant past of humanity,"
-  },
-  {
-    "path": "/catalog/books/leon-denis/joan-of-arc-medium",
-    "title": "Joan of Arc Medium",
-    "type": "book",
-    "author": "leon-denis",
-    "authorName": "Léon Denis",
-    "slug": "joan-of-arc-medium",
-    "cover": "/uploads/2026/07/joan-of-arc-medium-201x300.jpg",
-    "price": "US$13.99",
-    "format": "Paperback",
-    "forSale": true,
-    "amount": "13.99",
-    "synopsis": "Born among the humble, Joan endured injustice, betrayal, and an early martyrdom—yet her light still shines across the centuries. Warrior and peacemaker, visionary and saint, she united hearts and transformed nations. Canonized in 1920 before thousands in Rome, Joan continues to inspire believers and seekers alike. Admirers such as Alexandre Dumas, Louis Pasteur, and Sir Arthur Conan Doyle recognized in her the mark of divine mission—the spark that ended a century of war and awakened faith in countless souls. Her love, her charity, her unshakable faith—these remain her eternal legacy. Publisher: United States Spiritist Council (USSC). Publication Date: December 12, 2025. Language: English. Number of pages: 340. ISBN(10): 1948109476. ISBN(13): 978-1948109475.",
-    "blurb": "Born among the humble, Joan endured injustice, betrayal, and an early martyrdom—yet her light still shines across the centuries. Warrior and peacemaker, visionary and saint, she united hearts and transformed nations. Canonized in 1920 before t"
   },
   {
     "path": "/catalog/books/leon-denis/problem-of-life-and-destiny",
@@ -2621,6 +2591,36 @@
     "amount": "12.00",
     "synopsis": "When Léon Denis decided to write a general study about the arts with an emphasis on music, no one expected he would contact two preeminent artists now living in the spiritual world. The resulting lessons provide an invaluable insight on how music is composed and executed in the spheres of the afterlife. Not only that, he would addressed how architecture, painting, sculpture, and literature on Earth reflect their spiritual counterparts, making this book truly unique and informative, which captures the reader’s attention from the start. The book culminates in a series of intensely revealing statements by the spirit of French composer Jules Massenet. Never before, and since, has this subject been so thoroughly investigated as it is presented here.",
     "blurb": "When Léon Denis decided to write a general study about the arts with an emphasis on music, no one expected he would contact two preeminent artists now living in the spiritual world. The resulting lessons provide an invaluable insight on how"
+  },
+  {
+    "path": "/catalog/books/leon-denis/joan-of-arc-medium",
+    "title": "Joan of Arc Medium",
+    "type": "book",
+    "author": "leon-denis",
+    "authorName": "Léon Denis",
+    "slug": "joan-of-arc-medium",
+    "cover": "/uploads/2026/07/joan-of-arc-medium-201x300.jpg",
+    "price": "US$13.99",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "13.99",
+    "synopsis": "Born among the humble, Joan endured injustice, betrayal, and an early martyrdom—yet her light still shines across the centuries. Warrior and peacemaker, visionary and saint, she united hearts and transformed nations. Canonized in 1920 before thousands in Rome, Joan continues to inspire believers and seekers alike. Admirers such as Alexandre Dumas, Louis Pasteur, and Sir Arthur Conan Doyle recognized in her the mark of divine mission—the spark that ended a century of war and awakened faith in countless souls. Her love, her charity, her unshakable faith—these remain her eternal legacy. Publisher: United States Spiritist Council (USSC). Publication Date: December 12, 2025. Language: English. Number of pages: 340. ISBN(10): 1948109476. ISBN(13): 978-1948109475.",
+    "blurb": "Born among the humble, Joan endured injustice, betrayal, and an early martyrdom—yet her light still shines across the centuries. Warrior and peacemaker, visionary and saint, she united hearts and transformed nations. Canonized in 1920 before t"
+  },
+  {
+    "path": "/catalog/books/leon-denis/big-enigma-god-and-universe",
+    "title": "The Big Enigma",
+    "type": "book",
+    "author": "leon-denis",
+    "authorName": "Léon Denis",
+    "slug": "big-enigma-god-and-universe",
+    "cover": "/uploads/2020/01/big-enigma-god-and-universe.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "Perhaps the most personal and metaphysical of Léon Denis’ many books, The Big Enigma often reaches sublimity in unforgettable passages that are definitely not from this world. Deeply moving and quite formidable thoughts succeed one another endlessly, leaving the reader in awe as a result of the author’s absolute certainty and conviction. There is a ring of sterling truth in all the philosophical and spiritual teachings of this brilliant thinker, who matured over the years throughout his long and difficult life. This is an inspired book, which can nurture the reader’s mind and soul with genuine greatness and knowledge: in essence, a life changer. Denis pays tribute to his Celtic and Gallic ancestors, letting his text flow with abandon, thus showing that perhaps the biggest enigma of all was actually himself, as both a thinker and a writer, in the light of Spiritism.",
+    "blurb": "Perhaps the most personal and metaphysical of Léon Denis’ many books, The Big Enigma often reaches sublimity in unforgettable passages that are definitely not from this world. Deeply moving and quite formidable thoughts succeed one another"
   },
   {
     "path": "/catalog/books/luis-hu-rivas/fox-sisters",
