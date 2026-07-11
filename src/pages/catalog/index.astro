@@ -17,6 +17,10 @@ const total = books.length;
       <h1>Book Catalog</h1>
       <p>{total} Spiritist titles in English, distributed at cost. Browse by author below — or
         browse our free Virtual Library for the complete works of Chico Xavier and Allan Kardec.</p>
+      <div class="catalog-search">
+        <span class="catalog-search-icon" aria-hidden="true">🔍</span>
+        <input type="search" id="book-search" placeholder="Search books by title or author…" aria-label="Search books by title or author" autocomplete="off" />
+      </div>
       <div class="actions">
         <a class="btn btn-primary" href="/virtual-library">Browse the free Virtual Library →</a>
       </div>
@@ -29,15 +33,17 @@ const total = books.length;
         {authors.map((a) => <a href={`#${a.slug}`} class="btn btn-outline" style="padding:.3rem .7rem;font-size:.82rem">{a.name} ({a.count})</a>)}
       </nav>
 
+      <p id="book-search-empty" class="muted" style="display:none;margin-top:2rem">No books match your search.</p>
+
       {groups.map((g) => (
-        <div id={g.slug} style="margin-top:3rem;scroll-margin-top:5rem">
+        <div id={g.slug} data-author-group style="margin-top:3rem;scroll-margin-top:5rem">
           <h2 style="border-bottom:1px solid var(--line);padding-bottom:.5rem;margin-bottom:1.5rem">{g.name}</h2>
           <div class="book-grid">
             {g.books.map((b) => (
               b.type === 'heading' ? (
                 <h3 style="grid-column:1/-1;font-size:1.05rem;color:var(--brand-dark);margin:1rem 0 -.25rem">{b.text}</h3>
               ) : (
-                <a class="book" href={b.path}>
+                <a class="book" href={b.path} data-search={`${b.title} ${g.name}`.toLowerCase()}>
                   <div class="cover">{b.cover && <img src={b.cover} alt={`Cover of ${b.title}`} loading="lazy" />}</div>
                   <div class="title">{b.title}</div>
                   {b.price ? <div class="price">{b.price}</div> : <div class="by">View details</div>}
@@ -49,4 +55,56 @@ const total = books.length;
       ))}
     </div>
   </section>
+
+  <script>
+    const input = document.getElementById('book-search') as HTMLInputElement | null;
+    const emptyMsg = document.getElementById('book-search-empty');
+    const groupDivs = Array.from(document.querySelectorAll<HTMLElement>('[data-author-group]'));
+
+    input?.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      let anyVisibleOverall = false;
+
+      groupDivs.forEach((group) => {
+        const grid = group.querySelector('.book-grid');
+        if (!grid) return;
+        const children = Array.from(grid.children) as HTMLElement[];
+        let groupHasVisible = false;
+
+        children.forEach((child, i) => {
+          if (child.tagName === 'A') {
+            const match = !q || (child.dataset.search ?? '').includes(q);
+            child.style.display = match ? '' : 'none';
+            if (match) groupHasVisible = true;
+          }
+        });
+
+        children.forEach((child, i) => {
+          if (child.tagName === 'H3') {
+            let hasVisible = false;
+            for (let j = i + 1; j < children.length; j++) {
+              if (children[j].tagName === 'H3') break;
+              if (children[j].style.display !== 'none') { hasVisible = true; break; }
+            }
+            child.style.display = (!q || hasVisible) ? '' : 'none';
+          }
+        });
+
+        group.style.display = (!q || groupHasVisible) ? '' : 'none';
+        if (groupHasVisible || !q) anyVisibleOverall = true;
+      });
+
+      if (emptyMsg) emptyMsg.style.display = (q && !anyVisibleOverall) ? '' : 'none';
+    });
+  </script>
+
+  <style>
+    .catalog-search { position: relative; max-width: 420px; margin: 1.25rem 0; }
+    .catalog-search-icon { position: absolute; left: .9rem; top: 50%; transform: translateY(-50%);
+      font-size: 1rem; opacity: .6; pointer-events: none; }
+    .catalog-search input { width: 100%; padding: .7rem 1rem .7rem 2.4rem; border-radius: 999px;
+      border: 1px solid var(--line); font: inherit; font-size: .95rem; background: #fff; color: var(--ink); }
+    .catalog-search input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .catalog-search input::-webkit-search-cancel-button { cursor: pointer; }
+  </style>
 </Base>
