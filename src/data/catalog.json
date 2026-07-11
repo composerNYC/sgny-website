@@ -627,6 +627,13 @@
         "isBook": true
       },
       {
+        "href": "/catalog/books/divaldo-franco/on-the-way-to-a-world-of-regeneration",
+        "text": "On the Way to a World of Regeneration",
+        "cover": "/uploads/2026/07/on-the-way-to-a-world-of-regeneration-246x300.jpg",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
         "href": "/catalog/books/divaldo-franco/planetary-transition",
         "text": "Planetary Transition",
         "cover": "/uploads/2020/01/planetary-transition.png",
@@ -894,6 +901,21 @@
     "forSale": false,
     "synopsis": "“I approached her and noticed she felt my presence I touched her and she shivered I grabbed her arms and they became my arms. I got a little dizzy and she swayed. I thought and she responded. I lifted her and we walked together Then, through her I slapped his face, crazy with hatred, overjoyed to find her insane with me, the two of us acting as one. And we are still one, and we’re going to remain so.” This is, in his own words, how a discarnate spirit took possession of a high-society girl exactly on her fifteenth birthday party. The party breaks up, naturally, and the girl is committed to a mental hospital. Had she become insane of mad, according to the usual standards of behavior? Or was she possessed by an evil spirit? Should she be submitted to the orthodox medical routine for such cases, or else should she be exorcised? This book tells her story. Why she had become involved in the process, exposing herself to her plight and what a dedicated group of both incarnate and discarnate people did to release not only her, but also those who became entangled with her in an ugly story way back in a previous incarnation.",
     "blurb": "“I approached her and noticed she felt my presence I touched her and she shivered I grabbed her arms and they became my arms. I got a little dizzy and she swayed. I thought and she responded. I lifted her and we walked together Then, throug"
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/on-the-way-to-a-world-of-regeneration",
+    "title": "On the Way to a World of Regeneration",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "on-the-way-to-a-world-of-regeneration",
+    "cover": "/uploads/2026/07/on-the-way-to-a-world-of-regeneration-246x300.jpg",
+    "price": "US$20.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "20.00",
+    "synopsis": "This book describes a period of major global transformation, presenting the concept that tragic events, including pandemics, represent the fragility of the human being on the pedestal of its illusions. Narrated by the spirit Manoel Philomeno de Miranda, it follows the journey and tasks undertaken by dozens of groups of Spirit benefactors, under the command of Spirit Guide Ismael, as they prepare the New Age on Earth. The work suggests humanity is transitioning from a world of trials and expiations to a new world of regeneration, with some souls undergoing spiritual convalescence in the afterlife during this transition period.",
+    "blurb": "This book describes a period of major global transformation, presenting the concept that tragic events, including pandemics, represent the fragility of the human being on the pedestal of its illusions. Narrated by the spirit Manoel Philomeno"
   },
   {
     "path": "/catalog/books/divaldo-franco/planetary-transition",
