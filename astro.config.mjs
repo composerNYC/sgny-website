@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 // NOTE: the prayer submit endpoint + private prayer book are temporarily set
 // aside; when re-added they need a host that runs server code (e.g. Netlify).
 export default defineConfig({
-  site: 'https://www.sgny.org',
+  site: 'https://sgny.org',
   output: 'static',
   integrations: [
     pagefind(),
