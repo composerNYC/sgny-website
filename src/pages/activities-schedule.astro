@@ -6,6 +6,12 @@ const gridMode = { 'in-person': 'In person', online: 'Online', hybrid: 'Hybrid' 
 // plain text. They are decoded in-browser only when a visitor opens a session.
 const enc = (s) => Buffer.from(String(s), 'utf8').toString('base64');
 const zoomB64 = { id: enc(zoom.id), password: enc(zoom.password), phone: enc(zoom.phone), url: enc(zoom.url) };
+// "Nth Sunday only" tags (e.g. "1st Sunday only") restrict a session to that specific
+// week of the month; encoded as data-restrict="sunday-N" and interpreted client-side.
+const restrictOf = (s) => {
+  const m = s.tags.join(' ').match(/(\d)(?:st|nd|rd|th)\s+sunday/i);
+  return m ? `sunday-${m[1]}` : undefined;
+};
 ---
 <Base title="Schedule of Activities" description="The Spiritist Group of New York's regular weekly activities — study groups, prayer, fraternal assistance, and more. All free and open to everyone.">
   <section class="hero" style="padding-block:clamp(2.5rem,6vw,4.5rem)">
@@ -33,7 +39,7 @@ const zoomB64 = { id: enc(zoom.id), password: enc(zoom.password), phone: enc(zoo
                 <li>
                   <a class="sess" href={`/activities-schedule/${s.slug}`} data-slug={s.slug}
                      data-day={d.day} data-time={s.time}
-                     data-restrict={s.tags.some((t) => /4th\s+sunday/i.test(t)) ? 'fourth-sunday' : undefined}>
+                     data-restrict={restrictOf(s)}>
                     <span class="t">{s.time}</span>
                     <span class="s">{s.name} <span class="arrow">→</span></span>
                     <span class="tags">
@@ -208,7 +214,8 @@ const zoomB64 = { id: enc(zoom.id), password: enc(zoom.password), phone: enc(zoo
       const todayDow = DOW[p.weekday];
       const nowMin = (+p.hour % 24) * 60 + (+p.minute);
       const Y = +p.year, M = +p.month, D = +p.day;
-      const isFourth = (dayOfMonth) => dayOfMonth >= 22 && dayOfMonth <= 28; // 4th occurrence of a weekday
+      // Nth occurrence of a weekday in the month, by day-of-month range (1st: 1-7, 2nd: 8-14, ...).
+      const isNth = (n, dayOfMonth) => dayOfMonth > (n - 1) * 7 && dayOfMonth <= n * 7;
 
       let best = null;
       for (const el of items) {
@@ -217,11 +224,13 @@ const zoomB64 = { id: enc(zoom.id), password: enc(zoom.password), phone: enc(zoo
         if (!t || sDow === undefined) continue;
         let daysAhead = (sDow - todayDow + 7) % 7;
         if (daysAhead === 0 && t.end <= nowMin) daysAhead = 7;
-        if (el.dataset.restrict === 'fourth-sunday') {
+        const restrictMatch = (el.dataset.restrict || '').match(/^sunday-(\d)$/);
+        if (restrictMatch) {
+          const n = +restrictMatch[1];
           let guard = 0;
           while (guard++ < 10) {
             const occ = new Date(Date.UTC(Y, M - 1, D + daysAhead));
-            if (isFourth(occ.getUTCDate())) break;
+            if (isNth(n, occ.getUTCDate())) break;
             daysAhead += 7;
           }
         }

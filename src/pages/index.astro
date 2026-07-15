@@ -3,6 +3,12 @@ import Base from '../layouts/Base.astro';
 import catalog from '../data/catalog.json';
 import { schedule } from '../data/activities.js';
 const modeLabel = { 'in-person': 'In person', online: 'Online', hybrid: 'Hybrid' };
+// "Nth Sunday only" tags (e.g. "1st Sunday only") restrict a session to that specific
+// week of the month; encoded as data-restrict="sunday-N" and interpreted client-side.
+const restrictOf = (s) => {
+  const m = s.tags.join(' ').match(/(\d)(?:st|nd|rd|th)\s+sunday/i);
+  return m ? `sunday-${m[1]}` : undefined;
+};
 const books = catalog.filter((b) => b.type === 'book' && b.cover);
 // Lead with Allan Kardec's core codification — the most recognizable Spiritist works.
 const preferred = [
@@ -47,7 +53,7 @@ const featured = [...preferred.map(bySlug).filter(Boolean),
                 <li>
                   <a class="sess" href={`/activities-schedule?open=${s.slug}`}
                      data-day={d.day} data-time={s.time}
-                     data-restrict={s.tags.some((t) => /4th\s+sunday/i.test(t)) ? 'fourth-sunday' : undefined}>
+                     data-restrict={restrictOf(s)}>
                     <span class="t">{s.time}</span>
                     <span class="s">{s.name} <span class="arrow">→</span></span>
                     <span class="tags">
@@ -190,7 +196,8 @@ const featured = [...preferred.map(bySlug).filter(Boolean),
       const todayDow = DOW[p.weekday];
       const nowMin = (+p.hour % 24) * 60 + (+p.minute);
       const Y = +p.year, M = +p.month, D = +p.day;
-      const isFourth = (dayOfMonth) => dayOfMonth >= 22 && dayOfMonth <= 28;
+      // Nth occurrence of a weekday in the month, by day-of-month range (1st: 1-7, 2nd: 8-14, ...).
+      const isNth = (n, dayOfMonth) => dayOfMonth > (n - 1) * 7 && dayOfMonth <= n * 7;
 
       let best = null;
       for (const el of items) {
@@ -199,11 +206,13 @@ const featured = [...preferred.map(bySlug).filter(Boolean),
         if (!t || sDow === undefined) continue;
         let daysAhead = (sDow - todayDow + 7) % 7;
         if (daysAhead === 0 && t.end <= nowMin) daysAhead = 7;
-        if (el.dataset.restrict === 'fourth-sunday') {
+        const restrictMatch = (el.dataset.restrict || '').match(/^sunday-(\d)$/);
+        if (restrictMatch) {
+          const n = +restrictMatch[1];
           let guard = 0;
           while (guard++ < 10) {
             const occ = new Date(Date.UTC(Y, M - 1, D + daysAhead));
-            if (isFourth(occ.getUTCDate())) break;
+            if (isNth(n, occ.getUTCDate())) break;
             daysAhead += 7;
           }
         }
