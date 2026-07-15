@@ -13,7 +13,11 @@ const decodeEntities = (s) => s
 // entry needed. Falls back to the last known list if the feed can't be reached.
 let channelVideos = fallbackVideos;
 try {
-  const res = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`);
+  const res = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
+    },
+  });
   if (res.ok) {
     const xml = await res.text();
     const parsed = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)]
@@ -26,10 +30,16 @@ try {
           : null;
       })
       .filter(Boolean);
-    if (parsed.length) channelVideos = parsed;
+    if (parsed.length) {
+      channelVideos = parsed;
+    } else {
+      console.error('[spiritist-videos] RSS fetch OK but no entries parsed from feed');
+    }
+  } else {
+    console.error(`[spiritist-videos] RSS fetch failed: HTTP ${res.status}`);
   }
-} catch {
-  // Network unavailable at build time (e.g. local dev without internet) — use the fallback list.
+} catch (err) {
+  console.error('[spiritist-videos] RSS fetch threw:', err instanceof Error ? err.message : err);
 }
 
 const fmtDate = (d) => d ? new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : '';
