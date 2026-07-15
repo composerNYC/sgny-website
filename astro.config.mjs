@@ -16,7 +16,8 @@ export default defineConfig({
         !page.includes('/bibliographies/') &&
         !page.includes('/catalog/videos') &&
         !page.includes('/catalog/books/list-by-title') &&
-        !page.includes('/catalog/books/sab-publications'),
+        !page.includes('/catalog/books/sab-publications') &&
+        !page.includes('/prayer-book'),
     }),
   ],
   build: { format: 'directory' },
