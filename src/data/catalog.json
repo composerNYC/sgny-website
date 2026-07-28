@@ -591,7 +591,7 @@
         "href": "/catalog/books/divaldo-franco/self-discovery-an-inner-search",
         "text": "Self-Discovery:an Inner Search",
         "cover": "/uploads/2020/01/self-discovery-an-inner-search.png",
-        "price": "US$15.00",
+        "price": "",
         "isBook": true
       },
       {
@@ -832,10 +832,10 @@
     "authorName": "Divaldo Franco",
     "slug": "self-discovery-an-inner-search",
     "cover": "/uploads/2020/01/self-discovery-an-inner-search.png",
-    "price": "US$15.00",
+    "price": "",
     "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
+    "forSale": false,
+    "amount": "",
     "synopsis": "The psychology of gratitude becomes a competent instrument along the Self-ego axis, and it should be exercised at all moments of the corporeal existence as a secure guide in fulfilling its reality. Daughter of psychological maturity, those who cultivate gratitude are enriched with peace and happiness. In these days of violence and cruelty, as well as indifference for the relevant moral and emotional values, gratitude has a significant role regarding the integral health of human beings. This magnificent work presents a profound and encompassing analysis of gratitude whilst assisting the modern men and women in the great enterprise of self-realization.",
     "blurb": "The psychology of gratitude becomes a competent instrument along the Self-ego axis, and it should be exercised at all moments of the corporeal existence as a secure guide in fulfilling its reality. Daughter of psychological maturity, those"
   },
