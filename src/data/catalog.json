@@ -496,7 +496,7 @@
     "synopsis": "This book is also available for purchase in digital format ( Kindle ). Overview",
     "blurb": "This book is also available for purchase in digital format ( Kindle ). Overview"
   },
-        {
+          {
     "path": "/catalog/books/divaldo-franco",
     "title": "Divaldo Franco",
     "type": "listing",
@@ -596,6 +596,38 @@
       },
       {
         "heading": true,
+        "text": "Manoel Philomeno de Miranda"
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/obsession",
+        "text": "Obsession",
+        "cover": "/uploads/2020/01/obsession.png",
+        "price": "",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/on-the-way-to-a-world-of-regeneration",
+        "text": "On the Way to a World of Regeneration",
+        "cover": "/uploads/2026/07/on-the-way-to-a-world-of-regeneration-246x300.jpg",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/planetary-transition",
+        "text": "Planetary Transition",
+        "cover": "/uploads/2020/01/planetary-transition.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "href": "/catalog/books/divaldo-franco/psychiatric-and-spirit-obsession-disorders",
+        "text": "Psychiatric and Spirit Obsession Disorders",
+        "cover": "/uploads/2026/07/psychiatric-and-spirit-obsession-disorders-246x300.jpg",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
+        "heading": true,
         "text": "Others"
       },
       {
@@ -617,27 +649,6 @@
         "text": "Guidelines for Safety",
         "cover": "/uploads/2020/01/guidelines-for-safety.png",
         "price": "",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/obsession",
-        "text": "Obsession",
-        "cover": "/uploads/2020/01/obsession.png",
-        "price": "",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/on-the-way-to-a-world-of-regeneration",
-        "text": "On the Way to a World of Regeneration",
-        "cover": "/uploads/2026/07/on-the-way-to-a-world-of-regeneration-246x300.jpg",
-        "price": "US$20.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/divaldo-franco/planetary-transition",
-        "text": "Planetary Transition",
-        "cover": "/uploads/2020/01/planetary-transition.png",
-        "price": "US$15.00",
         "isBook": true
       },
       {
@@ -842,6 +853,69 @@
   {
     "type": "heading",
     "author": "divaldo-franco",
+    "text": "Manoel Philomeno de Miranda"
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/obsession",
+    "title": "Obsession",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "obsession",
+    "cover": "/uploads/2020/01/obsession.png",
+    "format": "",
+    "forSale": false,
+    "synopsis": "“I approached her and noticed she felt my presence I touched her and she shivered I grabbed her arms and they became my arms. I got a little dizzy and she swayed. I thought and she responded. I lifted her and we walked together Then, through her I slapped his face, crazy with hatred, overjoyed to find her insane with me, the two of us acting as one. And we are still one, and we’re going to remain so.” This is, in his own words, how a discarnate spirit took possession of a high-society girl exactly on her fifteenth birthday party. The party breaks up, naturally, and the girl is committed to a mental hospital. Had she become insane of mad, according to the usual standards of behavior? Or was she possessed by an evil spirit? Should she be submitted to the orthodox medical routine for such cases, or else should she be exorcised? This book tells her story. Why she had become involved in the process, exposing herself to her plight and what a dedicated group of both incarnate and discarnate people did to release not only her, but also those who became entangled with her in an ugly story way back in a previous incarnation.",
+    "blurb": "“I approached her and noticed she felt my presence I touched her and she shivered I grabbed her arms and they became my arms. I got a little dizzy and she swayed. I thought and she responded. I lifted her and we walked together Then, throug"
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/on-the-way-to-a-world-of-regeneration",
+    "title": "On the Way to a World of Regeneration",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "on-the-way-to-a-world-of-regeneration",
+    "cover": "/uploads/2026/07/on-the-way-to-a-world-of-regeneration-246x300.jpg",
+    "price": "US$20.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "20.00",
+    "synopsis": "This book describes a period of major global transformation, presenting the concept that tragic events, including pandemics, represent the fragility of the human being on the pedestal of its illusions. Narrated by the spirit Manoel Philomeno de Miranda, it follows the journey and tasks undertaken by dozens of groups of Spirit benefactors, under the command of Spirit Guide Ismael, as they prepare the New Age on Earth. The work suggests humanity is transitioning from a world of trials and expiations to a new world of regeneration, with some souls undergoing spiritual convalescence in the afterlife during this transition period.",
+    "blurb": "This book describes a period of major global transformation, presenting the concept that tragic events, including pandemics, represent the fragility of the human being on the pedestal of its illusions. Narrated by the spirit Manoel Philomeno"
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/planetary-transition",
+    "title": "Planetary Transition",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "planetary-transition",
+    "cover": "/uploads/2020/01/planetary-transition.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "All rooms in the great mansion of Our Father are inhabited and they are progressing towards the plenitude that awaits all of us, His children. But since the Creator is constantly at work, the many orbs in the universe are not all at the same level of moral and intellectual development. And so it is with planet Earth, which is now moving through a transitional phase by means of which it will cease to be a world of trials and expiation to become one of regeneration, where good will prevail over evil. It is important for us human beings to understand that this transition is not a physical one, but a consequence of our own moral and intellectual progress. Neither is the transition to be effected overnight or within a few days; rather, it has already begun and it is occurring all around us in a gradual and ever-improving manner. This change is the very collective desire for improvement in every sector of human society and our lives. As we, the spirits who inhabit this planet, improve ourselves, we contribute to pull this event ever so forward, making it unstoppable. There are some spirits, however, who do not understand this progressive movement and act against it out of ignorance. As the world and life progress, these spirits, be they incarnate or discarnate beings, become more recalcitrant and defiant to everything that is happening around them, and in this behaviour they set themselves apart so much from the mainstream progress that they perceive the new world being built today as a threatening environment for them. Our Father, however, is all mercy and understanding. It is a divine decree that all His children shall rise to plenitude. Hence, these recalcitrant spirits will continue their journey towards their improvement in other worlds, where they will find the conditions to integrate themselves in the societies therein. As our world gradually becomes one of regeneration, more and more of these ignorant brothers and sisters will leave us to inhabit other orbs in the great mansion of Our Father. They are leaving us through the death of their physical bodies and their future reincarnations on other orbs. This book discusses the transition period and the repercussions of our actions and thoughts for this process. It also shows the importance of mutual understanding and integration of different sectors of the human population, especially when facing tragedies such as the Indian Ocean tsunami of 2004, when so many had their journey in the physical realm cut short. Why so many deaths in a single event? Why did it happen? These and many other questions populate our minds and leave us in shock and perturbation. This extraordinary book comes to our rescue at times like this, showing to all of us the important of our working together as humankind, no longer as a nationality or a single religious belief. The book reiterates our desire to be as one family, to see the other as a fellow being, and to place rational faith in the divine works, whose intention is always our progress towards the Creator of all things. Let your heart be filled with the touching scenes narrated in this book, which were extracted from real rescue situations. And perchance our sensitivities will improve beyond the need of having tragedies or the temporary separation of recalcitrant spirits in order to move us to work as brothers and sisters in a world that was created for one large family.",
+    "blurb": "All rooms in the great mansion of Our Father are inhabited and they are progressing towards the plenitude that awaits all of us, His children. But since the Creator is constantly at work, the many orbs in the universe are not all at the sam"
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/psychiatric-and-spirit-obsession-disorders",
+    "title": "Psychiatric and Spirit Obsession Disorders",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "psychiatric-and-spirit-obsession-disorders",
+    "cover": "/uploads/2026/07/psychiatric-and-spirit-obsession-disorders-246x300.jpg",
+    "price": "US$15.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "This work presents accounts from discarnate spiritual benefactors who establish specialized psychiatric treatment activities at a clinic. Narrated by the spirit Manoel Philomeno de Miranda, the text describes how high-order spirits assess and address various mental and behavioral disorders affecting hospitalized patients. Through interviews with spirit messengers, it explores multiple aspects of psychological ailments, offering detailed insights into their nature and treatment approaches.",
+    "blurb": "This work presents accounts from discarnate spiritual benefactors who establish specialized psychiatric treatment activities at a clinic. Narrated by the spirit Manoel Philomeno de Miranda, the text describes how high-order spirits assess an"
+  },
+  {
+    "type": "heading",
+    "author": "divaldo-franco",
     "text": "Others"
   },
   {
@@ -888,49 +962,6 @@
     "amount": "",
     "synopsis": "Profound and simple questions were important components of the formidable occasions of fortunate learning during the entire period of Jesus Christ’s Gospel. Therefore, when we see our brothers and sisters of earthly struggles meet to study in the Spiritist Movement, when they dedicate some of the study time to clear doubts in an honest and healthy way, we rejoice with the possibility that these questions and their respective answers may be documented for the elucidation of several points of the revered Spiritist Doctrine.",
     "blurb": "Profound and simple questions were important components of the formidable occasions of fortunate learning during the entire period of Jesus Christ’s Gospel. Therefore, when we see our brothers and sisters of earthly struggles meet to study"
-  },
-  {
-    "path": "/catalog/books/divaldo-franco/obsession",
-    "title": "Obsession",
-    "type": "book",
-    "author": "divaldo-franco",
-    "authorName": "Divaldo Franco",
-    "slug": "obsession",
-    "cover": "/uploads/2020/01/obsession.png",
-    "format": "",
-    "forSale": false,
-    "synopsis": "“I approached her and noticed she felt my presence I touched her and she shivered I grabbed her arms and they became my arms. I got a little dizzy and she swayed. I thought and she responded. I lifted her and we walked together Then, through her I slapped his face, crazy with hatred, overjoyed to find her insane with me, the two of us acting as one. And we are still one, and we’re going to remain so.” This is, in his own words, how a discarnate spirit took possession of a high-society girl exactly on her fifteenth birthday party. The party breaks up, naturally, and the girl is committed to a mental hospital. Had she become insane of mad, according to the usual standards of behavior? Or was she possessed by an evil spirit? Should she be submitted to the orthodox medical routine for such cases, or else should she be exorcised? This book tells her story. Why she had become involved in the process, exposing herself to her plight and what a dedicated group of both incarnate and discarnate people did to release not only her, but also those who became entangled with her in an ugly story way back in a previous incarnation.",
-    "blurb": "“I approached her and noticed she felt my presence I touched her and she shivered I grabbed her arms and they became my arms. I got a little dizzy and she swayed. I thought and she responded. I lifted her and we walked together Then, throug"
-  },
-  {
-    "path": "/catalog/books/divaldo-franco/on-the-way-to-a-world-of-regeneration",
-    "title": "On the Way to a World of Regeneration",
-    "type": "book",
-    "author": "divaldo-franco",
-    "authorName": "Divaldo Franco",
-    "slug": "on-the-way-to-a-world-of-regeneration",
-    "cover": "/uploads/2026/07/on-the-way-to-a-world-of-regeneration-246x300.jpg",
-    "price": "US$20.00",
-    "format": "Paperback",
-    "forSale": true,
-    "amount": "20.00",
-    "synopsis": "This book describes a period of major global transformation, presenting the concept that tragic events, including pandemics, represent the fragility of the human being on the pedestal of its illusions. Narrated by the spirit Manoel Philomeno de Miranda, it follows the journey and tasks undertaken by dozens of groups of Spirit benefactors, under the command of Spirit Guide Ismael, as they prepare the New Age on Earth. The work suggests humanity is transitioning from a world of trials and expiations to a new world of regeneration, with some souls undergoing spiritual convalescence in the afterlife during this transition period.",
-    "blurb": "This book describes a period of major global transformation, presenting the concept that tragic events, including pandemics, represent the fragility of the human being on the pedestal of its illusions. Narrated by the spirit Manoel Philomeno"
-  },
-  {
-    "path": "/catalog/books/divaldo-franco/planetary-transition",
-    "title": "Planetary Transition",
-    "type": "book",
-    "author": "divaldo-franco",
-    "authorName": "Divaldo Franco",
-    "slug": "planetary-transition",
-    "cover": "/uploads/2020/01/planetary-transition.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "All rooms in the great mansion of Our Father are inhabited and they are progressing towards the plenitude that awaits all of us, His children. But since the Creator is constantly at work, the many orbs in the universe are not all at the same level of moral and intellectual development. And so it is with planet Earth, which is now moving through a transitional phase by means of which it will cease to be a world of trials and expiation to become one of regeneration, where good will prevail over evil. It is important for us human beings to understand that this transition is not a physical one, but a consequence of our own moral and intellectual progress. Neither is the transition to be effected overnight or within a few days; rather, it has already begun and it is occurring all around us in a gradual and ever-improving manner. This change is the very collective desire for improvement in every sector of human society and our lives. As we, the spirits who inhabit this planet, improve ourselves, we contribute to pull this event ever so forward, making it unstoppable. There are some spirits, however, who do not understand this progressive movement and act against it out of ignorance. As the world and life progress, these spirits, be they incarnate or discarnate beings, become more recalcitrant and defiant to everything that is happening around them, and in this behaviour they set themselves apart so much from the mainstream progress that they perceive the new world being built today as a threatening environment for them. Our Father, however, is all mercy and understanding. It is a divine decree that all His children shall rise to plenitude. Hence, these recalcitrant spirits will continue their journey towards their improvement in other worlds, where they will find the conditions to integrate themselves in the societies therein. As our world gradually becomes one of regeneration, more and more of these ignorant brothers and sisters will leave us to inhabit other orbs in the great mansion of Our Father. They are leaving us through the death of their physical bodies and their future reincarnations on other orbs. This book discusses the transition period and the repercussions of our actions and thoughts for this process. It also shows the importance of mutual understanding and integration of different sectors of the human population, especially when facing tragedies such as the Indian Ocean tsunami of 2004, when so many had their journey in the physical realm cut short. Why so many deaths in a single event? Why did it happen? These and many other questions populate our minds and leave us in shock and perturbation. This extraordinary book comes to our rescue at times like this, showing to all of us the important of our working together as humankind, no longer as a nationality or a single religious belief. The book reiterates our desire to be as one family, to see the other as a fellow being, and to place rational faith in the divine works, whose intention is always our progress towards the Creator of all things. Let your heart be filled with the touching scenes narrated in this book, which were extracted from real rescue situations. And perchance our sensitivities will improve beyond the need of having tragedies or the temporary separation of recalcitrant spirits in order to move us to work as brothers and sisters in a world that was created for one large family.",
-    "blurb": "All rooms in the great mansion of Our Father are inhabited and they are progressing towards the plenitude that awaits all of us, His children. But since the Creator is constantly at work, the many orbs in the universe are not all at the sam"
   },
   {
     "path": "/catalog/books/divaldo-franco/prelude-to-divine-kingdom",
