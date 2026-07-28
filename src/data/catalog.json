@@ -553,6 +553,13 @@
         "isBook": true
       },
       {
+        "href": "/catalog/books/divaldo-franco/glorious-days",
+        "text": "Glorious Days",
+        "cover": "/uploads/2026/07/glorious-days-246x300.jpg",
+        "price": "US$16.00",
+        "isBook": true
+      },
+      {
         "href": "/catalog/books/divaldo-franco/happy-life",
         "text": "Happy Life",
         "cover": "/uploads/2020/01/happy-life.png",
@@ -761,6 +768,21 @@
     "amount": "20.00",
     "synopsis": "The direction society takes is invariably connected to the destiny of the family, given that the latter consists of the starting point for experiences of universal fraternity. In this beautiful work composed of thirty themes, Joanna de &Acirc;ngelis offers a profound reflection about the mechanism of the spiritual and moral development of human beings, emphasizing the value of the family through corporeal and spiritual ties whose existence is still one of the most important factors, if not the most significant one, in preventing disintegration of society. The venerable Joanna de &Acirc;ngelis offers distinguished reflections about the family constellation, presenting the firm position of Spiritism on a theme that is unfortunately disregarded rather often in our chaotic modern world, and one which has led to a deterioration of social behavior into egotism and violence, as evidenced by their consequences to society, a situation that leaves all of us perplexed and powerless.",
     "blurb": "The direction society takes is invariably connected to the destiny of the family, given that the latter consists of the starting point for experiences of universal fraternity. In this beautiful work composed of thirty themes, Joanna de &Aci"
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/glorious-days",
+    "title": "Glorious Days",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "glorious-days",
+    "cover": "/uploads/2026/07/glorious-days-246x300.jpg",
+    "price": "US$16.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "16.00",
+    "synopsis": "In this volume, the spirit Joanna de Ângelis presents twenty-nine chapters exploring contemporary issues from a Spiritist perspective, addressing genetic engineering, organ transplants, cryopreservation, eugenics, sex changes, memory regression, and related topics that have generated controversy across academic and religious communities. Drawing from the Spiritist Doctrine and examining its scientific, philosophical, and religious dimensions, the author shows how these teachings align with and refresh Christian principles, remaining always alive and vibrant in the hearts and minds of all who love Him.",
+    "blurb": "In this volume, the spirit Joanna de Ângelis presents twenty-nine chapters exploring contemporary issues from a Spiritist perspective, addressing genetic engineering, organ transplants, cryopreservation, eugenics, sex changes, memory regressi"
   },
   {
     "path": "/catalog/books/divaldo-franco/happy-life",
