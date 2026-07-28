@@ -634,6 +634,13 @@
         "isBook": true
       },
       {
+        "href": "/catalog/books/divaldo-franco/spiritual-disturbances",
+        "text": "Spiritual Disturbances",
+        "cover": "/uploads/2026/07/spiritual-disturbances-246x300.jpg",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
         "heading": true,
         "text": "Others"
       },
@@ -934,6 +941,21 @@
     "amount": "15.00",
     "synopsis": "This work presents accounts from discarnate spiritual benefactors who establish specialized psychiatric treatment activities at a clinic. Narrated by the spirit Manoel Philomeno de Miranda, the text describes how high-order spirits assess and address various mental and behavioral disorders affecting hospitalized patients. Through interviews with spirit messengers, it explores multiple aspects of psychological ailments, offering detailed insights into their nature and treatment approaches.",
     "blurb": "This work presents accounts from discarnate spiritual benefactors who establish specialized psychiatric treatment activities at a clinic. Narrated by the spirit Manoel Philomeno de Miranda, the text describes how high-order spirits assess an"
+  },
+  {
+    "path": "/catalog/books/divaldo-franco/spiritual-disturbances",
+    "title": "Spiritual Disturbances",
+    "type": "book",
+    "author": "divaldo-franco",
+    "authorName": "Divaldo Franco",
+    "slug": "spiritual-disturbances",
+    "cover": "/uploads/2026/07/spiritual-disturbances-246x300.jpg",
+    "price": "US$15.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "This book is a brief account of the exchange between the two spheres of life, focusing especially on the spiritual disturbances resulting from the supreme ignorance that unhappy spirits allow themselves in their inglorious struggle against the Master Jesus and His doctrine. In some way, it is part of the series begun with Planetary Transition and The Dawn of a New Era, addressing modern challenges in the form of collective and individual obsessions, especially within serious Spiritist Societies dedicated to the renewal of society, as well as within human groups devoted to the progress and happiness of all creatures. Jesus watches over the earthly ship and guides it safely to its sheltering port, and every attempt to hinder His ministry of love and mercy proves fruitless. With this work, the spirit Manoel Philomeno de Miranda wishes to alert those companions who are careless or inattentive to the spiritual duties they assumed before their return to physical life, regarding their moral responsibilities as workers of the eleventh hour, committed to the benefactors of Humanity who place their trust in them.",
+    "blurb": "This book is a brief account of the exchange between the two spheres of life, focusing especially on the spiritual disturbances resulting from the supreme ignorance that unhappy spirits allow themselves in their inglorious struggle against"
   },
   {
     "type": "heading",
