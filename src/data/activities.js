@@ -56,7 +56,7 @@ export const sessions = [
     slug: 'wednesday-book-club', day: 'Wednesday', time: '7:00 – 8:00 PM',
     name: 'Book Club', mode: 'online', tags: ['Summer break', 'Back in August'],
     audience: 'Open to the public · no appointment needed',
-    material: '“Prelude to the Divine Kingdom” by Divaldo Franco and Amália Rodrigues (spirit). The book is available for purchase at SGNY.',
+    material: '“Arduous Ascension” by Divaldo Franco and Victor Hugo (spirit). The book is available for purchase at SGNY.',
     format: 'Reading and discussion.',
     notes: [
       'The Book Club is on summer vacation and will resume in August.',
@@ -125,7 +125,7 @@ export const activities = [
   { name: 'Individual Spiritual Counseling', audience: 'Open to all', icon: '🌿',
     desc: 'A private, confidential conversation for anyone going through a difficult moment.' },
   { name: 'Book Club', audience: 'Open to all', icon: '📚',
-    desc: 'A relaxed reading and discussion of a Spiritist book — currently “Prelude to the Divine Kingdom.” On summer vacation; back in August.' },
+    desc: 'A relaxed reading and discussion of a Spiritist book — currently “Arduous Ascension” by Divaldo Franco and Victor Hugo (spirit). On summer vacation; back in August.' },
   { name: 'Mediumship Meeting', audience: 'Prepared workers', icon: '🔆',
     desc: 'The mediumistic work of the group, carried out by prepared volunteers. Closed to the public.' },
 ];
