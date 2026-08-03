@@ -20,10 +20,10 @@ export const sessions = [
   },
   {
     slug: 'monday-fraternal-assistance', day: 'Monday', time: '7:00 – 8:00 PM',
-    name: 'Fraternal Assistance (Passes)', mode: 'hybrid', tags: ['Passes: in-person only'],
+    name: 'Public Meeting', mode: 'hybrid', tags: ['Passes: in-person only'],
     audience: 'Open to the public',
-    format: 'A brief lecture (streamed online) followed by the laying on of hands (passes), given in person only.',
-    material: 'Currently reading “Living Spring,” from the spirit Emmanuel through the mediumship of Francisco C. Xavier.',
+    format: 'A quick reading and comments from the book “Words of Eternal Life” by Francisco C. Xavier / Emmanuel, followed by passes (given in person only).',
+    material: '“Words of Eternal Life,” from the spirit Emmanuel through the mediumship of Francisco C. Xavier.',
     notes: [
       'Please be prompt — doors close at 7:00 PM, or once we reach full capacity. Late arrivals cannot be admitted.',
       'At the end, we ask everyone to leave promptly and in silence so the Mediumship Meeting can begin undisturbed.',
@@ -114,8 +114,8 @@ export const sessions = [
 
 // The "what to expect" cards.
 export const activities = [
-  { name: 'Fraternal Assistance', audience: 'Open to all', icon: '🤝',
-    desc: 'Spiritual support and a fraternal conversation, followed by the laying on of hands (passes).' },
+  { name: 'Public Meeting', audience: 'Open to all', icon: '🤝',
+    desc: 'A quick reading and comments from the book “Words of Eternal Life” by Francisco C. Xavier / Emmanuel, followed by passes (given in person only).' },
   { name: 'Study Group', audience: 'Open to all', icon: '📖',
     desc: 'Guided study of a Spiritist work, chapter by chapter — held Sunday, Tuesday, and Thursday.' },
   { name: 'Prayer Group', audience: 'By appointment', icon: '🕊️',
