@@ -1186,7 +1186,7 @@
         "href": "/catalog/books/francisco-xavier/the-consoler",
         "text": "The Consoler",
         "cover": "/uploads/2024/11/PHOTO-2024-11-25-16-30-14-199x300.jpg",
-        "price": "US$20.00",
+        "price": "US$15.00",
         "isBook": true
       },
       {
@@ -1545,10 +1545,10 @@
     "authorName": "Francisco C. Xavier",
     "slug": "the-consoler",
     "cover": "/uploads/2024/11/PHOTO-2024-11-25-16-30-14-199x300.jpg",
-    "price": "US$20.00",
+    "price": "US$15.00",
     "format": "Paperback",
     "forSale": true,
-    "amount": "20.00",
+    "amount": "15.00",
     "synopsis": "In this book of questions and answers, Emmanuel presents a comprehensive study of Spiritism, delving into topics suggested by those who see Spiritism as the Consoler promised by Christ. The work offers valuable insights on various aspects of Spiritism, including Science, Society, Determinism, Free Will, Sex Education, Mediumship and more. It is enriched with the wisdom and moral authority of the Spirit author, providing invaluable clarity on these profound subjects",
     "blurb": "In this book of questions and answers, Emmanuel presents a comprehensive study of Spiritism, delving into topics suggested by those who see Spiritism as the Consoler promised by Christ. The work offers valuable insights on various aspects o"
   },
