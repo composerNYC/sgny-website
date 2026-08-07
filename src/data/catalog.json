@@ -529,7 +529,7 @@
         "href": "/catalog/books/divaldo-franco/existential-conflicts",
         "text": "Existential Conflicts",
         "cover": "/uploads/2020/01/existential-conflicts.png",
-        "price": "US$20.00",
+        "price": "US$15.00",
         "isBook": true
       },
       {
@@ -741,10 +741,10 @@
     "authorName": "Divaldo Franco",
     "slug": "existential-conflicts",
     "cover": "/uploads/2020/01/existential-conflicts.png",
-    "price": "US$20.00",
+    "price": "US$15.00",
     "format": "paperback",
-    "forSale": false,
-    "amount": "",
+    "forSale": true,
+    "amount": "15.00",
     "synopsis": "In her unique style, the noble spirit Joanna de Ângelis presents us yet another work, Existential Conflicts, summarizing “…several disturbing behaviors which present themselves as tests of resistance for the human individual,” focused under the lights of psychology, psychoanalysis, and psychiatry, but under the prism of Spiritism. This great work, a psychography from Divaldo Franco, constitutes an excellent opportunity for us to ponder about the problem of existence, analyzing it judiciously. The most serious and pressing subjects parade here, clarified by the great knowledge and expertise of our venerable mentor. Fear, anger, laziness, jealousy, violence, love, death, psychological escapes, and so many other conflicts, are part of the universe of this jewel offered to us by the High Spirituality. And thus for our understanding and evolution.",
     "blurb": "In her unique style, the noble spirit Joanna de Ângelis presents us yet another work, Existential Conflicts, summarizing “…several disturbing behaviors which present themselves as tests of resistance for the human individual,” focused under"
   },
@@ -788,8 +788,8 @@
     "cover": "/uploads/2020/01/happy-life.png",
     "price": "US$15.00",
     "format": "paperback",
-    "forSale": false,
-    "amount": "",
+    "forSale": true,
+    "amount": "15.00",
     "synopsis": "Millions of hearts thirsting for love and understanding are seeking guidelines to relieve their anxieties and uncertainties. In this short but grand work, spiritual author Joanna de Ângelis assists them in their search for a happy life by providing 200 messages that bear encouragement, optimism, and hope. This book will bring new vitality to all whose objective is to attain a happy life.",
     "blurb": "Millions of hearts thirsting for love and understanding are seeking guidelines to relieve their anxieties and uncertainties. In this short but grand work, spiritual author Joanna de Ângelis assists them in their search for a happy life by p"
   },
