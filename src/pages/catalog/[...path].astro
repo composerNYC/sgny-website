@@ -21,6 +21,7 @@ const crumbs = segs.map((s, i) => ({
   href: '/' + segs.slice(0, i + 1).join('/'),
 }));
 const paypal = page.type === 'book' && page.forSale && page.amount;
+const buyUrl = page.type === 'book' && !paypal && page.buyUrl;
 ---
 <Base title={page.title} description={page.blurb || page.intro?.slice(0, 150)}>
   <section class="block">
@@ -52,6 +53,8 @@ const paypal = page.type === 'book' && page.forSale && page.amount;
                           <input type="hidden" name="currency_code" value="USD" />
                           <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Buy with PayPal</button>
                         </form>
+                      ) : buyUrl ? (
+                        <a class="btn btn-primary" href={buyUrl} target="_blank" rel="noopener" style="margin-top:.9rem;width:100%;justify-content:center">Buy on Amazon ↗</a>
                       ) : (
                         <a class="btn btn-outline" href="/contact-us" style="margin-top:.9rem;width:100%;justify-content:center">Ask about availability</a>
                       )}

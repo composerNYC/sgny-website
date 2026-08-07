@@ -1317,6 +1317,13 @@
         "isBook": true
       },
       {
+        "href": "/catalog/books/francisco-xavier/good-news",
+        "text": "Good News",
+        "cover": "/uploads/2026/08/good-news.jpg",
+        "price": "US$20.00",
+        "isBook": true
+      },
+      {
         "href": "/catalog/books/francisco-xavier/jesus-in-the-home",
         "text": "Jesus in the Home",
         "cover": "/uploads/2025/02/71VT7ezUFJL._AC_UY436_QL65_-208x300.jpg",
@@ -1355,7 +1362,7 @@
         "href": "/catalog/books/francisco-xavier/primer-on-being-good",
         "text": "A Primer on Being Good",
         "cover": "/uploads/2020/01/primer-on-being-good.png",
-        "price": "",
+        "price": "US$15.00",
         "isBook": true
       }
     ]
@@ -1811,6 +1818,22 @@
     "blurb": "In 1965, the Brazilian mediums Francisco Xavier and Waldo Vieira traveled to several countries, including the United States of America, England and France, to exchange Spiritist knowledge and visit some friends. The first part of the book c"
   },
   {
+    "path": "/catalog/books/francisco-xavier/good-news",
+    "title": "Good News",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "good-news",
+    "cover": "/uploads/2026/08/good-news.jpg",
+    "price": "US$20.00",
+    "format": "paperback",
+    "forSale": false,
+    "amount": "",
+    "buyUrl": "https://www.amazon.com/Good-News-Chico-Xavier/dp/6555705965/",
+    "synopsis": "Known in Brazilian Portuguese as “Boa Nova,” this book was psychographed by Francisco C. Xavier and dictated by the spirit Humberto de Campos. In thirty chapters, it revisits pivotal moments in the life of Christ and his disciples, adding depth to figures such as Zebedee, Mary Magdalene, Peter, and Thomas, and bringing forward accounts of Nicodemus, John the Baptist, and Joanna of Chuza. The English edition received the Silver Medal from the Illumination Book Awards in the Spirituality category.",
+    "blurb": "Known in Brazilian Portuguese as “Boa Nova,” this book was psychographed by Francisco C. Xavier and dictated by the spirit Humberto de Campos. In thirty chapters, it revisits pivotal moments in the life of Christ and his disciples, adding dept"
+  },
+  {
     "path": "/catalog/books/francisco-xavier/jesus-in-the-home",
     "title": "Jesus in the Home",
     "type": "book",
@@ -1908,10 +1931,10 @@
   "authorName": "Francisco C. Xavier",
   "slug": "primer-on-being-good",
   "cover": "/uploads/2020/01/primer-on-being-good.png",
-  "price": "",
+  "price": "US$15.00",
   "format": "paperback",
-  "forSale": false,
-  "amount": "",
+  "forSale": true,
+  "amount": "15.00",
   "synopsis": "The Spirit Meimei explains in simple language, appropriate for children, two paths in life: the path of good and the path of evil. God has granted us the freedom to choose either one. The book depicts the use of hands to do good, promote happiness, make friends, help people, and work so that the world may be a better place.",
   "blurb": "The Spirit Meimei explains in simple language, appropriate for children, two paths in life: the path of good and the path of evil. God has granted us the freedom to choose either one. The book depicts the use of hands to do good, promote ha"
 },
