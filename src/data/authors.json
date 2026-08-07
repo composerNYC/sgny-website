@@ -36,12 +36,6 @@
     "path": "/catalog/books/andre-trigueiro"
   },
   {
-    "slug": "cristina-cabral",
-    "name": "Cristina Cabral",
-    "count": 1,
-    "path": "/catalog/books/cristina-cabral"
-  },
-  {
     "slug": "gabriel-delanne",
     "name": "Gabriel Delanne",
     "count": 1,
@@ -86,7 +80,7 @@
   {
     "slug": "luis-hu-rivas",
     "name": "Luis Hu Rivas",
-    "count": 15,
+    "count": 12,
     "path": "/catalog/books/luis-hu-rivas"
   },
   {

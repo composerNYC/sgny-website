@@ -483,19 +483,6 @@
     "synopsis": "This book is also available for purchase in digital format ( Kindle ). Overview",
     "blurb": "This book is also available for purchase in digital format ( Kindle ). Overview"
   },
-  {
-    "path": "/catalog/books/cristina-cabral/peter-the-caterpillar",
-    "title": "Peter, the Caterpillar",
-    "type": "book",
-    "author": "cristina-cabral",
-    "authorName": "Cristina Cabral",
-    "slug": "peter-the-caterpillar",
-    "cover": "/uploads/2020/01/peter-caterpillar.png",
-    "format": "",
-    "forSale": false,
-    "synopsis": "This book is also available for purchase in digital format ( Kindle ). Overview",
-    "blurb": "This book is also available for purchase in digital format ( Kindle ). Overview"
-  },
           {
     "path": "/catalog/books/divaldo-franco",
     "title": "Divaldo Franco",
@@ -1210,6 +1197,13 @@
         "isBook": true
       },
       {
+        "href": "/catalog/books/francisco-xavier/heart-and-soul",
+        "text": "Heart and Soul",
+        "cover": "/uploads/2020/01/heart-and-soul.png",
+        "price": "US$15.00",
+        "isBook": true
+      },
+      {
         "heading": true,
         "text": "Andre Luiz"
       },
@@ -1319,13 +1313,6 @@
         "href": "/catalog/books/francisco-xavier/among-brothers-of-other-lands",
         "text": "Among Brothersof Other Lands",
         "cover": "/uploads/2020/01/among-brothers-of-other-lands.png",
-        "price": "US$15.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/francisco-xavier/heart-and-soul",
-        "text": "Heart and Soul",
-        "cover": "/uploads/2020/01/heart-and-soul.png",
         "price": "US$15.00",
         "isBook": true
       },
@@ -1574,6 +1561,21 @@
     "blurb": "This book explains that money is actually a neutral tool in all human endeavors and that it is our stewardship that actually grants it a constructive outcome. It is a collection of thoughts on the importance of money in our lives. As such,"
   },
   {
+    "path": "/catalog/books/francisco-xavier/heart-and-soul",
+    "title": "Heart and Soul",
+    "type": "book",
+    "author": "francisco-xavier",
+    "authorName": "Francisco C. Xavier",
+    "slug": "heart-and-soul",
+    "cover": "/uploads/2020/01/heart-and-soul.png",
+    "price": "US$15.00",
+    "format": "paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "At this time when many have their peace disturbed and countless households are struggling, disarranging and dissolving, thereby aggravating the sufferings of humanity, the world is more than ever in need and eager for solace. Our lives need a light that springs from the heart and soul, no more from the cold and cloudy brain. The lines from this book have flown from the pen of someone who, having made of healthy spiritualism an act of most sacred priesthood, has devoted his entire life to ease the moral and physical pain of his neighbor, both through his actions and his words as a result not only of a theoretical background but through an active practice of goodness. Therefore, the reader shall find in this tome and encouraging message, distributed throughout sixty short chapters on several topics, all converging much like streams of light towards he same ocean of truth, which is God, wherefore they shall quench the thirst of their pilgrim-like souls no matter who they are or from whence they come.",
+    "blurb": "At this time when many have their peace disturbed and countless households are struggling, disarranging and dissolving, thereby aggravating the sufferings of humanity, the world is more than ever in need and eager for solace. Our lives need"
+  },
+  {
     "type": "heading",
     "author": "francisco-xavier",
     "text": "Andre Luiz"
@@ -1807,21 +1809,6 @@
     "amount": "15.00",
     "synopsis": "In 1965, the Brazilian mediums Francisco Xavier and Waldo Vieira traveled to several countries, including the United States of America, England and France, to exchange Spiritist knowledge and visit some friends. The first part of the book contains mediumistic messages received in Brazilian Portuguese. Among these messages, there are interesting interviews with Brother X and William James, and many other respectable people from other nations. The second part of the book is composed of messages received in English. This is a book that brings us eloquent teachings in Spiritism and Christ consciousness for it approaches the following topics: reincarnation, mediumship, obsession, and culture. It opens new perspectives for a greater understanding of our brothers and sisters of all lands.",
     "blurb": "In 1965, the Brazilian mediums Francisco Xavier and Waldo Vieira traveled to several countries, including the United States of America, England and France, to exchange Spiritist knowledge and visit some friends. The first part of the book c"
-  },
-  {
-    "path": "/catalog/books/francisco-xavier/heart-and-soul",
-    "title": "Heart and Soul",
-    "type": "book",
-    "author": "francisco-xavier",
-    "authorName": "Francisco C. Xavier",
-    "slug": "heart-and-soul",
-    "cover": "/uploads/2020/01/heart-and-soul.png",
-    "price": "US$15.00",
-    "format": "paperback",
-    "forSale": true,
-    "amount": "15.00",
-    "synopsis": "At this time when many have their peace disturbed and countless households are struggling, disarranging and dissolving, thereby aggravating the sufferings of humanity, the world is more than ever in need and eager for solace. Our lives need a light that springs from the heart and soul, no more from the cold and cloudy brain. The lines from this book have flown from the pen of someone who, having made of healthy spiritualism an act of most sacred priesthood, has devoted his entire life to ease the moral and physical pain of his neighbor, both through his actions and his words as a result not only of a theoretical background but through an active practice of goodness. Therefore, the reader shall find in this tome and encouraging message, distributed throughout sixty short chapters on several topics, all converging much like streams of light towards he same ocean of truth, which is God, wherefore they shall quench the thirst of their pilgrim-like souls no matter who they are or from whence they come.",
-    "blurb": "At this time when many have their peace disturbed and countless households are struggling, disarranging and dissolving, thereby aggravating the sufferings of humanity, the world is more than ever in need and eager for solace. Our lives need"
   },
   {
     "path": "/catalog/books/francisco-xavier/jesus-in-the-home",
@@ -2194,13 +2181,6 @@
         "href": "/catalog/books/heather-bollech-fonseca",
         "text": "BOLLECH-FONSECA, Heather",
         "cover": "/uploads/2020/01/changing-lives-with-spiritism.png",
-        "price": "",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/cristina-cabral",
-        "text": "CABRAL, Cristina",
-        "cover": "/uploads/2020/01/peter-caterpillar.png",
         "price": "",
         "isBook": true
       },
@@ -2856,27 +2836,6 @@
         "cover": "/uploads/2020/01/spiritism-kids-v3.png",
         "price": "US$12.00",
         "isBook": true
-      },
-      {
-        "href": "/catalog/books/luis-hu-rivas/spiritism-kids-magazine-1",
-        "text": "Spiritism Kids Magazine #1",
-        "cover": "/uploads/2026/07/spiritism-kids-magazine-1-226x300.jpg",
-        "price": "US$12.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/luis-hu-rivas/spiritism-kids-magazine-2",
-        "text": "Spiritism Kids Magazine #2",
-        "cover": "/uploads/2026/07/spiritism-kids-magazine-2-224x300.jpg",
-        "price": "US$12.00",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/luis-hu-rivas/spiritism-kids-magazine-3",
-        "text": "Spiritism Kids Magazine #3",
-        "cover": "/uploads/2026/07/spiritism-kids-magazine-3-227x300.jpg",
-        "price": "US$12.00",
-        "isBook": true
       }
     ]
   },
@@ -3014,51 +2973,6 @@
     "amount": "12.00",
     "synopsis": "(Buy with Paypal) Synopsis About the Author(s) Bibliographic Information Title: The Spiritual Hen Author(s): Luis Hu Rivas Illustrator(s): Luis Hu Rivas Language: English Source: Translated material from the original Brazilian Portuguese edition Translation: Cláudia Nune Revision: Larissa Santos Editing: Jussara Korngold Publisher: United States Spiritist Federal (USSF) Location: New York, NY, USA Publication Date: August 16, 2017 (1 st edition) Number of pages: 33 ISBN(10): 0-9986481-5-9 ISBN(13): 978-0-9986481-5-6 Book size (W H T): 8 \" 11\" \" (21.6cm 27.9cm 0.3cm) Print type: Black font on colored glossy background Book format(s): Paperback Original Material Title: Galinha Espiritinha Publisher: Federação Espírita Brasileira (FEB) Location: Brasília – DF, Brazil Publication Date: — Language: Brazilian Portuguese",
     "blurb": "(Buy with Paypal) Synopsis About the Author(s) Bibliographic Information Title: The Spiritual Hen Author(s): Luis Hu Rivas Illustrator(s): Luis Hu Rivas Language: English Source: Translated material from the original Brazilian Portuguese ed"
-  },
-  {
-    "path": "/catalog/books/luis-hu-rivas/spiritism-kids-magazine-1",
-    "title": "Spiritism Kids Magazine #1",
-    "type": "book",
-    "author": "luis-hu-rivas",
-    "authorName": "Luis Hu Rivas",
-    "slug": "spiritism-kids-magazine-1",
-    "cover": "/uploads/2026/07/spiritism-kids-magazine-1-226x300.jpg",
-    "price": "US$12.00",
-    "format": "Paperback",
-    "forSale": true,
-    "amount": "12.00",
-    "synopsis": "A monthly magazine aiming to bring moral values and spirituality to children and teenagers, in a fun way.",
-    "blurb": "A monthly magazine aiming to bring moral values and spirituality to children and teenagers, in a fun way."
-  },
-  {
-    "path": "/catalog/books/luis-hu-rivas/spiritism-kids-magazine-2",
-    "title": "Spiritism Kids Magazine #2",
-    "type": "book",
-    "author": "luis-hu-rivas",
-    "authorName": "Luis Hu Rivas",
-    "slug": "spiritism-kids-magazine-2",
-    "cover": "/uploads/2026/07/spiritism-kids-magazine-2-224x300.jpg",
-    "price": "US$12.00",
-    "format": "Paperback",
-    "forSale": true,
-    "amount": "12.00",
-    "synopsis": "A monthly magazine (vol. 2) aiming to bring moral values and spirituality to children and teenagers, in a fun way.",
-    "blurb": "A monthly magazine (vol. 2) aiming to bring moral values and spirituality to children and teenagers, in a fun way."
-  },
-  {
-    "path": "/catalog/books/luis-hu-rivas/spiritism-kids-magazine-3",
-    "title": "Spiritism Kids Magazine #3",
-    "type": "book",
-    "author": "luis-hu-rivas",
-    "authorName": "Luis Hu Rivas",
-    "slug": "spiritism-kids-magazine-3",
-    "cover": "/uploads/2026/07/spiritism-kids-magazine-3-227x300.jpg",
-    "price": "US$12.00",
-    "format": "Paperback",
-    "forSale": true,
-    "amount": "12.00",
-    "synopsis": "A monthly magazine aiming to bring moral values and spirituality to children and teenagers, in a fun way.",
-    "blurb": "A monthly magazine aiming to bring moral values and spirituality to children and teenagers, in a fun way."
   },
   {
     "path": "/catalog/books/nilson-souza-pereira/getting-to-the-light-spiritist-therapy-for-discarnate-spirits",
@@ -3499,13 +3413,6 @@
         "href": "/catalog/books/heather-bollech-fonseca",
         "text": "BOLLECH-FONSECA, Heather",
         "cover": "/uploads/2020/01/changing-lives-with-spiritism.png",
-        "price": "",
-        "isBook": true
-      },
-      {
-        "href": "/catalog/books/cristina-cabral",
-        "text": "CABRAL, Cristina",
-        "cover": "/uploads/2020/01/peter-caterpillar.png",
         "price": "",
         "isBook": true
       },
