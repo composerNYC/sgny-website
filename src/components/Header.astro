@@ -37,6 +37,7 @@ const groupActive = (item) => item.children?.some((c) => active(c.href));
         ) : (
           <li><a href={item.href} aria-current={active(item.href) ? 'page' : undefined}>{item.label}</a></li>
         ))}
+        <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&display=1&business=sab-books@sgny.org" target="paypal">🛒 Cart</a></li>
         <li><a class="btn btn-primary" href="/donations" style="color:#2a1d05">Donate</a></li>
       </ul>
     </nav>

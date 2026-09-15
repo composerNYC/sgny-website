@@ -45,14 +45,38 @@ const buyUrl = page.type === 'book' && !paypal && page.buyUrl;
                       <div style="font-size:1.5rem;font-family:var(--serif);color:var(--brand-dark)">{page.price}</div>
                       {page.format && <div class="muted" style="font-size:.85rem;text-transform:capitalize">{page.format}</div>}
                       {paypal ? (
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal" style="margin-top:.9rem">
-                          <input type="hidden" name="cmd" value="_xclick" />
-                          <input type="hidden" name="business" value="sab-books@sgny.org" />
-                          <input type="hidden" name="item_name" value={page.title} />
-                          <input type="hidden" name="amount" value={page.amount} />
-                          <input type="hidden" name="currency_code" value="USD" />
-                          <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Buy with PayPal</button>
-                        </form>
+                        <>
+                          <div style="display:flex;align-items:center;justify-content:center;gap:.5rem;margin:.9rem 0 .7rem">
+                            <label for="qty" class="muted" style="font-size:.85rem">Qty</label>
+                            <input type="number" id="qty" value="1" min="1" max="99" style="width:4rem;padding:.35rem;text-align:center;border:1px solid var(--line);border-radius:8px" />
+                          </div>
+                          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+                            <input type="hidden" name="cmd" value="_xclick" />
+                            <input type="hidden" name="business" value="sab-books@sgny.org" />
+                            <input type="hidden" name="item_name" value={page.title} />
+                            <input type="hidden" name="amount" value={page.amount} />
+                            <input type="hidden" name="currency_code" value="USD" />
+                            <input type="hidden" name="quantity" value="1" data-qty-sync />
+                            <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Buy with PayPal</button>
+                          </form>
+                          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal" style="margin-top:.6rem">
+                            <input type="hidden" name="cmd" value="_cart" />
+                            <input type="hidden" name="add" value="1" />
+                            <input type="hidden" name="business" value="sab-books@sgny.org" />
+                            <input type="hidden" name="item_name" value={page.title} />
+                            <input type="hidden" name="amount" value={page.amount} />
+                            <input type="hidden" name="currency_code" value="USD" />
+                            <input type="hidden" name="quantity" value="1" data-qty-sync />
+                            <button class="btn btn-outline" type="submit" style="width:100%;justify-content:center">Add to Cart</button>
+                          </form>
+                          <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&display=1&business=sab-books@sgny.org" target="paypal" class="muted" style="display:block;margin-top:.6rem;font-size:.85rem">View cart &amp; checkout →</a>
+                          <script>
+                            const qtyInput = document.getElementById('qty');
+                            qtyInput?.addEventListener('input', () => {
+                              document.querySelectorAll('[data-qty-sync]').forEach((el) => { el.value = qtyInput.value || '1'; });
+                            });
+                          </script>
+                        </>
                       ) : buyUrl ? (
                         <a class="btn btn-primary" href={buyUrl} target="_blank" rel="noopener" style="margin-top:.9rem;width:100%;justify-content:center">Buy on Amazon ↗</a>
                       ) : (
