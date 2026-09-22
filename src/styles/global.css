@@ -75,16 +75,12 @@ h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
 .hero {
   position: relative; isolation: isolate; overflow: hidden;
   color: #fff; padding: clamp(3.5rem, 9vw, 7rem) 0;
-  background: #102a47; /* fallback */
+  background: #1c3f8f; /* fallback */
 }
-/* slow blue → purple → turquoise color loop (~2 min each sweep) */
+/* light blue → indigo, top to bottom, matching the SGNY logo */
 .hero::before {
   content: ""; position: absolute; inset: -10%; z-index: -2;
-  background: linear-gradient(135deg,
-    #0e2a47 0%, #1f4e79 22%, #3a2c78 45%,
-    #432f8a 55%, #176b78 78%, #128a86 90%, #0e2a47 100%);
-  background-size: 300% 300%;
-  animation: heroDrift 120s ease-in-out infinite alternate;
+  background: linear-gradient(180deg, #0097d8 0%, #2d368f 100%);
 }
 /* soft inner vignette so headline stays legible over the moving color */
 .hero::after {
@@ -117,11 +113,6 @@ h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
 .hero-mist span:nth-child(4) { width: 22vw; height: 22vw; top: 12%; left: 45%;
   animation: mistFloatA 72s ease-in-out infinite reverse, mistPulse 19s ease-in-out infinite 2s; }
 
-@keyframes heroDrift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 @keyframes mistPulse {
   0%, 100% { opacity: .12; }
   50%      { opacity: .5; }
@@ -144,7 +135,7 @@ h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
   100% { transform: translate(0, 0) scale(.95); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero::before, .hero-mist span { animation: none; }
+  .hero-mist span { animation: none; }
   .hero-mist span { opacity: .28; }
 }
 
