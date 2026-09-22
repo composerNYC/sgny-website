@@ -73,10 +73,10 @@ export const sessions = [
   },
   {
     slug: 'thursday-study-group', day: 'Thursday', time: '7:00 – 8:00 PM',
-    name: 'Study Group', mode: 'hybrid', tags: [],
+    name: 'Study Group', mode: 'hybrid', tags: ['Passes: in-person only'],
     audience: 'Open to the public',
     material: 'Study of Spiritism — “The Spirits’ Book” by Allan Kardec.',
-    format: 'Reading and discussion of Spiritism, offered both in person and online.',
+    format: 'Reading and discussion of Spiritism, offered both in person and online, followed by passes (given in person only).',
     notes: [],
   },
   {
