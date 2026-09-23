@@ -1983,6 +1983,50 @@
     "blurb": "It is always a great responsibility to discuss the teachings of Kardec. To do it correctly as a conscientious researcher, Guillermo organized several sources of information, extracted from several authors. However, he primarily thoroughly s"
   },
   {
+    "path": "/catalog/books/gustavo-rocha",
+    "title": "Gustavo Cruzeiro Rocha",
+    "type": "listing",
+    "author": "gustavo-rocha",
+    "authorName": "Gustavo Cruzeiro Rocha",
+    "slug": "gustavo-rocha",
+    "intro": "The list below shows books authored by Gustavo Cruzeiro Rocha . Back to Book Catalog . The books are alphabetically listed by title (ignore \"a,\" \"an,\" and \"the\"): Shared Lessons",
+    "children": [
+      {
+        "href": "/catalog/books/gustavo-rocha/shared-lessons",
+        "text": "Shared Lessons: The Awakening of Consciousness in the Light of Spiritism",
+        "cover": "/uploads/2026/09/shared-lessons.jpg",
+        "price": "US$15.00",
+        "isBook": true
+      }
+    ]
+  },
+  {
+    "path": "/catalog/books/gustavo-rocha/shared-lessons",
+    "title": "Shared Lessons: The Awakening of Consciousness in the Light of Spiritism",
+    "type": "book",
+    "author": "gustavo-rocha",
+    "authorName": "Gustavo Cruzeiro Rocha",
+    "slug": "shared-lessons",
+    "cover": "/uploads/2026/09/shared-lessons.jpg",
+    "price": "US$15.00",
+    "format": "Paperback",
+    "forSale": true,
+    "amount": "15.00",
+    "synopsis": "Every spiritual journey begins with questions.\nWho are we? Why do we suffer? What happens after death? Is there a greater purpose behind the experiences we encounter in life?\nIn Shared Lessons, Gustavo Cruzeiro Rocha invites readers on a journey of study and reflection on the teachings of Jesus in the light of Spiritism. Inspired by the works of Allan Kardec and the enduring wisdom of the Gospel, the book presents, in clear and accessible language, the foundations of Spiritism and their application to the challenges of everyday life.\nThroughout its lessons, themes such as the mission and teachings of Jesus, faith, prayer, charity, divine justice, and the Moral Laws are explored in a clear and welcoming manner, bringing Spiritist knowledge closer to everyday experience.\nMore than offering answers to life’s great questions, the book invites readers to reflection, self-knowledge, and moral growth, showing that spiritual learning is fulfilled through the practice of love, fraternity, and service to others.\nFor those discovering Spiritism or seeking to deepen their understanding of the Gospel in the light of the Spiritist Codification, Shared Lessons offers a message of hope, understanding, and spiritual renewal. An invitation to walk with greater confidence, serenity, and purpose in the light of Christ’s teachings.",
+    "blurb": "Every spiritual journey begins with questions. Who are we? Why do we suffer? What happens after death? Is there a greater purpose behind the experiences we encounter in life? In Shared Lessons, Gustavo Cruzeiro Rocha invites readers on a",
+    "bibliography": {
+      "Author(s)": "Gustavo Cruzeiro Rocha",
+      "Language": "English",
+      "Publisher": "United States Spiritist Federation",
+      "Publication Date": "September 14, 2026",
+      "Number of pages": "406",
+      "ISBN (13)": "978-1-948109-66-6",
+      "ISBN (10)": "1-948109-66-2",
+      "Book size (W×H×T)": "5.5″ × 8.5″ × 0.92″",
+      "Format(s)": "Paperback"
+    }
+  },
+  {
     "path": "/catalog/books/guy-lyon-playfair/francisco-xavier-medium-of-the-century",
     "title": "Chico Xavier – Medium of the Century",
     "type": "book",

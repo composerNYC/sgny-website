@@ -54,6 +54,12 @@
     "path": "/catalog/books/guillermo-luis"
   },
   {
+    "slug": "gustavo-rocha",
+    "name": "Gustavo Cruzeiro Rocha",
+    "count": 1,
+    "path": "/catalog/books/gustavo-rocha"
+  },
+  {
     "slug": "guy-lyon-playfair",
     "name": "Guy Lyon Playfair",
     "count": 1,
