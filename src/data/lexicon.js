@@ -26,7 +26,7 @@ export const figures = [
   },
   {
     name: 'Divaldo P. Franco',
-    years: 'born 1927',
+    years: '1927 – 2025',
     country: 'Brazil',
     role: 'Medium & Orator',
     image: '/uploads/2026/06/divaldo-franco.png',
