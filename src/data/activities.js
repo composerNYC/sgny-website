@@ -81,9 +81,9 @@ export const sessions = [
   },
   {
     slug: 'sunday-study-group-1', day: 'Sunday', time: '11:00 AM – 12:30 PM',
-    name: 'Study Group: Action and Reaction', mode: 'online', tags: ['1st Sunday only'],
+    name: 'Study Group: Sex and Destiny', mode: 'online', tags: ['1st Sunday only'],
     audience: 'Open to the public',
-    material: '“Action and Reaction,” from the spirit André Luiz through the mediumship of Francisco C. Xavier.',
+    material: '“Sex and Destiny,” from the spirit André Luiz through the mediumship of Francisco C. Xavier.',
     format: 'Reading and discussion of Spiritism, held online.',
     notes: ['Held on the first Sunday of each month.'],
   },
