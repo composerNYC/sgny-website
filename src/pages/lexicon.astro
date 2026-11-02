@@ -1,0 +1,120 @@
+---
+import Base from '../layouts/Base.astro';
+import sections from '../data/lexicon-vocabulary.json';
+
+const letters = sections.filter((s) => s.entries.length);
+const totalTerms = letters.reduce(
+  (n, s) => n + s.entries.length + s.entries.reduce((m, e) => m + e.subs.length, 0),
+  0
+);
+---
+<Base title="Lexicon" description="A trilingual glossary (English, French, Portuguese) of words and expressions used throughout Spiritist literature.">
+  <section class="hero" style="padding-block:clamp(2.5rem,6vw,4rem)">
+    <div class="container">
+      <p class="eyebrow" style="color:#e9c878">Reference</p>
+      <h1>Lexicon</h1>
+      <p>A trilingual glossary — English, Français, Português — of words and expressions used
+        throughout Spiritist literature, from Allan Kardec's own works to the writings of later
+        mediums and authors. {totalTerms} terms and expressions, A to W.</p>
+      <div class="catalog-search">
+        <span class="catalog-search-icon" aria-hidden="true">🔍</span>
+        <input type="search" id="lexicon-search" placeholder="Search a term in any language…" aria-label="Search the lexicon" autocomplete="off" />
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <nav class="crumbs lex-jump" id="lexicon-jump">
+        {letters.map((s) => <a href={`#letter-${s.letter}`} class="btn btn-outline" style="padding:.25rem .65rem;font-size:.82rem;min-width:2.2rem;text-align:center">{s.letter}</a>)}
+      </nav>
+
+      <div class="lex-head lex-row" aria-hidden="true">
+        <span>English</span><span>Français</span><span>Português</span>
+      </div>
+
+      <p id="lexicon-empty" class="muted" style="display:none;margin-top:2rem">No terms match your search.</p>
+
+      {letters.map((s) => (
+        <div data-letter-group id={`letter-${s.letter}`} style="scroll-margin-top:5rem;margin-top:2.5rem">
+          <h2 class="lex-letter">{s.letter}</h2>
+          <div class="lex-list">
+            {s.entries.map((e) => (
+              <div class="lex-entry" data-search={[e.en, e.fr, e.pt, ...e.subs.flatMap((sub) => [sub.en, sub.fr, sub.pt])].join(' ').toLowerCase()}>
+                <div class="lex-row lex-main">
+                  <span class="lex-en">{e.en}</span>
+                  <span class="lex-fr">{e.fr}</span>
+                  <span class="lex-pt">{e.pt}</span>
+                </div>
+                {e.subs.map((sub) => (
+                  <div class="lex-row lex-sub">
+                    <span class="lex-en">…{sub.en}</span>
+                    <span class="lex-fr">…{sub.fr}</span>
+                    <span class="lex-pt">…{sub.pt}</span>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <style>
+    .catalog-search { position: relative; max-width: 420px; margin: 1.25rem 0 0; }
+    .catalog-search-icon { position: absolute; left: .9rem; top: 50%; transform: translateY(-50%);
+      font-size: 1rem; opacity: .6; pointer-events: none; }
+    .catalog-search input { width: 100%; padding: .7rem 1rem .7rem 2.4rem; border-radius: 999px;
+      border: 1px solid var(--line); font: inherit; font-size: .95rem; background: #fff; color: var(--ink); }
+    .catalog-search input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .catalog-search input::-webkit-search-cancel-button { cursor: pointer; }
+    .lex-jump:not([hidden]) { display: flex; flex-wrap: wrap; gap: .4rem; }
+
+    .lex-letter { font-size: 1.4rem; color: var(--brand-dark); border-bottom: 2px solid var(--accent-soft);
+      padding-bottom: .3rem; margin-bottom: .6rem; }
+    .lex-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem 1.25rem; }
+    .lex-head { position: sticky; top: 64px; z-index: 5; background: var(--bg); padding: .6rem 0;
+      font-family: var(--sans); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em;
+      color: var(--ink-soft); border-bottom: 1px solid var(--line); margin-top: 1.5rem; }
+    .lex-entry { padding: .55rem 0; border-bottom: 1px solid var(--line); }
+    .lex-entry:last-child { border-bottom: 0; }
+    .lex-main .lex-en { font-weight: 700; color: var(--brand-dark); }
+    .lex-sub { opacity: .88; font-size: .93rem; margin-top: .25rem; }
+    .lex-fr { font-style: italic; color: var(--ink-soft); }
+    .lex-pt { color: var(--ink); }
+
+    @media (max-width: 720px) {
+      .lex-row { grid-template-columns: 1fr; gap: .15rem; }
+      .lex-head { display: none; }
+      .lex-sub { padding-left: .9rem; border-left: 2px solid var(--line); }
+      .lex-fr::before { content: "FR · "; font-style: normal; font-size: .7rem; color: var(--ink-soft); opacity: .7; }
+      .lex-pt::before { content: "PT · "; font-size: .7rem; color: var(--ink-soft); opacity: .7; }
+    }
+  </style>
+
+  <script>
+    const input = document.getElementById('lexicon-search') as HTMLInputElement | null;
+    const emptyMsg = document.getElementById('lexicon-empty');
+    const groups = Array.from(document.querySelectorAll<HTMLElement>('[data-letter-group]'));
+    const jump = document.getElementById('lexicon-jump');
+
+    input?.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      let anyVisible = false;
+      groups.forEach((group) => {
+        const entries = Array.from(group.querySelectorAll<HTMLElement>('.lex-entry'));
+        let groupHasMatch = false;
+        entries.forEach((entry) => {
+          const hit = !q || (entry.dataset.search || '').includes(q);
+          entry.hidden = !hit;
+          if (hit) groupHasMatch = true;
+        });
+        group.hidden = !groupHasMatch;
+        if (groupHasMatch) anyVisible = true;
+      });
+      if (jump) jump.hidden = q.length > 0;
+      if (emptyMsg) emptyMsg.style.display = anyVisible ? 'none' : '';
+    });
+  </script>
+</Base>
