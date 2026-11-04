@@ -2,20 +2,32 @@
 import Base from '../layouts/Base.astro';
 import sections from '../data/lexicon-vocabulary.json';
 
+const langs = [
+  { key: 'en', label: 'English', short: 'EN' },
+  { key: 'pt', label: 'Português', short: 'PT' },
+  { key: 'fr', label: 'Français', short: 'FR' },
+  { key: 'es', label: 'Español', short: 'ES' },
+  { key: 'it', label: 'Italiano', short: 'IT' },
+  { key: 'de', label: 'Deutsch', short: 'DE' },
+] as const;
+
 const letters = sections.filter((s) => s.entries.length);
 const totalTerms = letters.reduce(
   (n, s) => n + s.entries.length + s.entries.reduce((m, e) => m + e.subs.length, 0),
   0
 );
+const searchText = (t: Record<string, string>) => langs.map((l) => t[l.key]).join(' ');
 ---
-<Base title="Lexicon" description="A trilingual glossary (English, French, Portuguese) of words and expressions used throughout Spiritist literature.">
+<Base title="Lexicon" description="A Spiritist glossary in six languages (English, Portuguese, French, Spanish, Italian, German) of words and expressions used throughout Spiritist literature.">
   <section class="hero" style="padding-block:clamp(2.5rem,6vw,4rem)">
     <div class="container">
       <p class="eyebrow" style="color:#e9c878">Reference</p>
       <h1>Lexicon</h1>
-      <p>A trilingual glossary — English, Français, Português — of words and expressions used
-        throughout Spiritist literature, from Allan Kardec's own works to the writings of later
-        mediums and authors. {totalTerms} terms and expressions, A to W.</p>
+      <p>A Spiritist glossary in six languages — English, Português, Français, Español, Italiano,
+        Deutsch — of words and expressions used throughout Spiritist literature, from Allan Kardec's
+        own works to the writings of later mediums and authors. {totalTerms} terms and expressions,
+        listed alphabetically by their English form.</p>
+      <p style="font-size:.9rem;opacity:.85">Prepared by Jussara Korngold · Spanish revised 2021 · Revised edition 2026</p>
       <div class="catalog-search">
         <span class="catalog-search-icon" aria-hidden="true">🔍</span>
         <input type="search" id="lexicon-search" placeholder="Search a term in any language…" aria-label="Search the lexicon" autocomplete="off" />
@@ -30,7 +42,7 @@ const totalTerms = letters.reduce(
       </nav>
 
       <div class="lex-head lex-row" aria-hidden="true">
-        <span>English</span><span>Français</span><span>Português</span>
+        {langs.map((l) => <span>{l.label}</span>)}
       </div>
 
       <p id="lexicon-empty" class="muted" style="display:none;margin-top:2rem">No terms match your search.</p>
@@ -40,17 +52,13 @@ const totalTerms = letters.reduce(
           <h2 class="lex-letter">{s.letter}</h2>
           <div class="lex-list">
             {s.entries.map((e) => (
-              <div class="lex-entry" data-search={[e.en, e.fr, e.pt, ...e.subs.flatMap((sub) => [sub.en, sub.fr, sub.pt])].join(' ').toLowerCase()}>
+              <div class="lex-entry" data-search={[searchText(e), ...e.subs.map(searchText)].join(' ').toLowerCase()}>
                 <div class="lex-row lex-main">
-                  <span class="lex-en">{e.en}</span>
-                  <span class="lex-fr">{e.fr}</span>
-                  <span class="lex-pt">{e.pt}</span>
+                  {langs.map((l) => <span class={`lex-${l.key}`} data-lang={l.short}>{e[l.key]}</span>)}
                 </div>
                 {e.subs.map((sub) => (
                   <div class="lex-row lex-sub">
-                    <span class="lex-en">…{sub.en}</span>
-                    <span class="lex-fr">…{sub.fr}</span>
-                    <span class="lex-pt">…{sub.pt}</span>
+                    {langs.map((l) => <span class={`lex-${l.key}`} data-lang={l.short}>…{sub[l.key]}</span>)}
                   </div>
                 ))}
               </div>
@@ -73,23 +81,23 @@ const totalTerms = letters.reduce(
 
     .lex-letter { font-size: 1.4rem; color: var(--brand-dark); border-bottom: 2px solid var(--accent-soft);
       padding-bottom: .3rem; margin-bottom: .6rem; }
-    .lex-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem 1.25rem; }
+    .lex-row { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .5rem 1rem;
+      font-size: .9rem; overflow-wrap: anywhere; }
     .lex-head { position: sticky; top: 64px; z-index: 5; background: var(--bg); padding: .6rem 0;
       font-family: var(--sans); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em;
       color: var(--ink-soft); border-bottom: 1px solid var(--line); margin-top: 1.5rem; }
     .lex-entry { padding: .55rem 0; border-bottom: 1px solid var(--line); }
     .lex-entry:last-child { border-bottom: 0; }
     .lex-main .lex-en { font-weight: 700; color: var(--brand-dark); }
-    .lex-sub { opacity: .88; font-size: .93rem; margin-top: .25rem; }
-    .lex-fr { font-style: italic; color: var(--ink-soft); }
-    .lex-pt { color: var(--ink); }
+    .lex-sub { opacity: .88; font-size: .85rem; margin-top: .25rem; }
+    .lex-row span:nth-child(even) { color: var(--ink-soft); }
 
-    @media (max-width: 720px) {
+    @media (max-width: 900px) {
       .lex-row { grid-template-columns: 1fr; gap: .15rem; }
       .lex-head { display: none; }
       .lex-sub { padding-left: .9rem; border-left: 2px solid var(--line); }
-      .lex-fr::before { content: "FR · "; font-style: normal; font-size: .7rem; color: var(--ink-soft); opacity: .7; }
-      .lex-pt::before { content: "PT · "; font-size: .7rem; color: var(--ink-soft); opacity: .7; }
+      .lex-row span:not(:first-child)::before { content: attr(data-lang) " · "; font-weight: 400;
+        font-size: .7rem; color: var(--ink-soft); opacity: .7; }
     }
   </style>
 
