@@ -9,13 +9,15 @@
     "ask": [
       "Bash(node scripts/mailchimp.mjs copy:*)",
       "Bash(node scripts/mailchimp.mjs test:*)",
-      "Bash(node scripts/mailchimp.mjs send:*)"
+      "Bash(node scripts/mailchimp.mjs send:*)",
+      "Bash(node scripts/mailchimp.mjs setup:*)"
     ],
     "deny": [
       "Read(./.env)",
       "Read(./.env.*)",
       "Bash(cat .env:*)",
-      "Bash(cat ./.env:*)"
+      "Bash(cat ./.env:*)",
+      "Bash(pbpaste:*)"
     ]
   }
 }

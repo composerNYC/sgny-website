@@ -2,7 +2,8 @@
 /*
 SGNY weekly email — send Mailchimp campaigns on demand (designed in the Mailchimp web editor).
 
-  npm run mail:setup                               one-time: save your Mailchimp API key
+  npm run mail:setup                               one-time: save your Mailchimp API key (typed, hidden)
+  node scripts/mailchimp.mjs setup --clipboard --email you@x.com   same, reading the key from the clipboard
   node scripts/mailchimp.mjs account               plan + audiences (checks the key works)
   node scripts/mailchimp.mjs sent [n]              last n sent emails (default 3)
   node scripts/mailchimp.mjs drafts [all]          recent "Weekly Schedule" drafts (or every draft)
@@ -19,6 +20,7 @@ import { readFileSync, writeFileSync, existsSync, chmodSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { createInterface } from 'node:readline';
+import { execFileSync } from 'node:child_process';
 import { Writable } from 'node:stream';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -37,6 +39,7 @@ for (const line of readEnvFile().split('\n')) {
 function fail(msg) { console.error('\n✗ ' + msg + '\n'); process.exit(1); }
 
 let key, base, auth, dc;
+let inSetup = false;
 function useKey(k) {
   key = k.trim();
   dc = key.split('-').pop();
@@ -57,8 +60,11 @@ async function api(method, path, body) {
   }
   if (res.status === 204) return null;
   const data = await res.json().catch(() => ({}));
+  if ((res.status === 401 || res.status === 403) && inSetup) {
+    fail('Mailchimp didn\'t accept that key. It was probably copied with a small mistake.\n  Select the key again carefully, copy it (Cmd+C), and retry.');
+  }
   if (res.status === 401 || res.status === 403) {
-    fail('Mailchimp rejected the API key (it may be wrong, deleted, or expired).\n  Make a new key in Mailchimp (Profile → Extras → API keys), then run:  npm run mail:setup');
+    fail('Mailchimp rejected the API key (it may be wrong, deleted, or expired).\n  Copy a new key (Mailchimp → Profile → Extras → API keys) and set it up again (see CLAUDE.md, "Key setup").');
   }
   if (res.status === 404) fail('Mailchimp has no email with that id. Run "drafts" or "sent" to see the right id.');
   if (!res.ok) {
@@ -94,25 +100,43 @@ async function lastSent() {
 }
 
 // ---------- setup (no key needed yet) ----------
+// Two ways: interactive (npm run mail:setup, key typed hidden), or
+// `setup --clipboard --email you@x.com`: reads the key from the macOS clipboard so
+// Claude can run it without the key ever appearing in chat or output.
 async function setup() {
-  console.log('\nSGNY Mailchimp setup — this saves your API key on THIS computer only.');
-  console.log('Get a key in Mailchimp: Profile → Extras → API keys → Create a key.\n');
-  let muted = false;
-  const out = new Writable({ write(chunk, _e, cb) { if (!muted) process.stdout.write(chunk); cb(); } });
-  const rl = createInterface({ input: process.stdin, output: out, terminal: true });
-  const ask = (q, hide) => new Promise((res) => {
-    process.stdout.write(q);
-    muted = !!hide;
-    rl.question('', (a) => { muted = false; if (hide) process.stdout.write('\n'); res(a.trim()); });
-  });
+  const args = process.argv.slice(3);
+  const fromClipboard = args.includes('--clipboard');
+  const emailArg = args[args.indexOf('--email') + 1];
+  console.log('\nSGNY Mailchimp setup — this saves your API key on THIS computer only.\n');
 
-  const k = (await ask('Paste your API key (it stays hidden) and press Enter: ', true)).replace(/^"|"$/g, '');
-  if (!/^[0-9a-f]{32}-us\d+$/.test(k)) { rl.close(); fail('That doesn\'t look like a Mailchimp key (it should end in something like -us10). Run setup again.'); }
+  let k, email, rl, ask;
+  if (fromClipboard) {
+    try { k = execFileSync('pbpaste', { encoding: 'utf8' }); } catch { fail('Could not read the clipboard (this option needs a Mac).'); }
+    k = k.trim().replace(/^"|"$/g, '');
+    email = args.includes('--email') ? emailArg || '' : '';
+  } else {
+    let muted = false;
+    const out = new Writable({ write(chunk, _e, cb) { if (!muted) process.stdout.write(chunk); cb(); } });
+    rl = createInterface({ input: process.stdin, output: out, terminal: true });
+    ask = (q, hide) => new Promise((res) => {
+      process.stdout.write(q);
+      muted = !!hide;
+      rl.question('', (a) => { muted = false; if (hide) process.stdout.write('\n'); res(a.trim()); });
+    });
+    k = (await ask('Paste your API key (it stays hidden) and press Enter: ', true)).replace(/^"|"$/g, '');
+  }
+  if (!/^[0-9a-f]{32}-us\d+$/.test(k)) {
+    rl?.close();
+    fail(fromClipboard
+      ? 'The clipboard doesn\'t contain a Mailchimp key. Copy the whole key (it ends in -us10) and try again.'
+      : 'That doesn\'t look like a Mailchimp key (it should end in something like -us10). Run setup again.');
+  }
   useKey(k);
+  inSetup = true;
   const a = await api('GET', '/?fields=account_name');
+  inSetup = false;
   console.log(`✓ Key works — connected to "${a.account_name}".`);
-  const email = await ask('Your email address, for test emails: ');
-  rl.close();
+  if (!fromClipboard) { email = await ask('Your email address, for test emails: '); rl.close(); }
 
   const values = {
     MAILCHIMP_API_KEY: k,
@@ -142,13 +166,13 @@ if (!['account', 'sent', 'drafts', 'copy', 'check', 'test', 'send'].includes(cmd
 }
 
 if (!process.env.MAILCHIMP_API_KEY || !/-us\d+$/.test(process.env.MAILCHIMP_API_KEY)) {
-  fail('No Mailchimp key on this computer yet. In the VS Code terminal run:  npm run mail:setup');
+  fail('No Mailchimp key on this computer yet. Copy the key and set it up (see CLAUDE.md, "Key setup").');
 }
 useKey(process.env.MAILCHIMP_API_KEY);
 
 const created = Date.parse(process.env.MAILCHIMP_KEY_CREATED || '');
 if (created && Date.now() - created > 335 * 864e5) {
-  console.log('⚠ Your Mailchimp key is about a year old and will expire soon. Make a new one and run: npm run mail:setup\n');
+  console.log('⚠ Your Mailchimp key is about a year old and will expire soon. Copy a new one and set it up again (see CLAUDE.md, "Key setup").\n');
 }
 
 switch (cmd) {
@@ -203,7 +227,7 @@ switch (cmd) {
   case 'test': {
     if (!id) fail('Usage: test <id> [email...]');
     const to = rest.length ? rest : (process.env.MAIL_TEST_TO || '').split(',').map((e) => e.trim()).filter(Boolean);
-    if (!to.length) fail('No test address. Add one (test <id> you@example.com) or run npm run mail:setup.');
+    if (!to.length) fail('No test address. Add one (test <id> you@example.com) or set up the key again with --email.');
     if (to.length > 6) fail('Mailchimp allows at most 6 test addresses.');
     await api('POST', `/campaigns/${id}/actions/test`, { test_emails: to, send_type: 'html' });
     console.log(`✓ Test email sent to: ${to.join(', ')} (check spam if it doesn't arrive in a few minutes).`);

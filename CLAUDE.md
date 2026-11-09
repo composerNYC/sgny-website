@@ -15,10 +15,15 @@ Joao (not technical) designs the weekly email in the Mailchimp web editor. You r
 3. `node scripts/mailchimp.mjs copy <id> "🔵 Weekly Schedule (<date>)"`. This creates a draft only.
 4. Give him the edit link and wait until he says it's ready.
 
+### "Send me a test"
+1. `node scripts/mailchimp.mjs drafts`: shows only recent "Weekly Schedule" drafts. If there's more than one, or none, ask him which; never guess. (`drafts all` lists every draft, including many old 2015–2022 ones.)
+2. `node scripts/mailchimp.mjs check <id>`: if not ready, explain each ✗ item in plain words and how to fix it in Mailchimp. Don't change campaign settings yourself.
+3. `node scripts/mailchimp.mjs test <id>`: this sends to the address saved at setup. If the script says there's no test address, ask for his email and run `test <id> <his email>`. Ask him to look at it in his inbox.
+
 ### "Send it"
 1. `node scripts/mailchimp.mjs drafts`: shows only recent "Weekly Schedule" drafts. If there's more than one, or none, ask him which; never guess. (`drafts all` lists every draft, including many old 2015–2022 ones.)
 2. `node scripts/mailchimp.mjs check <id>`: if not ready, explain each ✗ item in plain words and how to fix it in Mailchimp. Don't change campaign settings yourself.
-3. `node scripts/mailchimp.mjs test <id>`: this sends a test to the address saved in `.env`. Ask him to look at it in his inbox.
+3. Only if no test was sent for this draft yet in this conversation: send one as in "Send me a test" and wait for him to look at it.
 4. Run `node scripts/mailchimp.mjs send <id>` (no `--confirm`). It runs all the safety checks and sends nothing.
 5. Ask exactly one yes/no question that quotes the **subject, audience name, and number of people**, e.g. *"Send '🔵 Weekly Schedule (November 16, 2026)' to SGNY - General List (311 people)? This can't be undone."*
 6. Only if his reply to **that question** is a clear yes, run `send <id> --confirm`.
@@ -27,5 +32,6 @@ Joao (not technical) designs the weekly email in the Mailchimp web editor. You r
 - The request that starts the workflow ("send it", "send the email") is **never** the confirmation. Only a yes to the step-5 question counts, and only for that one email. A yes from a previous week or a previous email never carries over.
 - If the script refuses to send, explain why and stop. Never work around its checks.
 - Use only this script. Never call the Mailchimp API another way (curl, fetch, etc.).
-- Never read, print, `cat`, or echo `.env` or the API key. Never ask Joao to paste the key into the chat. If the key is missing, invalid or expired, tell him to make a new key in Mailchimp (Profile → Extras → API keys) and run `npm run mail:setup` in the VS Code terminal.
+- Never read, print, `cat`, or echo `.env` or the API key, and never run `pbpaste` or anything else that shows the clipboard. Never ask Joao to paste the key into the chat.
+- **Key setup** (when `account` says there's no key, or the key is rejected or expired): ask Joao to copy the key with Cmd+C (from the screenshot he was sent, or from Mailchimp → Profile → Extras → API keys) and to tell you his email address for test emails. Wait until he says he has copied it, then run `node scripts/mailchimp.mjs setup --clipboard --email <his email>`. The script reads the key from the clipboard, checks it and saves it without showing it. If it fails, have him copy the key again and retry. If his Mac can't select text in the image, he can instead run `npm run mail:setup` in the VS Code terminal (Terminal → New Terminal) and type the key there; it stays hidden.
 - Test emails count toward the monthly send limit, so one test per email is enough unless he asks for more.
