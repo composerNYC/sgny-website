@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/mailchimp.mjs account:*)",
+      "Bash(node scripts/mailchimp.mjs sent:*)",
+      "Bash(node scripts/mailchimp.mjs drafts:*)",
+      "Bash(node scripts/mailchimp.mjs check:*)"
+    ],
+    "ask": [
+      "Bash(node scripts/mailchimp.mjs copy:*)",
+      "Bash(node scripts/mailchimp.mjs test:*)",
+      "Bash(node scripts/mailchimp.mjs send:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Bash(cat .env:*)",
+      "Bash(cat ./.env:*)"
+    ]
+  }
+}

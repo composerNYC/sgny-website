@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "mail:setup": "node scripts/mailchimp.mjs setup"
   },
   "dependencies": {
     "@astrojs/netlify": "^5.5.4",
@@ -15,5 +16,8 @@
     "astro": "^4.16.0",
     "astro-pagefind": "^2.0.0",
     "pagefind": "^1.5.2"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
