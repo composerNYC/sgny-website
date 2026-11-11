@@ -1,16 +1,20 @@
 #!/usr/bin/env node
 /*
-SGNY weekly email — send Mailchimp campaigns on demand (designed in the Mailchimp web editor).
+SGNY weekly email — build drafts and send Mailchimp campaigns on demand (layout: scripts/email-builder.mjs).
 
   npm run mail:setup                               one-time: save your Mailchimp API key (typed, hidden)
   node scripts/mailchimp.mjs setup --clipboard --email you@x.com   same, reading the key from the clipboard
   node scripts/mailchimp.mjs account               plan + audiences (checks the key works)
   node scripts/mailchimp.mjs sent [n]              last n sent emails (default 3)
   node scripts/mailchimp.mjs drafts [all]          recent "Weekly Schedule" drafts (or every draft)
-  node scripts/mailchimp.mjs copy <id> "<subject>" new DRAFT copied from a sent email (nothing is sent)
+  node scripts/mailchimp.mjs new "<subject>"       new empty DRAFT, same audience/sender as last email (nothing is sent)
+  node scripts/mailchimp.mjs copy <id> "<subject>" old way: DRAFT copied from a sent email, edited by hand in Mailchimp
+  node scripts/mailchimp.mjs content <id> <file>   save an email's HTML to a file (read-only)
+  node scripts/mailchimp.mjs fill <id> <week.json> put a built week into a DRAFT (uploads photos; nothing is sent)
   node scripts/mailchimp.mjs check <id>            Mailchimp's pre-send checklist for a draft
-  node scripts/mailchimp.mjs test <id> [email...]  test copy (default: MAIL_TEST_TO from .env)
-  node scripts/mailchimp.mjs send <id> --confirm   SEND TO THE WHOLE AUDIENCE (cannot be undone)
+  node scripts/mailchimp.mjs test <id> <week.json> [email...]  test copy (default: MAIL_TEST_TO from .env)
+  node scripts/mailchimp.mjs send <id> <week.json> [--confirm] checks only; with --confirm SENDS TO THE WHOLE AUDIENCE
+    (test and send refuse unless the draft is exactly the current build of <week.json>)
 
 Settings live in .env (gitignored, never commit): MAILCHIMP_API_KEY, MAILCHIMP_KEY_CREATED, MAIL_TEST_TO.
 Workflow rules for Claude: see CLAUDE.md. Plain-language guide: see the guide sent to Joao.
@@ -87,6 +91,7 @@ function describe(c) {
     `from:       ${s.from_name || '(none)'} <${s.reply_to || 'no reply-to'}>`,
     `audience:   ${r.list_name || '(none selected)'}${r.segment_text ? ' · segment: ' + r.segment_text.replace(/<[^>]+>/g, '') : ''}`,
     `recipients: ${r.recipient_count ?? 0}`,
+    `made by:    ${c.content_type === 'template' && c.settings?.template_id ? 'old Mailchimp template ("copy")' : 'Claude ("new" + "fill")'}`,
     c.send_time ? `sent:       ${fmt(c.send_time)} (${c.emails_sent} emails)` : `created:    ${fmt(c.create_time)}`,
     `edit link:  https://${dc}.admin.mailchimp.com/campaigns/edit?id=${c.web_id}`,
   ];
@@ -94,9 +99,52 @@ function describe(c) {
   return lines.join('\n');
 }
 
+// What an email shows: its pictures, links and words (ignores Mailchimp's whitespace changes).
+function fingerprint(html = '') {
+  const imgs = [...html.matchAll(/<img[^>]*src="([^"]+)"/g)].map((m) => m[1]);
+  const links = [...html.matchAll(/href="([^"*][^"]*)"/g)].map((m) => m[1]);
+  const words = html.replace(/<style[\s\S]*?<\/style>/g, '').replace(/<!--[\s\S]*?-->/g, '').replace(/<[^>]+>/g, ' ').replace(/&nbsp;|\s+/g, ' ').trim();
+  return JSON.stringify([imgs, links, words]);
+}
+
+// Refuse a draft that still shows exactly what last week's email showed (never filled, or Mailchimp reverted it).
+async function assertNotLastWeek(id) {
+  const prev = await lastSent();
+  if (!prev) return;
+  const [mine, theirs] = await Promise.all([api('GET', `/campaigns/${id}/content`), api('GET', `/campaigns/${prev.id}/content`)]);
+  if (fingerprint(mine.html) === fingerprint(theirs.html)) {
+    fail(`This draft still has exactly the same content as the last email sent ("${prev.settings.subject_line}"). This week's content is missing (run "fill" again). Refusing.`);
+  }
+}
+
+// The last WEEKLY email sent (ignores one-off emails sent in between).
 async function lastSent() {
-  const { campaigns } = await api('GET', '/campaigns?status=sent&type=regular&count=1&sort_field=send_time&sort_dir=DESC');
-  return campaigns[0];
+  const { campaigns } = await api('GET', '/campaigns?status=sent&type=regular&count=20&sort_field=send_time&sort_dir=DESC');
+  return campaigns.find((c) => WEEKLY.test(`${c.settings.subject_line} ${c.settings.title}`));
+}
+
+// Build the week file again and make sure the draft in Mailchimp is exactly that version.
+// Catches: changes approved after the last "fill", and Mailchimp quietly changing the draft.
+async function assertMatchesWeek(c, weekPath) {
+  if (!weekPath || !weekPath.endsWith('.json')) fail(`Give the week file too, e.g. ${cmd} ${c.id} emails/weeks/2026-11-16/week.json`);
+  if (c.content_type === 'template' && c.settings.template_id) {
+    fail('This draft is tied to the old Mailchimp template (made with "copy"), so it may not show the approved email. Make a new draft with "new" and "fill" it. Refusing.');
+  }
+  const { build, BuildError } = await import('./email-builder.mjs');
+  let built;
+  try {
+    built = await build(weekPath, { mode: 'mailchimp', upload: async () => { throw new BuildError('This week has a new photo that is not in the Mailchimp draft yet. Run "fill" again, then send a new test.'); } });
+  } catch (e) {
+    if (e instanceof BuildError) fail(e.message);
+    throw e;
+  }
+  if ((c.settings.subject_line || '').trim() !== built.week.subject.trim()) {
+    fail(`The draft's subject is "${c.settings.subject_line}" but the week file says "${built.week.subject}" (wrong draft or wrong week?). Refusing.`);
+  }
+  const { html } = await api('GET', `/campaigns/${c.id}/content`);
+  if (fingerprint(html) !== fingerprint(built.html)) {
+    fail('The draft in Mailchimp is not the latest approved version of this week\'s email (something changed after the last "fill"). Run "fill" again, then send a new test. Refusing.');
+  }
 }
 
 // ---------- setup (no key needed yet) ----------
@@ -160,7 +208,7 @@ const [cmd, id, ...rest] = process.argv.slice(2);
 
 if (cmd === 'setup') { await setup(); process.exit(0); }
 
-if (!['account', 'sent', 'drafts', 'copy', 'check', 'test', 'send'].includes(cmd)) {
+if (!['account', 'sent', 'drafts', 'new', 'copy', 'content', 'fill', 'check', 'test', 'send'].includes(cmd)) {
   console.log(readFileSync(fileURLToPath(import.meta.url), 'utf8').split('*/')[0].replace('#!/usr/bin/env node\n/*', ''));
   process.exit(cmd ? 1 : 0);
 }
@@ -195,7 +243,7 @@ switch (cmd) {
     const cutoff = Date.now() - 60 * 864e5;
     const shown = all ? campaigns : campaigns.filter((c) =>
       WEEKLY.test(`${c.settings.subject_line} ${c.settings.title}`) && Date.parse(c.create_time) > cutoff);
-    if (!shown.length) console.log('No recent "Weekly Schedule" drafts. (Start one with "copy".)');
+    if (!shown.length) console.log('No recent "Weekly Schedule" drafts. (Start one with "new".)');
     for (const c of shown) console.log(describe(c) + '\n');
     if (!all && campaigns.length > shown.length) console.log(`(${campaigns.length - shown.length} older or unrelated drafts hidden — "drafts all" shows them)`);
     break;
@@ -215,41 +263,128 @@ switch (cmd) {
     console.log('\nNext: open the edit link, update this week\'s content in Mailchimp, and save.');
     break;
   }
+  case 'content': {
+    // Read-only: save an email's HTML to a file and list the template's editable sections.
+    const out = rest[0];
+    if (!id || !out || !out.endsWith('.html')) fail('Usage: content <id> <output.html>');
+    if (existsSync(out)) fail(`${out} already exists. Choose a new file name.`);
+    const c = await api('GET', `/campaigns/${id}`);
+    const { html } = await api('GET', `/campaigns/${id}/content`);
+    writeFileSync(out, html || '');
+    console.log(describe(c));
+    console.log(`template:   ${c.settings.template_id || '(none — custom HTML)'}`);
+    const sections = [...new Set([...(html || '').matchAll(/mc:edit="([^"]+)"/g)].map((m) => m[1]))];
+    console.log(`sections:   ${sections.length ? sections.join(', ') : '(no editable sections found)'}`);
+    console.log(`saved HTML: ${out} (${(html || '').length} characters)`);
+    break;
+  }
+  case 'new': {
+    // A fresh, empty DRAFT with last email's audience and sender. Unlike "copy", it isn't tied to the
+    // old drag-and-drop template (Mailchimp re-applies that template over any content we put in).
+    const subject = [id, ...rest].join(' ').trim();
+    if (!subject || !/\(([A-Z][a-z]+ \d{1,2}, \d{4})\)\s*$/.test(subject)) fail('Usage: new "🔵 Weekly Schedule (November 16, 2026)"');
+    const prev = await lastSent();
+    if (!prev) fail('No sent email found to take the audience and sender from.');
+    if (prev.recipients.list_name !== AUDIENCE) fail(`The last sent email went to "${prev.recipients.list_name}", not "${AUDIENCE}". Stop and check with the user.`);
+    const s = prev.settings;
+    const recipients = { list_id: prev.recipients.list_id };
+    if (prev.recipients.segment_opts?.conditions?.length) recipients.segment_opts = prev.recipients.segment_opts;
+    const created = await api('POST', '/campaigns', {
+      type: 'regular',
+      recipients,
+      // inline_css off: the built email already has its styles inline; re-inlining would bloat it past Gmail's limit.
+      settings: { subject_line: subject, title: subject.replace(/^[^\p{L}\p{N}]+/u, '').trim(), preview_text: s.preview_text?.replace(/\([^)]*\)/, subject.match(/\(([^)]+)\)\s*$/)[0].trim()) || '', from_name: s.from_name, reply_to: s.reply_to, inline_css: false },
+      tracking: { opens: prev.tracking.opens, html_clicks: prev.tracking.html_clicks, text_clicks: prev.tracking.text_clicks },
+    });
+    console.log('✓ New empty DRAFT created — nothing was sent. Next: fill it.\n');
+    console.log(describe(created));
+    break;
+  }
+  case 'fill': {
+    // Put a built week (emails/weeks/<date>/week.json) into a DRAFT: uploads new photos, replaces the content.
+    const weekPath = rest[0];
+    if (!id || !weekPath) fail('Usage: fill <draft-id> <week.json>');
+    const c = await api('GET', `/campaigns/${id}`);
+    if (c.status !== 'save') fail(`This email's status is "${c.status}", not a draft. Refusing to change it.`);
+    if (c.content_type === 'template' && c.settings.template_id) {
+      fail('This draft is tied to the old drag-and-drop template (it was made with "copy"), so Mailchimp would undo the new content. Make the draft with "new" instead.');
+    }
+    const { build, BuildError } = await import('./email-builder.mjs');
+    let built;
+    try {
+      built = await build(weekPath, {
+        mode: 'mailchimp',
+        upload: async (file) => {
+          const name = file.split('/').pop();
+          const f = await api('POST', '/file-manager/files', { name, file_data: readFileSync(file).toString('base64') });
+          console.log(`  uploaded photo: ${name}`);
+          return f.full_size_url;
+        },
+      });
+    } catch (e) {
+      if (e instanceof BuildError) fail(e.message);
+      throw e;
+    }
+    if ((c.settings.subject_line || '').trim() !== built.week.subject.trim()) {
+      fail(`The draft's subject is "${c.settings.subject_line}" but week.json says "${built.week.subject}". They must match (wrong draft?).`);
+    }
+    // Settings first: changing settings on a template email makes Mailchimp re-apply the old template content.
+    if (built.week.previewText !== undefined && built.week.previewText !== c.settings.preview_text) {
+      await api('PATCH', `/campaigns/${id}`, { settings: { subject_line: c.settings.subject_line, from_name: c.settings.from_name, reply_to: c.settings.reply_to, preview_text: built.week.previewText } });
+    }
+    await api('PUT', `/campaigns/${id}/content`, { html: built.html });
+    const fp = fingerprint(built.html);
+    await new Promise((r) => setTimeout(r, 6000)); // Mailchimp can quietly undo content a few seconds later
+    const after = await api('GET', `/campaigns/${id}/content`);
+    if (fingerprint(after.html) !== fp) fail('Mailchimp did not keep the new content. Nothing was sent. Try "fill" again; if it keeps failing, stop and tell the user.');
+    console.log('✓ Draft updated with the approved email. Nothing was sent.\n');
+    console.log(describe(await api('GET', `/campaigns/${id}`)));
+    for (const w of built.warnings) console.log(`⚠ ${w}`);
+    break;
+  }
   case 'check': {
     if (!id) fail('Usage: check <id>');
     const c = await api('GET', `/campaigns/${id}`);
     console.log(describe(c) + '\n');
     const { is_ready, items } = await api('GET', `/campaigns/${id}/send-checklist`);
     for (const i of items) console.log(`${i.type === 'success' ? '✓' : i.type === 'warning' ? '!' : '✗'} ${i.heading}: ${i.details}`);
-    console.log(is_ready ? '\nREADY to send.' : '\nNOT READY — fix the ✗ items in Mailchimp first.');
+    console.log(is_ready ? '\nREADY to send.' : '\nNOT READY — see the ✗ items above.');
     break;
   }
   case 'test': {
-    if (!id) fail('Usage: test <id> [email...]');
-    const to = rest.length ? rest : (process.env.MAIL_TEST_TO || '').split(',').map((e) => e.trim()).filter(Boolean);
-    if (!to.length) fail('No test address. Add one (test <id> you@example.com) or set up the key again with --email.');
+    if (!id) fail('Usage: test <id> <week.json> [email...]');
+    const [weekPath, ...emails] = rest;
+    const to = emails.length ? emails : (process.env.MAIL_TEST_TO || '').split(',').map((e) => e.trim()).filter(Boolean);
+    if (!to.length) fail('No test address. Add one (test <id> <week.json> you@example.com) or set up the key again with --email.');
     if (to.length > 6) fail('Mailchimp allows at most 6 test addresses.');
+    const c = await api('GET', `/campaigns/${id}`);
+    if (c.status !== 'save') fail(`This email's status is "${c.status}", not a draft.`);
+    await assertMatchesWeek(c, weekPath);
+    await assertNotLastWeek(id);
     await api('POST', `/campaigns/${id}/actions/test`, { test_emails: to, send_type: 'html' });
     console.log(`✓ Test email sent to: ${to.join(', ')} (check spam if it doesn't arrive in a few minutes).`);
     break;
   }
   case 'send': {
-    if (!id) fail('Usage: send <id> --confirm');
+    if (!id) fail('Usage: send <id> <week.json> [--confirm]');
+    const weekPath = rest.find((a) => a !== '--confirm');
     const c = await api('GET', `/campaigns/${id}`);
     console.log(describe(c) + '\n');
     const r = c.recipients || {};
     if (c.status !== 'save') fail(`This email's status is "${c.status}", not a draft. Refusing to send.`);
-    if (r.list_name !== AUDIENCE) fail(`Audience is "${r.list_name || 'none'}", not "${AUDIENCE}". Fix the "To" field in Mailchimp. Refusing to send.`);
+    if (r.list_name !== AUDIENCE) fail(`Audience is "${r.list_name || 'none'}", not "${AUDIENCE}". Stop and tell the user. Refusing to send.`);
     if (!r.recipient_count) fail('This email has 0 recipients. Refusing to send.');
     const prev = await lastSent();
     if (prev && prev.settings.subject_line.trim() === (c.settings.subject_line || '').trim()) {
-      fail(`An email with this exact subject was already sent ${fmt(prev.send_time)}. Change the subject/date in Mailchimp if this is a new week. Refusing to send.`);
+      fail(`An email with this exact subject was already sent ${fmt(prev.send_time)}. Check the date in the subject. Refusing to send.`);
     }
+    await assertMatchesWeek(c, weekPath);
     if (prev && Math.abs(r.recipient_count - prev.emails_sent) > prev.emails_sent * 0.15) {
       console.log(`⚠ Recipient count (${r.recipient_count}) is quite different from last time (${prev.emails_sent}). Double-check the audience.\n`);
     }
     const { is_ready } = await api('GET', `/campaigns/${id}/send-checklist`);
     if (!is_ready) fail('Mailchimp says this email is not ready. Run "check" to see what to fix.');
+    await assertNotLastWeek(id);
     if (!rest.includes('--confirm')) {
       console.log(`Ready. Nothing sent yet. Sending would go to ${r.recipient_count} people in "${r.list_name}".`);
       break;

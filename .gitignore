@@ -21,3 +21,28 @@ dist/
 
 # personal Claude Code settings (not shared with collaborators)
 .claude/settings.local.json
+
+# weekly email: photos, previews and build files stay local (uploaded photo links are saved in week.json)
+emails/.cache/
+emails/weeks/*/.build/
+emails/weeks/*/preview.html
+emails/weeks/*/*.jpg
+emails/weeks/*/*.JPG
+emails/weeks/*/*.jpeg
+emails/weeks/*/*.JPEG
+emails/weeks/*/*.png
+emails/weeks/*/*.PNG
+emails/weeks/*/*.gif
+emails/weeks/*/*.GIF
+emails/weeks/*/*.heic
+emails/weeks/*/*.HEIC
+emails/weeks/*/*.heif
+emails/weeks/*/*.HEIF
+emails/weeks/*/*.webp
+emails/weeks/*/*.WEBP
+emails/weeks/*/*.tif
+emails/weeks/*/*.TIF
+emails/weeks/*/*.tiff
+emails/weeks/*/*.TIFF
+emails/weeks/*/*.pdf
+emails/weeks/*/*.PDF

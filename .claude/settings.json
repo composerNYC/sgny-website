@@ -4,7 +4,11 @@
       "Bash(node scripts/mailchimp.mjs account:*)",
       "Bash(node scripts/mailchimp.mjs sent:*)",
       "Bash(node scripts/mailchimp.mjs drafts:*)",
-      "Bash(node scripts/mailchimp.mjs check:*)"
+      "Bash(node scripts/mailchimp.mjs check:*)",
+      "Bash(node scripts/mailchimp.mjs content:*)",
+      "Bash(node scripts/mailchimp.mjs new:*)",
+      "Bash(node scripts/mailchimp.mjs fill:*)",
+      "Bash(node scripts/email-builder.mjs:*)"
     ],
     "ask": [
       "Bash(node scripts/mailchimp.mjs copy:*)",
