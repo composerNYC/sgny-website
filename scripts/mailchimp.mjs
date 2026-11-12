@@ -11,6 +11,7 @@ SGNY weekly email — build drafts and send Mailchimp campaigns on demand (layou
   node scripts/mailchimp.mjs copy <id> "<subject>" old way: DRAFT copied from a sent email, edited by hand in Mailchimp
   node scripts/mailchimp.mjs content <id> <file>   save an email's HTML to a file (read-only)
   node scripts/mailchimp.mjs fill <id> <week.json> put a built week into a DRAFT (uploads photos; nothing is sent)
+  node scripts/mailchimp.mjs delete-practice <id>  delete an unsent PRACTICE draft (practice runs only)
   node scripts/mailchimp.mjs check <id>            Mailchimp's pre-send checklist for a draft
   node scripts/mailchimp.mjs test <id> <week.json> [email...]  test copy (default: MAIL_TEST_TO from .env)
   node scripts/mailchimp.mjs send <id> <week.json> [--confirm] checks only; with --confirm SENDS TO THE WHOLE AUDIENCE
@@ -208,7 +209,7 @@ const [cmd, id, ...rest] = process.argv.slice(2);
 
 if (cmd === 'setup') { await setup(); process.exit(0); }
 
-if (!['account', 'sent', 'drafts', 'new', 'copy', 'content', 'fill', 'check', 'test', 'send'].includes(cmd)) {
+if (!['account', 'sent', 'drafts', 'new', 'copy', 'content', 'fill', 'delete-practice', 'check', 'test', 'send'].includes(cmd)) {
   console.log(readFileSync(fileURLToPath(import.meta.url), 'utf8').split('*/')[0].replace('#!/usr/bin/env node\n/*', ''));
   process.exit(cmd ? 1 : 0);
 }
@@ -342,6 +343,15 @@ switch (cmd) {
     for (const w of built.warnings) console.log(`⚠ ${w}`);
     break;
   }
+  case 'delete-practice': {
+    // Clean up after a practice run. Only deletes unsent drafts whose subject starts with PRACTICE.
+    if (!id) fail('Usage: delete-practice <id>');
+    const c = await api('GET', `/campaigns/${id}`);
+    if (c.status !== 'save' || !/^PRACTICE\b/.test(c.settings.subject_line || '')) fail('Only unsent PRACTICE drafts can be deleted with this command. Nothing deleted.');
+    await api('DELETE', `/campaigns/${id}`);
+    console.log(`✓ Deleted the practice draft "${c.settings.subject_line}".`);
+    break;
+  }
   case 'check': {
     if (!id) fail('Usage: check <id>');
     const c = await api('GET', `/campaigns/${id}`);
@@ -370,6 +380,7 @@ switch (cmd) {
     const weekPath = rest.find((a) => a !== '--confirm');
     const c = await api('GET', `/campaigns/${id}`);
     console.log(describe(c) + '\n');
+    if (/^PRACTICE\b/.test(c.settings.subject_line || '')) fail('This is a PRACTICE email. Practice emails are never sent to the list (only tests). Refusing.');
     const r = c.recipients || {};
     if (c.status !== 'save') fail(`This email's status is "${c.status}", not a draft. Refusing to send.`);
     if (r.list_name !== AUDIENCE) fail(`Audience is "${r.list_name || 'none'}", not "${AUDIENCE}". Stop and tell the user. Refusing to send.`);

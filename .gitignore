@@ -26,6 +26,8 @@ dist/
 emails/.cache/
 emails/weeks/*/.build/
 emails/weeks/*/preview.html
+emails/weeks/*/options.html
+emails/weeks/*-practice/
 emails/weeks/*/*.jpg
 emails/weeks/*/*.JPG
 emails/weeks/*/*.jpeg

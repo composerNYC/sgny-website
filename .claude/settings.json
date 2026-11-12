@@ -8,7 +8,9 @@
       "Bash(node scripts/mailchimp.mjs content:*)",
       "Bash(node scripts/mailchimp.mjs new:*)",
       "Bash(node scripts/mailchimp.mjs fill:*)",
-      "Bash(node scripts/email-builder.mjs:*)"
+      "Bash(node scripts/email-builder.mjs:*)",
+      "Bash(node scripts/mailchimp.mjs delete-practice:*)",
+      "Bash(git pull --ff-only)"
     ],
     "ask": [
       "Bash(node scripts/mailchimp.mjs copy:*)",

@@ -4,6 +4,7 @@ SGNY weekly email builder. It turns a week file (emails/weeks/<date>/week.json) 
 
   node scripts/email-builder.mjs next "<subject>"  start emails/weeks/<date>/week.json from the latest week
   node scripts/email-builder.mjs videos            latest uploads on the SGNY YouTube channel
+  node scripts/email-builder.mjs options <week.json>  side-by-side choices from <week folder>/options.json → options.html
   node scripts/email-builder.mjs <week.json>       build a preview page: emails/weeks/<date>/preview.html
                                                    (all images embedded, for the approval preview)
 
@@ -212,14 +213,21 @@ export async function build(weekPath, { mode = 'preview', upload } = {}) {
   const ctx = loadWeek(weekPath);
   const { week, dir } = ctx;
   const warnings = [];
-  const parts = [];
   week.uploaded ||= {};
 
   const sunday = sundayFor(week);
   const videos = week.videos || [];
   if (!videos.length) warnings.push('No YouTube videos listed ("videos"). The "latest videos" list will be empty.');
 
-  for (const [i, item] of week.content.entries()) {
+  const parts = await renderItems(week.content, { ctx, mode, upload, warnings, sunday, videos });
+  return finish(parts, { week, sunday, warnings, dir, mode });
+}
+
+// Turn a list of week.json items into email blocks.
+async function renderItems(items, { ctx, mode, upload, warnings, sunday, videos }) {
+  const { week, dir } = ctx;
+  const parts = [];
+  for (const [i, item] of items.entries()) {
     if (item === '---') { parts.push(read('blocks/parts/divider.html')); continue; }
     if (typeof item === 'string' && item.startsWith('@')) {
       const name = item.slice(1);
@@ -262,7 +270,10 @@ export async function build(weekPath, { mode = 'preview', upload } = {}) {
     if (item && typeof item === 'object' && typeof item.text === 'string') { parts.push(textBlock(item)); continue; }
     fail(`Item ${i + 1} in "content" isn't understood: ${JSON.stringify(item).slice(0, 80)}`);
   }
+  return parts;
+}
 
+async function finish(parts, { week, sunday, warnings, dir, mode }) {
   let html = compact(read('layout.html').replace('{{CONTENT}}', () => parts.join('\n')));
   const size = Buffer.byteLength(html);
   if (size > GMAIL_LIMIT) warnings.push(`The email is ${Math.round(size / 1000)} KB; Gmail cuts off emails over about 102 KB. Shorten it (drop an older announcement).`);
@@ -312,16 +323,81 @@ async function embedForPreview(html, week) {
   return html;
 }
 
+// ---------- options page ----------
+/*
+  <week folder>/options.json:
+  { "question": "How should the Symposium announcement look?",
+    "options": [ { "label": "Flyer + short invitation", "note": "optional one line", "content": [ ...items... ] }, ... ] }
+  Builds <week folder>/options.html: the options side by side, each exactly as it would look in the email.
+*/
+export async function buildOptions(weekPath) {
+  const ctx = loadWeek(weekPath);
+  const { week, dir } = ctx;
+  const optPath = join(dir, 'options.json');
+  if (!existsSync(optPath)) fail(`No options.json in ${dir}.`);
+  let spec;
+  try { spec = JSON.parse(readFileSync(optPath, 'utf8')); } catch (e) { fail(`options.json is not valid JSON: ${e.message}`); }
+  if (!Array.isArray(spec.options) || spec.options.length < 2 || spec.options.length > 4) fail('options.json needs 2 to 4 "options".');
+  const warnings = [];
+  const sunday = sundayFor(week);
+  const layout = read('layout.html');
+  const emailCss = [...layout.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)].map((m) => m[1]).join('\n');
+  const cols = [];
+  for (const [n, opt] of spec.options.entries()) {
+    if (!Array.isArray(opt.content) || !opt.content.length) fail(`Option ${n + 1} has no "content".`);
+    const parts = await renderItems(opt.content, { ctx, mode: 'preview', warnings, sunday, videos: week.videos || [] });
+    const letter = 'ABCD'[n];
+    cols.push(`<section class="opt" aria-labelledby="opt-${letter}">
+<div class="opt-head"><span class="letter" id="opt-${letter}">${letter}</span><div><div class="opt-label">${esc(opt.label || `Option ${letter}`)}</div>${opt.note ? `<div class="opt-note">${esc(opt.note)}</div>` : ''}</div></div>
+<div class="mail"><div class="mail-inner">${compact(parts.join('\n'))}</div></div>
+</section>`);
+  }
+  const page = `<meta charset="utf-8">
+<title>${esc(spec.title || `Email options, ${week.subject.match(/\(([^)]+)\)/)?.[1] || ''}`)}</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+${emailCss}
+/* Page around the email samples. Layout: one column per option, wrapping to a single column on phones. */
+:root { --bg: #eef2f6; --fg: #1d2733; --muted: #5a6878; --card: #ffffff; --line: #d5dde6; --accent: #1f6fb2; --mailbg: #F2F2F2; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #11161c; --fg: #e6ebf1; --muted: #9aa8b8; --card: #1a2129; --line: #2c3742; --accent: #6db3ee; color-scheme: dark; } }
+:root[data-theme="dark"] { --bg: #11161c; --fg: #e6ebf1; --muted: #9aa8b8; --card: #1a2129; --line: #2c3742; --accent: #6db3ee; color-scheme: dark; }
+html body { width: auto !important; height: auto !important; box-sizing: border-box; background: var(--bg) !important; color: var(--fg); font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; margin: 0;
+  padding-block: 24px 40px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.intro { max-width: 1900px; margin: 0 auto 20px; }
+.intro .q { font-size: 22px; font-weight: 700; line-height: 1.3; text-wrap: balance; margin: 0 0 6px; }
+.intro .how { color: var(--muted); font-size: 15px; margin: 0; }
+.grid { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; align-items: flex-start; max-width: 1900px; margin: 0 auto; }
+.opt { flex: 1 1 340px; max-width: 620px; min-width: 0; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+.opt-head { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
+.letter { flex: none; width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: var(--card); font-weight: 700; font-size: 20px; display: grid; place-items: center; }
+.opt-label { font-weight: 650; font-size: 17px; }
+.opt-note { color: var(--muted); font-size: 14px; margin-top: 2px; }
+.mail { background: var(--mailbg); border-radius: 6px; padding: 10px; overflow-x: auto; }
+.mail-inner { background: #ffffff; max-width: 600px; margin: 0 auto; color: #606060; }
+.mail-inner table { table-layout: fixed; width: 100% !important; }
+.mail-inner img { max-width: 100% !important; height: auto; }
+</style>
+<div class="intro"><p class="q">${esc(spec.question || 'Which one do you like best?')}</p>
+<p class="how">Each one shows exactly how it will look in the email. Tell Claude the letter you like, or what to change.</p></div>
+<div class="grid">${cols.join('\n')}</div>`;
+  const html = await embedForPreview(page, week);
+  const out = join(dir, 'options.html');
+  writeFileSync(out, html);
+  return { out, warnings, count: spec.options.length };
+}
+
 // Start next week's file from the latest week: same list of items, new subject.
 // Local photos that were uploaded become their Mailchimp links (the files stay in the old folder).
 export function nextWeek(subject) {
   const d = subjectDate(subject);
-  const folder = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  // Practice runs ("PRACTICE 🔵 Weekly Schedule (...)") get their own folder and are never used as "last week".
+  const practice = /^PRACTICE\b/.test(subject);
+  const folder = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}${practice ? '-practice' : ''}`;
   const weeksDir = join(emailsDir, 'weeks');
   const target = join(weeksDir, folder, 'week.json');
   if (existsSync(target)) fail(`${target} already exists. Edit that one instead.`);
   const prevName = execFileSync('ls', [weeksDir], { encoding: 'utf8' }).split('\n')
-    .filter((n) => /^\d{4}-\d{2}-\d{2}$/.test(n) && n < folder && existsSync(join(weeksDir, n, 'week.json'))).sort().pop();
+    .filter((n) => /^\d{4}-\d{2}-\d{2}$/.test(n) && n < folder.slice(0, 10) && existsSync(join(weeksDir, n, 'week.json'))).sort().pop();
   if (!prevName) fail('No earlier week found in emails/weeks/.');
   const { week: prev, dir: prevDir } = loadWeek(join(weeksDir, prevName, 'week.json'));
   const dropped = [];
@@ -361,8 +437,14 @@ export async function latestVideos(n = 6) {
 
 // ---------- CLI ----------
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  if (process.argv[2] === 'next' || process.argv[2] === 'videos') {
+  if (['next', 'videos', 'options'].includes(process.argv[2])) {
     try {
+      if (process.argv[2] === 'options') {
+        const { out, warnings, count } = await buildOptions(process.argv[3] || fail('Usage: options <week.json>'));
+        console.log(`options:  ${out} (${count} options)`);
+        for (const w of warnings) console.log(`⚠ ${w}`);
+        process.exit(0);
+      }
       if (process.argv[2] === 'videos') {
         const fmt = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', weekday: 'short', month: 'short', day: 'numeric' });
         for (const v of await latestVideos()) console.log(`${fmt.format(new Date(v.published)).padEnd(12)} ${v.title}\n             ${v.url}`);

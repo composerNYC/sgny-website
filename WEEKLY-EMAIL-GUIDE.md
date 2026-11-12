@@ -40,19 +40,24 @@ subject, the list, and the number of people.
 
 ---
 
+## Try it first: a practice run
+
+Open the Claude panel and type **"Let's do a practice run of the weekly email."** Everything works exactly like the real thing, all the way to a test email in your inbox, but **nothing can be sent to the list**. Claude cleans up afterward.
+
 ## Every week
 
-Open the Claude panel in VS Code and talk to Claude normally:
+Open the Claude panel in VS Code and say **"Let's do this week's email."** Claude leads; just answer. You can write in Portuguese if you like.
 
-| You | What happens |
+| Claude… | You… |
 |---|---|
-| **"Let's do next week's email"** | Claude asks which date goes in the subject and opens a folder for this week. |
-| *Drag the flyers and photos into that folder, then type the text for each announcement in the chat* | Say also what to take out from last week. Claude checks spelling, dates and times, and asks about anything missing. |
-| *Open the preview link Claude gives you* | Ask for any changes in your own words ("move the talk to the top", "bigger photo"). Claude updates the same link. |
-| **"Looks good"** | Claude puts it in Mailchimp and sends a test to your inbox. |
-| *Look at the test in your inbox* | If something needs changing, say so. Claude fixes it and sends a new test. |
-| **"Send it"** | Claude asks: *"Send … to SGNY - General List (311 people)?"* |
-| **"Yes"** | It goes out. ✓ |
+| asks you to confirm the date (*"the week of Monday, November 16?"*) | say yes, or give the right date |
+| lists what's still in from last week and offers to remove past events | say what to take out |
+| opens a window on your screen | drag in this week's flyers and photos |
+| asks what's new | give the basics: what, when, where, who, link. A pasted WhatsApp message is fine. **Claude writes the description for you.** |
+| shows a page with 2–3 ways it could look (A, B, C) | pick a letter, or say what to change |
+| shows the whole email | ask for changes in your own words ("move the talk to the top"), or say **"looks good"** |
+| puts it in Mailchimp and sends a test to your inbox | look at it; ask for changes if needed |
+| asks *"Send … to SGNY - General List (311 people)?"* | **"Yes"**, and it goes out ✓ |
 
 **About VS Code pop-ups:** sometimes VS Code asks *"Allow Claude to run this command?"* Click **Yes / Allow**. For anything that tests or sends, choose **allow once**, never "always allow."
 
