@@ -338,16 +338,18 @@ async function schedule(week, S, sunday) {
   ${boxes.join('')}`);
 }
 
-function zoomBox(S) {
-  const z = S.zoom;
+// The Zoom link, ID, password and phone come from the website, the same master link every session page uses.
+async function zoomBox(S) {
+  const z = (await import(pathToFileURL(join(root, 'src/data/activities.js')).href)).zoom;
+  if (!z?.url || !z?.id) fail('The website has no Zoom details (zoom in src/data/activities.js).');
   return section(card(`<div style="padding:24px;">
     ${eyebrow('Join online')}
     <div style="font-family:${SERIF};font-size:22px;font-weight:600;color:${C.ink};margin:0 0 10px;">All online meetings use one Zoom link</div>
     ${btn(z.url, 'Join on Zoom', 'blue')}
     <div style="font-family:${SANS};font-size:14px;line-height:1.7;color:${C.soft};margin-top:12px;">
-      Meeting ID <strong style="color:${C.ink};">${esc(z.id)}</strong> · Password <strong style="color:${C.ink};">${esc(z.password)}</strong><br>
-      By phone: ${z.phones.map(esc).join(' or ')}, then Meeting ID ${esc(z.id)} and password <strong style="color:${C.ink};">${esc(z.phonePassword)}</strong>.<br>
-      Other numbers: ${link(z.localNumbers, 'find your local number')}.
+      Meeting ID <strong style="color:${C.ink};">${esc(z.id)}</strong>${z.password ? ` · Password <strong style="color:${C.ink};">${esc(z.password)}</strong>` : ''}<br>
+      ${z.phone ? `By phone: ${esc(z.phone)}, then enter the Meeting ID.<br>` : ''}
+      ${S.zoom?.localNumbers ? `Other numbers: ${link(S.zoom.localNumbers, 'find your local number')}.` : ''}
     </div></div>`, `background:${C.goldSoft};border-color:${C.goldSoft};`), C.white, '8px 40px 36px');
 }
 
@@ -482,7 +484,7 @@ export async function build(weekPath, { mode = 'preview', upload } = {}) {
 
   rows.push(videosBox(week, S, warnings));
   rows.push(await schedule(week, S, sunday));
-  rows.push(zoomBox(S));
+  rows.push(await zoomBox(S));
   rows.push(donateBox(S));
   rows.push(quoteBox(week.quote || S.quote));
   rows.push(footer(S.links));

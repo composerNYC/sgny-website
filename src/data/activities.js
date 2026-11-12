@@ -1,5 +1,5 @@
 // SGNY regular activities + per-session detail. Sourced from sgny.org.
-// NOTE: the Zoom link is from the SGNY site and should be confirmed current.
+// The Zoom link is SGNY's one master link (confirmed Nov 2026). The weekly email uses it too.
 export const zoom = {
   url: 'https://us02web.zoom.us/j/81255349276?pwd=d0FyQWx0dDVCRDhZdGdha1o1RjJSUT09',
   id: '812 5534 9276',

@@ -80,7 +80,7 @@ Each option's `events` uses the same items as `events` in week.json. Then run `n
 - Add the latest videos: `node scripts/email-builder.mjs videos` lists the newest uploads with dates; take the ones published since the last email (usually the Thursday Spirits' Book study and the Sunday study). The YouTube titles leave out the book, so add it in front, e.g. `The Spirits' Book: Introduction, Items VIII, IX and X`, `The Gospel According to Spiritism: Blessed Are the Afflicted`. The Sunday book is the one for that Sunday in the rotation. If unsure, ask.
 - Build: `node scripts/email-builder.mjs emails/weeks/<folder>/week.json`. Fix every ✗; fix each ⚠ or tell him about it. If it says the email is too big for Gmail, suggest taking out the oldest announcement.
 - Show `preview.html` (see "Showing him things") with a three-line summary: what's new at the top, the Sunday line, the two videos. Ask: *"Does this look right? Tell me anything you'd like changed."*
-- **The first time you work with him** (no earlier week in `emails/weeks/` was sent by this new system, i.e. only `2026-11-09` exists), also ask him to look carefully at the "This week at SGNY" schedule and the Zoom box: *"The schedule now comes from the website. Are all the days, times and the Zoom details right?"* If anything is wrong, don't change it yourself: tell him you'll pass it on, and tell the user (the website's schedule in `src/data/activities.js` needs fixing, which fixes both).
+- **The first time you work with him** (no earlier week in `emails/weeks/` was sent by this new system, i.e. only `2026-11-09` exists), also ask him to look carefully at the "This week at SGNY" schedule and the Zoom box: *"The schedule and the Zoom details now come from the website. Are all the days and times right?"* If anything is wrong, don't change it yourself: tell him you'll pass it on, and tell the user (the website's schedule in `src/data/activities.js` needs fixing, which fixes both).
 - Change what he asks, rebuild, and show it again (same link). Only a clear "looks good / approved" counts as approval of this version; if you change anything after that, he approves again.
 
 ### 7. Into Mailchimp, test, send
@@ -98,7 +98,7 @@ He's visual: put every options page and preview in front of him; never just desc
 ## How the email is made
 - The look matches sgny.org (same colors, type, cards and buttons) and is built by `scripts/email-builder.mjs`. Don't change the design for a normal week. The email always runs in this order: header, "This week at SGNY" banner, **Happening soon** (this week's events), **From our catalog** (books), **More from our community** (promotions), **Latest videos**, **the weekly schedule**, Zoom box, donations, quote, footer.
 - **The weekly schedule comes from the website** (`src/data/activities.js`), so the email and the site always agree; closed meetings are left out, and the Sunday shown is the one for that week's Sunday.
-- **Standing content** (the books, promotions, Zoom details, quote, links and the banner's sentence) is in `emails/standing.json`.
+- **Standing content** (the books, promotions, quote, links and the banner's sentence) is in `emails/standing.json`.
 - Each week has a folder `emails/weeks/<YYYY-MM-DD>/` (practice: `<YYYY-MM-DD>-practice`) with `week.json`, that week's photos, and the built `preview.html` / `options.html`.
 - `node scripts/mailchimp.mjs new "<subject>"` creates an empty draft; `fill <draft-id> <week.json>` uploads the photos and puts the email in it. Never use `copy` for this: a copied draft is tied to the old Mailchimp template and Mailchimp undoes the new content.
 
@@ -142,6 +142,6 @@ He's visual: put every options page and preview in front of him; never just desc
 
 ## If he wants something the email can't do yet
 - A new or changed book or promotion that will run for weeks: add or edit it in `emails/standing.json` and use its name. Retiring one: remove its name from the week's `books` / `more`.
-- New Zoom details, the banner sentence or the usual quote: edit `emails/standing.json`, show him the preview, and mention that this changes every future email.
+- The Zoom link, meeting ID, password and phone come from the website (`zoom` in `src/data/activities.js`), the one master link everyone uses; if they change, tell the user. The banner sentence or the usual quote: edit `emails/standing.json`, show him the preview, and mention that this changes every future email.
 - **The weekly schedule** (days, times, session names) comes from the website. Don't edit it for the email: tell him you'll pass it on, and tell the user.
 - Don't redesign the layout. If he asks for a new look, tell him you'll pass it on to whoever set this up, and stop.
