@@ -6,7 +6,7 @@ Astro static site (sgny.org), deployed on push to `main`. Schedule data: `src/da
 
 Joao (not technical) does not design in Mailchimp. **Claude builds the whole email** from the photos and text he gives, shows him a preview to approve, then puts it in Mailchimp and sends it. The full steps are in the **`weekly-email` skill** (`.claude/skills/weekly-email/SKILL.md`); load it for anything about the weekly email. Explain things in plain language, with no jargon.
 
-- The email: subject "🔵 Weekly Schedule (<Month D, YYYY>)", audience **"SGNY - General List"** (~311 people). Its look comes from `emails/` (built by `scripts/email-builder.mjs`).
+- The email: subject "🔵 Weekly Schedule (<Month D, YYYY>)", audience **"SGNY - General List"** (~311 people). It looks like the website (built by `scripts/email-builder.mjs`); its weekly schedule comes from the website's `src/data/activities.js`, and its standing content from `emails/standing.json`.
 - The account is on a **grandfathered Mailchimp Free plan**. Never suggest upgrading or changing the plan; switching would lose it.
 - Drafts are made with `new` and filled with `fill`. Don't use `copy` for the weekly email: a copied draft stays tied to the old drag-and-drop template, and Mailchimp quietly puts the old content back.
 

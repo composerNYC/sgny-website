@@ -32,6 +32,7 @@ This copies last week's email into a new week, keeping everything that was in it
 Before asking him anything about content, work out on your own what should be promoted this week. Events are often announced weeks ahead (a talk next month starts appearing early), so this matters.
 
 1. **Read the last 3 sent emails**, not just last week's: `node scripts/mailchimp.mjs sent 3`, then `node scripts/mailchimp.mjs content <id> <scratch-dir>/<id>.html` for each, and read their text. Also read the `week.json` of recent weeks in `emails/weeks/`. **Look at every flyer image** with the Read tool. Event dates are often only on the flyer.
+   (Emails sent before Nov 16, 2026 use the old look, so their layout differs, but the events and dates in them still count.)
 2. **List every event or promotion you find** with its date(s), and sort each one:
    - **Still coming up and in last week's email:** keep it. If it's within about 7 days, suggest making it stand out: move it to the top, and add a short line like "This Saturday!" or "3 days to go!" (they've done this before, e.g. the Symposium countdown).
    - **Still coming up but dropped from last week's email** (it was in an earlier one): suggest bringing it back.
@@ -60,7 +61,7 @@ Before asking him anything about content, work out on your own what should be pr
 
 ### 5. Options (when there's a real choice)
 When a new announcement could reasonably look different ways, show him **2 or 3 options side by side** instead of asking in words. Good choices to offer:
-- flyer only vs. flyer + short invitation vs. headline first, then flyer;
+- flyer only vs. flyer with a caption vs. a card (title, text, button);
 - which announcement goes first;
 - a shorter vs. a fuller description;
 - for several photos of one event: all of them vs. the best one.
@@ -69,15 +70,17 @@ Write `emails/weeks/<folder>/options.json`:
 ```json
 { "question": "How should we announce Rafael Rezende's talk?",
   "options": [
-    { "label": "Flyer only", "note": "Clean. The flyer already says everything.", "content": [ { "image": "talk.jpg", "alt": "..." }, "---" ] },
-    { "label": "Flyer + short invitation", "note": "Adds a warm line and the link.", "content": [ ... ] } ] }
+    { "label": "Flyer only", "note": "Clean. The flyer already says everything.", "events": [ { "image": "talk.jpg", "alt": "..." } ] },
+    { "label": "Flyer + caption", "note": "Adds the key facts under the flyer.", "events": [ { "image": "talk.jpg", "alt": "...", "caption": "..." } ] },
+    { "label": "Card", "note": "A card with title, text and a button.", "events": [ { "title": "...", "label": "...", "text": "...", "image": "talk.jpg", "buttons": [ { "label": "Register", "url": "https://..." } ] } ] } ] }
 ```
-Each option's `content` uses the same items as week.json. Then run `node scripts/email-builder.mjs options emails/weeks/<folder>/week.json` and show `options.html` (see "Showing him things"). Ask: *"Which one do you like: A, B or C? Or tell me what to change."* Put his choice into week.json. Offer options for the things that matter, not for everything: usually one options page per email is plenty. If nothing is new, skip this step.
+Each option's `events` uses the same items as `events` in week.json. Then run `node scripts/email-builder.mjs options emails/weeks/<folder>/week.json` and show `options.html` (see "Showing him things"). Ask: *"Which one do you like: A, B or C? Or tell me what to change."* Put his choice into week.json. Offer options for the things that matter, not for everything: usually one options page per email is plenty. If nothing is new, skip this step.
 
 ### 6. The finished email
 - Add the latest videos: `node scripts/email-builder.mjs videos` lists the newest uploads with dates; take the ones published since the last email (usually the Thursday Spirits' Book study and the Sunday study). The YouTube titles leave out the book, so add it in front, e.g. `The Spirits' Book: Introduction, Items VIII, IX and X`, `The Gospel According to Spiritism: Blessed Are the Afflicted`. The Sunday book is the one for that Sunday in the rotation. If unsure, ask.
 - Build: `node scripts/email-builder.mjs emails/weeks/<folder>/week.json`. Fix every ✗; fix each ⚠ or tell him about it. If it says the email is too big for Gmail, suggest taking out the oldest announcement.
 - Show `preview.html` (see "Showing him things") with a three-line summary: what's new at the top, the Sunday line, the two videos. Ask: *"Does this look right? Tell me anything you'd like changed."*
+- **The first time you work with him** (no earlier week in `emails/weeks/` was sent by this new system, i.e. only `2026-11-09` exists), also ask him to look carefully at the "This week at SGNY" schedule and the Zoom box: *"The schedule now comes from the website. Are all the days, times and the Zoom details right?"* If anything is wrong, don't change it yourself: tell him you'll pass it on, and tell the user (the website's schedule in `src/data/activities.js` needs fixing, which fixes both).
 - Change what he asks, rebuild, and show it again (same link). Only a clear "looks good / approved" counts as approval of this version; if you change anything after that, he approves again.
 
 ### 7. Into Mailchimp, test, send
@@ -93,8 +96,10 @@ He's visual: put every options page and preview in front of him; never just desc
 - Pages are previews only; the test email in his inbox is the final check of how it really looks.
 
 ## How the email is made
-- The look is fixed and copied from the real Nov 9, 2026 email: `emails/layout.html` (frame, header, footer) and `emails/blocks/` (the parts that repeat every week). Don't edit these for a normal week.
-- Each week has a folder `emails/weeks/<YYYY-MM-DD>/` (practice: `<YYYY-MM-DD>-practice`) with `week.json` (what goes in the email, top to bottom), that week's photos, and the built `preview.html` / `options.html`.
+- The look matches sgny.org (same colors, type, cards and buttons) and is built by `scripts/email-builder.mjs`. Don't change the design for a normal week. The email always runs in this order: header, "This week at SGNY" banner, **Happening soon** (this week's events), **From our catalog** (books), **More from our community** (promotions), **Latest videos**, **the weekly schedule**, Zoom box, donations, quote, footer.
+- **The weekly schedule comes from the website** (`src/data/activities.js`), so the email and the site always agree; closed meetings are left out, and the Sunday shown is the one for that week's Sunday.
+- **Standing content** (the books, promotions, Zoom details, quote, links and the banner's sentence) is in `emails/standing.json`.
+- Each week has a folder `emails/weeks/<YYYY-MM-DD>/` (practice: `<YYYY-MM-DD>-practice`) with `week.json`, that week's photos, and the built `preview.html` / `options.html`.
 - `node scripts/mailchimp.mjs new "<subject>"` creates an empty draft; `fill <draft-id> <week.json>` uploads the photos and puts the email in it. Never use `copy` for this: a copied draft is tied to the old Mailchimp template and Mailchimp undoes the new content.
 
 ### week.json
@@ -103,29 +108,40 @@ He's visual: put every options page and preview in front of him; never just desc
 {
   "subject": "🔵 Weekly Schedule (November 16, 2026)",
   "previewText": "Please take a look at our schedule for this week (November 16, 2026)",
-  "content": [
-    "@this-week-header",
-    { "image": "symposium.jpg", "alt": "20th US Spiritist Symposium, Nov 7, Dania Beach FL", "link": "https://..." },
-    { "text": "<strong>3 DAYS TO GO!</strong>\nThe countdown is on.\n\nRegister <a href=\"https://...\">here</a>.", "align": "center", "size": 16 },
-    "---",
-    "@sgny-website", "---", "@podcast", "---", "@donations", "---", "@youtube", "---", "@schedule", "---", "@quote", "---", "@social", "---", "@footer"
+  "intro": "(optional) one sentence for the blue banner; leave out to use the usual one",
+  "events": [
+    { "image": "symposium.jpg", "alt": "20th US Spiritist Symposium, Nov 7, Dania Beach FL", "link": "https://...",
+      "caption": "<strong>20th US Spiritist Symposium</strong> · Saturday, November 7 · Dania Beach, FL\nRegister <a href=\"https://...\">here</a>." },
+    { "text": "<strong>3 days to go!</strong>" },
+    { "title": "Christmas celebration", "label": "Sunday, December 13 · 11:00am", "text": "Music, readings and fellowship for the whole family.",
+      "image": "christmas.jpg", "buttons": [ { "label": "Details", "url": "https://..." } ] }
   ],
+  "books": ["posthumous-works", "prism-of-grief"],
+  "more": ["revue-spirite", "learning-platform", "podcast", "be-my-hope"],
   "videos": [
     { "title": "The Spirits' Book: Introduction, Items VIII, IX and X", "url": "https://www.youtube.com/watch?v=-eQSiZYKTNc" }
   ],
-  "sunday": { "title": "Study Group - ...", "text": "..." }
+  "sunday": { "title": "Study Group: ...", "text": "..." },
+  "quote": { "text": "...", "by": "..." }
 }
 ```
 
-- `"@name"`: a standing part from `emails/blocks/`: `this-week-header` (the "THIS WEEK AT SGNY" banner), `sgny-website`, `posthumous-works`, `prism-of-grief`, `revue-spirite`, `learning-platform`, `podcast`, `be-my-hope`, `donations`, `youtube` (banner, video list, channel button), `schedule` (banner, weekly schedule, Zoom details), `quote`, `social`, `footer`. Keep `@donations` through `@footer` in that order at the end.
-- `"---"`: the thin grey line between sections. One between sections; several photos of one announcement go together with no line between them.
-- `{ "image": ... }`: a photo or flyer, either a file in the week folder or a `https://` link. `alt` is required: a short description of what the image says. `link` is optional: where it goes when clicked. `width` is optional (pixels, at most 564). Leave it out and the picture fills the column if it's at least 564 pixels wide, otherwise it shows at its own size. Set it for things like a book cover (about 330). Photos are resized, turned upright and converted (HEIC → JPEG) automatically.
-- `{ "text": ... }`: plain text. A blank line starts a new paragraph and a single line break is kept. Only `<a href="...">`, `<strong>`, `<em>`, `<u>`, `<br>` are allowed. Links are styled blue automatically. `align`: `justify` (default, like the book blurbs), `center` or `left`. `size`: 14 (default body), 16 for short centered announcements, 18 for a headline.
-- `videos`: the "latest videos" list (usually 2).
-- `sunday`: leave it out. The builder fills in the Sunday line from the monthly rotation (1st Sunday Sex and Destiny, 2nd Gospel, 3rd The Mediums' Book, 4th Q&A Session). Set it only when Joao says that Sunday is different, or `"none"` if there's no Sunday session. On a 5th Sunday the builder stops; ask him what happens that day.
-- `uploaded`: written by `fill` (each uploaded photo's Mailchimp link); don't touch it.
+- `events` ("Happening soon", top to bottom). Three kinds:
+  - **Flyer**: `image` (a file in the week folder or a `https://` link), `alt` (required: a short description of what the image says), optional `link` (where a click goes) and `caption` (the key facts under the flyer: bold name, then date · time · place, then a link; this is what readers see if their email hides images, so add one to every important flyer). Pictures fill the 520px column; smaller ones show at their own size. Photos are resized, turned upright and converted (HEIC → JPEG) automatically.
+  - **Card**: `title`, optional `label` (small gold line above the title, e.g. the date), `text`, `image`, `buttons` (`[{ "label", "url" }]`). Good for events without a flyer.
+  - **Note**: `text` only, centered, e.g. a countdown line. Optional `align`, `size`.
+- Text everywhere (`caption`, `text`): a blank line starts a new paragraph and a single line break is kept. Only `<a href="...">`, `<strong>`, `<em>`, `<u>`, `<br>` are allowed.
+- `books`: names from `emails/standing.json` ("From our catalog", shown two per row), or a full object `{ "title", "by", "text", "image", "link" }` for a new book.
+- `more`: names from `emails/standing.json` ("More from our community" cards), or a full card object like the card event above.
+- `videos`: "Latest videos" (usually 2). Write titles as `<Book or series>: <video title>`; the part before the colon shows as the small gold line.
+- `sunday`: leave it out. The schedule shows that week's Sunday session from the website's rotation (1st Sunday Sex and Destiny, 2nd Gospel, 3rd The Mediums' Book, 4th Question & Answer). Set it only when Joao says that Sunday is different, or `"none"` if there's no Sunday session. On a 5th Sunday the builder stops; ask him what happens that day.
+- `quote`: leave it out to use the usual quote; set it for a different one.
+- `uploaded`: written by `fill` (each uploaded photo's Mailchimp link and size); don't touch it.
 
-Whatever is in the list carries over to next week until it's removed, so a promotion that runs for several weeks stays in by itself.
+`next` carries events, books, promotions and the quote over to next week until they're removed, so a promotion that runs for several weeks stays in by itself.
 
 ## If he wants something the email can't do yet
-Changing a standing part (new Zoom details, a new quote, retiring the podcast) means editing `emails/blocks/<name>.html` or removing it from the list. Removing is fine. For edits to the schedule, Zoom or footer text, make the change, show him the preview, and mention that this changes every future email. Don't redesign the layout. If he asks for a new look, tell him you'll pass it on to whoever set this up, and stop.
+- A new or changed book or promotion that will run for weeks: add or edit it in `emails/standing.json` and use its name. Retiring one: remove its name from the week's `books` / `more`.
+- New Zoom details, the banner sentence or the usual quote: edit `emails/standing.json`, show him the preview, and mention that this changes every future email.
+- **The weekly schedule** (days, times, session names) comes from the website. Don't edit it for the email: tell him you'll pass it on, and tell the user.
+- Don't redesign the layout. If he asks for a new look, tell him you'll pass it on to whoever set this up, and stop.

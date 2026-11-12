@@ -1,0 +1,78 @@
+{
+  "intro": "Study groups, spiritual assistance and talks, all free and open to everyone, in person in Manhattan and online.",
+  "books": {
+    "posthumous-works": {
+      "title": "Posthumous Works",
+      "by": "Allan Kardec",
+      "text": "The first English edition of these selected writings, presented by the USSF to honor Kardec.",
+      "image": "https://mcusercontent.com/b68e90a1f6237b2836846604b/images/550609a9-51c9-dbc8-ae55-1c58f2c224fd.jpeg",
+      "link": "https://sgny.org/catalog/books/allan-kardec/posthumous-works/"
+    },
+    "prism-of-grief": {
+      "title": "The Prism of Grief",
+      "by": "Jussara Pretti Korngold",
+      "text": "Love, loss and awakening across the seasons of life: a healing path through sorrow.",
+      "image": "https://mcusercontent.com/b68e90a1f6237b2836846604b/images/4d7f0720-da65-01b1-7b4c-2fb1db2de04e.jpeg",
+      "link": "https://sgny.org/catalog/books/jussara-korngold/the-prism-of-grief/"
+    }
+  },
+  "cards": {
+    "revue-spirite": {
+      "label": "Revue Spirite · Issue 25",
+      "title": "Law of Adoration: Drawing Closer to God",
+      "text": "Worship, the elevation of thought and moral progress, in the light of Spiritism, science, philosophy and ethics.",
+      "image": "https://mcusercontent.com/b68e90a1f6237b2836846604b/images/5914b842-cb3a-7c39-bd3e-ad2caf1ee28f.jpg",
+      "buttons": [{ "label": "Read the issue", "url": "https://revuespirite.cei-spiritistcouncil.com/revue-spirite-n25-year-169/?lang=en" }]
+    },
+    "learning-platform": {
+      "label": "Virtual courses",
+      "title": "One new platform, two great courses",
+      "text": "Our new learning platform offers courses that introduce you to the world of Spiritism, at your own pace.",
+      "image": "https://mcusercontent.com/b68e90a1f6237b2836846604b/images/0d8832e1-c859-7ed9-4504-ad07aa96538e.jpeg",
+      "buttons": [{ "label": "Visit learn.spiritist.us", "url": "https://learn.spiritist.us" }]
+    },
+    "podcast": {
+      "label": "Every Friday · 7:00pm EST",
+      "title": "Psychology & Spirituality",
+      "text": "Dr. Anahy Fonseca, Jussara Korngold and guests on the works of Joanna de Angelis: real-world insights for a better life. A new episode every week.",
+      "image": "https://mcusercontent.com/b68e90a1f6237b2836846604b/images/79d611ef-b609-ca9a-9cba-1a6a0596edce.jpeg",
+      "buttons": [{ "label": "Listen on Spotify", "url": "https://open.spotify.com/show/0aYucZH8ykhBhGliylX4ER" }]
+    },
+    "be-my-hope": {
+      "label": "Free app",
+      "title": "Be My HOPE",
+      "text": "Uplifting videos, courses and audio, plus a daily inspirational message on your phone.",
+      "image": "https://mcusercontent.com/b68e90a1f6237b2836846604b/images/ce0ee527-6de2-fff0-4b69-8c9ac168b1d1.jpeg",
+      "buttons": [
+        { "label": "App Store", "url": "https://apps.apple.com/us/app/be-my-hope/id6462927703" },
+        { "label": "Google Play", "url": "https://play.google.com/store/apps/details?id=com.goodbarber.bemyhope" }
+      ]
+    }
+  },
+  "zoom": {
+    "url": "https://us02web.zoom.us/j/81255349276?pwd=SEU4aWVQUGhIQS9WUCtWV1FyS29adz09",
+    "id": "812 5534 9276",
+    "password": "kardec",
+    "phones": ["+1 646 558 8656 (New York)", "+1 301 715 8592 (Germantown)"],
+    "phonePassword": "849513",
+    "localNumbers": "https://us02web.zoom.us/u/k50277mvD"
+  },
+  "bookLinks": {
+    "Words of Eternal Life": "https://www.sgny.org/catalog/books/francisco-xavier/words-of-eternal-life/",
+    "The Spirits’ Book": "https://www.sgny.org/catalog/books/allan-kardec/spirits-book/"
+  },
+  "quote": {
+    "text": "Though nobody can go back and make a new beginning, anyone can start over and make a new ending.",
+    "by": "Chico Xavier"
+  },
+  "links": {
+    "website": "https://sgny.org/",
+    "schedule": "https://sgny.org/activities-schedule",
+    "donate": "https://sgny.org/donations/",
+    "youtube": "https://www.youtube.com/channel/UC8IaYwI9obGOFko2kwXQb8A",
+    "facebook": "https://www.facebook.com/SpiritistGroupofNewYork/",
+    "email": "mailto:sab-books@sgny.org",
+    "zelle": "sab-books@sgny.org",
+    "logo": "https://sgny.org/uploads/2023/04/cropped-logo-SGNY-novo-192x192.jpeg"
+  }
+}
