@@ -37,7 +37,7 @@ const recentChannelVideos = (lastMonth.length >= 9 ? lastMonth : channelVideos).
       </div>
       <div class="video-grid">
         {recentChannelVideos.map((v) => (
-          <button class="vid" data-id={v.id} data-title={v.title}>
+          <button class="vid" data-id={v.id} data-title={v.title} data-date={v.date}>
             <span class="vid-thumb">
               <img src={`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`} alt={v.title} loading="lazy" />
               <span class="vid-play" aria-hidden="true">▶</span>

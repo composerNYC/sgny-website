@@ -1,0 +1,75 @@
+name: Videos watch
+
+# Daily, two hours after the site's daily rebuild (deploy.yml, 13:00 UTC):
+#  1. refresh the saved video list (src/data/videos.js) so the Spiritist Videos page never falls back to old videos;
+#  2. check the LIVE page shows a recent video; if not, open a GitHub issue (GitHub emails the repo owner),
+#     and close it again by itself once the page is current.
+on:
+  schedule:
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: videos-watch
+  cancel-in-progress: false
+
+env:
+  ALARM_TITLE: "Spiritist Videos page is out of date"
+
+jobs:
+  refresh-saved-list:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Add new uploads to the saved list
+        run: node scripts/refresh-videos.mjs
+      - name: Commit if it changed
+        run: |
+          if git diff --quiet -- src/data/videos.js; then echo "No new videos."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/videos.js
+          git commit -m "Videos: update the saved list with new uploads"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+  check-live-page:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Is the newest video on sgny.org recent?
+        id: check
+        run: |
+          set +e
+          node scripts/check-videos.mjs > result.txt
+          echo "stale=$?" >> "$GITHUB_OUTPUT"
+          cat result.txt
+      - name: Open an issue when stale
+        if: steps.check.outputs.stale != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          open=$(gh issue list --state open --search "\"$ALARM_TITLE\" in:title" --json number -q '.[0].number')
+          if [ -n "$open" ]; then
+            gh issue comment "$open" --body-file result.txt
+          else
+            gh issue create --title "$ALARM_TITLE" --body-file result.txt
+          fi
+      - name: Close the issue when fixed
+        if: steps.check.outputs.stale == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for n in $(gh issue list --state open --search "\"$ALARM_TITLE\" in:title" --json number -q '.[].number'); do
+            gh issue close "$n" --comment "Fixed by itself: $(cat result.txt)"
+          done
