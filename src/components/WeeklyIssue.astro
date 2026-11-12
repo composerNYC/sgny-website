@@ -7,7 +7,7 @@ const others = issues.filter((i) => i.slug !== issue.slug);
 <section class="hero" style="padding-block:clamp(2.5rem,6vw,4rem)">
   <div class="container">
     <p class="eyebrow" style="color:#e9c878">Weekly News{isLatest ? ' · This week' : ''}</p>
-    <h1>Week of {issue.date}</h1>
+    <h1 style="max-width:none">Week of <span style="white-space:nowrap">{issue.date}</span></h1>
     <p>Our weekly email: what's happening at SGNY, new books, the latest videos and the full
       schedule. Get it in your inbox every week, free.</p>
     <div class="actions">
