@@ -26,7 +26,8 @@ Guide me one step at a time in plain language, and wait for me after each step.
    and press Cmd+C, and to tell you my email address for test emails. Then set it up
    with the clipboard method in CLAUDE.md. Never ask me to paste the key into the chat.
    When it works, remind me to delete the screenshot.
-5. Finish by telling me my weekly routine in three short lines.
+5. Tell me my weekly routine in three short lines, then ask if I'd like to do a
+   practice run now.
 
 Never send anything to the list unless I answer yes to your final question showing the
 subject, the list, and the number of people.
