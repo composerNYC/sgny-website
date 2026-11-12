@@ -7,6 +7,8 @@ in the same look as sgny.org (colors, type, cards, schedule).
   node scripts/email-builder.mjs videos               latest uploads on the SGNY YouTube channel
   node scripts/email-builder.mjs options <week.json>  side-by-side choices from <week folder>/options.json → options.html
   node scripts/email-builder.mjs <week.json>          build a preview page: emails/weeks/<date>/preview.html
+  node scripts/email-builder.mjs publish <week.json>  after sending: save the web version for sgny.org/weekly-news
+                                                      (src/data/weekly-news/<date>.json; no Zoom details, no unsubscribe footer)
 
 Uploading and putting the email into Mailchimp is done by: node scripts/mailchimp.mjs fill <draft-id> <week.json>
 
@@ -210,6 +212,14 @@ async function picture(image, opts, what) {
     return { src: image, width: known?.width || null };
   }
   const file = resolve(dir, image);
+  if (mode === 'web') {
+    // The website shows the copy already uploaded to Mailchimp (published only after the email is sent).
+    const up = week.uploaded || {};
+    const exact = existsSync(file) && up[`${image}:${statSync(file).size}`];
+    const entry = exact || Object.keys(up).filter((k) => k.slice(0, k.lastIndexOf(':')) === image).map((k) => up[k]).pop();
+    if (!entry) fail(`${what} (${image}) isn't in Mailchimp yet. Put the email in Mailchimp ("fill") before publishing it to the website.`);
+    return { src: uploadedUrl(entry), width: entry.width || COL };
+  }
   const ready = prepareImage(file, join(dir, '.build'), COL * 2);
   const w = pixelSize(ready).w;
   if (w < COL) warnings.push(`${what} (${image}) is only ${w}px wide, so it will show smaller than the column or look soft.`);
@@ -339,7 +349,16 @@ async function schedule(week, S, sunday) {
 }
 
 // The Zoom link, ID, password and phone come from the website, the same master link every session page uses.
-async function zoomBox(S) {
+async function zoomBox(S, web) {
+  if (web) {
+    // The website keeps the Zoom details out of its pages (they're decoded only when a visitor opens a session).
+    return section(card(`<div style="padding:24px;">
+    ${eyebrow('Join online')}
+    <div style="font-family:${SERIF};font-size:22px;font-weight:600;color:${C.ink};margin:0 0 10px;">All online meetings use one Zoom link</div>
+    ${para('Open any session in our schedule to get the link and password.', 'font-size:15px;')}
+    ${btn(S.links.schedule, 'Open the schedule', 'blue')}
+    </div>`, `background:${C.goldSoft};border-color:${C.goldSoft};`), C.white, '8px 40px 36px');
+  }
   const z = (await import(pathToFileURL(join(root, 'src/data/activities.js')).href)).zoom;
   if (!z?.url || !z?.id) fail('The website has no Zoom details (zoom in src/data/activities.js).');
   return section(card(`<div style="padding:24px;">
@@ -452,7 +471,8 @@ export async function build(weekPath, { mode = 'preview', upload } = {}) {
   const opts = { ctx, mode, upload, warnings };
   const sunday = await sundayFor(week);
 
-  const rows = [header(S.links), hero(week, S)];
+  const web = mode === 'web';
+  const rows = web ? [] : [header(S.links), hero(week, S)]; // the website page has its own header and banner
 
   const events = week.events || [];
   if (events.length) {
@@ -484,9 +504,17 @@ export async function build(weekPath, { mode = 'preview', upload } = {}) {
 
   rows.push(videosBox(week, S, warnings));
   rows.push(await schedule(week, S, sunday));
-  rows.push(await zoomBox(S));
+  rows.push(await zoomBox(S, web));
   rows.push(donateBox(S));
   rows.push(quoteBox(week.quote || S.quote));
+
+  if (web) {
+    // For the website's Weekly News page: just the email's column (the site has its own header and footer).
+    const html = `<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" class="wn-mail" style="width:100%;max-width:600px;margin:0 auto;border-radius:16px;overflow:hidden;border:1px solid ${C.line};">\n${rows.join('\n')}\n</table>`;
+    if (/zoom\.us\/j\//.test(html)) fail('The web version contains the Zoom link; it must stay off the website.');
+    if (/\*\|[A-Z_:]+\|\*/.test(html)) fail('The web version still has a Mailchimp merge tag in it.');
+    return { html, week, sunday, warnings, dir };
+  }
   rows.push(footer(S.links));
 
   let html = page(rows);
@@ -636,6 +664,28 @@ export function nextWeek(subject) {
   return { path: target, from: prevName, dropped };
 }
 
+// ---------- website: Weekly News ----------
+// After an email is sent, save its web version as src/data/weekly-news/<YYYY-MM-DD>.json.
+// The site's /weekly-news page shows the newest one; each issue also gets its own page.
+export async function publishWeb(weekPath) {
+  const { week } = loadWeek(weekPath);
+  if (/^PRACTICE\b/.test(week.subject)) fail('This is a practice email. Practice emails are never published to the website.');
+  const d = subjectDate(week.subject);
+  const slug = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  const { html, sunday } = await build(weekPath, { mode: 'web' });
+  const outDir = join(root, 'src/data/weekly-news');
+  mkdirSync(outDir, { recursive: true });
+  const out = join(outDir, `${slug}.json`);
+  const events = (week.events || []).map((e) => e.title || (e.caption || '').split('\n')[0].replace(/<[^>]+>/g, '').split(' · ')[0]).filter(Boolean);
+  writeFileSync(out, JSON.stringify({
+    slug, date: fmtDate(d), subject: week.subject,
+    summary: events.slice(0, 3).join(' · '),
+    sunday: sunday.none ? null : `${sunday.shortDate}: ${sunday.session.name}`,
+    html,
+  }, null, 2) + '\n');
+  return { out, slug };
+}
+
 // Latest uploads on the SGNY YouTube channel (newest first).
 export async function latestVideos(n = 6) {
   let xml;
@@ -665,6 +715,9 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     } else if (cmd === 'videos') {
       const fmt = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', weekday: 'short', month: 'short', day: 'numeric' });
       for (const v of await latestVideos()) console.log(`${fmt.format(new Date(v.published)).padEnd(12)} ${v.title}\n             ${v.url}`);
+    } else if (cmd === 'publish') {
+      const { out, slug } = await publishWeb(args[0] || fail('Usage: publish <week.json>'));
+      console.log(`✓ Web version saved: ${out}\n  It appears at sgny.org/weekly-news (and /weekly-news/${slug}) once committed and pushed.`);
     } else if (cmd === 'next') {
       const { path, from, dropped } = nextWeek(args.join(' ').trim());
       console.log(`✓ Started ${path} (copied from ${from}). Now update this week's events and videos.`);

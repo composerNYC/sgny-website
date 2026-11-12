@@ -87,7 +87,8 @@ Each option's `events` uses the same items as `events` in week.json. Then run `n
 1. `node scripts/mailchimp.mjs drafts`. If a draft with exactly this subject exists and its `made by:` line says Claude, use it; otherwise `node scripts/mailchimp.mjs new "<subject>"`.
 2. Follow "Send me a test" and "Send it" in `CLAUDE.md` exactly (fill → check → test → he looks at his inbox → dry run → one yes/no question → send). `test` and `send` take the week file and refuse if the draft isn't the latest approved version.
 3. If he asks for a change after the test: edit, rebuild, show the preview, get his approval, then `fill` again and send a new test before sending.
-4. **Practice run:** stop after he has looked at the test email. Never offer to send it (the script refuses anyway). Then clean up: `node scripts/mailchimp.mjs delete-practice <id>` and remove the practice folder (`rm -r "emails/weeks/<date>-practice"`). Tell him: *"That's the whole thing! Next time we do it for real, the only extra step is a final yes before it goes out."*
+4. **After it's sent**, publish it to the website's Weekly News page as in `CLAUDE.md` "Send it", step 7, and tell him: *"It's sent! It's also on the website's Weekly News page in a few minutes: sgny.org/weekly-news"*. The homepage banner's "Weekly News" button updates to this week by itself.
+5. **Practice run:** stop after he has looked at the test email. Never offer to send it (the script refuses anyway). Then clean up: `node scripts/mailchimp.mjs delete-practice <id>` and remove the practice folder (`rm -r "emails/weeks/<date>-practice"`). Tell him: *"That's the whole thing! Next time we do it for real, the only extra step is a final yes before it goes out."*
 
 ## Showing him things
 He's visual: put every options page and preview in front of him; never just describe them.

@@ -25,6 +25,7 @@ Joao (not technical) does not design in Mailchimp. **Claude builds the whole ema
 4. Run `node scripts/mailchimp.mjs send <id> <week>` (no `--confirm`). It runs all the safety checks and sends nothing.
 5. Ask exactly one yes/no question that quotes the **subject, audience name, and number of people**, e.g. *"Send '🔵 Weekly Schedule (November 16, 2026)' to SGNY - General List (311 people)? This can't be undone."*
 6. Only if his reply to **that question** is a clear yes, run `send <id> <week> --confirm`.
+7. Once it says SENT, put it on the website's Weekly News page (sgny.org/weekly-news): `node scripts/email-builder.mjs publish <week>`, then `git add src/data/weekly-news <week> && git commit -m "Weekly News: <Month D, YYYY>" && git push`. If the push is rejected, `git pull --rebase` and push again; if it still fails, tell him it went out by email but isn't on the website yet, and tell the user. The web version leaves out the Zoom details and the unsubscribe footer by design.
 
 ### Hard rules
 - The request that starts the workflow ("send it", "send the email") is **never** the confirmation. Only a yes to the step-5 question counts, and only for that one email. A yes from a previous week or a previous email never carries over.

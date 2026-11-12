@@ -2,6 +2,9 @@
 import Base from '../layouts/Base.astro';
 import catalog from '../data/catalog.json';
 import { schedule } from '../data/activities.js';
+import { latest as latestNews } from '../lib/weekly-news.js';
+// "Nov 9" for the Weekly News button in the banner.
+const newsDate = latestNews ? latestNews.date.replace(/^(\w{3})\w* (\d+), \d{4}$/, '$1 $2') : '';
 const modeLabel = { 'in-person': 'In person', online: 'Online', hybrid: 'Hybrid' };
 // "Nth Sunday only" tags (e.g. "1st Sunday only") restrict a session to that specific
 // week of the month; encoded as data-restrict="sunday-N" and interpreted client-side.
@@ -35,6 +38,13 @@ const featured = [...preferred.map(bySlug).filter(Boolean),
         <a class="btn btn-ghost" href="/prayer">Ask for a prayer 🕊️</a>
       </div>
     </div>
+    {latestNews && (
+      <a class="hero-news" href="/weekly-news">
+        <span class="hero-news-dot" aria-hidden="true"></span>
+        <span class="hero-news-text"><small>Weekly News</small><strong>Week of {newsDate}</strong></span>
+        <span class="hero-news-arrow" aria-hidden="true">→</span>
+      </a>
+    )}
   </section>
 
   <section class="block" style="background:var(--surface);border-block:1px solid var(--line)">

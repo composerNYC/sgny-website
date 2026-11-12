@@ -1,0 +1,12 @@
+---
+import Base from '../../layouts/Base.astro';
+import WeeklyIssue from '../../components/WeeklyIssue.astro';
+import { issues, latest } from '../../lib/weekly-news.js';
+export function getStaticPaths() {
+  return issues.map((issue) => ({ params: { slug: issue.slug }, props: { issue } }));
+}
+const { issue } = Astro.props;
+---
+<Base title={`Weekly News · ${issue.date}`} description={`SGNY Weekly News for the week of ${issue.date}${issue.summary ? `: ${issue.summary}` : ''}.`}>
+  <WeeklyIssue issue={issue} isLatest={issue.slug === latest.slug} />
+</Base>

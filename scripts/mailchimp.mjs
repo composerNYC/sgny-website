@@ -227,9 +227,9 @@ if (created && Date.now() - created > 335 * 864e5) {
 switch (cmd) {
   case 'account': {
     const a = await api('GET', '/?fields=account_name,pricing_plan_type,total_subscribers');
-    const lists = await api('GET', '/lists?fields=lists.id,lists.name,lists.stats.member_count&count=20');
+    const lists = await api('GET', '/lists?fields=lists.id,lists.name,lists.stats.member_count,lists.subscribe_url_long&count=20');
     console.log(`${a.account_name} · plan: ${a.pricing_plan_type}`);
-    for (const l of lists.lists) console.log(`  audience: ${l.name} (${l.stats.member_count} subscribed)`);
+    for (const l of lists.lists) console.log(`  audience: ${l.name} (${l.stats.member_count} subscribed) · sign-up form: ${l.subscribe_url_long}`);
     break;
   }
   case 'sent': {

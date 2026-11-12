@@ -1,0 +1,47 @@
+---
+// One issue of Weekly News (the web version of the weekly email), plus the list of past issues.
+import { issues, subscribeUrl } from '../lib/weekly-news.js';
+const { issue, isLatest = false } = Astro.props;
+const others = issues.filter((i) => i.slug !== issue.slug);
+---
+<section class="hero" style="padding-block:clamp(2.5rem,6vw,4rem)">
+  <div class="container">
+    <p class="eyebrow" style="color:#e9c878">Weekly News{isLatest ? ' · This week' : ''}</p>
+    <h1>Week of {issue.date}</h1>
+    <p>Our weekly email: what's happening at SGNY, new books, the latest videos and the full
+      schedule. Get it in your inbox every week, free.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href={subscribeUrl} target="_blank" rel="noopener">Get it by email</a>
+      {others.length > 0 && <a class="btn btn-ghost" href="#past-issues">Past issues</a>}
+      {!isLatest && <a class="btn btn-ghost" href="/weekly-news">This week's issue</a>}
+    </div>
+  </div>
+</section>
+
+<section class="wn-issue">
+  <div class="container">
+    <article aria-label={`Weekly News, week of ${issue.date}`} set:html={issue.html} />
+  </div>
+</section>
+
+{others.length > 0 && (
+  <section class="block wn-past" id="past-issues">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Archive</p>
+        <h2>Past issues</h2>
+      </div>
+      <ul class="wn-list">
+        {others.map((i) => (
+          <li>
+            <a href={`/weekly-news/${i.slug}`}>
+              <span class="wn-date">{i.date}</span>
+              <span class="wn-sum">{i.summary || 'Weekly schedule and news'}</span>
+              <span class="wn-go" aria-hidden="true">→</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+)}
