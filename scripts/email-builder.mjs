@@ -686,20 +686,13 @@ export async function publishWeb(weekPath) {
   return { out, slug };
 }
 
-// Latest uploads on the SGNY YouTube channel (newest first).
-export async function latestVideos(n = 6) {
-  let xml;
-  try {
-    const res = await fetch('https://www.youtube.com/feeds/videos.xml?channel_id=UC8IaYwI9obGOFko2kwXQb8A');
-    if (!res.ok) throw new Error(String(res.status));
-    xml = await res.text();
-  } catch { fail("Couldn't reach YouTube. Check the internet connection, or ask Joao for the two video links."); }
-  const unxml = (s) => s.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
-  return [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].slice(0, n).map(([, e]) => ({
-    title: unxml(e.match(/<title>([^<]*)<\/title>/)[1]),
-    url: `https://www.youtube.com/watch?v=${e.match(/<yt:videoId>([^<]+)</)[1]}`,
-    published: e.match(/<published>([^<]+)</)[1],
-  }));
+// Latest uploads on the SGNY YouTube channel (newest first). Same source as the website's Videos page:
+// the RSS feed, or the channel page when the feed is down (dates then approximate).
+export async function latestVideos(n = 8) {
+  const { latestVideos: fetchVideos } = await import(pathToFileURL(join(root, 'src/lib/youtube.js')).href);
+  const { videos, source } = await fetchVideos();
+  if (!videos) fail("Couldn't reach YouTube. Check the internet connection, or ask Joao for the two video links.");
+  return videos.slice(0, n).map((v) => ({ title: v.title, url: `https://www.youtube.com/watch?v=${v.id}`, published: v.date, approx: source !== 'rss' }));
 }
 
 // ---------- CLI ----------
@@ -714,7 +707,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       for (const w of warnings) console.log(`⚠ ${w}`);
     } else if (cmd === 'videos') {
       const fmt = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', weekday: 'short', month: 'short', day: 'numeric' });
-      for (const v of await latestVideos()) console.log(`${fmt.format(new Date(v.published)).padEnd(12)} ${v.title}\n             ${v.url}`);
+      for (const v of await latestVideos()) console.log(`${(v.approx ? '~' : '') + fmt.format(new Date(v.published + 'T12:00:00'))}`.padEnd(13) + ` ${v.title}\n              ${v.url}`);
     } else if (cmd === 'publish') {
       const { out, slug } = await publishWeb(args[0] || fail('Usage: publish <week.json>'));
       console.log(`✓ Web version saved: ${out}\n  It appears at sgny.org/weekly-news (and /weekly-news/${slug}) once committed and pushed.`);

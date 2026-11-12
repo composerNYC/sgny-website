@@ -2,45 +2,15 @@
 import Base from '../layouts/Base.astro';
 import { channelVideos as fallbackVideos } from '../data/videos.js';
 
-const CHANNEL_ID = 'UC8IaYwI9obGOFko2kwXQb8A'; // Spiritist Group of New York
+import { latestVideos } from '../lib/youtube.js';
 
-const decodeEntities = (s) => s
-  .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
-  .replace(/&quot;/g, '"').replace(/&#39;/g, "'");
-
-// Pull the channel's current uploads straight from its YouTube RSS feed at build
-// time, so new videos show up automatically on the next rebuild — no manual data
-// entry needed. Falls back to the last known list if the feed can't be reached.
-let channelVideos = fallbackVideos;
-try {
-  const res = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`, {
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
-    },
-  });
-  if (res.ok) {
-    const xml = await res.text();
-    const parsed = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)]
-      .map(([, entry]) => {
-        const id = entry.match(/<yt:videoId>([^<]+)<\/yt:videoId>/)?.[1];
-        const title = entry.match(/<title>([^<]+)<\/title>/)?.[1];
-        const published = entry.match(/<published>([^<]+)<\/published>/)?.[1];
-        return id && title && published
-          ? { id, title: decodeEntities(title), date: published.slice(0, 10) }
-          : null;
-      })
-      .filter(Boolean);
-    if (parsed.length) {
-      channelVideos = parsed;
-    } else {
-      console.error('[spiritist-videos] RSS fetch OK but no entries parsed from feed');
-    }
-  } else {
-    console.error(`[spiritist-videos] RSS fetch failed: HTTP ${res.status}`);
-  }
-} catch (err) {
-  console.error('[spiritist-videos] RSS fetch threw:', err instanceof Error ? err.message : err);
-}
+// Pull the channel's current uploads at build time (the site rebuilds daily), so new
+// videos show up automatically. YouTube's RSS feed is often down, so this falls back to
+// the channel's public Videos page, and only then to the last saved list.
+const { videos: live, source } = await latestVideos();
+if (!live) console.error('[spiritist-videos] YouTube unreachable (feed and channel page); using the saved list');
+else if (source !== 'rss') console.warn(`[spiritist-videos] RSS feed down; using the ${source} (approximate dates)`);
+const channelVideos = live || fallbackVideos;
 
 const fmtDate = (d) => d ? new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : '';
 // Show the last month's uploads (newest first); if that's fewer than 9, pad with
