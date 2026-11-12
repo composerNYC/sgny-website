@@ -51,7 +51,7 @@ Open the Claude panel in VS Code and say **"Let's do this week's email."** Claud
 | Claude… | You… |
 |---|---|
 | asks you to confirm the date (*"the week of Monday, November 16?"*) | say yes, or give the right date |
-| lists what's still in from last week and offers to remove past events | say what to take out |
+| reads the last few emails and flyers on its own, then tells you its plan: which upcoming events to keep, which to put at the top because they're close, which past events to take out, and anything that dropped off but is still coming up | say yes, or what to change |
 | opens a window on your screen | drag in this week's flyers and photos |
 | asks what's new | give the basics: what, when, where, who, link. A pasted WhatsApp message is fine. **Claude writes the description for you.** |
 | shows a page with 2–3 ways it could look (A, B, C) | pick a letter, or say what to change |

@@ -28,11 +28,26 @@ Work out the Monday of the coming week from today's date and ask him to confirm:
 
 This copies last week's email into a new week, keeping everything that was in it.
 
-### 2. What stays from last week
-Look at the announcements carried over (the items between `@this-week-header` and `@sgny-website`). Tell him in one short list what's there, in plain words ("the Spiritist Week flyers, Nov 15–22", "Rafael Rezende's talk, Nov 14"). **Mark anything whose date has already passed and say you'll take it out unless he wants it.** Ask: *"Anything else to take out?"*
+### 2. Scan the recent emails yourself, then come with a plan
+Before asking him anything about content, work out on your own what should be promoted this week. Events are often announced weeks ahead (a talk next month starts appearing early), so this matters.
+
+1. **Read the last 3 sent emails**, not just last week's: `node scripts/mailchimp.mjs sent 3`, then `node scripts/mailchimp.mjs content <id> <scratch-dir>/<id>.html` for each, and read their text. Also read the `week.json` of recent weeks in `emails/weeks/`. **Look at every flyer image** with the Read tool. Event dates are often only on the flyer.
+2. **List every event or promotion you find** with its date(s), and sort each one:
+   - **Still coming up and in last week's email:** keep it. If it's within about 7 days, suggest making it stand out: move it to the top, and add a short line like "This Saturday!" or "3 days to go!" (they've done this before, e.g. the Symposium countdown).
+   - **Still coming up but dropped from last week's email** (it was in an earlier one): suggest bringing it back.
+   - **Already over** (its last date is before this email goes out): plan to take it out.
+   - **Ongoing promotions without a date** (books, podcast, app, courses): keep as they are; don't bring them up unless something looks out of date.
+   - **Unclear** (no date you can find, or the flyer and the text disagree): ask about it.
+3. **Make those changes in week.json yourself**, then tell him the plan in one short list, in plain words, e.g.:
+   *"Here's what I'm planning for this week:*
+   *• Keep the Tri-State Spiritist Week (Nov 15–22). It starts this Sunday, so I'll move it to the top with a 'This week!' line.*
+   *• Take out Rafael Rezende's talk. It was on Nov 14.*
+   *• Bring back the Christmas celebration (Dec 13). It was in the Nov 2 email but not last week's.*
+   *Does that sound right? And is there anything new this week?"*
+4. Adjust to whatever he says. If he has nothing new, go straight to step 6.
 
 ### 3. What's new this week
-1. Run `open "emails/weeks/<folder>"` so the week's folder pops up on his screen, and say: *"Drag this week's flyers or photos into the window that just opened. Tell me when they're in."* (Pictures pasted into the chat aren't saved as files, so they must go in that window.)
+1. If he has new things, run `open "emails/weeks/<folder>"` so the week's folder pops up on his screen, and say: *"Drag this week's flyers or photos into the window that just opened. Tell me when they're in."* (Pictures pasted into the chat aren't saved as files, so they must go in that window.)
 2. For each new thing, ask for **just the basics**, as short as he likes: what it is, when (day, date, time), where (in person / online / place), who's speaking or leading, and the link if there is one. Tell him he can paste a WhatsApp message or flyer text as it is.
 3. If he has no new announcements this week, that's fine. Go to step 4.
 
