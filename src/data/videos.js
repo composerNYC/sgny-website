@@ -2,6 +2,7 @@
 
 // Latest uploads from the SGNY channel (newest first). Full archive: youtube.com/@SpiritistGroupofNewYork
 export const channelVideos = [
+  { id: 'ik5Hdk7Adc4', title: "Introduction: Items XI, XII and XIII", date: "2026-11-13" },
   { id: 'jxsnlxKLZYA', title: "Blessed are the Afflicted", date: "2026-11-10" },
   { id: '-eQSiZYKTNc', title: "Introduction: Items VIII, IX and X", date: "2026-11-07" },
   { id: 'MKmIweIvN8k', title: "Part One - Chapter 1", date: "2026-11-02" },
