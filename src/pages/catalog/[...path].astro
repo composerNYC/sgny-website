@@ -40,9 +40,9 @@ const buyUrl = page.type === 'book' && !paypal && page.buyUrl;
               </div>
               {page.type === 'book' && (
                 <div class="card" style="margin-top:1.25rem;text-align:center">
-                  {page.price ? (
+                  {page.price || buyUrl ? (
                     <>
-                      <div style="font-size:1.5rem;font-family:var(--serif);color:var(--brand-dark)">{page.price}</div>
+                      {page.price && <div style="font-size:1.5rem;font-family:var(--serif);color:var(--brand-dark)">{page.price}</div>}
                       {page.format && <div class="muted" style="font-size:.85rem;text-transform:capitalize">{page.format}</div>}
                       {paypal ? (
                         <>
