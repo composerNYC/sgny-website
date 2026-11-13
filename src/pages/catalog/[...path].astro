@@ -59,6 +59,7 @@ const buyUrl = page.type === 'book' && !paypal && page.buyUrl;
                             <input type="hidden" name="quantity" value="1" data-qty-sync />
                             <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Buy with PayPal</button>
                           </form>
+                          <p class="muted" style="margin:.4rem 0 0;font-size:.8rem;line-height:1.35">No PayPal account needed. You can pay with any credit or debit card.</p>
                           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal" style="margin-top:.6rem">
                             <input type="hidden" name="cmd" value="_cart" />
                             <input type="hidden" name="add" value="1" />
