@@ -135,7 +135,7 @@ He's visual: put every options page and preview in front of him; never just desc
 - `books`: names from `emails/standing.json` ("From our catalog", shown two per row), or a full object `{ "title", "by", "text", "image", "link" }` for a new book.
 - `more`: names from `emails/standing.json` ("More from our community" cards), or a full card object like the card event above.
 - `videos`: "Latest videos" (usually 2). Write titles as `<Book or series>: <video title>`; the part before the colon shows as the small gold line.
-- `sunday`: leave it out. The schedule shows that week's Sunday session from the website's rotation (1st Sunday Sex and Destiny, 2nd Gospel, 3rd The Mediums' Book, 4th Question & Answer). Set it only when Joao says that Sunday is different, or `"none"` if there's no Sunday session. On a 5th Sunday the builder stops; ask him what happens that day.
+- `sunday`: leave it out. The schedule shows that week's Sunday session from the website's rotation (1st Sunday Sex and Destiny, 2nd Gospel, 3rd The Mediums' Book, 4th Questions & Answers). Set it only when Joao says that Sunday is different, or `"none"` if there's no Sunday session. On a 5th Sunday the builder stops; ask him what happens that day.
 - `quote`: leave it out to use the usual quote; set it for a different one.
 - `uploaded`: written by `fill` (each uploaded photo's Mailchimp link and size); don't touch it.
 

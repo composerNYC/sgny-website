@@ -105,9 +105,9 @@ export const sessions = [
   },
   {
     slug: 'sunday-qa', day: 'Sunday', time: '11:00 AM – 12:30 PM',
-    name: 'Question & Answer', mode: 'online', tags: ['4th Sunday only'],
-    audience: 'Open to the public — newcomers welcome',
-    format: 'An informal session, held online, where newcomers can ask anything about Spiritism.',
+    name: 'Questions & Answers', mode: 'online', tags: ['4th Sunday only'],
+    audience: 'Open to the public',
+    format: 'An informal session, held online, where everyone is welcome to ask anything about Spiritism.',
     notes: ['Held on the fourth Sunday of each month.'],
   },
 ];
@@ -120,8 +120,8 @@ export const activities = [
     desc: 'Guided study of a Spiritist work, chapter by chapter — held Sunday, Tuesday, and Thursday.' },
   { name: 'Prayer Group', audience: 'By appointment', icon: '🕊️',
     desc: 'A gathering for prayer that prepares us for study and charity. Held online.' },
-  { name: 'Question & Answer', audience: 'Newcomers welcome', icon: '💬',
-    desc: 'An informal session for newcomers to ask anything about Spiritism. Online, 4th Sunday monthly.' },
+  { name: 'Questions & Answers', audience: 'Open to all', icon: '💬',
+    desc: 'An informal session where everyone is welcome to ask anything about Spiritism. Online, 4th Sunday monthly.' },
   { name: 'Individual Spiritual Counseling', audience: 'Open to all', icon: '🌿',
     desc: 'A private, confidential conversation for anyone going through a difficult moment.' },
   { name: 'Book Club', audience: 'Open to all', icon: '📚',
