@@ -1,0 +1,114 @@
+---
+// Directory of Spiritist Centers, used by /other-spiritist-institutions/usa and /worldwide.
+// Each section is a state or country with either `groups` (from SpiritistGroups.org, see
+// scripts/refresh-spiritist-groups.mjs), legacy `html` from our older list, or a `link`.
+import { cleanBody } from '../lib/html.js';
+
+interface Group {
+  name: string; kind: string; address: string; city: string; state: string; country: string;
+  website: string; languages: string[]; online: boolean; listing: string;
+}
+interface Section {
+  id: string; title: string; jump: string;
+  groups?: Group[]; byState?: boolean; html?: string; note?: string;
+  link?: { href: string; text: string };
+}
+interface Props { sections: Section[]; searchLabel: string }
+const { sections, searchLabel } = Astro.props;
+
+const regions = (groups: Group[]) => {
+  const map = new Map<string, Group[]>();
+  for (const g of groups) map.set(g.state, [...(map.get(g.state) ?? []), g]);
+  return [...map];
+};
+const host = (url: string) => url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+const searchText = (g: Group) => [g.name, g.address, g.city, g.state, g.country, ...g.languages].join(' ').toLowerCase();
+---
+<div class="dir-search">
+  <span aria-hidden="true">🔍</span>
+  <input type="search" id="dir-search" placeholder={searchLabel} aria-label={searchLabel} autocomplete="off" />
+</div>
+<nav class="dir-jump" id="dir-jump" aria-label="Jump to">
+  {sections.map((s) => <a href={`#${s.id}`} class="btn btn-outline">{s.jump}</a>)}
+</nav>
+<p id="dir-empty" class="muted" style="display:none;margin-top:2rem">No centers match your search.</p>
+
+{sections.map((s) => (
+  <section class="dir-section" id={s.id} data-dir-section>
+    <h2>{s.title}</h2>
+    {s.note && <p class="muted dir-note">{s.note}</p>}
+    {s.link && <p data-dir-item data-search={s.title.toLowerCase()}><a href={s.link.href}>{s.link.text} →</a></p>}
+    {s.html && <div class="dir-older" data-dir-item data-search={s.html.replace(/<[^>]+>/g, ' ').toLowerCase()} set:html={cleanBody(s.html)} />}
+    {s.groups && (s.byState ? regions(s.groups) : [['', s.groups] as [string, Group[]]]).map(([region, groups]) => (
+      <div data-dir-region>
+        {region && <h3 class="dir-region">{region}</h3>}
+        <div class="dir-grid">
+          {groups.map((g) => (
+            <article class="dir-card" data-dir-item data-search={searchText(g)}>
+              <h4>{g.website ? <a href={g.website} target="_blank" rel="noopener">{g.name}</a> : g.name}</h4>
+              <p class="dir-meta">{g.kind}{g.languages.length > 0 && ` · ${g.languages.join(', ')}`}{g.online && ' · Online activities'}</p>
+              <p class="dir-addr">{g.address}</p>
+              <p class="dir-links">
+                {g.website && <a href={g.website} target="_blank" rel="noopener">{host(g.website)} ↗</a>}
+                <a href={g.listing} target="_blank" rel="noopener">Details on SpiritistGroups.org ↗</a>
+              </p>
+            </article>
+          ))}
+        </div>
+      </div>
+    ))}
+  </section>
+))}
+
+<style>
+  .dir-search { position: relative; max-width: 420px; margin: 0 0 1.25rem; }
+  .dir-search span { position: absolute; left: .9rem; top: 50%; transform: translateY(-50%); opacity: .6; pointer-events: none; }
+  .dir-search input { width: 100%; padding: .7rem 1rem .7rem 2.4rem; border-radius: 999px; border: 1px solid var(--line);
+    font: inherit; font-size: .95rem; background: #fff; color: var(--ink); }
+  .dir-search input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .dir-jump:not([hidden]) { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .dir-jump .btn { padding: .25rem .65rem; font-size: .82rem; }
+  .dir-section { scroll-margin-top: 5rem; margin-top: 2.75rem; }
+  .dir-section > h2 { font-size: 1.5rem; color: var(--brand-dark); border-bottom: 2px solid var(--accent-soft);
+    padding-bottom: .3rem; margin-bottom: .75rem; }
+  .dir-note { font-size: .88rem; margin-top: -.25rem; }
+  .dir-region { font-size: 1.05rem; margin: 1.4rem 0 .6rem; color: var(--ink-soft); font-family: var(--sans);
+    text-transform: uppercase; letter-spacing: .06em; }
+  .dir-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .9rem; }
+  .dir-card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem; }
+  .dir-card h4 { margin: 0 0 .25rem; font-size: 1.05rem; line-height: 1.3; }
+  .dir-card h4 a { color: var(--brand-dark); text-decoration: none; }
+  .dir-card h4 a:hover { text-decoration: underline; }
+  .dir-card p { margin: .2rem 0; font-size: .88rem; overflow-wrap: anywhere; }
+  .dir-meta { color: var(--ink-soft); font-size: .8rem !important; }
+  .dir-links { display: flex; flex-wrap: wrap; gap: .25rem .9rem; margin-top: .5rem !important; }
+  .dir-links a { font-size: .82rem; }
+  .dir-older { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem; font-size: .92rem; }
+</style>
+
+<script>
+  const input = document.getElementById('dir-search') as HTMLInputElement | null;
+  const jump = document.getElementById('dir-jump');
+  const empty = document.getElementById('dir-empty');
+  const sections = Array.from(document.querySelectorAll<HTMLElement>('[data-dir-section]'));
+
+  input?.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let any = false;
+    sections.forEach((section) => {
+      let sectionHit = false;
+      section.querySelectorAll<HTMLElement>('[data-dir-item]').forEach((item) => {
+        const hit = !q || (item.dataset.search || '').includes(q);
+        item.hidden = !hit;
+        if (hit) sectionHit = true;
+      });
+      section.querySelectorAll<HTMLElement>('[data-dir-region]').forEach((region) => {
+        region.hidden = !region.querySelector('[data-dir-item]:not([hidden])');
+      });
+      section.hidden = !sectionHit;
+      if (sectionHit) any = true;
+    });
+    if (jump) jump.hidden = q.length > 0;
+    if (empty) empty.style.display = any ? 'none' : '';
+  });
+</script>

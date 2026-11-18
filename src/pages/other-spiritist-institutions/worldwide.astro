@@ -1,0 +1,50 @@
+---
+import Base from '../../layouts/Base.astro';
+import CentersDirectory from '../../components/CentersDirectory.astro';
+import directory from '../../data/spiritist-groups.json';
+import older from '../../data/spiritist-centers-older.json';
+
+// Countries covered by SpiritistGroups.org come from there; the others from our older (2016) list.
+const abroad = directory.groups.filter((g) => g.country !== 'United States');
+const countries = [...new Set(abroad.map((g) => g.country))];
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z]+/g, '-');
+const sections = [
+  ...countries.map((country) => {
+    const groups = abroad.filter((g) => g.country === country);
+    return { id: slug(country), title: country, jump: country, groups, byState: new Set(groups.map((g) => g.state)).size > 1 };
+  }),
+  ...older.map((o) => ({
+    id: slug(o.country), title: o.country, jump: o.country, html: o.html,
+    note: 'From our older list (2016). These details may be out of date.',
+  })),
+  {
+    id: 'united-states', title: 'United States', jump: 'United States',
+    link: { href: '/other-spiritist-institutions/usa', text: 'See the list of Spiritist Centers in the USA' },
+  },
+].sort((a, b) => a.title.localeCompare(b.title));
+const updated = new Date(directory.updated + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+---
+<Base title="Spiritist Centers (Worldwide)" description="Spiritist centers and study groups around the world, by country, with addresses and websites.">
+  <section class="hero" style="padding-block:clamp(2.5rem,6vw,4rem)">
+    <div class="container">
+      <p class="eyebrow" style="color:#e9c878">Spiritist Centers</p>
+      <h1>Spiritist Centers Worldwide</h1>
+      <p>Spiritist centers and study groups outside the United States, by country. For the United States,
+        see the <a href="/other-spiritist-institutions/usa" style="color:#fff;text-decoration:underline">USA list</a>.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <nav class="crumbs">
+        <a href="/">Home</a> · <a href="/other-spiritist-institutions">Other Spiritist Organizations</a> · <span>Worldwide</span>
+      </nav>
+      <p class="muted" style="font-size:.9rem">Listings for {countries.join(', ').replace(/, ([^,]*)$/, ' and $1')} come from
+        <a href="https://spiritistgroups.org/" target="_blank" rel="noopener">SpiritistGroups.org</a>, a project of
+        The Spiritist Institute, and were last updated on {updated}. To add or update a center in those countries, use
+        <a href="https://spiritistgroups.org/add-listing/" target="_blank" rel="noopener">SpiritistGroups.org</a>.
+        For other countries, please <a href="mailto:sgny.webmaster@gmail.com">email us</a>.</p>
+      <CentersDirectory sections={sections} searchLabel="Search by name, city or country…" />
+    </div>
+  </section>
+</Base>

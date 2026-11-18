@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import CentersDirectory from '../../components/CentersDirectory.astro';
+import directory from '../../data/spiritist-groups.json';
+
+const groups = directory.groups.filter((g) => g.country === 'United States');
+const states = [...new Set(groups.map((g) => g.state))];
+const sections = states.map((state) => ({
+  id: state.toLowerCase().replace(/[^a-z]+/g, '-'),
+  title: state,
+  jump: state,
+  groups: groups.filter((g) => g.state === state),
+}));
+const updated = new Date(directory.updated + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+---
+<Base title="Spiritist Centers (USA)" description={`${groups.length} Spiritist centers and study groups across the United States, with addresses and websites.`}>
+  <section class="hero" style="padding-block:clamp(2.5rem,6vw,4rem)">
+    <div class="container">
+      <p class="eyebrow" style="color:#e9c878">Spiritist Centers</p>
+      <h1>Spiritist Centers in the USA</h1>
+      <p>{groups.length} Spiritist centers and study groups in {states.length} states. Many also hold
+        activities online. For centers outside the United States, see the
+        <a href="/other-spiritist-institutions/worldwide" style="color:#fff;text-decoration:underline">worldwide list</a>.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <nav class="crumbs">
+        <a href="/">Home</a> · <a href="/other-spiritist-institutions">Other Spiritist Organizations</a> · <span>USA</span>
+      </nav>
+      <p class="muted" style="font-size:.9rem">This list comes from
+        <a href="https://spiritistgroups.org/" target="_blank" rel="noopener">SpiritistGroups.org</a>, a project of
+        The Spiritist Institute, and was last updated on {updated}. To add or update a center, use
+        <a href="https://spiritistgroups.org/add-listing/" target="_blank" rel="noopener">SpiritistGroups.org</a>.</p>
+      <CentersDirectory sections={sections} searchLabel="Search by name, city or state…" />
+    </div>
+  </section>
+</Base>
