@@ -2,6 +2,7 @@
 
 // Latest uploads from the SGNY channel (newest first). Full archive: youtube.com/@SpiritistGroupofNewYork
 export const channelVideos = [
+  { id: 'ZudXknia_q0', title: "Introduction: Items XIV, XV, XVI and XVII", date: "2026-11-20" },
   { id: 'QslSk5gjhPU', title: "The Development of Mediumship (conclusion)", date: "2026-11-15" },
   { id: 'ik5Hdk7Adc4', title: "Introduction: Items XI, XII and XIII", date: "2026-11-13" },
   { id: 'jxsnlxKLZYA', title: "Blessed are the Afflicted", date: "2026-11-10" },
